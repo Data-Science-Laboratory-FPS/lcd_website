@@ -706,7 +706,7 @@
         // Función para cargar archivos MD
         async function loadMarkdown(filename) {
             try {
-                const response = await fetch(`/content/${filename}.md`);
+                const response = await fetch(`content/${filename}.md`);
                 if (!response.ok) throw new Error(`Error loading ${filename}.md`);
                 return await response.text();
             } catch (error) {
