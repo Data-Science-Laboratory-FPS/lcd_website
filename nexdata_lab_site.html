@@ -589,13 +589,6 @@
             margin: 2rem 0;
         }
 
-        .loading {
-            text-align: center;
-            color: #66bb6a;
-            padding: 2rem;
-            font-size: 1.1rem;
-        }
-
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.5rem;
@@ -643,7 +636,7 @@
 
     <section class="hero" id="inicio">
         <div class="hero-content">
-            <div id="hero-content"><div class="loading">Cargando...</div></div>
+            <div id="hero-content"></div>
             <div class="cta-buttons">
                 <button class="btn btn-primary" onclick="scrollToContact()">Comenzar ahora</button>
                 <button class="btn btn-secondary" onclick="scrollToServices()">Ver servicios</button>
@@ -655,41 +648,41 @@
     <section class="section" id="servicios">
         <h2 class="section-title">Nuestros Servicios</h2>
         <p class="section-subtitle">Soluciones end-to-end en ciencia de datos</p>
-        <div class="services-grid" id="services-grid"><div class="loading">Cargando servicios...</div></div>
+        <div class="services-grid" id="services-grid"></div>
     </section>
 
     <section class="section" id="proyectos">
         <h2 class="section-title">Proyectos</h2>
         <p class="section-subtitle">Casos de éxito que transformaron negocios</p>
-        <div class="projects-grid" id="projects-grid"><div class="loading">Cargando proyectos...</div></div>
+        <div class="projects-grid" id="projects-grid"></div>
     </section>
 
     <section class="section" id="equipo">
         <h2 class="section-title">Equipo</h2>
         <p class="section-subtitle">Las mentes detrás de la innovación</p>
-        <div class="team-grid" id="team-grid"><div class="loading">Cargando equipo...</div></div>
+        <div class="team-grid" id="team-grid"></div>
     </section>
 
     <section class="section" id="investigacion">
         <h2 class="section-title">Investigación</h2>
         <p class="section-subtitle">Contribuyendo al avance de la ciencia de datos</p>
-        <div class="content-wrapper" id="research-content"><div class="loading">Cargando investigación...</div></div>
+        <div class="content-wrapper" id="research-content"></div>
     </section>
 
     <section class="section" id="multimedia">
         <h2 class="section-title">Multimedia</h2>
         <p class="section-subtitle">Conocimiento que compartimos</p>
-        <div class="content-wrapper" id="multimedia-content"><div class="loading">Cargando multimedia...</div></div>
+        <div class="content-wrapper" id="multimedia-content"></div>
     </section>
 
     <section class="stats" id="impacto">
         <h2 class="section-title">Nuestro Impacto</h2>
         <p class="section-subtitle">Resultados que hablan por sí mismos</p>
-        <div class="stats-grid" id="stats-grid"><div class="loading">Cargando estadísticas...</div></div>
+        <div class="stats-grid" id="stats-grid"></div>
     </section>
 
     <section class="cta-section" id="contacto">
-        <div class="cta-box" id="cta-content"><div class="loading">Cargando...</div></div>
+        <div class="cta-box" id="cta-content"></div>
     </section>
 
     <footer>
@@ -703,19 +696,205 @@
             gfm: true
         });
 
-        // Función para cargar archivos MD
-        async function loadMarkdown(filename) {
-            try {
-                const response = await fetch(`/content/${filename}.md`);
-                if (!response.ok) throw new Error(`Error loading ${filename}.md`);
-                return await response.text();
-            } catch (error) {
-                console.error(`Error loading ${filename}:`, error);
-                return null;
-            }
-        }
+        // Simulación de contenido MD (en producción, esto vendría de archivos)
+        const content = {
+            inicio: `# Transformamos datos en decisiones inteligentes
 
-        // Función para parsear Hero
+## 🚀 Impulsando el futuro con IA
+
+Laboratorio especializado en ciencia de datos, machine learning y análisis predictivo. Convertimos información compleja en ventajas competitivas reales.
+
+### Métricas Destacadas
+
+**Precisión ML**
+96.7%
+↗ +12% este mes
+
+**Modelos activos**
+142
+↗ En producción
+
+**TB procesados**
+8.4
+↗ Últimos 30 días`,
+
+            servicios: `### 🧠 Machine Learning
+Modelos predictivos personalizados que aprenden de tus datos para automatizar decisiones y detectar patrones ocultos.
+
+### 📊 Análisis Avanzado
+Exploramos tus datos en profundidad para extraer insights accionables y visualizaciones impactantes.
+
+### 🤖 IA Generativa
+Implementamos modelos de lenguaje y visión por computadora para automatizar procesos creativos y analíticos.
+
+### ⚡ Big Data
+Procesamiento escalable de grandes volúmenes de datos con tecnologías distribuidas y en tiempo real.
+
+### 🎯 Optimización
+Algoritmos de optimización para maximizar recursos, reducir costos y mejorar la eficiencia operativa.
+
+### 🔮 Forecasting
+Predicción de tendencias y series temporales para anticiparte al mercado y planificar estratégicamente.`,
+
+            proyectos: `### 🏦 Sistema Predictivo de Fraude Bancario
+**Cliente:** Banco Nacional | **Industria:** Fintech
+
+Implementamos un modelo de detección de fraude en tiempo real que procesa 50K transacciones por segundo.
+
+**Resultados:**
+- 94% de precisión en detección
+- Reducción de 67% en fraudes
+- ROI del 340% en 6 meses
+
+---
+
+### 🛒 Motor de Recomendación E-commerce
+**Cliente:** RetailMax | **Industria:** Retail
+
+Sistema de recomendación personalizado basado en deep learning que aumenta conversión y ticket promedio.
+
+**Resultados:**
+- +45% en conversión
+- +28% en ticket promedio
+- 2.3M predicciones diarias
+
+---
+
+### 🏥 Predicción de Demanda Hospitalaria
+**Cliente:** HealthCare Plus | **Industria:** Salud
+
+Modelo de forecasting para optimizar recursos hospitalarios y reducir tiempos de espera.
+
+**Resultados:**
+- 91% precisión predictiva
+- -35% en tiempos de espera
+- Optimización de 120 camas
+
+---
+
+### 📈 Optimización de Precios Dinámicos
+**Cliente:** AeroLink | **Industria:** Transporte
+
+Algoritmo de pricing dinámico que maximiza ingresos según demanda, competencia y estacionalidad.
+
+**Resultados:**
+- +23% en ingresos
+- 89% ocupación promedio
+- Sistema 24/7 en producción`,
+
+            equipo: `### 👨‍💻 Dr. Carlos Mendoza
+**Lead Data Scientist**
+
+PhD en Machine Learning por MIT. 10+ años desarrollando modelos predictivos para Fortune 500. Especialista en NLP y computer vision.
+
+---
+
+### 👩‍💻 María González
+**ML Engineer**
+
+Ex-Google AI. Experta en despliegue de modelos a escala. Arquitectura de sistemas distribuidos y MLOps.
+
+---
+
+### 👨‍💻 Javier Torres
+**Data Engineer**
+
+Especialista en Big Data y pipelines de datos. Certificado en AWS y Azure. 8+ años optimizando infraestructura de datos.
+
+---
+
+### 👩‍💻 Ana Rodríguez
+**Research Scientist**
+
+Investigadora en deep learning y reinforcement learning. Publicaciones en NeurIPS y ICML. Doctorado en IA por Stanford.
+
+---
+
+### 👨‍💻 Luis Martínez
+**Business Intelligence Lead**
+
+MBA + Data Science. Experto en traducir insights técnicos a estrategia de negocio. 12+ años en consultoría analítica.
+
+---
+
+### 👩‍💻 Sandra Kim
+**Computer Vision Engineer**
+
+Especialista en visión por computadora y procesamiento de imágenes. Ex-Tesla Autopilot team. Experta en PyTorch y OpenCV.`,
+
+            investigacion: `### 📄 Papers Publicados
+
+**"Efficient Transformer Architecture for Time Series Forecasting"**
+*NeurIPS 2024 • Mendoza, C., Rodríguez, A.*
+
+Arquitectura transformer optimizada que reduce en 40% el tiempo de entrenamiento en series temporales largas.
+
+---
+
+**"Federated Learning for Healthcare: Privacy-Preserving Predictions"**
+*ICML 2024 • González, M., Torres, J.*
+
+Framework de aprendizaje federado que permite entrenar modelos médicos sin compartir datos sensibles.
+
+---
+
+**"Real-time Fraud Detection using Graph Neural Networks"**
+*KDD 2023 • Mendoza, C., Martínez, L.*
+
+Sistema de detección de fraude basado en GNN que procesa relaciones complejas en tiempo real.
+
+---
+
+### 📝 Blog Técnico
+
+**Últimos artículos:**
+
+- **"De Zero a Hero en MLOps"** - Guía práctica para poner modelos en producción
+- **"LLMs en Español: Fine-tuning efectivo"** - Técnicas para adaptar modelos de lenguaje
+- **"Optimización de Hiperparámetros con Optuna"** - Tutorial hands-on
+- **"Data Quality: El enemigo silencioso del ML"** - Best practices`,
+
+            multimedia: `### 🎙️ Podcast: "Data Talks"
+
+**#42: El futuro de los LLMs con Yann LeCun**
+Conversamos sobre la evolución de modelos de lenguaje y su impacto en la industria.
+🎧 *Spotify • Apple Podcasts • YouTube*
+
+**#38: MLOps en producción - Lecciones aprendidas**
+Nuestras experiencias desplegando más de 100 modelos en entornos productivos.
+🎧 *Spotify • Apple Podcasts • YouTube*
+
+---
+
+### 📺 Canal de YouTube
+
+**"Tutorial: Fine-tuning de LLaMA 3 en tu laptop"**
+125K views • Aprende a adaptar modelos de lenguaje con recursos limitados.
+
+**"Construyendo un RAG desde cero"**
+89K views • Sistema de retrieval-augmented generation paso a paso.
+
+**"Computer Vision para principiantes"**
+156K views • Serie completa de detección de objetos con YOLO.`,
+
+            impacto: `**50+**
+Proyectos Completados
+
+**95%**
+Precisión Promedio
+
+**2.3M**
+Predicciones Diarias
+
+**24/7**
+Monitoreo Activo`,
+
+            contacto: `# ¿Listo para transformar tus datos?
+
+Agenda una consultoría gratuita y descubre cómo la ciencia de datos puede impulsar tu negocio.`
+        };
+
+        // Función para parsear y renderizar contenido
         function parseHeroContent(md) {
             const lines = md.split('\n');
             const title = lines[0].replace(/^# /, '');
@@ -819,11 +998,8 @@
         }
 
         // Renderizar Hero
-        async function renderHero() {
-            const md = await loadMarkdown('inicio');
-            if (!md) return;
-            
-            const data = parseHeroContent(md);
+        function renderHero() {
+            const data = parseHeroContent(content.inicio);
             
             document.getElementById('hero-content').innerHTML = `
                 <div class="hero-badge">${data.badge}</div>
@@ -843,11 +1019,8 @@
         }
 
         // Renderizar Servicios
-        async function renderServices() {
-            const md = await loadMarkdown('servicios');
-            if (!md) return;
-            
-            const services = parseServices(md);
+        function renderServices() {
+            const services = parseServices(content.servicios);
             
             const html = services.map(s => `
                 <div class="service-card">
@@ -861,11 +1034,8 @@
         }
 
         // Renderizar Proyectos
-        async function renderProjects() {
-            const md = await loadMarkdown('proyectos');
-            if (!md) return;
-            
-            const projects = parseProjects(md);
+        function renderProjects() {
+            const projects = parseProjects(content.proyectos);
             
             const html = projects.map(p => `
                 <div class="project-card">
@@ -883,11 +1053,8 @@
         }
 
         // Renderizar Equipo
-        async function renderTeam() {
-            const md = await loadMarkdown('equipo');
-            if (!md) return;
-            
-            const members = parseTeam(md);
+        function renderTeam() {
+            const members = parseTeam(content.equipo);
             
             const html = members.map(m => `
                 <div class="team-card">
@@ -902,29 +1069,20 @@
         }
 
         // Renderizar Investigación
-        async function renderResearch() {
-            const md = await loadMarkdown('investigacion');
-            if (!md) return;
-            
-            const html = marked.parse(md);
+        function renderResearch() {
+            const html = marked.parse(content.investigacion);
             document.getElementById('research-content').innerHTML = html;
         }
 
         // Renderizar Multimedia
-        async function renderMultimedia() {
-            const md = await loadMarkdown('multimedia');
-            if (!md) return;
-            
-            const html = marked.parse(md);
+        function renderMultimedia() {
+            const html = marked.parse(content.multimedia);
             document.getElementById('multimedia-content').innerHTML = html;
         }
 
         // Renderizar Stats
-        async function renderStats() {
-            const md = await loadMarkdown('impacto');
-            if (!md) return;
-            
-            const stats = parseStats(md);
+        function renderStats() {
+            const stats = parseStats(content.impacto);
             
             const html = stats.map(s => `
                 <div class="stat-item">
@@ -937,11 +1095,8 @@
         }
 
         // Renderizar Contacto
-        async function renderContact() {
-            const md = await loadMarkdown('contacto');
-            if (!md) return;
-            
-            const lines = md.split('\n').filter(l => l.trim());
+        function renderContact() {
+            const lines = content.contacto.split('\n').filter(l => l.trim());
             const title = lines[0].replace(/^# /, '');
             const description = lines[2];
             
@@ -953,15 +1108,15 @@
         }
 
         // Inicializar todo el contenido
-        async function initContent() {
-            await renderHero();
-            await renderServices();
-            await renderProjects();
-            await renderTeam();
-            await renderResearch();
-            await renderMultimedia();
-            await renderStats();
-            await renderContact();
+        function initContent() {
+            renderHero();
+            renderServices();
+            renderProjects();
+            renderTeam();
+            renderResearch();
+            renderMultimedia();
+            renderStats();
+            renderContact();
         }
 
         // Funciones de scroll
@@ -997,8 +1152,8 @@
         }, observerOptions);
 
         // Iniciar cuando el DOM esté listo
-        document.addEventListener('DOMContentLoaded', async () => {
-            await initContent();
+        document.addEventListener('DOMContentLoaded', () => {
+            initContent();
             
             // Aplicar animaciones a las tarjetas
             setTimeout(() => {
