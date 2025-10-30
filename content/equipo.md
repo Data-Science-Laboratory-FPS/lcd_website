@@ -20,7 +20,7 @@ Ex-Google AI. Experta en despliegue de modelos a escala. Arquitectura de sistema
 
 ---
 
-### 👨‍💻 Javier Torres
+### 👨‍💻 Sara Díaz
 **Data Engineer**
 
 Especialista en Big Data y pipelines de datos. Certificado en AWS y Azure. 8+ años optimizando infraestructura de datos.
