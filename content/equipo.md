@@ -20,12 +20,12 @@ Ex-Google AI. Experta en despliegue de modelos a escala. Arquitectura de sistema
 
 ---
 
-### 👨‍💻 Javier Torres
+### 👨‍💻 Sara Díaz Real
 **Data Engineer**
 
-Especialista en Big Data y pipelines de datos. Certificado en AWS y Azure. 8+ años optimizando infraestructura de datos.
+Doble grado en Física y Matemáticas. Máster en Lógica, Computación e Inteligencia Artificial.
 
-*LinkedIn • GitHub*
+www.linkedin.com/in/sara-diaz-real-964606203
 
 ---
 
