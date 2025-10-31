@@ -1,21 +1,16 @@
-# Nuestros Servicios
+# Our Services
 
 ## Soluciones end-to-end en ciencia de datos
 
-### 🧠 Machine Learning
-Modelos predictivos personalizados que aprenden de tus datos para automatizar decisiones y detectar patrones ocultos.
+### 🧠 Support for Research and Innovation (R&I) - Information Engineering and Data Science 
+Knowledge generation through Big Data and AI tools applied to research and innovation projects.
+Addressing clinical questions and creating healthcare databases that support scientific publications, while facilitating collaborative access to information. 
 
-### 📊 Análisis Avanzado
-Exploramos tus datos en profundidad para extraer insights accionables y visualizaciones impactantes.
+### ✅ EVIAS - Evaluation and Validation of AI Algorithms for Health
+Evaluation of healthcare AI solutions aimed at both the Andalusian Health Service (SAS) and external public and private entities.
+The evaluation includes external algorithm validation using local data and data science methodologies, as well as a comprehensive technical 
+and clinical assessment carried out by experts from the Andalusian Public Health System (SSPA).
 
-### 🤖 IA Generativa
-Implementamos modelos de lenguaje y visión por computadora para automatizar procesos creativos y analíticos.
-
-### ⚡ Big Data
-Procesamiento escalable de grandes volúmenes de datos con tecnologías distribuidas y en tiempo real.
-
-### 🎯 Optimización
-Algoritmos de optimización para maximizar recursos, reducir costos y mejorar la eficiencia operativa.
-
-### 🔮 Forecasting
-Predicción de tendencias y series temporales para anticiparte al mercado y planificar estratégicamente.
+### 📊 PRAETORIA - Andalusian Platform for the Development of Clinical Decision Support Systems (CDSS)
+Development of AI-based CDSS focused on specific use cases, promoting tools that enhance the quality of patient care and optimize resource 
+management for diagnosis, prognosis, treatment, and monitoring in healthcare settings.
