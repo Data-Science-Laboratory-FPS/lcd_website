@@ -622,6 +622,23 @@
                 grid-template-columns: 1fr;
             }
         }
+                    
+            .team-links {
+                margin-top: 1rem;
+                font-size: 0.95rem;
+            }
+        
+            .team-link {
+                color: #cfd8dc; /* gris claro visible */
+                text-decoration: none;
+                font-weight: 500;
+                transition: color 0.2s ease;
+            }
+        
+            .team-link:hover {
+                color: #ffffff; /* blanco al pasar el ratón */
+                text-decoration: underline;
+            }
     </style>
 </head>
 <body>
@@ -653,8 +670,8 @@
     </section>
 
     <section class="section" id="servicios">
-        <h2 class="section-title">Nuestros Servicios</h2>
-        <p class="section-subtitle">Soluciones end-to-end en ciencia de datos</p>
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">End-to-end solutions in data science</p>
         <div class="services-grid" id="services-grid"><div class="loading">Cargando servicios...</div></div>
     </section>
 
@@ -797,11 +814,17 @@
                 const emoji = titleLine.match(/^[^\s]+/)[0];
                 const name = titleLine.replace(/^[^\s]+\s+/, '');
                 const role = lines[1].replace(/^\*\*|\*\*$/g, '');
-                const bio = lines[3];
                 
-                members.push({ emoji, name, role, bio });
+                // Detect links (Markdown links start with *[)
+                const linkIndex = lines.findIndex(l => l.trim().startsWith('*[') || l.trim().startsWith('*http'));
+                const bioLines = linkIndex > -1 ? lines.slice(2, linkIndex) : lines.slice(2);
+                const bio = bioLines.join(' ');
+                
+                const links = linkIndex > -1 ? lines[linkIndex] : '';
+                
+                members.push({ emoji, name, role, bio, links });
             });
-
+        
             return members;
         }
 
@@ -889,18 +912,23 @@
         async function renderTeam() {
             const md = await loadMarkdown('equipo');
             if (!md) return;
-            
+        
             const members = parseTeam(md);
-            
+        
             const html = members.map(m => `
                 <div class="team-card">
                     <div class="team-avatar">${m.emoji}</div>
                     <h3>${m.name}</h3>
                     <div class="team-role">${m.role}</div>
                     <p>${m.bio}</p>
+                    <div class="team-links">
+                        ${marked
+                            .parse(m.links || '')
+                            .replaceAll('<a ', '<a target="_blank" rel="noopener noreferrer" class="team-link" ')}
+                    </div>
                 </div>
             `).join('');
-
+        
             document.getElementById('team-grid').innerHTML = html;
         }
 
