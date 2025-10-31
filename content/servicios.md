@@ -7,6 +7,9 @@ Knowledge generation through Big Data and AI tools applied to research and innov
 Addressing clinical questions and creating healthcare databases that support scientific publications,<br>
 while facilitating collaborative access to information.
 
+### 🧠 Support for Research and Innovation (R&I) - Information Engineering and Data Science
+Knowledge generation through Big Data and AI tools applied to research and innovation projects. Addressing clinical questions and creating healthcare databases that support scientific publications, while facilitating collaborative access to information.
+
 ### ✅ EVIAS - Evaluation and Validation of AI Algorithms for Health
 Evaluation of healthcare AI solutions aimed at both the Andalusian Health Service (SAS) and external public and private entities.<br>
 The evaluation includes external algorithm validation using local data and data science methodologies, as well as a comprehensive<br>
