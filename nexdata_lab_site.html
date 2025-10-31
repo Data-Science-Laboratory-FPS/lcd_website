@@ -930,11 +930,14 @@ Agenda una consultoría gratuita y descubre cómo la ciencia de datos puede impu
                     const titleLine = lines[0].trim();
                     const icon = titleLine.match(/^[^\s]+/)[0];
                     const title = titleLine.replace(/^[^\s]+\s+/, '');
-                    const description = lines[1];
+                    
+                    // 🔧 FIX: combine all description lines, not just the first one
+                    const description = lines.slice(1).join(' ');
+                    
                     services.push({ icon, title, description });
                 }
             });
-
+        
             return services;
         }
 
