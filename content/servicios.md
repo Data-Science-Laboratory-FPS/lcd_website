@@ -13,6 +13,5 @@ The evaluation includes external algorithm validation using local data and data 
 technical and clinical assessment carried out by experts from the Andalusian Public Health System (SSPA).
 
 ### 📊 PRAETORIA - Andalusian Platform for the Development of Clinical Decision Support Systems (CDSS)
-Development of AI-based CDSS focused on specific use cases, promoting tools that enhance the quality of<br> 
-patient care and optimize resource management for diagnosis, prognosis, treatment, and monitoring in healthcare settings.
+Development of AI-based CDSS focused on specific use cases, promoting tools that enhance the quality of patient care and optimize resource management for diagnosis, prognosis, treatment, and monitoring in healthcare settings.
 

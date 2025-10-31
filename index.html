@@ -751,11 +751,14 @@
                     const titleLine = lines[0].trim();
                     const icon = titleLine.match(/^[^\s]+/)[0];
                     const title = titleLine.replace(/^[^\s]+\s+/, '');
-                    const description = lines[1];
+                    
+                    // Combine all following lines into one description
+                    const description = lines.slice(1).join(' ');
+                    
                     services.push({ icon, title, description });
                 }
             });
-
+        
             return services;
         }
 
