@@ -34,9 +34,7 @@ Especialista en Big Data y pipelines de datos. Certificado en AWS y Azure. 8+ a�
 
 Biotechnologist and MSc in Biomedical Research. Specialized in health data analysis and predictive modeling using Big Data and AI tools applied to biomedical and clinical research.
 
-*[LinkedIn](https://www.linkedin.com/in/%C3%A1lvaro-ritor%C3%A9-hidalgo-22414410b/?locale=en_US) • 
-[ORCID](https://orcid.org/0000-0002-7292-9842) • 
-[GitHub](https://github.com/alvarorh27)*
+*[LinkedIn](https://www.linkedin.com/in/%C3%A1lvaro-ritor%C3%A9-hidalgo-22414410b/?locale=en_US) • [ORCID](https://orcid.org/0000-0002-7292-9842) • [GitHub](https://github.com/alvarorh27)*
 
 ---
 
