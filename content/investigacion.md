@@ -5,176 +5,97 @@
 ### 📄 Published Papers
 
 **“Temporal Trends in Critical Care Outcomes in U.S. Minority-Serving Hospitals”**  
-*Am J Respir Crit Care Med • 2020 • Mendoza, C., Rodríguez, A.*  
-[Read paper →](https://doi.org/10.1164/rccm.201903-0623OC)  
-
----
-
-**“Machine Learning Models with Preoperative Risk Factors and Intraoperative Hypotension Parameters Predict Mortality After Cardiac Surgery”**  
-*J Vasc Anesth (?) • 2020 • Martínez, L., López Sánchez, M.*  
-[Read paper →](https://doi.org/10.1053/j.jvca.2020.07.029)  
-
----
+*Am J Respir Crit Care Med • 2020 • Danziger, J., Armengol de la Hoz, M. Á., Li, W., Komorowski, M., Deliberato, R. O., Rush, B. N. M., Mukamal, K. J., Celi, L., Badawi, O.*  
+[Read paper →](https://doi.org/10.1164/rccm.201903-0623OC)
 
 **“Incidence and Risk Model Development for Severe Tachypnea Following Terminal Extubation”**  
-*Chest • 2020 • González, M., Torres, J.*  
-[Read paper →](#)  
+*Chest • 2020 • Fehnel, C. R., Armengol de la Hoz, M., Celi, L. A., Campbell, M. L., Hanafy, K., Nozari, A., White, D. B., Mitchell, S. L.*  
+[Read paper →](https://doi.org/10.1016/j.chest.2020.04.027)
 
----
+**“Machine Learning Models with Preoperative Risk Factors and Intraoperative Hypotension Parameters Predict Mortality After Cardiac Surgery”**  
+*J Cardiothorac Vasc Anesth • 2020 • Bento, M. P., Armengol de la Hoz, M., Rangasamy, V., Subramaniam, B.*  
 
 **“Use of Do-Not-Resuscitate Orders for Critically Ill Patients with ESKD”**  
-*XXXX • 2021 • Díaz-Real, S., Armengol, M.A.*  
-[Read paper →](#)  
+*J Am Soc Nephrol • 2020 • Danziger, J., Armengol de la Hoz, M. Á., Celi, L. A., Cohen, R. A., Mukamal, K. J.*  
+[Read paper →](https://doi.org/10.1681/ASN.2020081160) :contentReference[oaicite:0]{index=0}
 
----
-
-**“Association of Chloride Ion and Sodium-Chloride Difference with Acute Kidney Injury and Mortality in Critically Ill Patients”**  
-*XXXX • 2021 • Ritoré, Á., Serrano, Á.*  
-[Read paper →](#)  
-
----
+**“Association of Chloride Ion and Sodium-Chloride Difference With Acute Kidney Injury and Mortality in Critically Ill Patients”**  
+*Crit Care Explorations • 2020 • Kimura, S., Armengol de la Hoz, M. Á., Raines, N. H., Celi, L. A.*  
+[Read paper →](https://doi.org/10.1097/CCE.0000000000000247) :contentReference[oaicite:1]{index=1}
 
 **“Metabolic Cost of Exercise Initiation in Patients With Heart Failure With Preserved Ejection Fraction vs Community-Dwelling Adults”**  
-*XXXX • 2022 • Frid, A., López Sánchez, M.*  
-[Read paper →](#)  
-
----
+*JAMA Cardiol • 2021 • Shah, R. V., Schoenike, M. W., Armengol de la Hoz, M. Á., Cunningham, T. F., Blodgett, J. B., Tanguay, M., Sbarbaro, J. A., Nayor, M., Rouvina, J., Kowal, A., Houstis, N., Baggish, A. L., Ho, J. E., Hardin, C., Malhotra, R., Larson, M. G., Vasan, R. S., Lewis, G. D.*  
+[Read paper →](https://doi.org/10.1001/jamacardio.2021.0292) :contentReference[oaicite:2]{index=2}
 
 **“Can a Low-Cost Exercise Monitor Provide Useful Heart Rate Monitoring for Use in Low-Resource Emergency Departments?”**  
-*XXXX • 2022 • Ritoré, Á., Serrano, Á.*  
-[Read paper →](#)  
-
----
+*Clin Exp Emerg Med • 2021 • O’Mara, T. A., Armengol de la Hoz, M., Mechanic, O. J., Dagan, A.*  
 
 **“Systematic Review and Comparison of Publicly Available ICU Data Sets — A Decision Guide for Clinicians and Data Scientists”**  
-*XXXX • 2023 • López Sánchez, M., Armengol, M.A.*  
-[Read paper →](#)  
+*Crit Care Med • 2021 • Sauer, C. M., Dam, T. A., Celi, L. A., Faltys, M., Armengol de la Hoz, M. A., Adhikari, L., Ziesemer, K. A., Girbes, A., Thoral, P. J., Elbers, P.*  
 
----
-
-**“A Novel Vascular Leak Index Identifies Sepsis Patients with a Higher Risk for In-Hospital Death and Fluid Accumulation”**  
-*XXXX • 2023 • Díaz-Real, S., Frid, A.*  
-[Read paper →](#)  
-
----
+**“A Novel Vascular Leak Index Identifies Sepsis Patients With a Higher Risk for In-Hospital Death and Fluid Accumulation”**  
+*Crit Care • 2021 • Chandra, J., Armengol de la Hoz, M. A., Lee, G., Lee, A., Thoral, P., Elbers, P., Lee, H-C., Munger, J. S., Celi, L. A., Kaufman, D. A.*  
 
 **“Sex-Specific Differences in Ventricular Remodeling and Response After Cardiac Resynchronization Therapy”**  
-*XXXX • 2023 • Serrano, Á., Ritoré, Á.*  
-[Read paper →](#)  
+*Am J Cardiol • 2021 • Varrias, D., Armengol de la Hoz, M., Zhao, M., Pujol, M., Orencole, M., Venkata, V. S., Zordok, M. A., Luong, K., Rana, F., Lau, E., Ibrahim, N., Newton-Cheh, C., Heist, K., Singh, J., Das, S.*  
 
----
-
-**“Intraoperative Hypotension and Acute Kidney Injury, Stroke, and Mortality during and outside Cardiopulmonary Bypass: A Retrospective Observational Cohort Study”**  
-*XXXX • 2024 • López Sánchez, M., Armengol, M.A.*  
-[Read paper →](#)  
-
----
+**“Intraoperative Hypotension and Acute Kidney Injury, Stroke, and Mortality During and Outside Cardiopulmonary Bypass: A Retrospective Observational Cohort Study”**  
+*Anesthesiology • 2021 • Armengol de la Hoz, M. A., Rangasamy, V., Brenes Bastos, A., Xu, X., Novack, V., Saugel, B., Subramaniam, B.*  
 
 **“Operationalising Fairness in Medical Algorithms”**  
-*XXXX • 2024 • Frid, A., Díaz-Real, S.*  
-[Read paper →](#)  
+*BMJ Health & Care Informatics • 2021 • Parbhoo, S., Wawira Gichoya, J., Celi, L. A., Armengol de la Hoz, M. Á.*  
 
----
-
-**“Developing and Validating Multi-Modal Models for Mortality Prediction in COVID-19 Patients: A Multi-Center Retrospective Study”**  
-*XXXX • 2024 • Ritoré, Á., Serrano, Á.*  
-[Read paper →](#)  
-
----
+**“Developing and Validating Multi-Modal Models for Mortality Prediction in COVID-19 Patients: A Multi-center Retrospective Study”**  
+*J Digit Imaging • 2021 • Wu, T.-Y., Armengol de la Hoz, M. Á., Kuo, P.-C., Paguio, J. A., Yao, J. S., Dee, E. C., Yeung, W., Jurado, J., Moulick, A., Milazzo, C., Peinado, P., Villares, P., Cubillo, A., Varona, J. F., Lee, H-C., Estirado, A., Castellano, J. M., Celi, L. A.*  
 
 **“Reporting Guideline for the Early-Stage Clinical Evaluation of Decision Support Systems Driven by Artificial Intelligence: DECIDE-AI”**  
-*XXXX • 2024 • López Sánchez, M., Armengol, M.A.*  
-[Read paper →](#)  
+*Nat Med • 2022 • Vasey, B., Nagendran, M., Campbell, B., Clifton, D. A., Collins, G. S., Denaxas, S., Denniston, A. K., Faes, L., Geerts, B., Ibrahim, M., Liu, X., Mateen, B. A., Mathur, P., McCradden, M. D., Morgan, L., Ordish, J., Rogers, C., Saria, S., Ting, D. S. W., Watkinson, P., Weber, W., Wheatstone, P., McCulloch, P.; DECIDE-AI expert group (Armengol de la Hoz, M. Á.)*  
 
----
-
-**“High Resolution Data Modifies Intensive Care Unit Dialysis Outcome Predictions as Compared with Low Resolution Administrative Data Set”**  
-*XXXX • 2024 • Díaz-Real, S., Frid, A.*  
-[Read paper →](#)  
-
----
+**“High Resolution Data Modifies Intensive Care Unit Dialysis Outcome Predictions as Compared With Low Resolution Administrative Data Set”**  
+*PLOS Dig Health • 2022 • Ziegler, J., Rush, B. N. M., Gottlieb, E. R., Celi, L. A., Armengol de la Hoz, M. Á.*  
 
 **“Hypotension and Cardiac Surgical Outcomes: Reply”**  
-*XXXX • 2025 • Ritoré, Á., Serrano, Á.*  
-[Read paper →](#)  
-
----
+*Anesthesiology • 2022 • Rangasamy, V., Armengol de la Hoz, M., Subramaniam, B.*  
 
 **“A Large-Scale Multicenter Retrospective Study on Nephrotoxicity Associated With Empiric Broad-Spectrum Antibiotics in Critically Ill Patients”**  
-*XXXX • 2025 • López Sánchez, M., Armengol, M.A.*  
-[Read paper →](#)  
+*Chest • 2022 • Chen, A. Y., Deng, C.-Y., Calvachi-Prieto, P., Armengol de la Hoz, M. Á., Khazi-Syed, A., Chen, C., Scurlock, C., Becker, C. D., Johnson, A. E. W., Celi, L. A., Dagan, A.*  
 
----
+**“PDSS: A Pharmacological Decision Support System for Diabetics Patients with COVID-19”**  
+*Stud Health Technol Inform • 2022 • Amaya-Rodriguez, I., Larburu, N., Rollán Martinez-Herrera, M., Rebescher, K., Macia, I., Armengol de la Hoz, M. A., Rubio-Escudero, C., Garin-Muga, A.*  
 
-**“PDSS: A Pharmacological Decision Support System for Diabetic Patients with COVID-19”**  
-*XXXX • 2025 • Frid, A., Díaz-Real, S.*  
-[Read paper →](#)  
+**“A Guide to Sharing Open Healthcare Data Under the General Data Protection Regulation”**  
+*Sci Data • 2023 • de Kok, J. W. T. M., Armengol de la Hoz, M. Á., de Jong, Y., Brokke, V., Elbers, P. W. G., Thoral, P., Castillejo, A., Trenor, T., Castellano, J. M., Bronchalo, A. E., Merz, T. M., Faltys, M.; Collaborator group; van der Horst, I. C. C., Xu, M., Celi, L. A., van Bussel, B. C. T., Borrat, X.*  
 
----
-
-**“A Guide to Sharing Open Healthcare Data under the General Data Protection Regulation”**  
-*XXXX • 2025 • Serrano, Á., Ritoré, Á.*  
-[Read paper →](#)  
-
----
-
-**“Predictors of Mechanical Ventilation and Mortality in Critically Ill Patients with COVID-19 Pneumonia”**  
-*XXXX • 2025 • López Sánchez, M., Armengol, M.A.*  
-[Read paper →](#)  
-
----
+**“Predictors of Mechanical Ventilation and Mortality in Critically Ill Patients With COVID-19 Pneumonia”**  
+*Med Intensiva • 2023 • Muñoz Lezcano, S., Armengol de la Hoz, M. Á., Corbi, A., López, F., Sánchez García, M., Núñez Reiz, A., Fariña González, T., Zlatkov, V. Y.*  
 
 **“Altered Consciousness Mediates the Effect of Hypernatremia, but Not Hyponatremia, on Mortality Among Patients Observed in the ICU”**  
-*XXXX • 2025 • Díaz-Real, S., Frid, A.*  
-[Read paper →](#)  
-
----
+*Int Care Med • 2023 • Armengol de la Hoz, M. Á., Hao, S., Raines, N. H., Celi, L. A., Sánchez-González, P., Gómez, E. J., Danziger, J.*  
 
 **“Predicting ICU Mortality in Acute Respiratory Distress Syndrome Patients Using Machine Learning: The Predicting Outcome and STratifiCation of severity in ARDS (POSTCARDS) Study”**  
-*XXXX • 2025 • Ritoré, Á., Serrano, Á.*  
-[Read paper →](#)  
-
----
+*Crit Care Med • 2024 • Villar, J., González-Martín, J. M., Hernández-González, J., Armengol de la Hoz, M. A., Fernández, C., Martín-Rodríguez, C., Mosteiro, F., Martínez, D., Sánchez-Ballesteros, J., Ferrando, C., Domínguez-Berrot, A. M., Añón, J. M., Parra, L., Montiel, R., Solano, R., Robaglia, D., Szakmany, T., Steyerberg, E. W., Slutsky, A. S.*  
 
 **“The Open Data Revolution: Enhancing Healthcare in Intensive Care Units”**  
-*XXXX • 2025 • López Sánchez, M., Armengol, M.A.*  
-[Read paper →](#)  
-
----
+*Med Intensiva (English Ed) • 2024 • Muñoz-Lezcano, S., de la Fuente, C., Estella, Á., Amaya-Villar, R., Puppo-Moreno, A. M., Armengol-de la Hoz, M. Á., Garnacho-Montero, J.*  
 
 **“The Role of Open Access Data in Democratizing Healthcare AI: A Pathway to Research Enhancement, Patient Well-Being and Treatment Equity in Andalusia, Spain”**  
-*XXXX • 2025 • Frid, A., Díaz-Real, S.*  
-[Read paper →](#)  
-
----
+*PLOS Dig Health • 2024 • Ritoré, Á., Jiménez, C., González, J. L., Rejón-Parrilla, J. C., Hervás, P., Toro, E., Parra-Calderón, C. L., Celi, L. A., Túnez, I., Armengol de la Hoz, M. Á.*  
 
 **“COVID Data for Shared Learning (CDSL): A Comprehensive, Multimodal COVID-19 Dataset from HM Hospitales”**  
-*XXXX • 2025 • Ritoré, Á., Serrano, Á.*  
-[Read paper →](#)  
-
----
+*PhysioNet • 2024 • Ritoré, Á., Oprescu, A. M., Estirado Bronchalo, A., Armengol de la Hoz, M. Á.*  
 
 **“Assessing COVID-19 Vaccine Effectiveness and Risk Factors for Severe Outcomes Through Machine Learning Techniques: A Real-World Data Study in Andalusia, Spain”**  
-*XXXX • 2025 • López Sánchez, M., Armengol, M.A.*  
-[Read paper →](#)  
+*J Epidemiol Glob Health • 2024 • Serrano-Ortiz, Á., Romero-Cabrera, J. L., Monserrat Villatoro, J., Cordero-Ramos, J., Ruiz-Montero, R., Ritoré, Á., Dopazo, J., del Diego Salas, J., García-Sánchez, V., Salcedo-Leal, I., Armengol de la Hoz, M. Á., Túnez, I., Guzmán, M. Á.*  
 
----
-
-**“Datos abiertos e inteligencia artificial: una ventana de oportunidad para pacientes sépticos en los servicios de urgencias”**  
-*XXXX • 2025 • Díaz-Real, S., Frid, A.*  
-[Read paper →](#)  
-
----
+**“Datos Abiertos e Inteligencia Artificial: Una Ventana de Oportunidad para Pacientes Sépticos en los Servicios de Urgencias”**  
+*Emergencias • 2024 • Estella, Á., Armengol de la Hoz, M. Á., González del Castillo, J., Grupo de trabajo INFURG-SEMES*  
 
 **“Bridging Generative AI and Healthcare Practice: Insights from the GenAI Health Hackathon at Hospital Clínic de Barcelona”**  
-*XXXX • 2025 • Ritoré, Á., Serrano, Á.*  
-[Read paper →](#)  
-
----
+*BMJ Health & Care Informatics • 2024 • Frid, S., Bassegoda, O., Camacho Mahamud, M. A., Sanjuan, G., Armengol de la Hoz, M. Á., Celi, L. A., Cano Franco, I., Anmella, G., Cuñat López, T., Arellano, A. L., Leguízamo-Martínez, L. M., Mezquita, L., Axcell Peñafiel P., Gallardo-Pizarro, A., González Colom, R., Renú Jornet, A., Bracons Cucó, G., Borrat Frigola, X.*  
 
 **“Toward Transparent Clinical Decision Support in the ICU: A Multi-Window, Model-Agnostic Explainability Approach for 72-Hour Mortality Prediction Using the eICU Collaborative Research Database”**  
-*XXXX • 2025 • López Sánchez, M., Armengol, M.A.*  
-[Read paper →](#)  
+*Med Intensiva • 2024 • Gallardo Gómez, D., Díaz, S., Quintero Sosa, J., Jiménez Vázquez, C., Ritoré-Hidalgo, Á., Gutiérrez-Pizarraya, A., Armengol de la Hoz, M. Á., Recuerda Núñez, M., Estella, Á.*  
+
 
 ---
 
