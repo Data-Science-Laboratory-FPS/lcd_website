@@ -39,7 +39,7 @@ Biotechnologist and MSc in Biomedical Research. Specialized in health data analy
 ### 👩‍💻 Macarena López Sánchez
 
 **Scientific Project Manager & Data Scientist**
-Bioinformatician with a PhD in Computational Science and extensive international experience in data science and AI for healthcare. Leads and develops projects that turn real-world health data into actionable data science for clinical innovation.
+PhD Bioinformatician applying data science and AI to transform real-world health data into clinical innovation.
 *[LinkedIn](www.linkedin.com/in/mlsanchez22) • [ORCID](https://orcid.org/0000-0002-6193-9498) • [GitHub](https://github.com/mlsanchez22)*
 
 ---
