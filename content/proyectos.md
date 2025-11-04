@@ -1,16 +1,8 @@
-# Proyectos
 
-## Casos de éxito que transformaron negocios
+### 🏦 ASSESS-DHT: Development & harmonisation of methodologies for assessing digital health technologies in Europe
+*[Web](https://assess-dht.eu/)*
 
-### 🏦 Sistema Predictivo de Fraude Bancario
-**Cliente:** Banco Nacional | **Industria:** Fintech
-
-Implementamos un modelo de detección de fraude en tiempo real que procesa 50K transacciones por segundo.
-
-**Resultados:**
-- 94% de precisión en detección
-- Reducción de 67% en fraudes
-- ROI del 340% en 6 meses
+The overarching objective of ASSESS DHT is to consolidate and streamline existing methods and tools for approval of innovative DHT and develop a new fit-for-purpose generic (overarching) health technology assessment (HTA) framework of Digital Health Technologies (DHTs), harmonised for Europe and aligned with the European Health Data Space (EHDS) Regulation proposal, but also catering for variability between settings, to respond to the methodological challenges with assessing DHTs, including their added value and health benefits for patients and the digital transformation of health systems.
 
 ---
 
