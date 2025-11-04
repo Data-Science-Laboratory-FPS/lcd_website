@@ -886,27 +886,29 @@
             document.getElementById('services-grid').innerHTML = html;
         }
 
-        // Renderizar Proyectos
+        // Render Projects
         async function renderProjects() {
-            const md = await loadMarkdown('proyectos');
+            const md = await loadMarkdown('projects');
             if (!md) return;
-            
+
             const projects = parseProjects(md);
-            
+
             const html = projects.map(p => `
                 <div class="project-card">
                     <h3>${p.icon} ${p.title}</h3>
+                    ${p.website ? `<a href="${p.website}" target="_blank" class="project-link">${p.website}</a>` : ''}
                     <div class="project-meta">${p.meta}</div>
                     <p>${p.description}</p>
-                    <div class="project-results">
-                        <strong>Resultados:</strong><br>
-                        ${p.results.map(r => `• ${r}`).join('<br>')}
+                    <div class="project-summary">
+                        <strong>Summary:</strong><br>
+                        ${p.summary ? p.summary : ''}
                     </div>
                 </div>
             `).join('');
 
             document.getElementById('projects-grid').innerHTML = html;
         }
+
 
         // Renderizar Equipo
         async function renderTeam() {
