@@ -2,6 +2,8 @@
 
 ## Las mentes detrás de la innovación
 
+---
+
 ### 👨‍💻 Álvaro Ritoré Hidalgo
 **Data Scientist**
 Biotechnologist and MSc in Biomedical Research. Specialized in health data analysis and predictive modeling using Big Data and AI tools applied to biomedical and clinical research.
