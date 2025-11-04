@@ -1,6 +1,4 @@
-# Equipo
 
-## Las mentes detrás de la innovación
 
 ---
 
