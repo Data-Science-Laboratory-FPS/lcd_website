@@ -3,7 +3,7 @@
 meta: 2022–2025 | Horizon Europe project
 website: https://assess-dht.eu
 description: The overarching objective of ASSESS DHT is to consolidate and streamline existing methods and tools for approval of innovative Digital Health Technologies (DHTs).
-summary: The project develops a harmonised European framework for evaluating DHTs, aligned with the European Health Data Space (EHDS) regulation proposal, addressing challenges in assessing their added value and benefits for patients and health systems.
+summary: The project develops a harmonised European framework for evaluating DHTs, aligned with the European Health Data Space (EHDS) regulation proposal.
 
 ---
 
@@ -11,6 +11,7 @@ summary: The project develops a harmonised European framework for evaluating DHT
 meta: 2022–2025 | Horizon Europe project
 website: https://assess-dht.eu
 description: The overarching objective of ASSESS DHT is to consolidate and streamline existing methods and tools for approval of innovative Digital Health Technologies (DHTs).
-summary: The project develops a harmonised European framework for evaluating DHTs, aligned with the European Health Data Space (EHDS) regulation proposal, addressing challenges in assessing their added value and benefits for patients and health systems.
+summary: The project develops a harmonised European framework for evaluating DHTs, aligned with the European Health Data Space (EHDS) regulation proposal.
 
 ---
+
