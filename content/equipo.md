@@ -2,6 +2,8 @@
 
 ## Las mentes detrás de la innovación
 
+---
+
 ### 👨‍💻 Dr. Miguel Ángel Armengol de la Hoz
 **Lead Data Scientist**
 PhD en Machine Learning por MIT. 10+ años desarrollando modelos predictivos para Fortune 500. Especialista en NLP y computer vision.
