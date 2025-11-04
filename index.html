@@ -782,27 +782,38 @@
         function parseProjects(md) {
             const projects = [];
             const blocks = md.split('---').filter(b => b.trim() && b.includes('###'));
-            
+    
             blocks.forEach(block => {
-                const lines = block.split('\n').filter(l => l.trim());
-                const titleLine = lines[0].replace(/^### /, '');
-                const icon = titleLine.match(/^[^\s]+/)[0];
-                const title = titleLine.replace(/^[^\s]+\s+/, '');
-                const meta = lines[1].replace(/^\*\*/, '').replace(/\*\*$/, '');
-                const description = lines[3];
-                
-                const results = [];
-                for (let i = 5; i < lines.length; i++) {
-                    if (lines[i].startsWith('-')) {
-                        results.push(lines[i].replace(/^- /, ''));
-                    }
-                }
-                
-                projects.push({ icon, title, meta, description, results });
+                const lines = block.split('\n').map(l => l.trim()).filter(l => l);
+
+        // Title and icon
+                const titleLine = lines.find(l => l.startsWith('###')) || '';
+                const iconMatch = titleLine.match(/^[#\s]*([\p{Emoji}\p{So}\p{Sk}\p{Sm}\p{Sc}])/u);
+                const icon = iconMatch ? iconMatch[1] : '';
+                const title = icon ? titleLine.replace(/^###\s*[\p{Emoji}\p{So}\p{Sk}\p{Sm}\p{Sc}]\s*/u, '').trim() 
+                                   : titleLine.replace(/^###\s*/, '').trim();
+
+        // Extract meta, website, description, summary
+                const metaLine = lines.find(l => l.toLowerCase().startsWith('meta:')) || '';
+                const websiteLine = lines.find(l => l.toLowerCase().startsWith('website:')) || '';
+                const descriptionIndex = lines.findIndex(l => l.toLowerCase().startsWith('description:'));
+                const summaryIndex = lines.findIndex(l => l.toLowerCase().startsWith('summary:'));
+
+                const meta = metaLine ? metaLine.replace(/^meta:\s*/i, '') : '';
+                const website = websiteLine ? websiteLine.replace(/^website:\s*/i, '') : '';
+                const description = descriptionIndex >= 0 
+                    ? lines[descriptionIndex].replace(/^description:\s*/i, '') 
+                    : '';
+                const summary = summaryIndex >= 0 
+                    ? lines.slice(summaryIndex).join(' ').replace(/^summary:\s*/i, '') 
+                    : '';
+
+                projects.push({ icon, title, meta, website, description, summary });
             });
 
             return projects;
         }
+
 
         function parseTeam(md) {
             const members = [];
