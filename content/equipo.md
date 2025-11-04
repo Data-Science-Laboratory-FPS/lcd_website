@@ -40,7 +40,7 @@ Biotechnologist and MSc in Biomedical Research. Specialized in health data analy
 
 **Scientific Project Manager & Data Scientist**
 PhD Bioinformatician applying data science and AI to transform real-world health data into clinical innovation.
-*[LinkedIn](www.linkedin.com/in/mlsanchez22) • [ORCID](https://orcid.org/0000-0002-6193-9498) • [GitHub](https://github.com/mlsanchez22)*
+*[LinkedIn](https://www.linkedin.com/in/mlsanchez22/) • [ORCID](https://orcid.org/0000-0002-6193-9498) • [GitHub](https://github.com/mlsanchez22)*
 
 ---
 
