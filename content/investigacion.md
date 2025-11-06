@@ -1,5 +1,3 @@
-# Research 
-## Contributing to the Advancement of Data Science 
 ### 📄 Published Papers 
 **“Toward Transparent Clinical Decision Support in the ICU: A Multi-Window, Model-Agnostic Explainability Approach for 72-Hour Mortality Prediction Using the eICU Collaborative Research Database”** 
 *Med Intensiva • 2024 • Gallardo Gómez, D., Díaz, S., Quintero Sosa, J., Jiménez Vázquez, C., Ritoré-Hidalgo, Á., Gutiérrez-Pizarraya, A., Armengol de la Hoz, M. Á., Recuerda Núñez, M., Estella, Á.* 
