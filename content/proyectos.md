@@ -12,6 +12,13 @@ summary: The BRIDGE project aims to boost health innovation in Europe by develop
 
 ---
 
+💉 RASCAL: Survival Analysis of COVID-19 Hospitalized Patients in Andalusian Hospitals
+
+meta: 2021–ongoing | Regional research project (Andalusia)
+summary: The RASCAL project performs survival analysis of patients hospitalized with COVID-19 across Andalusian hospitals. Using both clinical and epidemiological data, it explores key factors associated with in-hospital mortality, length of stay, and post-admission outcomes among COVID-positive patients. The study applies advanced statistical and machine learning survival models implemented in Python and R to identify risk patterns, improve predictive performance, and inform future health system preparedness and patient management strategies.
+
+---
+
 ### 🧠 EII: AI-driven clinical decision support for treatment response prediction in Inflammatory Bowel Disease
 
 meta: 2021–ongoing | Regional research project (Andalusia)
@@ -31,3 +38,5 @@ summary: SAIDIS aims to develop an intelligent alert system for the early detect
 meta: 2024–ongoing | Regional research project (Andalusia, CCUE)
 
 summary: The trIAje project applies advanced artificial intelligence techniques —including supervised learning, deep learning, and natural language processing— to optimize the telephone triage process of the Andalusian Emergency Coordination Center (CCUE). Using both structured data (triage questions) and unstructured data (free-text notes from emergency calls), the project develops predictive models to improve the accuracy of classifying critical emergencies such as cardiac arrest, respiratory distress, chest pain, and stroke. By identifying key predictive variables and evaluating model performance through sensitivity, specificity, and false positive/negative rates, trIAje aims to enhance clinical decision-making, reduce unnecessary alarms, and improve emergency care outcomes across the regional system.
+
+
