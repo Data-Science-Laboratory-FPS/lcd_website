@@ -19,7 +19,7 @@ Biotechnologist and MSc in Biomedical Research. Specialized in health data analy
 
 ### 👩‍💻 Sara Díaz Real
 **Data Scientist**
-**IMAGE:** https://data-science-laboratory-fps.github.io/lcd_website/images/foto_sara_diaz.jpg
+**IMAGE:** [https://data-science-laboratory-fps.github.io/lcd_website/images/foto_sara_diaz.jpg](https://avatars.githubusercontent.com/u/9919?v=4)
 Double degree in Physics and Mathematics. MSc in Logic, Computing and Artificial Intelligence. Specialised in data analysis and the creation of predictive models using statistical tools, Big Data and AI.
 *[LinkedIn](https://www.linkedin.com/in/sara-diaz-real-964606203/) • [ORCID](https://orcid.org/0000-0001-9468-3786) • [GitHub](https://github.com/saradiazr11)*
 
