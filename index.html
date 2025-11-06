@@ -397,6 +397,14 @@
             align-items: center;
             justify-content: center;
             font-size: 3rem;
+            overflow: hidden; /* ← AÑADE ESTO */
+        }
+
+        .team-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
         }
 
         .team-card h3 {
@@ -940,7 +948,7 @@
                 <div class="team-card">
                     <div class="team-avatar">
                         ${m.image 
-                            ? `<img src="${m.image}" alt="${m.name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">` 
+                            ? `<img src="${m.image}" alt="${m.name}">` 
                             : m.emoji}
                     </div>
                     <h3>${m.name}</h3>
