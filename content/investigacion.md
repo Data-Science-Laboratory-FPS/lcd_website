@@ -3,7 +3,7 @@
 ## Contributing to the Advancement of Data Science
 
 ### 📄 Published Papers
-
+```
 “Toward Transparent Clinical Decision Support in the ICU: A Multi-Window, Model-Agnostic Explainability Approach for 72-Hour Mortality Prediction Using the eICU Collaborative Research Database”  
 Med Intensiva • 2024 • Gallardo Gómez, D., Díaz, S., Quintero Sosa, J., Jiménez Vázquez, C., Ritoré-Hidalgo, Á., Gutiérrez-Pizarraya, A., Armengol de la Hoz, M. Á., Recuerda Núñez, M., Estella, Á.  
 [Read paper →](https://doi.org/)
@@ -119,8 +119,7 @@ Chest • 2020 • Fehnel, C. R., Armengol de la Hoz, M., Celi, L. A., Campbell,
 “Temporal Trends in Critical Care Outcomes in U.S. Minority-Serving Hospitals”  
 Am J Respir Crit Care Med • 2020 • Danziger, J., Armengol de la Hoz, M. Á., Li, W., Komorowski, M., Deliberato, R. O., Rush, B. N. M., Mukamal, K. J., Celi, L., Badawi, O.  
 [Read paper →](https://doi.org/10.1164/rccm.201903-0623OC)
-
-
+```
 ---
 <!--
 
