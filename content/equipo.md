@@ -5,7 +5,7 @@
 ### 👨‍💻 Dr. Miguel Ángel Armengol de la Hoz
 **Lead Data Scientist**
 **IMAGE:** https://raw.githubusercontent.com/Data-Science-Laboratory-FPS/lcd_website/main/images/fota_miguelangel.jpg
-PhD en Machine Learning por MIT. 10+ años desarrollando modelos predictivos para Fortune 500. Especialista en NLP y computer vision.
+PhD en Machine Learning por MIT. 10+ años desarrollando modelos predictivos para Fortune 500. Especialista en NLP y computer vision. Doc
 
 *LinkedIn • GitHub • Scholar*
 
