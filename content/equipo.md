@@ -19,7 +19,7 @@ Biotechnologist and MSc in Biomedical Research. Specialized in health data analy
 
 ### 👩‍💻 Sara Díaz Real
 **Data Scientist**
-**IMAGE:** https://raw.githubusercontent.com/Data-Science-Laboratory-FPS/lcd_website/main/images/fota_sara_diaz.jpg
+**IMAGE:** https://raw.githubusercontent.com/Data-Science-Laboratory-FPS/lcd_website/main/images/foto_sara_diaz.jpg
 Double degree in Physics and Mathematics. MSc in Logic, Computing and Artificial Intelligence. Specialised in data analysis and the creation of predictive models using statistical tools, Big Data and AI.
 *[LinkedIn](https://www.linkedin.com/in/sara-diaz-real-964606203/) • [ORCID](https://orcid.org/0000-0001-9468-3786) • [GitHub](https://github.com/saradiazr11)*
 
@@ -27,7 +27,7 @@ Double degree in Physics and Mathematics. MSc in Logic, Computing and Artificial
 
 ### 👨‍💻 Ángel Serrano Alarcón
 **Biomedical Engineer**
-**IMAGE:** https://raw.githubusercontent.com/Data-Science-Laboratory-FPS/lcd_website/main/images/fota_angel.jpg
+**IMAGE:** https://raw.githubusercontent.com/Data-Science-Laboratory-FPS/lcd_website/main/images/foto_angel.jpg
 Degree in Biomedical Engineering. MSc in Software Engineering: Data, Cloud and IT Management. Specialised in clinical data analysis and the creation of predictive models using AI.
 *[LinkedIn](https://www.linkedin.com/in/angserala/) • [ORCID](https://orcid.org/0000-0003-0841-4382) • [GitHub](https://github.com/saroalre)*
 
