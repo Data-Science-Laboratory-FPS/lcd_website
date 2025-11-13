@@ -26,10 +26,10 @@ Double degree in Physics and Mathematics. MSc in Logic, Computing and Artificial
 ---
 
 ### 👨‍💻 Ángel Serrano Alarcón
-
-**Scientific Project Manager & Data Scientist**
-PhD Bioinformatician applying data science and AI to transform real-world health data into clinical innovation.
-*[LinkedIn](https://www.linkedin.com/in/mlsanchez22/) • [ORCID](https://orcid.org/0000-0002-6193-9498) • [GitHub](https://github.com/mlsanchez22)*
+**Biomedical Engineer**
+**IMAGE:** https://raw.githubusercontent.com/Data-Science-Laboratory-FPS/lcd_website/main/images/fota_angel.jpg
+Degree in Biomedical Engineering. MSc in Software Engineering: Data, Cloud and IT Management. Specialised in clinical data analysis and the creation of predictive models using AI.
+*[LinkedIn](https://www.linkedin.com/in/angserala/) • [ORCID](https://orcid.org/0000-0003-0841-4382) • [GitHub](https://github.com/saroalre)*
 
 ---
 
