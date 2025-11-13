@@ -6,18 +6,6 @@
     <title>NexData Lab - Ciencia de Datos que Transforma</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.0/marked.min.js"></script>
     <style>
-        :root {
-            --verde-principal: #007932;    /* Pantone 356 C */
-            --verde-acento: #368f3f;       /* Pantone 7740 C */
-            --teal: #00707B;               /* Pantone 322 C */
-            --negro: #2e2925;              /* Pantone Black */
-            --gris-oscuro: #555559;        /* Cool Gray 11 C */
-            --gris-medio: #b9b9ba;         /* Cool Gray 7 C */
-            --gris-claro: #c9c9c9;         /* Cool Gray 3 C */
-            --blanco: #ffffff;
-            --fondo-alterno: #f8f8f8;
-        }
-
         * {
             margin: 0;
             padding: 0;
@@ -26,8 +14,8 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: var(--blanco);
-            color: var(--negro);
+            background: #0a0f0a;
+            color: #e8f5e9;
             overflow-x: hidden;
         }
 
@@ -38,32 +26,32 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            background: radial-gradient(ellipse at 20% 30%, rgba(0, 121, 50, 0.02) 0%, transparent 50%),
-                        radial-gradient(ellipse at 80% 70%, rgba(54, 143, 63, 0.02) 0%, transparent 50%);
+            background: radial-gradient(ellipse at 20% 30%, rgba(0, 230, 118, 0.15) 0%, transparent 50%),
+                        radial-gradient(ellipse at 80% 70%, rgba(102, 187, 106, 0.12) 0%, transparent 50%),
+                        radial-gradient(ellipse at 50% 50%, rgba(27, 94, 32, 0.1) 0%, transparent 70%);
         }
 
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.5rem 5%;
+            padding: 2rem 5%;
             position: fixed;
             width: 100%;
             backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.95);
-            border-bottom: 1px solid var(--gris-claro);
+            background: rgba(10, 15, 10, 0.7);
+            border-bottom: 1px solid rgba(0, 230, 118, 0.1);
             z-index: 1000;
             transition: all 0.3s ease;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
         }
 
         .logo {
             font-size: 1.5rem;
             font-weight: 800;
-            background: linear-gradient(135deg, var(--verde-principal), var(--verde-acento));
+            background: linear-gradient(135deg, #00e676, #66bb6a);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            letter-spacing: -0.5px;
+            letter-spacing: -1px;
         }
 
         .nav-links {
@@ -73,16 +61,15 @@
         }
 
         .nav-links a {
-            color: var(--gris-oscuro);
+            color: #a5d6a7;
             text-decoration: none;
             font-weight: 500;
-            font-size: 0.95rem;
             transition: all 0.3s ease;
             position: relative;
         }
 
         .nav-links a:hover {
-            color: var(--verde-acento);
+            color: #00e676;
         }
 
         .nav-links a::after {
@@ -92,7 +79,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--verde-acento);
+            background: #00e676;
             transition: width 0.3s ease;
         }
 
@@ -116,28 +103,28 @@
 
         .hero-badge {
             display: inline-block;
-            padding: 0.6rem 1.5rem;
-            background: rgba(0, 121, 50, 0.08);
-            border: 1px solid rgba(0, 121, 50, 0.2);
+            padding: 0.5rem 1.5rem;
+            background: rgba(0, 230, 118, 0.1);
+            border: 1px solid rgba(0, 230, 118, 0.3);
             border-radius: 50px;
-            color: var(--verde-principal);
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
+            color: #00e676;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
             animation: float 3s ease-in-out infinite;
         }
 
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-8px); }
+            50% { transform: translateY(-10px); }
         }
 
         h1 {
             font-size: 4rem;
             line-height: 1.1;
             margin-bottom: 1.5rem;
-            color: var(--negro);
-            font-weight: 800;
+            background: linear-gradient(135deg, #e8f5e9, #00e676, #66bb6a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             animation: fadeInUp 0.8s ease;
         }
 
@@ -153,10 +140,10 @@
         }
 
         .hero-description {
-            font-size: 1.25rem;
-            color: var(--gris-oscuro);
+            font-size: 1.3rem;
+            color: #a5d6a7;
             margin-bottom: 2.5rem;
-            line-height: 1.7;
+            line-height: 1.6;
             animation: fadeInUp 0.8s ease 0.2s backwards;
         }
 
@@ -170,7 +157,7 @@
             padding: 1rem 2.5rem;
             border: none;
             border-radius: 12px;
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -179,25 +166,25 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--verde-principal), var(--verde-acento));
-            color: var(--blanco);
-            box-shadow: 0 4px 20px rgba(0, 121, 50, 0.25);
+            background: linear-gradient(135deg, #00e676, #66bb6a);
+            color: #0a0f0a;
+            box-shadow: 0 10px 30px rgba(0, 230, 118, 0.3);
         }
 
         .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 30px rgba(0, 121, 50, 0.35);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 230, 118, 0.4);
         }
 
         .btn-secondary {
-            background: var(--blanco);
-            color: var(--verde-principal);
-            border: 2px solid var(--gris-medio);
+            background: rgba(0, 230, 118, 0.1);
+            color: #00e676;
+            border: 2px solid rgba(0, 230, 118, 0.3);
         }
 
         .btn-secondary:hover {
-            background: var(--fondo-alterno);
-            border-color: var(--verde-acento);
+            background: rgba(0, 230, 118, 0.2);
+            border-color: #00e676;
         }
 
         .hero-visual {
@@ -208,23 +195,18 @@
 
         .data-card {
             position: absolute;
-            background: var(--blanco);
-            border: 1px solid var(--gris-medio);
+            background: rgba(13, 25, 13, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 230, 118, 0.2);
             border-radius: 20px;
             padding: 1.5rem;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 20px 60px rgba(0, 230, 118, 0.1);
             animation: floatCard 4s ease-in-out infinite;
-            transition: all 0.3s ease;
-        }
-
-        .data-card:hover {
-            box-shadow: 0 15px 50px rgba(0, 121, 50, 0.15);
-            border-color: var(--verde-acento);
         }
 
         @keyframes floatCard {
             0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(1deg); }
+            50% { transform: translateY(-20px) rotate(2deg); }
         }
 
         .data-card:nth-child(1) {
@@ -246,25 +228,23 @@
         }
 
         .card-title {
-            color: var(--verde-principal);
-            font-size: 0.85rem;
+            color: #00e676;
+            font-size: 0.9rem;
             margin-bottom: 0.5rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            font-weight: 600;
         }
 
         .card-value {
             font-size: 2rem;
             font-weight: 700;
-            color: var(--negro);
+            color: #e8f5e9;
         }
 
         .card-trend {
-            color: var(--verde-acento);
+            color: #66bb6a;
             font-size: 0.9rem;
             margin-top: 0.3rem;
-            font-weight: 500;
         }
 
         .section {
@@ -272,22 +252,19 @@
             position: relative;
         }
 
-        .section:nth-child(even) {
-            background: var(--fondo-alterno);
-        }
-
         .section-title {
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 1rem;
-            color: var(--negro);
-            font-weight: 800;
+            background: linear-gradient(135deg, #e8f5e9, #00e676);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .section-subtitle {
             text-align: center;
-            color: var(--gris-oscuro);
-            font-size: 1.15rem;
+            color: #81c784;
+            font-size: 1.2rem;
             margin-bottom: 4rem;
         }
 
@@ -299,24 +276,25 @@
         }
 
         .service-card {
-            background: var(--blanco);
-            border: 1px solid var(--gris-medio);
-            border-radius: 20px;
+            background: rgba(13, 25, 13, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 230, 118, 0.2);
+            border-radius: 24px;
             padding: 2.5rem;
             transition: all 0.4s ease;
             cursor: pointer;
         }
 
         .service-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--verde-acento);
-            box-shadow: 0 15px 50px rgba(0, 121, 50, 0.12);
+            transform: translateY(-10px);
+            border-color: #00e676;
+            box-shadow: 0 20px 60px rgba(0, 230, 118, 0.2);
         }
 
         .service-icon {
             width: 60px;
             height: 60px;
-            background: linear-gradient(135deg, rgba(0, 121, 50, 0.1), rgba(54, 143, 63, 0.05));
+            background: linear-gradient(135deg, rgba(0, 230, 118, 0.2), rgba(102, 187, 106, 0.2));
             border-radius: 16px;
             display: flex;
             align-items: center;
@@ -326,15 +304,14 @@
         }
 
         .service-card h3 {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             margin-bottom: 1rem;
-            color: var(--negro);
-            font-weight: 700;
+            color: #e8f5e9;
         }
 
         .service-card p {
-            color: var(--gris-oscuro);
-            line-height: 1.7;
+            color: #a5d6a7;
+            line-height: 1.6;
         }
 
         .projects-grid {
@@ -345,61 +322,46 @@
         }
 
         .project-card {
-            background: var(--blanco);
-            border: 1px solid var(--gris-medio);
-            border-radius: 20px;
+            background: rgba(13, 25, 13, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 230, 118, 0.2);
+            border-radius: 24px;
             padding: 2.5rem;
             transition: all 0.4s ease;
         }
 
         .project-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--verde-acento);
-            box-shadow: 0 15px 50px rgba(0, 121, 50, 0.12);
+            transform: translateY(-10px);
+            border-color: #00e676;
+            box-shadow: 0 20px 60px rgba(0, 230, 118, 0.2);
         }
 
         .project-card h3 {
             font-size: 1.5rem;
-            color: var(--verde-principal);
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-        }
-
-        .project-link {
-            color: var(--teal);
-            font-size: 0.85rem;
-            text-decoration: none;
-            display: inline-block;
+            color: #00e676;
             margin-bottom: 1rem;
-            transition: color 0.3s ease;
-        }
-
-        .project-link:hover {
-            color: var(--verde-acento);
-            text-decoration: underline;
         }
 
         .project-meta {
-            color: var(--verde-acento);
+            color: #66bb6a;
             font-size: 0.9rem;
             margin-bottom: 1rem;
-            font-weight: 500;
         }
 
         .project-card p {
-            color: var(--gris-oscuro);
+            color: #a5d6a7;
             line-height: 1.6;
             margin-bottom: 1.5rem;
         }
 
-        .project-summary {
+        .project-results {
             margin-top: 1.5rem;
             padding-top: 1.5rem;
-            border-top: 1px solid var(--gris-claro);
+            border-top: 1px solid rgba(0, 230, 118, 0.1);
         }
 
-        .project-summary strong {
-            color: var(--negro);
+        .project-results strong {
+            color: #e8f5e9;
         }
 
         .team-grid {
@@ -410,31 +372,32 @@
         }
 
         .team-card {
-            background: var(--blanco);
-            border: 1px solid var(--gris-medio);
-            border-radius: 20px;
+            background: rgba(13, 25, 13, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 230, 118, 0.2);
+            border-radius: 24px;
             padding: 2rem;
             text-align: center;
             transition: all 0.4s ease;
         }
 
         .team-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--verde-acento);
-            box-shadow: 0 15px 50px rgba(0, 121, 50, 0.12);
+            transform: translateY(-10px);
+            border-color: #00e676;
+            box-shadow: 0 20px 60px rgba(0, 230, 118, 0.2);
         }
 
         .team-avatar {
             width: 120px;
             height: 120px;
             border-radius: 50%;
-            background: linear-gradient(135deg, rgba(0, 121, 50, 0.15), rgba(54, 143, 63, 0.1));
+            background: linear-gradient(135deg, rgba(0, 230, 118, 0.3), rgba(102, 187, 106, 0.3));
             margin: 0 auto 1.5rem;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 3rem;
-            overflow: hidden;
+            overflow: hidden; /* ← AÑADE ESTO */
         }
 
         .team-avatar img {
@@ -446,91 +409,106 @@
 
         .team-card h3 {
             font-size: 1.3rem;
-            color: var(--negro);
+            color: #e8f5e9;
             margin-bottom: 0.5rem;
-            font-weight: 700;
         }
 
         .team-role {
-            color: var(--verde-principal);
+            color: #00e676;
             font-size: 0.95rem;
             margin-bottom: 1rem;
             font-weight: 600;
         }
 
         .team-card p {
-            color: var(--gris-oscuro);
+            color: #a5d6a7;
             line-height: 1.6;
             font-size: 0.95rem;
         }
 
-        .team-links {
-            margin-top: 1rem;
-            font-size: 0.95rem;
+        .research-section {
+            margin-bottom: 3rem;
         }
 
-        .team-link {
-            color: var(--teal);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s ease;
+        .research-section h3 {
+            font-size: 1.8rem;
+            color: #00e676;
+            margin-bottom: 2rem;
         }
 
-        .team-link:hover {
-            color: var(--verde-acento);
-            text-decoration: underline;
+        .paper-item, .blog-item {
+            background: rgba(13, 25, 13, 0.4);
+            border: 1px solid rgba(0, 230, 118, 0.15);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
         }
 
-        .content-wrapper {
-            color: var(--gris-oscuro);
-            line-height: 1.8;
+        .paper-item:hover, .blog-item:hover {
+            border-color: #00e676;
+            transform: translateX(10px);
         }
 
-        .content-wrapper h2 {
-            color: var(--negro);
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .content-wrapper h3 {
-            color: var(--verde-principal);
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .content-wrapper h4 {
-            color: var(--negro);
-            margin-top: 1.5rem;
+        .paper-item h4, .blog-item h4 {
+            color: #e8f5e9;
+            font-size: 1.2rem;
             margin-bottom: 0.5rem;
-            font-weight: 600;
         }
 
-        .content-wrapper strong {
-            color: var(--negro);
+        .paper-meta {
+            color: #66bb6a;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
         }
 
-        .content-wrapper hr {
-            border: none;
-            border-top: 1px solid var(--gris-claro);
-            margin: 2rem 0;
+        .paper-item p, .blog-item p {
+            color: #a5d6a7;
+            line-height: 1.6;
         }
 
-        .content-wrapper a {
-            color: var(--teal);
-            text-decoration: none;
-            transition: color 0.3s ease;
+        .multimedia-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
         }
 
-        .content-wrapper a:hover {
-            color: var(--verde-acento);
-            text-decoration: underline;
+        .media-card {
+            background: rgba(13, 25, 13, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 230, 118, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.4s ease;
+        }
+
+        .media-card:hover {
+            transform: translateY(-5px);
+            border-color: #00e676;
+            box-shadow: 0 15px 40px rgba(0, 230, 118, 0.2);
+        }
+
+        .media-card h4 {
+            color: #e8f5e9;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .media-card p {
+            color: #a5d6a7;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .media-links {
+            color: #00e676;
+            font-size: 0.9rem;
         }
 
         .stats {
             padding: 6rem 5%;
             text-align: center;
-            background: linear-gradient(135deg, rgba(0, 121, 50, 0.03), rgba(54, 143, 63, 0.02));
         }
 
         .stats-grid {
@@ -547,16 +525,15 @@
         .stat-number {
             font-size: 3.5rem;
             font-weight: 800;
-            background: linear-gradient(135deg, var(--verde-principal), var(--verde-acento));
+            background: linear-gradient(135deg, #00e676, #66bb6a);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 0.5rem;
         }
 
         .stat-label {
-            color: var(--gris-oscuro);
-            font-size: 1rem;
-            font-weight: 500;
+            color: #81c784;
+            font-size: 1.1rem;
         }
 
         .cta-section {
@@ -566,48 +543,63 @@
         }
 
         .cta-box {
-            background: linear-gradient(135deg, var(--verde-principal), var(--verde-acento));
+            background: linear-gradient(135deg, rgba(0, 230, 118, 0.1), rgba(102, 187, 106, 0.05));
+            border: 2px solid rgba(0, 230, 118, 0.3);
             border-radius: 30px;
             padding: 4rem 3rem;
             max-width: 800px;
             margin: 0 auto;
-            box-shadow: 0 20px 60px rgba(0, 121, 50, 0.25);
+            backdrop-filter: blur(20px);
         }
 
         .cta-box h2 {
             font-size: 2.5rem;
             margin-bottom: 1.5rem;
-            color: var(--blanco);
-            font-weight: 800;
+            color: #e8f5e9;
         }
 
         .cta-box p {
             font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.95);
+            color: #a5d6a7;
             margin-bottom: 2rem;
-        }
-
-        .cta-box .btn {
-            background: var(--blanco);
-            color: var(--verde-principal);
-        }
-
-        .cta-box .btn:hover {
-            background: var(--fondo-alterno);
-            transform: translateY(-2px);
         }
 
         footer {
             padding: 3rem 5%;
-            border-top: 1px solid var(--gris-claro);
+            border-top: 1px solid rgba(0, 230, 118, 0.1);
             text-align: center;
-            color: var(--gris-oscuro);
-            background: var(--fondo-alterno);
+            color: #66bb6a;
+        }
+
+        .content-wrapper {
+            color: #a5d6a7;
+            line-height: 1.8;
+        }
+
+        .content-wrapper h2 {
+            color: #e8f5e9;
+            margin-bottom: 1rem;
+        }
+
+        .content-wrapper h3 {
+            color: #00e676;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .content-wrapper strong {
+            color: #e8f5e9;
+        }
+
+        .content-wrapper hr {
+            border: none;
+            border-top: 1px solid rgba(0, 230, 118, 0.2);
+            margin: 2rem 0;
         }
 
         .loading {
             text-align: center;
-            color: var(--gris-oscuro);
+            color: #66bb6a;
             padding: 2rem;
             font-size: 1.1rem;
         }
@@ -634,10 +626,27 @@
                 display: none;
             }
 
-            .projects-grid {
+            .projects-grid, .multimedia-grid {
                 grid-template-columns: 1fr;
             }
         }
+                    
+            .team-links {
+                margin-top: 1rem;
+                font-size: 0.95rem;
+            }
+        
+            .team-link {
+                color: #cfd8dc; /* gris claro visible */
+                text-decoration: none;
+                font-weight: 500;
+                transition: color 0.2s ease;
+            }
+        
+            .team-link:hover {
+                color: #ffffff; /* blanco al pasar el ratón */
+                text-decoration: underline;
+            }
     </style>
 </head>
 <body>
@@ -713,11 +722,13 @@
     </footer>
 
     <script>
+        // Configuración de marked
         marked.setOptions({
             breaks: true,
             gfm: true
         });
 
+        // Función para cargar archivos MD
         async function loadMarkdown(filename) {
             try {
                 const response = await fetch(`content/${filename}.md`);
@@ -729,12 +740,14 @@
             }
         }
 
+        // Función para parsear Hero
         function parseHeroContent(md) {
             const lines = md.split('\n');
             const title = lines[0].replace(/^# /, '');
             const badge = lines[2].replace(/^## /, '');
             const description = lines[4];
             
+            // Extraer métricas
             const metricsSection = md.split('### Métricas Destacadas')[1];
             const metrics = [];
             const metricBlocks = metricsSection.split('\n\n').filter(b => b.trim());
@@ -763,7 +776,10 @@
                     const titleLine = lines[0].trim();
                     const icon = titleLine.match(/^[^\s]+/)[0];
                     const title = titleLine.replace(/^[^\s]+\s+/, '');
+                    
+                    // Combine all following lines into one description
                     const description = lines.slice(1).join(' ');
+                    
                     services.push({ icon, title, description });
                 }
             });
@@ -778,12 +794,14 @@
             blocks.forEach(block => {
                 const lines = block.split('\n').map(l => l.trim()).filter(l => l);
 
+        // Title and icon
                 const titleLine = lines.find(l => l.startsWith('###')) || '';
                 const iconMatch = titleLine.match(/^[#\s]*([\p{Emoji}\p{So}\p{Sk}\p{Sm}\p{Sc}])/u);
                 const icon = iconMatch ? iconMatch[1] : '';
                 const title = icon ? titleLine.replace(/^###\s*[\p{Emoji}\p{So}\p{Sk}\p{Sm}\p{Sc}]\s*/u, '').trim() 
                                    : titleLine.replace(/^###\s*/, '').trim();
 
+        // Extract meta, website, description, summary
                 const metaLine = lines.find(l => l.toLowerCase().startsWith('meta:')) || '';
                 const websiteLine = lines.find(l => l.toLowerCase().startsWith('website:')) || '';
                 const descriptionIndex = lines.findIndex(l => l.toLowerCase().startsWith('description:'));
@@ -804,6 +822,7 @@
             return projects;
         }
 
+
         function parseTeam(md) {
             const members = [];
             const blocks = md.split('---').filter(b => b.trim() && b.includes('###'));
@@ -815,11 +834,14 @@
                 const name = titleLine.replace(/^[^\s]+\s+/, '');
                 const role = lines[1].replace(/^\*\*|\*\*$/g, '');
         
+                // Buscar si hay una línea con IMAGE:
                 const imageIndex = lines.findIndex(l => l.toUpperCase().includes('IMAGE:'));
                 const image = imageIndex > -1 ? lines[imageIndex].replace(/^\*\*IMAGE:\*\*\s*/i, '').trim() : null;
         
+                // Detect links
                 const linkIndex = lines.findIndex(l => l.trim().startsWith('*[') || l.trim().startsWith('*http'));
         
+                // Bio starts after role (and image if present), ends before links
                 const bioStartIndex = imageIndex > -1 ? imageIndex + 1 : 2;
                 const bioEndIndex = linkIndex > -1 ? linkIndex : lines.length;
                 const bioLines = lines.slice(bioStartIndex, bioEndIndex);
@@ -849,6 +871,7 @@
             return stats;
         }
 
+        // Renderizar Hero
         async function renderHero() {
             const md = await loadMarkdown('inicio');
             if (!md) return;
@@ -872,8 +895,185 @@
             document.getElementById('hero-metrics').innerHTML = metricsHTML;
         }
 
+        // Renderizar Servicios
         async function renderServices() {
             const md = await loadMarkdown('servicios');
             if (!md) return;
             
-            const services = parseServices(m
+            const services = parseServices(md);
+            
+            const html = services.map(s => `
+                <div class="service-card">
+                    <div class="service-icon">${s.icon}</div>
+                    <h3>${s.title}</h3>
+                    <p>${s.description}</p>
+                </div>
+            `).join('');
+
+            document.getElementById('services-grid').innerHTML = html;
+        }
+
+        // Render Projects
+        async function renderProjects() {
+            const md = await loadMarkdown('proyectos');
+            if (!md) return;
+
+            const projects = parseProjects(md);
+
+            const html = projects.map(p => `
+                <div class="project-card">
+                    <h3>${p.icon} ${p.title}</h3>
+                    ${p.website ? `<a href="${p.website}" target="_blank" class="project-link">${p.website}</a>` : ''}
+                    <div class="project-meta">${p.meta}</div>
+                    <p>${p.description}</p>
+                    <div class="project-summary">
+                        <strong>Summary:</strong><br>
+                        ${p.summary ? p.summary : ''}
+                    </div>
+                </div>
+            `).join('');
+
+            document.getElementById('projects-grid').innerHTML = html;
+        }
+
+
+        // Renderizar Equipo
+        async function renderTeam() {
+            const md = await loadMarkdown('equipo');
+            if (!md) return;
+
+            const members = parseTeam(md);
+
+            const html = members.map(m => `
+                <div class="team-card">
+                    <div class="team-avatar">
+                        ${m.image 
+                            ? `<img src="${m.image}" alt="${m.name}">` 
+                            : m.emoji}
+                    </div>
+                    <h3>${m.name}</h3>
+                    <div class="team-role">${m.role}</div>
+                    <p>${m.bio}</p>
+                    <div class="team-links">
+                        ${marked
+                            .parse(m.links || '')
+                            .replaceAll('<a ', '<a target="_blank" rel="noopener noreferrer" class="team-link" ')}
+                    </div>
+                </div>
+            `).join('');
+
+            document.getElementById('team-grid').innerHTML = html;
+        }
+
+        // Renderizar Investigación
+        async function renderResearch() {
+            const md = await loadMarkdown('investigacion');
+            if (!md) return;
+            
+            const html = marked.parse(md);
+            document.getElementById('research-content').innerHTML = html;
+        }
+
+        // Renderizar Multimedia
+        async function renderMultimedia() {
+            const md = await loadMarkdown('multimedia');
+            if (!md) return;
+            
+            const html = marked.parse(md);
+            document.getElementById('multimedia-content').innerHTML = html;
+        }
+
+        // Renderizar Stats
+        async function renderStats() {
+            const md = await loadMarkdown('impacto');
+            if (!md) return;
+            
+            const stats = parseStats(md);
+            
+            const html = stats.map(s => `
+                <div class="stat-item">
+                    <div class="stat-number">${s.number}</div>
+                    <div class="stat-label">${s.label}</div>
+                </div>
+            `).join('');
+
+            document.getElementById('stats-grid').innerHTML = html;
+        }
+
+        // Renderizar Contacto
+        async function renderContact() {
+            const md = await loadMarkdown('contacto');
+            if (!md) return;
+            
+            const lines = md.split('\n').filter(l => l.trim());
+            const title = lines[0].replace(/^# /, '');
+            const description = lines[2];
+            
+            document.getElementById('cta-content').innerHTML = `
+                <h2>${title}</h2>
+                <p>${description}</p>
+                <button class="btn btn-primary" onclick="alert('¡Formulario de contacto próximamente!')">Contactar ahora</button>
+            `;
+        }
+
+        // Inicializar todo el contenido
+        async function initContent() {
+            await renderHero();
+            await renderServices();
+            await renderProjects();
+            await renderTeam();
+            await renderResearch();
+            await renderMultimedia();
+            await renderStats();
+            await renderContact();
+        }
+
+        // Funciones de scroll
+        function scrollToContact() {
+            document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function scrollToServices() {
+            document.getElementById('servicios').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Efecto parallax en scroll
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const cards = document.querySelectorAll('.data-card');
+            cards.forEach((card, index) => {
+                card.style.transform = `translateY(${scrolled * (0.1 + index * 0.05)}px)`;
+            });
+        });
+
+        // Animación de elementos al entrar en viewport
+        const observerOptions = {
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Iniciar cuando el DOM esté listo
+        document.addEventListener('DOMContentLoaded', async () => {
+            await initContent();
+            
+            // Aplicar animaciones a las tarjetas
+            setTimeout(() => {
+                document.querySelectorAll('.service-card, .stat-item, .project-card, .team-card').forEach(el => {
+                    el.style.opacity = '0';
+                    el.style.transform = 'translateY(30px)';
+                    el.style.transition = 'all 0.6s ease';
+                    observer.observe(el);
+                });
+            }, 100);
+        });
+    </script>
+</body>
+</html>
