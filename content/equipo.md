@@ -34,7 +34,7 @@ Degree in Biomedical Engineering. MSc in Software Engineering: Data, Cloud and I
 ---
 
 ### 👩‍💻 Macarena López Sánchez
-
 **Scientific Project Manager & Data Scientist**
+**IMAGE:** https://raw.githubusercontent.com/Data-Science-Laboratory-FPS/lcd_website/main/images/foto_macarena.jpg
 PhD Bioinformatician applying data science and AI to transform real-world health data into clinical innovation.
 *[LinkedIn](https://www.linkedin.com/in/mlsanchez22/) • [ORCID](https://orcid.org/0000-0002-6193-9498) • [GitHub](https://github.com/mlsanchez22)*
