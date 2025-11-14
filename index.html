@@ -912,8 +912,8 @@
 
             document.getElementById('services-grid').innerHTML = html;
         }
-    // Render Projects
-    async function renderProjects() {
+        // Render Projects
+        async function renderProjects() {
         const md = await loadMarkdown('proyectos');
         if (!md) return;
 
@@ -930,7 +930,8 @@
         `).join('');
 
         document.getElementById('projects-grid').innerHTML = html;
-    }
+        }
+
         // Renderizar Equipo
         async function renderTeam() {
             const md = await loadMarkdown('equipo');
