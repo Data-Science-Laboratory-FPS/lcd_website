@@ -1,14 +1,14 @@
 ### 📄 Published Papers 
 **“Toward Transparent Clinical Decision Support in the ICU: A Multi-Window, Model-Agnostic Explainability Approach for 72-Hour Mortality Prediction Using the eICU Collaborative Research Database”** 
-*Med Intensiva • 2024 • Gallardo Gómez, D., Díaz, S., Quintero Sosa, J., Jiménez Vázquez, C., Ritoré-Hidalgo, Á., Gutiérrez-Pizarraya, A., **Armengol de la Hoz, M. Á.**, Recuerda Núñez, M., Estella, Á.* 
+*Med Intensiva • 2025 • Gallardo Gómez, D., Díaz, S., Quintero Sosa, J., Jiménez Vázquez, C., Ritoré-Hidalgo, Á., Gutiérrez-Pizarraya, A., **Armengol de la Hoz, M. Á.**, Recuerda Núñez, M., Estella, Á.* 
 <!--[Read paper →](https://doi.org/) -->
 
 **“Bridging Generative AI and Healthcare Practice: Insights from the GenAI Health Hackathon at Hospital Clínic de Barcelona”** 
-*BMJ Health & Care Informatics • 2024 • Frid, S., Bassegoda, O., Camacho Mahamud, M. A., Sanjuan, G., **Armengol de la Hoz, M. Á.**, Celi, L. A., Cano Franco, I., Anmella, G., Cuñat López, T., Arellano, A. L., Leguízamo-Martínez, L. M., Mezquita, L., Axcell Peñafiel P., Gallardo-Pizarro, A., González Colom, R., Renú Jornet, A., Bracons Cucó, G., Borrat Frigola, X.* 
+*BMJ Health & Care Informatics • 2025 • Frid, S., Bassegoda, O., Camacho Mahamud, M. A., Sanjuan, G., **Armengol de la Hoz, M. Á.**, Celi, L. A., Cano Franco, I., Anmella, G., Cuñat López, T., Arellano, A. L., Leguízamo-Martínez, L. M., Mezquita, L., Axcell Peñafiel P., Gallardo-Pizarro, A., González Colom, R., Renú Jornet, A., Bracons Cucó, G., Borrat Frigola, X.* 
 <!--[Read paper →](https://doi.org/) -->
 
 **“Datos Abiertos e Inteligencia Artificial: Una Ventana de Oportunidad para Pacientes Sépticos en los Servicios de Urgencias”** 
-*Emergencias • 2024 • Estella, Á., **Armengol de la Hoz, M. Á.**, González del Castillo, J., Grupo de trabajo INFURG-SEMES* 
+*Emergencias • 2025 • Estella, Á., **Armengol de la Hoz, M. Á.**, González del Castillo, J., Grupo de trabajo INFURG-SEMES* 
 [Read paper →](https://doi.org/10.55633/s3me/056.2025) 
 
 **“Assessing COVID-19 Vaccine Effectiveness and Risk Factors for Severe Outcomes Through Machine Learning Techniques: A Real-World Data Study in Andalusia, Spain”** 
