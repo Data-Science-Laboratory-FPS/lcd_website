@@ -34,4 +34,24 @@ summary: SAIDIS aims to develop an intelligent alert system for the early detect
 meta: Regional research project (Andalusia, CCUE)
 summary: The trIAje project applies advanced artificial intelligence techniques —including supervised learning, deep learning, and natural language processing— to optimize the telephone triage process of the Andalusian Emergency Coordination Center (CCUE). Using both structured data (triage questions) and unstructured data (free-text notes from emergency calls), the project develops predictive models to improve the accuracy of classifying critical emergencies such as cardiac arrest, respiratory distress, chest pain, and stroke. By identifying key predictive variables and evaluating model performance through sensitivity, specificity, and false positive/negative rates, trIAje aims to enhance clinical decision-making, reduce unnecessary alarms, and improve emergency care outcomes across the regional system.
 
+---
+
+### 💉 Analysis of COVID-19 Vaccine Brands in Andalusia
+
+meta: Regional research project
+summary: This project evaluates the real-world effectiveness of different European COVID-19 vaccine brands in Andalusia between 2020 and 2022. Using population-based data and machine learning methods, it analyses how each brand relates to key clinical outcomes —hospital admission, ICU admission, and 30-day mortality— in infected patients. The study extends the original Vaccine Effectiveness and Risk Factors in COVID-19 proyect cohort and incorporates detailed risk-factor modelling to identify differences in protection across vaccine types.
+
+---
+
+### 💉 Vaccine Effectiveness and Risk Factors in COVID-19
+
+meta: Regional research project
+summary: A retrospective, population-level cohort study assessing risk factors for hospitalisation, ICU admission, and mortality among SARS-CoV-2–infected individuals in Andalusia. The project examines demographic, clinical, and epidemiological variables to quantify vaccine effectiveness and identify patient profiles associated with severe outcomes. Its analytical framework, built in R and ML techniques, provides the foundation for subsequent derivative studies.
+
+---
+
+### 🌍 Social Determinants of Health and COVID-19 Outcomes
+
+meta: Regional research project
+summary: This project investigates how Social Determinants of Health —derived from IECA public datasets— influence hospital admission, ICU admission, and mortality in COVID-19 cases in Andalusia. Complementing Vaccine Effectiveness and Risk Factors in COVID-19 proyect, it integrates sociodemographic indicators with clinical variables and applies ML models in R and Python to quantify the contribution of social inequality and other risk factors to adverse outcomes. The results aim to inform public health planning and equity-focused interventions.
 
