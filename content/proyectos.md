@@ -36,22 +36,18 @@ summary: The trIAje project applies advanced artificial intelligence techniques 
 
 ---
 
-### 💉 Analysis of COVID-19 Vaccine Brands in Andalusia
-
+### 💉 COVID-19 Project - Vaccine Effectiveness and Risk Factors in COVID-19
 meta: Regional research project
-summary: This project evaluates the real-world effectiveness of different European COVID-19 vaccine brands in Andalusia between 2020 and 2022. Using population-based data and machine learning methods, it analyses how each brand relates to key clinical outcomes —hospital admission, ICU admission, and 30-day mortality— in infected patients. The study extends the original Vaccine Effectiveness and Risk Factors in COVID-19 proyect cohort and incorporates detailed risk-factor modelling to identify differences in protection across vaccine types.
+summary: A retrospective, population-based cohort study assessing risk factors for COVID-19 hospitalization, ICU admission, and mortality among the Andalusian population throughout the COVID-19 pandemic (March 2020 to April 2022), and estimating vaccine effectiveness for these severe outcomes. The project analyses demographic, clinical, and epidemiological variables to quantify vaccine performance and identify patient profiles associated with severe disease. Its analytical framework, incorporating machine-learning techniques, provides the foundation for subsequent COVID-19 derivative studies.
 
 ---
 
-### 💉 Vaccine Effectiveness and Risk Factors in COVID-19
-
+### 💉 COVID-19 BRANDS -  Analysis of COVID-19 Vaccine Brand Effectiveness
 meta: Regional research project
-summary: A retrospective, population-level cohort study assessing risk factors for hospitalisation, ICU admission, and mortality among SARS-CoV-2–infected individuals in Andalusia. The project examines demographic, clinical, and epidemiological variables to quantify vaccine effectiveness and identify patient profiles associated with severe outcomes. Its analytical framework, built in R and ML techniques, provides the foundation for subsequent derivative studies.
+summary: This project evaluates the effectiveness of different COVID-19 vaccine brands, stratified by number of doses and considering both homologous and heterologous vaccination schemes, in preventing severe clinical outcomes (hospitalization, ICU admission, and 30-day mortality) among individuals infected with SARS-CoV-2 during the COVID-19 pandemic in Andalusia, Spain. This study builds on the primary COVID-19 vaccine cohort by incorporating detailed risk-factor modelling to identify differences in protection across vaccine types and schemes
 
 ---
 
-### 🌍 Social Determinants of Health and COVID-19 Outcomes
-
+### 🌍 COVID-19 SOCIODEMOGRAPHICS - Analysis of Social Determinants of Health and COVID-19 Outcomes
 meta: Regional research project
-summary: This project investigates how Social Determinants of Health —derived from IECA public datasets— influence hospital admission, ICU admission, and mortality in COVID-19 cases in Andalusia. Complementing Vaccine Effectiveness and Risk Factors in COVID-19 proyect, it integrates sociodemographic indicators with clinical variables and applies ML models in R and Python to quantify the contribution of social inequality and other risk factors to adverse outcomes. The results aim to inform public health planning and equity-focused interventions.
-
+summary: This project examines how Social Determinants of Health (SDH) influence SARS-CoV-2 infection and severe COVID-19 outcomes (hospitalization, ICU admission, and 30-day mortality) in Andalusia. It integrates sociodemographic indicators, such as the loneliness index and unemployment rate, and applies machine-learning models to quantify the contribution of municipality-level social disparities and other risk factors to adverse outcomes. The findings aim to support public health planning and equity-oriented interventions.
