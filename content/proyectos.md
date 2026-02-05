@@ -13,7 +13,8 @@ summary: The BRIDGE project aims to boost health innovation in Europe by develop
 ---
 
 ### 🤰 ePerinatal: Digital Intervention for Perinatal Mental Health
-meta: Research project summary: The ePerinatal project evaluates the efficacy of a comprehensive digital health ecosystem designed to prevent and address perinatal depression and anxiety. Through the "Unete" initiative, the study recruits pregnant women to test a mobile health (mHealth) solution that offers continuous emotional monitoring, psychoeducational resources, and cognitive-behavioral tools. The project aims to validate digital biomarkers for early detection of mental health risks, improve maternal and neonatal well-being, and demonstrate the cost-effectiveness of integrating accessible digital mental health interventions into routine perinatal care pathways.
+meta: Research project 
+summary: The ePerinatal project evaluates the efficacy of a comprehensive digital health ecosystem designed to prevent and address perinatal depression and anxiety. Through the "Unete" initiative, the study recruits pregnant women to test a mobile health (mHealth) solution that offers continuous emotional monitoring, psychoeducational resources, and cognitive-behavioral tools. The project aims to validate digital biomarkers for early detection of mental health risks, improve maternal and neonatal well-being, and demonstrate the cost-effectiveness of integrating accessible digital mental health interventions into routine perinatal care pathways.
 
 ---
 
