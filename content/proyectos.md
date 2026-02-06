@@ -8,6 +8,7 @@ summary: The overarching objective of ASSESS DHT is to consolidate and streamlin
 
 ### 🏦 BRIDGE: Breakthrough Regulatory Innovation and Development throuGh sandbox Environments
 meta: Horizon Europe project 🇪🇺
+website: https://bridge-ihi.eu
 summary: The BRIDGE project aims to boost health innovation in Europe by developing a framework for designing and operating regulatory sandboxes—controlled environments that enable the testing of new technologies while complying with regulations. It will identify existing sandboxes, create a horizon scanning methodology, and produce case studies, checklists, and evidence packages. Additionally, it will develop MOSAIC, a modular model with functional specifications for implementing these environments. By engaging regulators, industry, funders, providers, and patients in a consultative process, BRIDGE will deliver comprehensive recommendations for legally, effectively, and adaptively applying this methodology in the future.
 
 ---
