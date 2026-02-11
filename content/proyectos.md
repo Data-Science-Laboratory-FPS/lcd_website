@@ -19,6 +19,13 @@ summary: The ePerinatal project evaluates the efficacy of a comprehensive digita
 
 ---
 
+### 🏦 IntelliLung: Intelligent Lung Support for Mechanically Ventilated Patients in the Intensive Care Unit 
+meta: Horizon Europe project 🇪🇺
+website: https://intellilung-project.eu/
+summary: IntelliLung aims to clinically validate and extend an Artificial Intelligence Decision Support System (AI-DSS) based on reinforcement learning. This system is designed to optimize mechanical ventilation and extracorporeal lung support settings, improving the care of intensive care unit patients. Retrospective and multicenter prospective studies are being developed to validate the IntelliLung AI-DSS and the patient information software.
+
+---
+
 ### 💉 RASCAL: Survival Analysis of COVID-19 Hospitalized Patients in Andalusian Hospitals
 meta: Regional research project (Andalusia)
 summary: The RASCAL project performs survival analysis of patients hospitalized with COVID-19 across Andalusian hospitals. Using both clinical and epidemiological data, it explores key factors associated with in-hospital mortality, length of stay, and post-admission outcomes among COVID-positive patients. The study applies advanced statistical and machine learning survival models implemented in Python and R to identify risk patterns, improve predictive performance, and inform future health system preparedness and patient management strategies.
