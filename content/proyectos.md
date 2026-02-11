@@ -19,10 +19,10 @@ summary: The ePerinatal project evaluates the efficacy of a comprehensive digita
 
 ---
 
-### 🏦 IntelliLung: Intelligent Lung Support for Mechanically Ventilated Patients in the Intensive Care Unit 
+### 🫁 IntelliLung: Intelligent Lung Support for Mechanically Ventilated Patients in the Intensive Care Unit 
 meta: Horizon Europe project 🇪🇺
 website: https://intellilung-project.eu/
-summary: IntelliLung aims to clinically validate and extend an Artificial Intelligence Decision Support System (AI-DSS) based on reinforcement learning. This system is designed to optimize mechanical ventilation and extracorporeal lung support settings, improving the care of intensive care unit patients. Retrospective and multicenter prospective studies are being developed to validate the IntelliLung AI-DSS and the patient information software.
+summary: IntelliLung aims to clinically validate and extend an Artificial Intelligence Clinical Decision Support System (AI-CDSS) based on reinforcement learning. The system is designed to optimize mechanical ventilation settings in intensive care unit patients by integrating ventilator parameters, clinical variables, and patient condition to identify optimal setting combinations and reduce the risk of lung injury. Retrospective and multicenter prospective studies are being conducted to validate the IntelliLung AI-DSS and its patient information software.
 
 ---
 
