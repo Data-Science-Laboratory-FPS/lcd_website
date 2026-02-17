@@ -16,7 +16,7 @@ summary: The BRIDGE project aims to boost health innovation in Europe by develop
 ### 🚑 trIAje: AI-based Optimization of Emergency Call Triage
 meta: Regional research project (Andalusia, CCUE)
 summary: The trIAje project applies advanced artificial intelligence techniques —including supervised learning, deep learning, and natural language processing— to optimize the telephone triage process of the Andalusian Emergency Coordination Center (CCUE). Using both structured data (triage questions) and unstructured data (free-text notes from emergency calls), the project develops predictive models to improve the accuracy of classifying critical emergencies such as cardiac arrest, respiratory distress, chest pain, and stroke. By identifying key predictive variables and evaluating model performance through sensitivity, specificity, and false positive/negative rates, trIAje aims to enhance clinical decision-making, reduce unnecessary alarms, and improve emergency care outcomes across the regional system.
-
+team: 👤 María José Luque Hernández, 👤 Miguel Ángel Armengol de la Hoz, 👤 Carlos Romero Olóriz, 👤 Auxiliadora Mesa Caballero, 👤 Cristina López López
 ---
 
 ### 🤰 ePerinatal: Digital Intervention for Perinatal Mental Health
