@@ -396,6 +396,76 @@
         .project-link    { color: var(--green); font-size: .9rem; text-decoration: none; display: block; margin-bottom: .75rem; }
         .project-link:hover { text-decoration: underline; }
 
+        /* research team toggle */
+        .btn-team {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            margin-top: 1.25rem;
+            padding: .5rem 1.25rem;
+            background: rgba(0,121,50,.08);
+            border: 1.5px solid rgba(0,121,50,.35);
+            border-radius: 50px;
+            color: var(--green);
+            font-size: .88rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all .25s ease;
+            letter-spacing: .3px;
+        }
+        .btn-team:hover {
+            background: var(--green);
+            color: var(--white);
+            box-shadow: 0 6px 18px rgba(0,121,50,.25);
+        }
+        .btn-team .team-arrow {
+            display: inline-block;
+            transition: transform .3s ease;
+            font-style: normal;
+        }
+        .btn-team.open .team-arrow { transform: rotate(180deg); }
+
+        .project-team-panel {
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height .4s cubic-bezier(.4,0,.2,1), opacity .3s ease;
+            opacity: 0;
+        }
+        .project-team-panel.open {
+            max-height: 400px;
+            opacity: 1;
+        }
+        .project-team-inner {
+            margin-top: 1rem;
+            padding: 1rem 1.25rem;
+            background: rgba(157,214,191,.1);
+            border: 1.5px solid rgba(157,214,191,.45);
+            border-radius: 14px;
+        }
+        .project-team-inner p {
+            font-size: .88rem;
+            font-weight: 700;
+            color: var(--green);
+            text-transform: uppercase;
+            letter-spacing: .8px;
+            margin-bottom: .6rem !important;
+        }
+        .project-team-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: .5rem;
+        }
+        .project-team-list li {
+            background: rgba(255,255,255,.85);
+            border: 1px solid rgba(0,121,50,.2);
+            border-radius: 50px;
+            padding: .3rem .9rem;
+            font-size: .88rem;
+            color: var(--text);
+            font-weight: 500;
+        }
+
         /* team */
         .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; margin-top: 3rem; }
 
@@ -680,11 +750,13 @@
                 const websiteLine     = ls.find(l => l.toLowerCase().startsWith('website:')) || '';
                 const descriptionIdx  = ls.findIndex(l => l.toLowerCase().startsWith('description:'));
                 const summaryIdx      = ls.findIndex(l => l.toLowerCase().startsWith('summary:'));
+                const teamLine        = ls.find(l => l.toLowerCase().startsWith('team:')) || '';
                 const meta        = metaLine     ? metaLine.replace(/^meta:\s*/i, '') : '';
                 const website     = websiteLine  ? websiteLine.replace(/^website:\s*/i, '') : '';
                 const description = descriptionIdx >= 0 ? ls[descriptionIdx].replace(/^description:\s*/i, '') : '';
                 const summary     = summaryIdx >= 0     ? ls.slice(summaryIdx).join(' ').replace(/^summary:\s*/i, '') : '';
-                projects.push({ icon, title, meta, website, description, summary });
+                const team        = teamLine     ? teamLine.replace(/^team:\s*/i, '').split(',').map(m => m.trim()).filter(Boolean) : [];
+                projects.push({ icon, title, meta, website, description, summary, team });
             });
             return projects;
         }
@@ -753,13 +825,25 @@
         async function renderProjects() {
             const md = await loadMarkdown('proyectos');
             if (!md) return;
-            document.getElementById('projects-grid').innerHTML = parseProjects(md).map(p => `
+            document.getElementById('projects-grid').innerHTML = parseProjects(md).map((p, i) => `
                 <div class="project-card">
                     <h3>${p.icon} ${p.title}</h3>
                     ${p.website ? `<a href="${p.website}" target="_blank" class="project-link">${p.website}</a>` : ''}
                     <div class="project-meta">${p.meta}</div>
                     <p>${p.description}</p>
                     ${p.summary ? `<div class="project-summary">${p.summary}</div>` : ''}
+                    ${p.team.length ? `
+                    <button class="btn-team" onclick="toggleTeam(this, 'team-${i}')">
+                        👥 Research Team <i class="team-arrow">▾</i>
+                    </button>
+                    <div class="project-team-panel" id="team-${i}">
+                        <div class="project-team-inner">
+                            <p>Research Team</p>
+                            <ul class="project-team-list">
+                                ${p.team.map(m => `<li>${m}</li>`).join('')}
+                            </ul>
+                        </div>
+                    </div>` : ''}
                 </div>`).join('');
         }
 
@@ -812,6 +896,14 @@
                 <h2>${title}</h2>
                 <p>${description}</p>
                 <button class="btn btn-primary" onclick="alert('¡Formulario de contacto próximamente!')">Contactar ahora</button>`;
+        }
+
+        // ── research team toggle ──────────────────────────────────────
+        function toggleTeam(btn, panelId) {
+            const panel = document.getElementById(panelId);
+            const isOpen = panel.classList.contains('open');
+            panel.classList.toggle('open', !isOpen);
+            btn.classList.toggle('open', !isOpen);
         }
 
         // ── scroll helpers ────────────────────────────────────────────
