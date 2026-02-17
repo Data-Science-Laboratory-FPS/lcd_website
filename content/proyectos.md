@@ -13,6 +13,12 @@ summary: The BRIDGE project aims to boost health innovation in Europe by develop
 
 ---
 
+### 🚑 trIAje: AI-based Optimization of Emergency Call Triage
+meta: Regional research project (Andalusia, CCUE)
+summary: The trIAje project applies advanced artificial intelligence techniques —including supervised learning, deep learning, and natural language processing— to optimize the telephone triage process of the Andalusian Emergency Coordination Center (CCUE). Using both structured data (triage questions) and unstructured data (free-text notes from emergency calls), the project develops predictive models to improve the accuracy of classifying critical emergencies such as cardiac arrest, respiratory distress, chest pain, and stroke. By identifying key predictive variables and evaluating model performance through sensitivity, specificity, and false positive/negative rates, trIAje aims to enhance clinical decision-making, reduce unnecessary alarms, and improve emergency care outcomes across the regional system.
+
+---
+
 ### 🤰 ePerinatal: Digital Intervention for Perinatal Mental Health
 meta: Horizon Europe project 🇪🇺
 summary: The ePerinatal project evaluates the efficacy of a comprehensive digital health ecosystem designed to prevent and address perinatal depression and anxiety. Through the "Unete" initiative, the study recruits pregnant women to test a mobile health (mHealth) solution that offers continuous emotional monitoring, psychoeducational resources, and cognitive-behavioral tools. The project aims to validate digital biomarkers for early detection of mental health risks, improve maternal and neonatal well-being, and demonstrate the cost-effectiveness of integrating accessible digital mental health interventions into routine perinatal care pathways.
@@ -41,12 +47,6 @@ summary: This project focuses on the development and validation of machine learn
 ### 🧩 SAIDIS: Intelligent Alert System for the Detection of Severe Suicide Attempts
 meta: Regional research project (Andalusia)
 summary: SAIDIS aims to develop an intelligent alert system for the early detection of severe suicide attempts through the analysis of electronic health records (EHRs). The project explores novel approaches based on open-source large language models (LLMs) and other AI techniques to identify clinical patterns and linguistic markers associated with high-risk behaviors. By leveraging natural language understanding and predictive modeling, SAIDIS seeks to support mental health professionals in timely intervention and prevention strategies.
-
----
-
-### 🚑 trIAje: AI-based Optimization of Emergency Call Triage
-meta: Regional research project (Andalusia, CCUE)
-summary: The trIAje project applies advanced artificial intelligence techniques —including supervised learning, deep learning, and natural language processing— to optimize the telephone triage process of the Andalusian Emergency Coordination Center (CCUE). Using both structured data (triage questions) and unstructured data (free-text notes from emergency calls), the project develops predictive models to improve the accuracy of classifying critical emergencies such as cardiac arrest, respiratory distress, chest pain, and stroke. By identifying key predictive variables and evaluating model performance through sensitivity, specificity, and false positive/negative rates, trIAje aims to enhance clinical decision-making, reduce unnecessary alarms, and improve emergency care outcomes across the regional system.
 
 ---
 
