@@ -6,65 +6,61 @@
     <title>NexData Lab - Ciencia de Datos que Transforma</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.0/marked.min.js"></script>
     <style>
-  /* Vibrant Andalusian Corporate Palette (Official Colors):
-         * Background: #F5F7F5 (Light neutral with green hint)
-         * Primary Text: #1a3a1a (Deep forest green - darker for better contrast)
-         * Corporate Green (Principal): #007932
-         * Hover Green: #005a26 (Darker)
-         * Support Mint: #9dd6bf (Light mint)
-         * Specific Support: #c8dac8 (Very light sage)
-         * White: #FFFFFF
-         */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        /* ─── PALETTE ─────────────────────────────────────────────── */
+        :root {
+            --bg:       #F5F7F5;
+            --text:     #1a3a1a;
+            --green:    #007932;
+            --dark:     #005a26;
+            --mint:     #9dd6bf;
+            --sage:     #c8dac8;
+            --white:    #FFFFFF;
         }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: #F5F7F5;
-            color: #1a3a1a;
+            background: var(--bg);
+            color: var(--text);
             overflow-x: hidden;
         }
 
         .gradient-bg {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            inset: 0;
             z-index: -1;
-            background: radial-gradient(ellipse at 20% 30%, rgba(200, 218, 200, 0.3) 0%, transparent 50%),
-                        radial-gradient(ellipse at 80% 70%, rgba(157, 214, 191, 0.25) 0%, transparent 50%),
-                        radial-gradient(ellipse at 50% 50%, rgba(0, 121, 50, 0.08) 0%, transparent 70%); 
+            background:
+                radial-gradient(ellipse at 20% 30%, rgba(200,218,200,.3) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 70%, rgba(157,214,191,.25) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(0,121,50,.08) 0%, transparent 70%);
         }
 
+        /* ─── NAV ──────────────────────────────────────────────────── */
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 2rem 5%;
+            padding: 1.25rem 5%;
             position: fixed;
             width: 100%;
             backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.98);
-            border-bottom: 2px solid rgba(0, 121, 50, 0.15);
-            box-shadow: 0 4px 20px rgba(0, 121, 50, 0.08);
+            background: rgba(255,255,255,.98);
+            border-bottom: 2px solid rgba(0,121,50,.15);
+            box-shadow: 0 4px 20px rgba(0,121,50,.08);
             z-index: 1000;
-            transition: all 0.3s ease;
         }
 
         .logo {
             font-size: 1.5rem;
             font-weight: 800;
-            background: linear-gradient(135deg, #007932, #005a26, #9dd6bf); 
+            background: linear-gradient(135deg, var(--green), var(--dark), var(--mint));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             letter-spacing: -1px;
         }
 
+        /* desktop links */
         .nav-links {
             display: flex;
             gap: 2rem;
@@ -72,32 +68,164 @@
         }
 
         .nav-links a {
-            color: #1a3a1a;
+            color: var(--text);
             text-decoration: none;
             font-weight: 500;
-            transition: all 0.3s ease;
+            transition: color .3s;
             position: relative;
-        }
-
-        .nav-links a:hover {
-            color: #007932;
         }
 
         .nav-links a::after {
             content: '';
             position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #007932;
-            transition: width 0.3s ease;
+            bottom: -5px; left: 0;
+            width: 0; height: 2px;
+            background: var(--green);
+            transition: width .3s;
         }
 
-        .nav-links a:hover::after {
-            width: 100%;
+        .nav-links a:hover { color: var(--green); }
+        .nav-links a:hover::after { width: 100%; }
+
+        /* ─── HAMBURGER (collapse style) ───────────────────────────── */
+        .hamburger {
+            display: none;          /* hidden on desktop */
+            cursor: pointer;
+            background: transparent;
+            border: 0;
+            padding: 10px;
+            transition-property: opacity, filter;
+            transition-duration: .15s;
+            transition-timing-function: linear;
         }
 
+        .hamburger:hover { opacity: .7; }
+        .hamburger.is-active:hover { opacity: .7; }
+
+        .hamburger-box {
+            width: 36px;
+            height: 26px;
+            display: inline-block;
+            position: relative;
+        }
+
+        .hamburger-inner {
+            display: block;
+            top: 50%;
+            margin-top: -2px;
+        }
+
+        .hamburger-inner,
+        .hamburger-inner::before,
+        .hamburger-inner::after {
+            width: 36px;
+            height: 3px;
+            background-color: var(--green);
+            border-radius: 4px;
+            position: absolute;
+            transition-property: transform;
+            transition-duration: .15s;
+            transition-timing-function: ease;
+        }
+
+        .hamburger-inner::before,
+        .hamburger-inner::after {
+            content: '';
+            display: block;
+        }
+
+        .hamburger-inner::before { top: -11px; }
+        .hamburger-inner::after  { bottom: -11px; }
+
+        /* collapse animation */
+        .hamburger--collapse .hamburger-inner {
+            top: auto;
+            bottom: 0;
+            transition-duration: .13s;
+            transition-delay: .13s;
+            transition-timing-function: cubic-bezier(.55,.055,.675,.19);
+        }
+
+        .hamburger--collapse .hamburger-inner::after {
+            top: -22px;
+            transition: top .2s .2s cubic-bezier(.33333,.66667,.66667,1), opacity .1s linear;
+        }
+
+        .hamburger--collapse .hamburger-inner::before {
+            transition: top .12s .2s cubic-bezier(.33333,.66667,.66667,1), transform .13s cubic-bezier(.55,.055,.675,.19);
+        }
+
+        /* active state */
+        .hamburger--collapse.is-active .hamburger-inner {
+            transform: translate3d(0,-10px,0) rotate(-45deg);
+            transition-delay: .22s;
+            transition-timing-function: cubic-bezier(.215,.61,.355,1);
+        }
+
+        .hamburger--collapse.is-active .hamburger-inner::after {
+            top: 0;
+            opacity: 0;
+            transition: top .2s cubic-bezier(.33333,0,.66667,.33333), opacity .1s .22s linear;
+        }
+
+        .hamburger--collapse.is-active .hamburger-inner::before {
+            top: 0;
+            transform: rotate(-90deg);
+            transition: top .1s .16s cubic-bezier(.33333,0,.66667,.33333), transform .13s .25s cubic-bezier(.215,.61,.355,1);
+        }
+
+        /* ─── MOBILE DRAWER ─────────────────────────────────────────── */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0; right: 0;
+            width: 280px;
+            height: 100vh;
+            background: var(--white);
+            box-shadow: -8px 0 40px rgba(0,121,50,.15);
+            z-index: 999;
+            padding: 6rem 2rem 2rem;
+            transform: translateX(100%);
+            transition: transform .35s cubic-bezier(.77,0,.175,1);
+        }
+
+        .mobile-menu.open { transform: translateX(0); }
+
+        .mobile-menu ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .mobile-menu ul li a {
+            display: block;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(0,121,50,.1);
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color .2s, padding-left .2s;
+        }
+
+        .mobile-menu ul li a:hover {
+            color: var(--green);
+            padding-left: .5rem;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,.3);
+            z-index: 998;
+            backdrop-filter: blur(2px);
+        }
+
+        .overlay.open { display: block; }
+
+        /* ─── HERO ──────────────────────────────────────────────────── */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -107,48 +235,39 @@
             gap: 4rem;
         }
 
-        .hero-content {
-            flex: 1;
-            max-width: 600px;
-        }
+        .hero-content { flex: 1; max-width: 600px; }
 
         .hero-badge {
             display: inline-block;
-            padding: 0.5rem 1.5rem;
-            background: rgba(157, 214, 191, 0.2);
-            border: 2px solid #9dd6bf;
+            padding: .5rem 1.5rem;
+            background: rgba(157,214,191,.2);
+            border: 2px solid var(--mint);
             border-radius: 50px;
-            color: #007932;
-            font-size: 0.9rem;
+            color: var(--green);
+            font-size: .9rem;
             font-weight: 600;
             margin-bottom: 2rem;
             animation: float 3s ease-in-out infinite;
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+            0%,100% { transform: translateY(0); }
+            50%      { transform: translateY(-10px); }
         }
 
         h1 {
             font-size: 4rem;
             line-height: 1.1;
             margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, #007932, #005a26, #9dd6bf);
+            background: linear-gradient(135deg, var(--green), var(--dark), var(--mint));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: fadeInUp 0.8s ease;
+            animation: fadeInUp .8s ease;
         }
 
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(30px); }
+            to   { opacity: 1; transform: translateY(0); }
         }
 
         .hero-description {
@@ -156,13 +275,13 @@
             color: #2d5a3d;
             margin-bottom: 2.5rem;
             line-height: 1.6;
-            animation: fadeInUp 0.8s ease 0.2s backwards;
+            animation: fadeInUp .8s ease .2s backwards;
         }
 
         .cta-buttons {
             display: flex;
             gap: 1.5rem;
-            animation: fadeInUp 0.8s ease 0.4s backwards;
+            animation: fadeInUp .8s ease .4s backwards;
         }
 
         .btn {
@@ -172,514 +291,207 @@
             font-size: 1.1rem;
             font-weight: 600;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all .3s ease;
             text-decoration: none;
             display: inline-block;
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #007932, #005a26);
-            color: #FFFFFF;
-            box-shadow: 0 10px 30px rgba(0, 121, 50, 0.4);
+            background: linear-gradient(135deg, var(--green), var(--dark));
+            color: var(--white);
+            box-shadow: 0 10px 30px rgba(0,121,50,.4);
         }
 
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(0, 121, 50, 0.5);
-            background: linear-gradient(135deg, #005a26, #004520);
+            box-shadow: 0 15px 40px rgba(0,121,50,.5);
+            background: linear-gradient(135deg, var(--dark), #004520);
         }
 
         .btn-secondary {
-            background: rgba(157, 214, 191, 0.2); 
-            color: #007932;
-            border: 2px solid #007932;
+            background: rgba(157,214,191,.2);
+            color: var(--green);
+            border: 2px solid var(--green);
         }
 
         .btn-secondary:hover {
-            background: #007932;
-            color: #FFFFFF;
-            border-color: #007932;
-            box-shadow: 0 8px 20px rgba(0, 121, 50, 0.3);
+            background: var(--green);
+            color: var(--white);
+            box-shadow: 0 8px 20px rgba(0,121,50,.3);
         }
 
-        .hero-visual {
-            flex: 1;
-            position: relative;
-            height: 500px;
-        }
+        /* ─── HERO VISUAL CARDS ─────────────────────────────────────── */
+        .hero-visual { flex: 1; position: relative; height: 500px; }
 
         .data-card {
             position: absolute;
-            background: rgba(255, 255, 255, 0.98);
+            background: rgba(255,255,255,.98);
             backdrop-filter: blur(20px);
-            border: 2px solid rgba(157, 214, 191, 0.5); 
+            border: 2px solid rgba(157,214,191,.5);
             border-radius: 20px;
             padding: 1.5rem;
-            box-shadow: 0 20px 60px rgba(0, 121, 50, 0.15);
+            box-shadow: 0 20px 60px rgba(0,121,50,.15);
             animation: floatCard 4s ease-in-out infinite;
         }
 
         @keyframes floatCard {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(2deg); }
+            0%,100% { transform: translateY(0) rotate(0deg); }
+            50%      { transform: translateY(-20px) rotate(2deg); }
         }
 
-        .data-card:nth-child(1) {
-            top: 10%;
-            left: 10%;
-            animation-delay: 0s;
-        }
+        .data-card:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+        .data-card:nth-child(2) { top: 50%; right: 10%; animation-delay: 1s; }
+        .data-card:nth-child(3) { bottom: 10%; left: 20%; animation-delay: 2s; }
 
-        .data-card:nth-child(2) {
-            top: 50%;
-            right: 10%;
-            animation-delay: 1s;
-        }
+        .card-title  { color: var(--green); font-size: .9rem; font-weight: 600; margin-bottom: .5rem; text-transform: uppercase; letter-spacing: 1px; }
+        .card-value  { font-size: 2.5rem; font-weight: 800; background: linear-gradient(135deg, var(--green), var(--mint)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-trend  { color: var(--dark); font-size: .9rem; font-weight: 600; margin-top: .3rem; }
 
-        .data-card:nth-child(3) {
-            bottom: 10%;
-            left: 20%;
-            animation-delay: 2s;
-        }
-
-        .card-title {
-            color: #007932;
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .card-value {
-            font-size: 2.5rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #007932, #9dd6bf);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .card-trend {
-            color: #005a26;
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-top: 0.3rem;
-        }
-
-        .section {
-            padding: 6rem 5%;
-            position: relative;
-        }
+        /* ─── SECTIONS ──────────────────────────────────────────────── */
+        .section { padding: 6rem 5%; position: relative; }
 
         .section-title {
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 1rem;
-            background: linear-gradient(135deg, #007932, #005a26, #9dd6bf);
+            background: linear-gradient(135deg, var(--green), var(--dark), var(--mint));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .section-subtitle {
-            text-align: center;
-            color: #2d5a3d;
-            font-size: 1.2rem;
-            margin-bottom: 4rem;
-        }
+        .section-subtitle { text-align: center; color: #2d5a3d; font-size: 1.2rem; margin-bottom: 4rem; }
 
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
+        /* services */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; }
 
         .service-card {
-            background: rgba(255, 255, 255, 0.95); 
-            backdrop-filter: blur(20px);
-            border: 2px solid rgba(157, 214, 191, 0.4); 
+            background: rgba(255,255,255,.95);
+            border: 2px solid rgba(157,214,191,.4);
             border-radius: 24px;
             padding: 2.5rem;
-            transition: all 0.4s ease;
+            transition: all .4s ease;
             cursor: pointer;
         }
 
-        .service-card:hover {
-            transform: translateY(-10px);
-            border-color: #007932; 
-            box-shadow: 0 20px 60px rgba(0, 121, 50, 0.25);
-        }
+        .service-card:hover { transform: translateY(-10px); border-color: var(--green); box-shadow: 0 20px 60px rgba(0,121,50,.25); }
+        .service-icon { width: 60px; height: 60px; background: linear-gradient(135deg, rgba(0,121,50,.15), rgba(157,214,191,.3)); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-bottom: 1.5rem; color: var(--green); }
+        .service-card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--text); }
+        .service-card p  { color: #2d5a3d; line-height: 1.6; }
 
-        .service-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, rgba(0, 121, 50, 0.15), rgba(157, 214, 191, 0.3)); 
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            color: #007932;
-        }
-
-        .service-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #1a3a1a;
-        }
-
-        .service-card p {
-            color: #2d5a3d;
-            line-height: 1.6;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2.5rem;
-            margin-top: 3rem;
-        }
+        /* projects */
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2.5rem; margin-top: 3rem; }
 
         .project-card {
-            background: rgba(255, 255, 255, 0.95); 
-            backdrop-filter: blur(20px);
-            border: 2px solid rgba(200, 218, 200, 0.5); 
+            background: rgba(255,255,255,.95);
+            border: 2px solid rgba(200,218,200,.5);
             border-radius: 24px;
             padding: 2.5rem;
-            transition: all 0.4s ease;
+            transition: all .4s ease;
         }
 
-        .project-card:hover {
-            transform: translateY(-10px);
-            border-color: #9dd6bf; 
-            box-shadow: 0 20px 60px rgba(157, 214, 191, 0.3);
-        }
+        .project-card:hover { transform: translateY(-10px); border-color: var(--mint); box-shadow: 0 20px 60px rgba(157,214,191,.3); }
+        .project-card h3 { font-size: 1.5rem; color: var(--green); margin-bottom: 1rem; }
+        .project-meta    { color: var(--dark); font-size: .9rem; font-weight: 600; margin-bottom: 1rem; }
+        .project-card p  { color: #2d5a3d; line-height: 1.6; margin-bottom: 1.5rem; }
+        .project-link    { color: var(--green); font-size: .9rem; text-decoration: none; display: block; margin-bottom: .75rem; }
+        .project-link:hover { text-decoration: underline; }
 
-        .project-card h3 {
-            font-size: 1.5rem;
-            color: #007932;
-            margin-bottom: 1rem;
-        }
-
-        .project-meta {
-            color: #005a26;
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .project-card p {
-            color: #2d5a3d;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
-
-        .project-results {
-            margin-top: 1.5rem;
-            padding-top: 1.5rem;
-            border-top: 2px solid rgba(157, 214, 191, 0.3); 
-        }
-
-        .project-results strong {
-            color: #1a3a1a;
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2.5rem;
-            margin-top: 3rem;
-        }
+        /* team */
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; margin-top: 3rem; }
 
         .team-card {
-            background: rgba(255, 255, 255, 0.95); 
-            backdrop-filter: blur(20px);
-            border: 2px solid rgba(157, 214, 191, 0.4); 
+            background: rgba(255,255,255,.95);
+            border: 2px solid rgba(157,214,191,.4);
             border-radius: 24px;
             padding: 2rem;
             text-align: center;
-            transition: all 0.4s ease;
+            transition: all .4s ease;
         }
 
-        .team-card:hover {
-            transform: translateY(-10px);
-            border-color: #007932; 
-            box-shadow: 0 20px 60px rgba(0, 121, 50, 0.25);
-        }
+        .team-card:hover { transform: translateY(-10px); border-color: var(--green); box-shadow: 0 20px 60px rgba(0,121,50,.25); }
+        .team-avatar { width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, rgba(0,121,50,.2), rgba(157,214,191,.3)); margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; font-size: 3rem; overflow: hidden; }
+        .team-avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+        .team-card h3   { font-size: 1.3rem; color: var(--text); margin-bottom: .5rem; }
+        .team-role      { color: var(--green); font-size: .95rem; margin-bottom: 1rem; font-weight: 600; }
+        .team-card p    { color: #2d5a3d; line-height: 1.6; font-size: .95rem; }
+        .team-links     { margin-top: 1rem; font-size: .95rem; }
+        .team-link      { color: var(--green); text-decoration: none; font-weight: 500; transition: color .2s; }
+        .team-link:hover { color: var(--dark); text-decoration: underline; }
 
-        .team-avatar {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, rgba(0, 121, 50, 0.2), rgba(157, 214, 191, 0.3)); 
-            margin: 0 auto 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            overflow: hidden; 
-        }
-
-        .team-avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-
-        .team-card h3 {
-            font-size: 1.3rem;
-            color: #1a3a1a;
-            margin-bottom: 0.5rem;
-        }
-
-        .team-role {
-            color: #007932;
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .team-card p {
-            color: #2d5a3d;
-            line-height: 1.6;
-            font-size: 0.95rem;
-        }
-        
-        .team-links {
-            margin-top: 1rem;
-            font-size: 0.95rem;
-        }
-    
-        .team-link {
-            color: #007932;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s ease;
-        }
-    
-        .team-link:hover {
-            color: #005a26;
-            text-decoration: underline;
-        }
-
-        .research-section {
-            margin-bottom: 3rem;
-        }
-
-        .research-section h3 {
-            font-size: 1.8rem;
-            color: #007932;
-            margin-bottom: 2rem;
-        }
+        /* research / multimedia */
+        .content-wrapper     { color: #2d5a3d; line-height: 1.8; }
+        .content-wrapper h2  { color: var(--text); margin-bottom: 1rem; }
+        .content-wrapper h3  { color: var(--green); margin-top: 2rem; margin-bottom: 1rem; }
+        .content-wrapper strong { color: var(--text); }
+        .content-wrapper hr  { border: none; border-top: 2px solid rgba(157,214,191,.3); margin: 2rem 0; }
 
         .paper-item, .blog-item {
-            background: rgba(255, 255, 255, 0.95);
-            border: 2px solid rgba(157, 214, 191, 0.4); 
+            background: rgba(255,255,255,.95);
+            border: 2px solid rgba(157,214,191,.4);
             border-radius: 16px;
             padding: 2rem;
             margin-bottom: 1.5rem;
-            transition: all 0.3s ease;
+            transition: all .3s ease;
         }
 
-        .paper-item:hover, .blog-item:hover {
-            border-color: #007932; 
-            transform: translateX(10px);
-            box-shadow: 0 10px 30px rgba(0, 121, 50, 0.15);
-        }
+        .paper-item:hover, .blog-item:hover { border-color: var(--green); transform: translateX(10px); box-shadow: 0 10px 30px rgba(0,121,50,.15); }
+        .paper-item h4, .blog-item h4 { color: var(--text); font-size: 1.2rem; margin-bottom: .5rem; }
+        .paper-meta { color: var(--dark); font-size: .9rem; font-weight: 600; margin-bottom: 1rem; }
+        .paper-item p, .blog-item p  { color: #2d5a3d; line-height: 1.6; }
 
-        .paper-item h4, .blog-item h4 {
-            color: #1a3a1a;
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-        }
+        /* stats */
+        .stats { padding: 6rem 5%; text-align: center; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-top: 3rem; }
+        .stat-item   { animation: fadeInUp .8s ease; }
+        .stat-number { font-size: 3.5rem; font-weight: 800; background: linear-gradient(135deg, var(--green), var(--mint)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: .5rem; }
+        .stat-label  { color: #2d5a3d; font-size: 1.1rem; font-weight: 500; }
 
-        .paper-meta {
-            color: #005a26;
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
+        /* CTA */
+        .cta-section { padding: 6rem 5%; text-align: center; margin: 4rem 0; }
+        .cta-box { background: linear-gradient(135deg, rgba(157,214,191,.2), rgba(200,218,200,.15)); border: 3px solid rgba(0,121,50,.4); border-radius: 30px; padding: 4rem 3rem; max-width: 800px; margin: 0 auto; backdrop-filter: blur(20px); box-shadow: 0 20px 60px rgba(0,121,50,.15); }
+        .cta-box h2 { font-size: 2.5rem; margin-bottom: 1.5rem; background: linear-gradient(135deg, var(--green), var(--dark), var(--mint)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .cta-box p  { font-size: 1.2rem; color: #2d5a3d; margin-bottom: 2rem; }
 
-        .paper-item p, .blog-item p {
-            color: #2d5a3d;
-            line-height: 1.6;
-        }
+        footer { padding: 3rem 5%; border-top: 2px solid rgba(157,214,191,.3); text-align: center; color: var(--green); }
 
-        .multimedia-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
+        .loading { text-align: center; color: var(--green); padding: 2rem; font-size: 1.1rem; }
 
-        .media-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            border: 2px solid rgba(200, 218, 200, 0.5); 
-            border-radius: 20px;
-            padding: 2rem;
-            transition: all 0.4s ease;
-        }
+        /* ─── RESPONSIVE ─────────────────────────────────────────────── */
+        @media (max-width: 900px) {
+            .nav-links  { display: none; }
+            .hamburger  { display: inline-block; }
+            .mobile-menu { display: block; }
 
-        .media-card:hover {
-            transform: translateY(-5px);
-            border-color: #9dd6bf; 
-            box-shadow: 0 15px 40px rgba(157, 214, 191, 0.25);
-        }
+            h1 { font-size: 2.5rem; }
 
-        .media-card h4 {
-            color: #1a3a1a;
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .media-card p {
-            color: #2d5a3d;
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-
-        .media-links {
-            color: #007932;
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-
-        .stats {
-            padding: 6rem 5%;
-            text-align: center;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
-        }
-
-        .stat-item {
-            animation: fadeInUp 0.8s ease;
-        }
-
-        .stat-number {
-            font-size: 3.5rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #007932, #9dd6bf); 
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            color: #2d5a3d;
-            font-size: 1.1rem;
-            font-weight: 500;
-        }
-
-        .cta-section {
-            padding: 6rem 5%;
-            text-align: center;
-            margin: 4rem 0;
-        }
-
-        .cta-box {
-            background: linear-gradient(135deg, rgba(157, 214, 191, 0.2), rgba(200, 218, 200, 0.15)); 
-            border: 3px solid rgba(0, 121, 50, 0.4);
-            border-radius: 30px;
-            padding: 4rem 3rem;
-            max-width: 800px;
-            margin: 0 auto;
-            backdrop-filter: blur(20px);
-            box-shadow: 0 20px 60px rgba(0, 121, 50, 0.15);
-        }
-
-        .cta-box h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, #007932, #005a26, #9dd6bf);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .cta-box p {
-            font-size: 1.2rem;
-            color: #2d5a3d;
-            margin-bottom: 2rem;
-        }
-
-        footer {
-            padding: 3rem 5%;
-            border-top: 2px solid rgba(157, 214, 191, 0.3); 
-            text-align: center;
-            color: #007932;
-        }
-
-        .content-wrapper {
-            color: #2d5a3d;
-            line-height: 1.8;
-        }
-
-        .content-wrapper h2 {
-            color: #1a3a1a;
-            margin-bottom: 1rem;
-        }
-
-        .content-wrapper h3 {
-            color: #007932;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .content-wrapper strong {
-            color: #1a3a1a;
-        }
-
-        .content-wrapper hr {
-            border: none;
-            border-top: 2px solid rgba(157, 214, 191, 0.3); 
-            margin: 2rem 0;
-        }
-
-        .loading {
-            text-align: center;
-            color: #007932;
-            padding: 2rem;
-            font-size: 1.1rem;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .hero-visual {
-                height: 300px;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .projects-grid, .multimedia-grid {
-                grid-template-columns: 1fr;
-            }
+            .hero { flex-direction: column; text-align: center; padding-top: 7rem; }
+            .hero-visual { height: 300px; }
+            .cta-buttons { flex-direction: column; align-items: center; }
+            .projects-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
     <div class="gradient-bg"></div>
 
+    <!-- OVERLAY -->
+    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+    <!-- MOBILE DRAWER -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#inicio"       onclick="closeMenu()">Home</a></li>
+            <li><a href="#servicios"    onclick="closeMenu()">Services</a></li>
+            <li><a href="#proyectos"    onclick="closeMenu()">Projects</a></li>
+            <li><a href="#equipo"       onclick="closeMenu()">Team</a></li>
+            <li><a href="#investigacion" onclick="closeMenu()">Research</a></li>
+            <li><a href="#multimedia"   onclick="closeMenu()">Multimedia</a></li>
+            <li><a href="#impacto"      onclick="closeMenu()">Impact</a></li>
+            <li><a href="#contacto"     onclick="closeMenu()">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- NAV -->
     <nav>
         <div class="logo">NexData Lab</div>
         <ul class="nav-links">
@@ -692,55 +504,72 @@
             <li><a href="#impacto">Impact</a></li>
             <li><a href="#contacto">Contact</a></li>
         </ul>
+
+        <!-- HAMBURGER COLLAPSE -->
+        <button class="hamburger hamburger--collapse" id="hamburger"
+                type="button" aria-label="Menu" aria-controls="mobileMenu"
+                aria-expanded="false">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
     </nav>
 
+    <!-- HERO -->
     <section class="hero" id="inicio">
         <div class="hero-content">
             <div id="hero-content"><div class="loading">Loading...</div></div>
             <div class="cta-buttons">
-                <button class="btn btn-primary" onclick="scrollToContact()">Comenzar ahora</button>
+                <button class="btn btn-primary"   onclick="scrollToContact()">Comenzar ahora</button>
                 <button class="btn btn-secondary" onclick="scrollToServices()">Ver servicios</button>
             </div>
         </div>
         <div class="hero-visual" id="hero-metrics"></div>
     </section>
 
+    <!-- SERVICES -->
     <section class="section" id="servicios">
         <h2 class="section-title">Our Services</h2>
         <p class="section-subtitle">End-to-end solutions in data science</p>
         <div class="services-grid" id="services-grid"><div class="loading">Cargando servicios...</div></div>
     </section>
 
+    <!-- PROJECTS -->
     <section class="section" id="proyectos">
         <h2 class="section-title">Projects</h2>
         <p class="section-subtitle">From evidence to action: research with impact</p>
         <div class="projects-grid" id="projects-grid"><div class="loading">Loading projects...</div></div>
     </section>
 
+    <!-- TEAM -->
     <section class="section" id="equipo">
         <h2 class="section-title">Team</h2>
         <p class="section-subtitle">The minds behind innovation</p>
         <div class="team-grid" id="team-grid"><div class="loading">Loading team...</div></div>
     </section>
 
+    <!-- RESEARCH -->
     <section class="section" id="investigacion">
         <h2 class="section-title">Research</h2>
         <p class="section-subtitle">Contributing to the advancement of data science</p>
         <div class="content-wrapper" id="research-content"><div class="loading">Loading research...</div></div>
     </section>
 
+    <!-- MULTIMEDIA -->
     <section class="section" id="multimedia">
         <h2 class="section-title">Multimedia</h2>
         <p class="section-subtitle">Conocimiento que compartimos</p>
         <div class="content-wrapper" id="multimedia-content"><div class="loading">Cargando multimedia...</div></div>
     </section>
 
+    <!-- STATS -->
     <section class="stats" id="impacto">
         <h2 class="section-title">Our impact</h2>
         <p class="section-subtitle">Results that speak for themselves</p>
         <div class="stats-grid" id="stats-grid"><div class="loading">Loading...</div></div>
     </section>
 
+    <!-- CTA / CONTACT -->
     <section class="cta-section" id="contacto">
         <div class="cta-box" id="cta-content"><div class="loading">Loading...</div></div>
     </section>
@@ -750,43 +579,69 @@
     </footer>
 
     <script>
-        // Configuración de marked
-        marked.setOptions({
-            breaks: true,
-            gfm: true
+        // ── marked setup ──────────────────────────────────────────────
+        marked.setOptions({ breaks: true, gfm: true });
+
+        // ── hamburger toggle ──────────────────────────────────────────
+        const hamburger  = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const overlay    = document.getElementById('overlay');
+
+        function openMenu() {
+            hamburger.classList.add('is-active');
+            hamburger.setAttribute('aria-expanded', 'true');
+            mobileMenu.classList.add('open');
+            overlay.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            hamburger.classList.remove('is-active');
+            hamburger.setAttribute('aria-expanded', 'false');
+            mobileMenu.classList.remove('open');
+            overlay.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.contains('is-active') ? closeMenu() : openMenu();
         });
 
-        // Función para cargar archivos MD
+        // Close on Escape key
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeMenu();
+        });
+
+        // ── markdown loader ───────────────────────────────────────────
         async function loadMarkdown(filename) {
             try {
-                const response = await fetch(`content/${filename}.md`);
-                if (!response.ok) throw new Error(`Error loading ${filename}.md`);
-                return await response.text();
-            } catch (error) {
-                console.error(`Error loading ${filename}:`, error);
+                const res = await fetch(`content/${filename}.md`);
+                if (!res.ok) throw new Error(`Error loading ${filename}.md`);
+                return await res.text();
+            } catch (err) {
+                console.error(`Error loading ${filename}:`, err);
                 return null;
             }
         }
 
-        // Función para parsear Hero
+        // ── parsers ───────────────────────────────────────────────────
         function parseHeroContent(md) {
             const lines = md.split('\n');
             const title = lines[0].replace(/^# /, '');
             const badge = lines[2].replace(/^## /, '');
             const description = lines[4];
-            
-            // Extraer métricas
+
             const metricsSection = md.split('### Métricas Destacadas')[1];
             const metrics = [];
             const metricBlocks = metricsSection.split('\n\n').filter(b => b.trim());
-            
+
             metricBlocks.forEach(block => {
-                const lines = block.split('\n').filter(l => l.trim());
-                if (lines.length >= 3) {
+                const ls = block.split('\n').filter(l => l.trim());
+                if (ls.length >= 3) {
                     metrics.push({
-                        title: lines[0].replace(/^\*\*|\*\*$/g, ''),
-                        value: lines[1],
-                        trend: lines[2]
+                        title: ls[0].replace(/^\*\*|\*\*$/g, ''),
+                        value: ls[1],
+                        trend: ls[2]
                     });
                 }
             });
@@ -797,302 +652,208 @@
         function parseServices(md) {
             const services = [];
             const blocks = md.split('###').filter(b => b.trim());
-            
             blocks.forEach(block => {
-                const lines = block.split('\n').filter(l => l.trim());
-                if (lines.length >= 2) {
-                    const titleLine = lines[0].trim();
+                const ls = block.split('\n').filter(l => l.trim());
+                if (ls.length >= 2) {
+                    const titleLine = ls[0].trim();
                     const icon = titleLine.match(/^[^\s]+/)[0];
                     const title = titleLine.replace(/^[^\s]+\s+/, '');
-                    
-                    // Combine all following lines into one description
-                    const description = lines.slice(1).join(' ');
-                    
+                    const description = ls.slice(1).join(' ');
                     services.push({ icon, title, description });
                 }
             });
-        
             return services;
         }
 
         function parseProjects(md) {
             const projects = [];
             const blocks = md.split('---').filter(b => b.trim() && b.includes('###'));
-    
             blocks.forEach(block => {
-                const lines = block.split('\n').map(l => l.trim()).filter(l => l);
-
-        // Title and icon
-                const titleLine = lines.find(l => l.startsWith('###')) || '';
+                const ls = block.split('\n').map(l => l.trim()).filter(l => l);
+                const titleLine = ls.find(l => l.startsWith('###')) || '';
                 const iconMatch = titleLine.match(/^[#\s]*([\p{Emoji}\p{So}\p{Sk}\p{Sm}\p{Sc}])/u);
-                const icon = iconMatch ? iconMatch[1] : '';
-                const title = icon ? titleLine.replace(/^###\s*[\p{Emoji}\p{So}\p{Sk}\p{Sm}\p{Sc}]\s*/u, '').trim() 
-                                   : titleLine.replace(/^###\s*/, '').trim();
-
-        // Extract meta, website, description, summary
-                const metaLine = lines.find(l => l.toLowerCase().startsWith('meta:')) || '';
-                const websiteLine = lines.find(l => l.toLowerCase().startsWith('website:')) || '';
-                const descriptionIndex = lines.findIndex(l => l.toLowerCase().startsWith('description:'));
-                const summaryIndex = lines.findIndex(l => l.toLowerCase().startsWith('summary:'));
-
-                const meta = metaLine ? metaLine.replace(/^meta:\s*/i, '') : '';
-                const website = websiteLine ? websiteLine.replace(/^website:\s*/i, '') : '';
-                const description = descriptionIndex >= 0 
-                    ? lines[descriptionIndex].replace(/^description:\s*/i, '') 
-                    : '';
-                const summary = summaryIndex >= 0 
-                    ? lines.slice(summaryIndex).join(' ').replace(/^summary:\s*/i, '') 
-                    : '';
-
+                const icon  = iconMatch ? iconMatch[1] : '';
+                const title = icon
+                    ? titleLine.replace(/^###\s*[\p{Emoji}\p{So}\p{Sk}\p{Sm}\p{Sc}]\s*/u, '').trim()
+                    : titleLine.replace(/^###\s*/, '').trim();
+                const metaLine        = ls.find(l => l.toLowerCase().startsWith('meta:')) || '';
+                const websiteLine     = ls.find(l => l.toLowerCase().startsWith('website:')) || '';
+                const descriptionIdx  = ls.findIndex(l => l.toLowerCase().startsWith('description:'));
+                const summaryIdx      = ls.findIndex(l => l.toLowerCase().startsWith('summary:'));
+                const meta        = metaLine     ? metaLine.replace(/^meta:\s*/i, '') : '';
+                const website     = websiteLine  ? websiteLine.replace(/^website:\s*/i, '') : '';
+                const description = descriptionIdx >= 0 ? ls[descriptionIdx].replace(/^description:\s*/i, '') : '';
+                const summary     = summaryIdx >= 0     ? ls.slice(summaryIdx).join(' ').replace(/^summary:\s*/i, '') : '';
                 projects.push({ icon, title, meta, website, description, summary });
             });
-
             return projects;
         }
-
 
         function parseTeam(md) {
             const members = [];
             const blocks = md.split('---').filter(b => b.trim() && b.includes('###'));
-    
             blocks.forEach(block => {
-                const lines = block.split('\n').filter(l => l.trim());
-                const titleLine = lines[0].replace(/^### /, '');
+                const ls = block.split('\n').filter(l => l.trim());
+                const titleLine = ls[0].replace(/^### /, '');
                 const emoji = titleLine.match(/^[^\s]+/)[0];
-                const name = titleLine.replace(/^[^\s]+\s+/, '');
-                const role = lines[1].replace(/^\*\*|\*\*$/g, '');
-        
-                // Buscar si hay una línea con IMAGE:
-                const imageIndex = lines.findIndex(l => l.toUpperCase().includes('IMAGE:'));
-                const image = imageIndex > -1 ? lines[imageIndex].replace(/^\*\*IMAGE:\*\*\s*/i, '').trim() : null;
-        
-                // Detect links
-                const linkIndex = lines.findIndex(l => l.trim().startsWith('*[') || l.trim().startsWith('*http'));
-        
-                // Bio starts after role (and image if present), ends before links
+                const name  = titleLine.replace(/^[^\s]+\s+/, '');
+                const role  = ls[1].replace(/^\*\*|\*\*$/g, '');
+                const imageIndex = ls.findIndex(l => l.toUpperCase().includes('IMAGE:'));
+                const image = imageIndex > -1 ? ls[imageIndex].replace(/^\*\*IMAGE:\*\*\s*/i, '').trim() : null;
+                const linkIndex = ls.findIndex(l => l.trim().startsWith('*[') || l.trim().startsWith('*http'));
                 const bioStartIndex = imageIndex > -1 ? imageIndex + 1 : 2;
-                const bioEndIndex = linkIndex > -1 ? linkIndex : lines.length;
-                const bioLines = lines.slice(bioStartIndex, bioEndIndex);
-                const bio = bioLines.join(' ');
-        
-                const links = linkIndex > -1 ? lines[linkIndex] : '';
-        
+                const bioEndIndex   = linkIndex > -1 ? linkIndex : ls.length;
+                const bio   = ls.slice(bioStartIndex, bioEndIndex).join(' ');
+                const links = linkIndex > -1 ? ls[linkIndex] : '';
                 members.push({ emoji, name, role, bio, links, image });
             });
-
             return members;
         }
 
         function parseStats(md) {
             const stats = [];
             const blocks = md.split('\n\n').filter(b => b.trim() && b.includes('**'));
-            
             blocks.forEach(block => {
-                const lines = block.split('\n').filter(l => l.trim());
-                if (lines.length >= 2) {
-                    const number = lines[0].replace(/^\*\*|\*\*$/g, '');
-                    const label = lines[1];
-                    stats.push({ number, label });
+                const ls = block.split('\n').filter(l => l.trim());
+                if (ls.length >= 2) {
+                    stats.push({ number: ls[0].replace(/^\*\*|\*\*$/g, ''), label: ls[1] });
                 }
             });
-
             return stats;
         }
 
-        // Renderizar Hero
+        // ── renderers ─────────────────────────────────────────────────
         async function renderHero() {
             const md = await loadMarkdown('inicio');
             if (!md) return;
-            
             const data = parseHeroContent(md);
-            
             document.getElementById('hero-content').innerHTML = `
                 <div class="hero-badge">${data.badge}</div>
                 <h1>${data.title}</h1>
-                <p class="hero-description">${data.description}</p>
-            `;
-
-            const metricsHTML = data.metrics.map((m, i) => `
+                <p class="hero-description">${data.description}</p>`;
+            document.getElementById('hero-metrics').innerHTML = data.metrics.map(m => `
                 <div class="data-card">
                     <div class="card-title">${m.title}</div>
                     <div class="card-value">${m.value}</div>
                     <div class="card-trend">${m.trend}</div>
-                </div>
-            `).join('');
-
-            document.getElementById('hero-metrics').innerHTML = metricsHTML;
+                </div>`).join('');
         }
 
-        // Renderizar Servicios
         async function renderServices() {
             const md = await loadMarkdown('servicios');
             if (!md) return;
-            
-            const services = parseServices(md);
-            
-            const html = services.map(s => `
+            document.getElementById('services-grid').innerHTML = parseServices(md).map(s => `
                 <div class="service-card">
                     <div class="service-icon">${s.icon}</div>
                     <h3>${s.title}</h3>
                     <p>${s.description}</p>
-                </div>
-            `).join('');
-
-            document.getElementById('services-grid').innerHTML = html;
+                </div>`).join('');
         }
-        // Render Projects
+
         async function renderProjects() {
-        const md = await loadMarkdown('proyectos');
-        if (!md) return;
-
-        const projects = parseProjects(md);
-
-        const html = projects.map(p => `
-            <div class="project-card">
-                <h3>${p.icon} ${p.title}</h3>
-                ${p.website ? `<a href="${p.website}" target="_blank" class="project-link">${p.website}</a>` : ''}
-                <div class="project-meta">${p.meta}</div>
-                <p>${p.description}</p>
-                ${p.summary ? `<div class="project-summary">${p.summary}</div>` : ''}
-            </div>
-        `).join('');
-
-        document.getElementById('projects-grid').innerHTML = html;
+            const md = await loadMarkdown('proyectos');
+            if (!md) return;
+            document.getElementById('projects-grid').innerHTML = parseProjects(md).map(p => `
+                <div class="project-card">
+                    <h3>${p.icon} ${p.title}</h3>
+                    ${p.website ? `<a href="${p.website}" target="_blank" class="project-link">${p.website}</a>` : ''}
+                    <div class="project-meta">${p.meta}</div>
+                    <p>${p.description}</p>
+                    ${p.summary ? `<div class="project-summary">${p.summary}</div>` : ''}
+                </div>`).join('');
         }
 
-        // Renderizar Equipo
         async function renderTeam() {
             const md = await loadMarkdown('equipo');
             if (!md) return;
-
-            const members = parseTeam(md);
-
-            const html = members.map(m => `
+            document.getElementById('team-grid').innerHTML = parseTeam(md).map(m => `
                 <div class="team-card">
                     <div class="team-avatar">
-                        ${m.image 
-                            ? `<img src="${m.image}" alt="${m.name}">` 
-                            : m.emoji}
+                        ${m.image ? `<img src="${m.image}" alt="${m.name}">` : m.emoji}
                     </div>
                     <h3>${m.name}</h3>
                     <div class="team-role">${m.role}</div>
                     <p>${m.bio}</p>
                     <div class="team-links">
-                        ${marked
-                            .parse(m.links || '')
-                            .replaceAll('<a ', '<a target="_blank" rel="noopener noreferrer" class="team-link" ')}
+                        ${marked.parse(m.links || '').replaceAll('<a ', '<a target="_blank" rel="noopener noreferrer" class="team-link" ')}
                     </div>
-                </div>
-            `).join('');
-
-            document.getElementById('team-grid').innerHTML = html;
+                </div>`).join('');
         }
 
-        // Renderizar Investigación
         async function renderResearch() {
             const md = await loadMarkdown('investigacion');
             if (!md) return;
-            
-            const html = marked.parse(md);
-            document.getElementById('research-content').innerHTML = html;
+            document.getElementById('research-content').innerHTML = marked.parse(md);
         }
 
-        // Renderizar Multimedia
         async function renderMultimedia() {
             const md = await loadMarkdown('multimedia');
             if (!md) return;
-            
-            const html = marked.parse(md);
-            document.getElementById('multimedia-content').innerHTML = html;
+            document.getElementById('multimedia-content').innerHTML = marked.parse(md);
         }
 
-        // Renderizar Stats
         async function renderStats() {
             const md = await loadMarkdown('impacto');
             if (!md) return;
-            
-            const stats = parseStats(md);
-            
-            const html = stats.map(s => `
+            document.getElementById('stats-grid').innerHTML = parseStats(md).map(s => `
                 <div class="stat-item">
                     <div class="stat-number">${s.number}</div>
                     <div class="stat-label">${s.label}</div>
-                </div>
-            `).join('');
-
-            document.getElementById('stats-grid').innerHTML = html;
+                </div>`).join('');
         }
 
-        // Renderizar Contacto
         async function renderContact() {
             const md = await loadMarkdown('contacto');
             if (!md) return;
-            
             const lines = md.split('\n').filter(l => l.trim());
             const title = lines[0].replace(/^# /, '');
             const description = lines[2];
-            
             document.getElementById('cta-content').innerHTML = `
                 <h2>${title}</h2>
                 <p>${description}</p>
-                <button class="btn btn-primary" onclick="alert('¡Formulario de contacto próximamente!')">Contactar ahora</button>
-            `;
+                <button class="btn btn-primary" onclick="alert('¡Formulario de contacto próximamente!')">Contactar ahora</button>`;
         }
 
-        // Inicializar todo el contenido
-        async function initContent() {
-            await renderHero();
-            await renderServices();
-            await renderProjects();
-            await renderTeam();
-            await renderResearch();
-            await renderMultimedia();
-            await renderStats();
-            await renderContact();
-        }
+        // ── scroll helpers ────────────────────────────────────────────
+        function scrollToContact()  { document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' }); }
+        function scrollToServices() { document.getElementById('servicios').scrollIntoView({ behavior: 'smooth' }); }
 
-        // Funciones de scroll
-        function scrollToContact() {
-            document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' });
-        }
-
-        function scrollToServices() {
-            document.getElementById('servicios').scrollIntoView({ behavior: 'smooth' });
-        }
-
-        // Efecto parallax en scroll
+        // ── parallax ──────────────────────────────────────────────────
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
-            const cards = document.querySelectorAll('.data-card');
-            cards.forEach((card, index) => {
-                card.style.transform = `translateY(${scrolled * (0.1 + index * 0.05)}px)`;
+            document.querySelectorAll('.data-card').forEach((card, i) => {
+                card.style.transform = `translateY(${scrolled * (0.1 + i * 0.05)}px)`;
             });
         });
 
-        // Animación de elementos al entrar en viewport
-        const observerOptions = {
-            threshold: 0.5
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+        // ── intersection observer (entrance animations) ───────────────
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.style.opacity = '1';
+                    e.target.style.transform = 'translateY(0)';
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.15 });
 
-        // Iniciar cuando el DOM esté listo
+        // ── init ──────────────────────────────────────────────────────
         document.addEventListener('DOMContentLoaded', async () => {
-            await initContent();
-            
-            // Aplicar animaciones a las tarjetas
+            await Promise.all([
+                renderHero(),
+                renderServices(),
+                renderProjects(),
+                renderTeam(),
+                renderResearch(),
+                renderMultimedia(),
+                renderStats(),
+                renderContact()
+            ]);
+
             setTimeout(() => {
                 document.querySelectorAll('.service-card, .stat-item, .project-card, .team-card').forEach(el => {
                     el.style.opacity = '0';
                     el.style.transform = 'translateY(30px)';
-                    el.style.transition = 'all 0.6s ease';
+                    el.style.transition = 'all .6s ease';
                     observer.observe(el);
                 });
             }, 100);
