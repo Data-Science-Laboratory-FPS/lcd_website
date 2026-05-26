@@ -471,38 +471,41 @@
             position: absolute;
             top: 45%;
             transform: translateY(-50%);
-            border: 1.5px solid var(--green);
+            border: 1px solid rgba(0, 121, 50, .35);
             width: 42px;
             height: 42px;
             border-radius: 50%;
-            background: var(--white);
+            background: rgba(255,255,255,.45);
+            backdrop-filter: blur(8px);
             color: var(--green);
             font-size: 1.5rem;
             cursor: pointer;
             z-index: 2;
         }
-        .media-carousel-control:hover { background: var(--green); color: var(--white); }
+        .media-carousel-control:hover { background: rgba(0,121,50,.8); color: var(--white); }
         .media-carousel-control.prev { left: .2rem; }
         .media-carousel-control.next { right: .2rem; }
         .media-card {
             scroll-snap-align: start;
-            background: var(--white);
-            border: 0.5px solid var(--sage);
-            border-radius: 16px;
+            background: rgba(255,255,255,.28);
+            border: 1px solid rgba(255,255,255,.45);
+            border-radius: 18px;
             overflow: hidden;
-            transition: transform .25s ease, box-shadow .25s ease;
+            backdrop-filter: blur(10px);
+            transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
             text-decoration: none;
+            box-shadow: 0 8px 26px rgba(0, 121, 50, .08);
         }
-        .media-card:hover { transform: translateY(-2px); border-color: rgba(26, 107, 47, 0.3); }
-        .media-thumb-wrap { aspect-ratio: 16 / 9; background: #e8f5e9; }
+        .media-card:hover { transform: translateY(-4px); border-color: rgba(0,121,50,.32); box-shadow: 0 14px 32px rgba(0,121,50,.14); }
+        .media-thumb-wrap { aspect-ratio: 16 / 9; background: linear-gradient(130deg, rgba(23,49,34,.88), rgba(32,87,57,.66)); position: relative; }
         .media-thumb {
             width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
         }
-        .media-body { padding: 1rem 1rem 1.1rem; }
-        .media-title { color: var(--text); font-size: 1rem; font-weight: 700; margin-bottom: .5rem; }
+        .media-body { padding: 1rem 1rem 1.1rem; background: linear-gradient(180deg, rgba(255,255,255,.24), rgba(255,255,255,.12)); }
+        .media-title { color: #103720; font-size: 1rem; font-weight: 700; margin-bottom: .5rem; }
         .media-meta { color: var(--body); font-size: .9rem; display: flex; flex-wrap: wrap; gap: .35rem; line-height: 1.7; }
         .media-meta-tag {
             display: inline-block;
