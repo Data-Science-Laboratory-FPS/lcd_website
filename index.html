@@ -453,14 +453,14 @@
             font-weight: 500;
             color: var(--green);
         }
-        .media-carousel-shell { position: relative; }
+        .media-carousel-shell { position: relative; padding-inline: 2.4rem; }
         .media-carousel {
             display: grid;
             grid-auto-flow: column;
             grid-auto-columns: minmax(280px, 29vw);
             gap: 1rem;
             overflow-x: auto;
-            padding: .5rem 2.6rem 1rem;
+            padding: .5rem 0 1rem;
             scroll-snap-type: x mandatory;
             scrollbar-width: none;
             scroll-behavior: smooth;
@@ -483,8 +483,8 @@
             z-index: 2;
         }
         .media-carousel-control:hover { background: rgba(0,121,50,.8); color: var(--white); }
-        .media-carousel-control.prev { left: .2rem; }
-        .media-carousel-control.next { right: .2rem; }
+        .media-carousel-control.prev { left: .45rem; }
+        .media-carousel-control.next { right: .45rem; }
         .media-card {
             scroll-snap-align: start;
             background: #ffffff;
@@ -534,6 +534,21 @@
         .media-title { color: #2E2925; font-size: 1.03rem; font-weight: 600; margin-bottom: .45rem; line-height: 1.35; min-height: 2.6em; }
         .media-meta { color: #6f7377; font-size: 13px; line-height: 1.45; margin-bottom: .6rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .media-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: .85rem; }
+        .media-description {
+            color: #4e5458;
+            font-size: .86rem;
+            line-height: 1.45;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height .3s ease, opacity .25s ease;
+            margin-bottom: 0;
+        }
+        .media-card:hover .media-description {
+            max-height: 220px;
+            opacity: 1;
+            margin-bottom: .8rem;
+        }
         .media-topic-tag {
             display: inline-block;
             padding: .2rem .6rem;
@@ -968,10 +983,11 @@
             const duration = getField('Duration') || '';
             const topic = getField('Topic') || '';
             const type = getField('Type') || '';
+            const description = getField('Description') || '';
             const tags = splitTopicTags(topic);
             const badge = uploaded.includes('2026') ? '✓ Nuevo' : (type.toLowerCase().includes('podcast') ? '✓ Destacado' : '');
             const cta = type.toLowerCase().includes('podcast') ? '▶ Escuchar podcast' : '▶ Ver vídeo';
-            return { language, institution, uploaded, duration, tags, badge, cta };
+            return { language, institution, uploaded, duration, tags, badge, cta, description };
         }
 
         async function renderMultimedia() {
@@ -997,6 +1013,7 @@
                                     <div class="media-title">${item.title}</div>
                                     <div class="media-meta">📅 ${media.uploaded} · ${media.language} · 🏛️ ${media.institution}</div>
                                     <div class="media-tags">${media.tags.map(tag => `<span class="media-topic-tag">${tag}</span>`).join('')}</div>
+                                    ${media.description ? `<p class="media-description">${media.description.replace(/\\n/g, '<br>')}</p>` : ''}
                                     <span class="media-cta">${media.cta}</span>
                                 </div>
                             </a>`;
