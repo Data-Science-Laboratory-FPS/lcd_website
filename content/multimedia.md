@@ -12,7 +12,7 @@
 - Duration: 15 min
 - Uploaded: 06 April 2021
 
-[▶️ ![Thumbnail](https://img.youtube.com/vi/DEySESy-Xcs/maxresdefault.jpg)](https://www.youtube.com/watch?v=DEySESy-Xcs)
+[▶️ ![Thumbnail](https://img.youtube.com/vi/ke6qrOSqqB0/maxresdefault.jpg)](https://youtu.be/ke6qrOSqqB0)
 
 #### “Tarragona 2022 - Critical Data Summit & Datathon”
 - Language: 🇪🇸
@@ -132,16 +132,16 @@
 
 ## 🏥 Clinical AI & Healthcare Innovation
 
-#### “IntelliLung: AI-based clinical decision support for optimizing mechanical ventilation in critical care”
+#### “IntelliLung | EU-Horizon funded project”
 - Language: 🇬🇧
 - Type: Clinical AI innovation talk
-- Clinical focus: Reinforcement learning for safer, individualized ventilation settings
-- Innovation layer: Translational AI-CDSS for ICU deployment and evaluation
-- Data strategy: Multicenter validation with clinically interpretable modeling
+- Institution: IntelliLung Project
+- Topic: Mechanical ventilation, critical care, AI clinical decision support
 - Duration: 15 min
 - Uploaded: 06 April 2021
+- Description: Mechanical ventilation is a life-saving therapy widely used in intensive care units around the world. However, selecting the optimal ventilator settings for critically ill patients remains a major challenge. A patient’s respiratory condition can change rapidly, requiring clinicians to constantly balance two competing goals: ensuring adequate gas exchange while minimizing the risk of ventilator-induced lung and organ injury.\n\nThe IntelliLung project addresses this challenge by developing an AI-based clinical decision support system designed to help intensive care teams optimize mechanical ventilation for critically ill patients.\n\nLearn more at https://intellilung-project.eu\n\nFunded by the European Union’s HORIZON European Health and Digital Executive Agency (HaDEA) under grant agreement No. 101057434. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union. Neither the European Union nor the granting authority can be held responsible for them.
 
-[▶️ ![Thumbnail](https://img.youtube.com/vi/ke6qrOSqqB0/maxresdefault.jpg)](https://youtu.be/ke6qrOSqqB0)
+[▶️ ![Thumbnail](https://img.youtube.com/vi/DEySESy-Xcs/maxresdefault.jpg)](https://www.youtube.com/watch?v=DEySESy-Xcs)
 
 #### “RASCAL (Corona Severity Score Andaluz) ZinkkIn V1”
 - Language: 🇪🇸
