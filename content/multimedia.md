@@ -13,7 +13,7 @@
 - Duration: 15 min
 - Uploaded: 26 May 2026
 
-[▶️ ![Thumbnail](https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)
+[▶️ <img src="https://img.youtube.com/vi/DEySESy-Xcs/maxresdefault.jpg" alt="IntelliLung video thumbnail" title="Mechanical ventilation is a life-saving therapy widely used in intensive care units around the world. However, selecting the optimal ventilator settings for critically ill patients remains a major challenge. A patient’s respiratory condition can change rapidly, requiring clinicians to constantly balance two competing goals: ensuring adequate gas exchange while minimizing the risk of ventilator-induced lung and organ injury. The IntelliLung project addresses this challenge by developing an AI-based clinical decision support system designed to help intensive care teams optimize mechanical ventilation for critically ill patients. Learn more at https://intellilung-project.eu. Funded by the European Union’s HORIZON European Health and Digital Executive Agency (HaDEA) under grant agreement No. 101057434.">](https://www.youtube.com/watch?v=DEySESy-Xcs)
 
 #### “Podcast - IA y Datos FAIR para tratar la Sepsis de Urgencias”
 - Language: 🇪🇸
@@ -85,7 +85,7 @@
 - Duration: 13 min
 - Uploaded: 10 June 2022
 
-[▶️ ![Thumbnail](https://img.youtube.com/vi/CGiwgNorhvQ/maxresdefault.jpg)](https://youtu.be/CGiwgNorhvQ)
+[▶️ ![Thumbnail](https://img.youtube.com/vi/GGiwgNorhvQ/maxresdefault.jpg)](https://youtu.be/GGiwgNorhvQ)
 
 #### “Formación Medicina Personalizada y de Precisión, Bloque IA - DeepLearning y Transformers”
 - Language: 🇪🇸
@@ -146,7 +146,7 @@
 - Duration: 15 min
 - Uploaded: 26 May 2026
 
-[▶️ ![Thumbnail](https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)
+[▶️ <img src="https://img.youtube.com/vi/DEySESy-Xcs/maxresdefault.jpg" alt="IntelliLung video thumbnail" title="IntelliLung: AI-based clinical decision support for optimizing mechanical ventilation in critically ill ICU patients. Details include project goals, clinical impact, and EU Horizon funding context.">](https://www.youtube.com/watch?v=DEySESy-Xcs)
 
 #### “RASCAL (Corona Severity Score Andaluz) ZinkkIn V1”
 - Language: 🇪🇸
