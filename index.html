@@ -321,7 +321,13 @@
         }
 
         /* ─── HERO VISUAL CARDS ─────────────────────────────────────── */
-        .hero-visual { flex: 1; position: relative; height: 500px; }
+        .hero-visual { flex: 1; position: relative; height: 500px; display: flex; align-items: center; justify-content: center; }
+        .hero-floating-image {
+            width: min(100%, 560px);
+            border-radius: 28px;
+            box-shadow: 0 24px 60px rgba(16, 185, 129, 0.24);
+            animation: float 6s ease-in-out infinite;
+        }
 
         .data-card {
             position: absolute;
@@ -524,7 +530,9 @@
                 <button class="btn btn-secondary" onclick="scrollToServices()">Ver servicios</button>
             </div>
         </div>
-        <div class="hero-visual" id="hero-metrics"></div>
+        <div class="hero-visual" id="hero-metrics">
+            <img class="hero-floating-image" src="images/hero-floating-health-ai.png" alt="Visual de IA aplicada a salud" loading="eager">
+        </div>
     </section>
 
     <!-- SERVICES -->
@@ -631,9 +639,9 @@
             const badge = lines[2].replace(/^## /, '');
             const description = lines[4];
 
-            const metricsSection = md.split('### Métricas Destacadas')[1];
+            const metricsSection = md.includes('### Métricas Destacadas') ? md.split('### Métricas Destacadas')[1] : '';
             const metrics = [];
-            const metricBlocks = metricsSection.split('\n\n').filter(b => b.trim());
+            const metricBlocks = metricsSection ? metricsSection.split('\n\n').filter(b => b.trim()) : [];
 
             metricBlocks.forEach(block => {
                 const ls = block.split('\n').filter(l => l.trim());
@@ -731,12 +739,6 @@
                 <div class="hero-badge">${data.badge}</div>
                 <h1>${data.title}</h1>
                 <p class="hero-description">${data.description}</p>`;
-            document.getElementById('hero-metrics').innerHTML = data.metrics.map(m => `
-                <div class="data-card">
-                    <div class="card-title">${m.title}</div>
-                    <div class="card-value">${m.value}</div>
-                    <div class="card-trend">${m.trend}</div>
-                </div>`).join('');
         }
 
         async function renderServices() {
