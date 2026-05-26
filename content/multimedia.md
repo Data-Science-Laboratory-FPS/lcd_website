@@ -2,7 +2,7 @@
 
 ## Knowledge that we share
 
-## 🎙️ Podcasts & Media Interviews
+## 🌍 Conferences, Scientific Talks & Academic Lectures
 
 #### “Foro Inteligencia Artificial - Fenin, Federación Española de Empresas de Tecnología Sanitaria”
 - Language: 🇪🇸
@@ -12,59 +12,7 @@
 - Duration: 15 min
 - Uploaded: 26 May 2026
 
-[▶️ <img src="https://img.youtube.com/vi/ke6qrOSqqB0/maxresdefault.jpg" alt="IntelliLung video thumbnail" title="IntelliLung: AI-based clinical decision support for optimizing mechanical ventilation in critical care" />](https://youtu.be/ke6qrOSqqB0)
-
-#### “Podcast - IA y Datos FAIR para tratar la Sepsis de Urgencias”
-- Language: 🇪🇸
-- Topic: Sepsis, FAIR data, emergency medicine, predictive AI
-- Duration: 23 min
-- Uploaded: 25 May 2026
-
-[▶️ ![Thumbnail](https://img.youtube.com/vi/CHJymvs2cpc/maxresdefault.jpg)](https://youtu.be/CHJymvs2cpc)
-
-#### “Podcast - Insights from the GenAI Health Hackathon at Hospital Clínic de Barcelona”
-- Language: 🇪🇸
-- Topic: Generative AI, clinical workflows, healthcare innovation, RAG systems
-- Duration: 21 min
-- Uploaded: 24 May 2026
-
-[▶️ ![Thumbnail](https://img.youtube.com/vi/z4snDgBogbA/maxresdefault.jpg)](https://youtu.be/z4snDgBogbA)
-
-#### “Podcast - The Power of Data Communities”
-- Language: 🇪🇸
-- Topic: Open data communities, MIMIC database, equity and scientific collaboration
-- Duration: 18 min
-- Uploaded: 23 May 2026
-
-[▶️ ![Thumbnail](https://img.youtube.com/vi/Ctk-ae6I6Sc/maxresdefault.jpg)](https://youtu.be/Ctk-ae6I6Sc)
-
-#### “Datos Abiertos y Salud: Democratizando la Inteligencia Artificial en Andalucía”
-- Language: 🇪🇸
-- Topic: Open health data, PRAETORIA, ODACI, EVIAS, healthcare AI democratization
-- Duration: 23 min
-- Uploaded: 22 May 2026
-
-[▶️ ![Thumbnail](https://img.youtube.com/vi/aSR0FYqJwx0/maxresdefault.jpg)](https://youtu.be/aSR0FYqJwx0)
-
-#### “One Health – Universidad Europea”
-- Language: 🇪🇸
-- Institution: Universidad Europea
-- Topic: One Health
-
-[▶️ ![Thumbnail](https://img.youtube.com/vi/kDJFaHn1fJI/maxresdefault.jpg)](https://www.youtube.com/watch?v=kDJFaHn1fJI&list=PLc9PylzWI65WZGIO5rjDgl-T6dTTjQQtF&index=5)
-
-#### “El Sevilla CF es Salud”
-- Language: 🇪🇸
-- Institution: Sevilla FC Radio
-- Topic: Artificial intelligence in healthcare and hypertension awareness
-- Duration: 73 min
-- Uploaded: 17 May 2023
-
-[▶️ ![Thumbnail](https://img.youtube.com/vi/2MXZe0A2NLA/maxresdefault.jpg)](https://youtu.be/2MXZe0A2NLA)
-
----
-
-## 🌍 Conferences, Scientific Talks & Academic Lectures
+[▶️ ![Thumbnail](https://img.youtube.com/vi/ke6qrOSqqB0/maxresdefault.jpg)](https://youtu.be/ke6qrOSqqB0)
 
 #### “Tarragona 2022 - Critical Data Summit & Datathon”
 - Language: 🇪🇸
@@ -130,19 +78,70 @@
 
 ---
 
+## 🎙️ Podcasts & Media Interviews
+
+#### “Podcast - IA y Datos FAIR para tratar la Sepsis de Urgencias”
+- Language: 🇪🇸
+- Topic: Sepsis, FAIR data, emergency medicine, predictive AI
+- Duration: 23 min
+- Uploaded: 25 May 2026
+
+[▶️ ![Thumbnail](https://img.youtube.com/vi/CHJymvs2cpc/maxresdefault.jpg)](https://youtu.be/CHJymvs2cpc)
+
+#### “Podcast - Insights from the GenAI Health Hackathon at Hospital Clínic de Barcelona”
+- Language: 🇪🇸
+- Topic: Generative AI, clinical workflows, healthcare innovation, RAG systems
+- Duration: 21 min
+- Uploaded: 24 May 2026
+
+[▶️ ![Thumbnail](https://img.youtube.com/vi/z4snDgBogbA/maxresdefault.jpg)](https://youtu.be/z4snDgBogbA)
+
+#### “Podcast - The Power of Data Communities”
+- Language: 🇪🇸
+- Topic: Open data communities, MIMIC database, equity and scientific collaboration
+- Duration: 18 min
+- Uploaded: 23 May 2026
+
+[▶️ ![Thumbnail](https://img.youtube.com/vi/Ctk-ae6I6Sc/maxresdefault.jpg)](https://youtu.be/Ctk-ae6I6Sc)
+
+#### “Datos Abiertos y Salud: Democratizando la Inteligencia Artificial en Andalucía”
+- Language: 🇪🇸
+- Topic: Open health data, PRAETORIA, ODACI, EVIAS, healthcare AI democratization
+- Duration: 23 min
+- Uploaded: 22 May 2026
+
+[▶️ ![Thumbnail](https://img.youtube.com/vi/aSR0FYqJwx0/maxresdefault.jpg)](https://youtu.be/aSR0FYqJwx0)
+
+#### “One Health – Universidad Europea”
+- Language: 🇪🇸
+- Institution: Universidad Europea
+- Topic: One Health
+
+[▶️ ![Thumbnail](https://img.youtube.com/vi/kDJFaHn1fJI/maxresdefault.jpg)](https://www.youtube.com/watch?v=kDJFaHn1fJI&list=PLc9PylzWI65WZGIO5rjDgl-T6dTTjQQtF&index=5)
+
+#### “El Sevilla CF es Salud”
+- Language: 🇪🇸
+- Institution: Sevilla FC Radio
+- Topic: Artificial intelligence in healthcare and hypertension awareness
+- Duration: 73 min
+- Uploaded: 17 May 2023
+
+[▶️ ![Thumbnail](https://img.youtube.com/vi/2MXZe0A2NLA/maxresdefault.jpg)](https://youtu.be/2MXZe0A2NLA)
+
+---
+
 ## 🏥 Clinical AI & Healthcare Innovation
 
-#### “Foro Inteligencia Artificial - Fenin, Federación Española de Empresas de Tecnología Sanitaria”
-- Language: 🇪🇸
-- Type: Institutional forum talk
-- Clinical focus: AI for health technology sector transformation
-- Innovation layer: Public-private dialogue on data and digital health
-- Data strategy: Responsible AI and interoperability in clinical environments
-- Institution: Fenin
+#### “IntelliLung: AI-based clinical decision support for optimizing mechanical ventilation in critical care”
+- Language: 🇬🇧
+- Type: Clinical AI innovation talk
+- Clinical focus: Reinforcement learning for safer, individualized ventilation settings
+- Innovation layer: Translational AI-CDSS for ICU deployment and evaluation
+- Data strategy: Multicenter validation with clinically interpretable modeling
 - Duration: 15 min
 - Uploaded: 26 May 2026
 
-[▶️ <img src="https://img.youtube.com/vi/ke6qrOSqqB0/maxresdefault.jpg" alt="IntelliLung video thumbnail" title="IntelliLung: AI-based clinical decision support for optimizing mechanical ventilation in critical care" />](https://youtu.be/ke6qrOSqqB0)
+[▶️ ![Thumbnail](https://img.youtube.com/vi/ke6qrOSqqB0/maxresdefault.jpg)](https://youtu.be/ke6qrOSqqB0)
 
 #### “RASCAL (Corona Severity Score Andaluz) ZinkkIn V1”
 - Language: 🇪🇸
