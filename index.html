@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NexData Lab - Ciencia de Datos que Transforma</title>
+    <title>NexData Lab - Data Science that Transforms</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.0/marked.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
@@ -648,14 +648,14 @@
     <!-- MOBILE DRAWER -->
     <div class="mobile-menu" id="mobileMenu">
         <ul>
-            <li><a href="#inicio"       onclick="closeMenu()">Home</a></li>
-            <li><a href="#servicios"    onclick="closeMenu()">Services</a></li>
-            <li><a href="#proyectos"    onclick="closeMenu()">Projects</a></li>
-            <li><a href="#equipo"       onclick="closeMenu()">Team</a></li>
-            <li><a href="#investigacion" onclick="closeMenu()">Research</a></li>
+            <li><a href="#home"       onclick="closeMenu()">Home</a></li>
+            <li><a href="#services"    onclick="closeMenu()">Services</a></li>
+            <li><a href="#projects"    onclick="closeMenu()">Projects</a></li>
+            <li><a href="#team"       onclick="closeMenu()">Team</a></li>
+            <li><a href="#research" onclick="closeMenu()">Research</a></li>
             <li><a href="#multimedia"   onclick="closeMenu()">Multimedia</a></li>
-            <li><a href="#impacto"      onclick="closeMenu()">Impact</a></li>
-            <li><a href="#contacto"     onclick="closeMenu()">Contact</a></li>
+            <li><a href="#impact"      onclick="closeMenu()">Impact</a></li>
+            <li><a href="#contact"     onclick="closeMenu()">Contact</a></li>
         </ul>
     </div>
 
@@ -663,14 +663,14 @@
     <nav>
         <div class="logo">NexData Lab</div>
         <ul class="nav-links">
-            <li><a href="#inicio">Home</a></li>
-            <li><a href="#servicios">Services</a></li>
-            <li><a href="#proyectos">Projects</a></li>
-            <li><a href="#equipo">Team</a></li>
-            <li><a href="#investigacion">Research</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#research">Research</a></li>
             <li><a href="#multimedia">Multimedia</a></li>
-            <li><a href="#impacto">Impact</a></li>
-            <li><a href="#contacto">Contact</a></li>
+            <li><a href="#impact">Impact</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
 
         <!-- HAMBURGER COLLAPSE -->
@@ -684,12 +684,12 @@
     </nav>
 
     <!-- HERO -->
-    <section class="hero" id="inicio">
+    <section class="hero" id="home">
         <div class="hero-content">
             <div id="hero-content"><div class="loading">Loading...</div></div>
             <div class="cta-buttons">
                 <button class="btn btn-primary"   onclick="scrollToContact()">Comenzar ahora</button>
-                <button class="btn btn-secondary" onclick="scrollToServices()">Ver servicios</button>
+                <button class="btn btn-secondary" onclick="scrollToServices()">View services</button>
             </div>
         </div>
         <div class="hero-visual" id="hero-metrics">
@@ -698,28 +698,28 @@
     </section>
 
     <!-- SERVICES -->
-    <section class="section" id="servicios">
+    <section class="section" id="services">
         <h2 class="section-title">Our Services</h2>
         <p class="section-subtitle">End-to-end solutions in data science</p>
-        <div class="services-grid" id="services-grid"><div class="loading">Cargando servicios...</div></div>
+        <div class="services-grid" id="services-grid"><div class="loading">Loading services...</div></div>
     </section>
 
     <!-- PROJECTS -->
-    <section class="section" id="proyectos">
+    <section class="section" id="projects">
         <h2 class="section-title">Projects</h2>
         <p class="section-subtitle">From evidence to action: research with impact</p>
         <div class="projects-grid" id="projects-grid"><div class="loading">Loading projects...</div></div>
     </section>
 
     <!-- TEAM -->
-    <section class="section" id="equipo">
+    <section class="section" id="team">
         <h2 class="section-title">Team</h2>
         <p class="section-subtitle">The minds behind innovation</p>
         <div class="team-grid" id="team-grid"><div class="loading">Loading team...</div></div>
     </section>
 
     <!-- RESEARCH -->
-    <section class="section" id="investigacion">
+    <section class="section" id="research">
         <h2 class="section-title">Research</h2>
         <p class="section-subtitle">Contributing to the advancement of data science</p>
         <div class="content-wrapper" id="research-content"><div class="loading">Loading research...</div></div>
@@ -729,18 +729,18 @@
     <section class="section" id="multimedia">
         <h2 class="section-title">Multimedia</h2>
         <p class="section-subtitle">Conocimiento que compartimos</p>
-        <div class="content-wrapper" id="multimedia-content"><div class="loading">Cargando multimedia...</div></div>
+        <div class="content-wrapper" id="multimedia-content"><div class="loading">Loading multimedia...</div></div>
     </section>
 
     <!-- STATS -->
-    <section class="stats" id="impacto">
+    <section class="stats" id="impact">
         <h2 class="section-title">Our impact</h2>
         <p class="section-subtitle">Results that speak for themselves</p>
         <div class="stats-grid" id="stats-grid"><div class="loading">Loading...</div></div>
     </section>
 
     <!-- CTA / CONTACT -->
-    <section class="cta-section" id="contacto">
+    <section class="cta-section" id="contact">
         <div class="cta-box" id="cta-content"><div class="loading">Loading...</div></div>
     </section>
 
@@ -894,7 +894,7 @@
 
         // ── renderers ─────────────────────────────────────────────────
         async function renderHero() {
-            const md = await loadMarkdown('inicio');
+            const md = await loadMarkdown('home');
             if (!md) return;
             const data = parseHeroContent(md);
             document.getElementById('hero-content').innerHTML = `
@@ -904,7 +904,7 @@
         }
 
         async function renderServices() {
-            const md = await loadMarkdown('servicios');
+            const md = await loadMarkdown('services');
             if (!md) return;
             document.getElementById('services-grid').innerHTML = parseServices(md).map(s => `
                 <div class="service-card">
@@ -916,7 +916,7 @@
         }
 
         async function renderProjects() {
-            const md = await loadMarkdown('proyectos');
+            const md = await loadMarkdown('projects');
             if (!md) return;
             document.getElementById('projects-grid').innerHTML = parseProjects(md).map(p => `
                 <div class="project-card">
@@ -953,7 +953,7 @@
         }
 
         async function renderTeam() {
-            const md = await loadMarkdown('equipo');
+            const md = await loadMarkdown('team');
             if (!md) return;
             document.getElementById('team-grid').innerHTML = parseTeam(md).map(m => `
                 <div class="team-card">
@@ -971,7 +971,7 @@
         }
 
         async function renderResearch() {
-            const md = await loadMarkdown('investigacion');
+            const md = await loadMarkdown('research');
             if (!md) return;
             document.getElementById('research-content').innerHTML = marked.parse(md);
         }
@@ -1128,7 +1128,7 @@
         }
 
         async function renderStats() {
-            const md = await loadMarkdown('impacto');
+            const md = await loadMarkdown('impact');
             if (!md) return;
             document.getElementById('stats-grid').innerHTML = parseStats(md).map(s => `
                 <div class="stat-item">
@@ -1139,7 +1139,7 @@
         }
 
         async function renderContact() {
-            const md = await loadMarkdown('contacto');
+            const md = await loadMarkdown('contact');
             if (!md) return;
             const lines = md.split('\n').filter(l => l.trim());
             const title = lines[0].replace(/^# /, '');
@@ -1147,12 +1147,12 @@
             document.getElementById('cta-content').innerHTML = `
                 <h2>${title}</h2>
                 <p>${description}</p>
-                <button class="btn btn-primary" onclick="alert('¡Formulario de contacto próximamente!')">Contactar ahora</button>`;
+                <button class="btn btn-primary" onclick="alert('Contact form coming soon!')">Contactar ahora</button>`;
         }
 
         // ── scroll helpers ────────────────────────────────────────────
-        function scrollToContact()  { document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' }); }
-        function scrollToServices() { document.getElementById('servicios').scrollIntoView({ behavior: 'smooth' }); }
+        function scrollToContact()  { document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); }
+        function scrollToServices() { document.getElementById('services').scrollIntoView({ behavior: 'smooth' }); }
 
         // ── parallax ──────────────────────────────────────────────────
         window.addEventListener('scroll', () => {

@@ -4,7 +4,7 @@
 
 ## 🌍 Conferences, Scientific Talks & Academic Lectures
 
-#### “Foro Inteligencia Artificial - Fenin, Federación Española de Empresas de Tecnología Sanitaria”
+#### “Artificial Intelligence Forum - Fenin, Spanish Federation of Healthcare Technology Companies”
 - Language: 🇪🇸
 - Type: Institutional forum talk
 - Institution: Fenin
@@ -33,7 +33,7 @@
 
 [▶️ ![Thumbnail](https://img.youtube.com/vi/GGiwgNorhvQ/maxresdefault.jpg)](https://youtu.be/GGiwgNorhvQ)
 
-#### “Formación Medicina Personalizada y de Precisión, Bloque IA - DeepLearning y Transformers”
+#### “Personalized and Precision Medicine Training, AI Module - Deep Learning and Transformers”
 - Language: 🇪🇸
 - Topic: Deep learning, transformers, precision medicine
 - Duration: 29 min
@@ -41,7 +41,7 @@
 
 [▶️ ![Thumbnail](https://img.youtube.com/vi/a7rKSigNEKI/maxresdefault.jpg)](https://youtu.be/a7rKSigNEKI)
 
-#### “Complutense 2022 - Introducción Machine Learning + Crowdsourcing del dato sanitario”
+#### “Complutense 2022 - Introduction to Machine Learning + Healthcare Data Crowdsourcing”
 - Language: 🇪🇸
 - Institution: Universidad Complutense
 - Topic: Machine learning, crowdsourcing, healthcare data
@@ -77,7 +77,7 @@
 
 [▶️ ![Thumbnail](https://img.youtube.com/vi/1yf3ht9qHR8/maxresdefault.jpg)](https://youtu.be/1yf3ht9qHR8)
 
-#### “Simposio: Mitos y evidencia sobre la IA para la salud. Una perspectiva desde la evaluación de tecnologías sanitarias y la ciencia de datos”
+#### “Symposium: Myths and Evidence on AI for Health. A Perspective from Health Technology Assessment and Data Science”
 - Language: 🇪🇸
 - Type: Symposium talk
 - Topic: AI in healthcare, health technology assessment, data science evidence
@@ -88,7 +88,7 @@
 
 ## 🎙️ Podcasts & Media Interviews
 
-#### “Podcast - IA y Datos FAIR para tratar la Sepsis de Urgencias”
+#### “Podcast - AI and FAIR Data for Emergency Sepsis Care”
 - Language: 🇪🇸
 - Topic: Sepsis, FAIR data, emergency medicine, predictive AI
 - Duration: 23 min
@@ -112,7 +112,7 @@
 
 [▶️ ![Thumbnail](https://img.youtube.com/vi/Ctk-ae6I6Sc/maxresdefault.jpg)](https://youtu.be/Ctk-ae6I6Sc)
 
-#### “Datos Abiertos y Salud: Democratizando la Inteligencia Artificial en Andalucía”
+#### “Open Data and Health: Democratizing Artificial Intelligence in Andalusia”
 - Language: 🇪🇸
 - Topic: Open health data, PRAETORIA, ODACI, EVIAS, healthcare AI democratization
 - Duration: 23 min
