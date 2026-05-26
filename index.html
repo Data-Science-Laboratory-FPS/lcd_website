@@ -445,6 +445,38 @@
         .paper-meta { color: var(--dark); font-size: .9rem; font-weight: 600; margin-bottom: 1rem; }
         .paper-item p, .blog-item p  { color: #2d5a3d; line-height: 1.6; }
 
+        .media-category { margin-bottom: 3rem; }
+        .media-category h3 { margin-bottom: 1rem; }
+        .media-carousel {
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: minmax(260px, 32vw);
+            gap: 1rem;
+            overflow-x: auto;
+            padding: .5rem .25rem 1rem;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: thin;
+        }
+        .media-card {
+            scroll-snap-align: start;
+            background: rgba(255,255,255,.95);
+            border: 2px solid rgba(157,214,191,.4);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+        .media-card:hover { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(0,121,50,.18); }
+        .media-thumb-wrap { aspect-ratio: 16 / 9; background: #eaf6ef; }
+        .media-thumb {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .media-body { padding: .9rem 1rem 1rem; }
+        .media-title { color: var(--text); font-size: 1rem; margin-bottom: .4rem; }
+        .media-meta { color: #2d5a3d; font-size: .9rem; }
+
         /* stats */
         .stats { padding: 6rem 5%; text-align: center; }
         .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-top: 3rem; }
@@ -788,10 +820,71 @@
             document.getElementById('research-content').innerHTML = marked.parse(md);
         }
 
+        function parseMultimedia(md) {
+            const categories = [];
+            let current = null;
+            const lines = md.split('\n');
+
+            for (let i = 0; i < lines.length; i++) {
+                const line = lines[i].trim();
+                if (line.startsWith('## ') && !line.startsWith('### ')) {
+                    const title = line.replace(/^##\s+/, '').trim();
+                    if (title.toLowerCase() !== 'knowledge that we share') {
+                        current = { title, items: [] };
+                        categories.push(current);
+                    }
+                }
+
+                if (!current || !line.startsWith('#### ')) continue;
+                const item = { title: line.replace(/^####\s+/, '').replace(/[“”]/g, '').trim(), meta: [], url: '', thumbnail: '' };
+
+                let j = i + 1;
+                while (j < lines.length) {
+                    const l = lines[j].trim();
+                    if (!l) { j++; continue; }
+                    if (l.startsWith('#### ') || l.startsWith('## ') || l === '---') break;
+
+                    if (l.startsWith('- ')) item.meta.push(l.replace(/^-\s+/, ''));
+
+                    const m = l.match(/\[▶️[^\]]*\]\((https?:\/\/[^)]+)\)/);
+                    if (m) item.url = m[1];
+
+                    const t = l.match(/!\[Thumbnail\]\((https?:\/\/[^)]+)\)/i);
+                    if (t) item.thumbnail = t[1];
+                    j++;
+                }
+
+                if (!item.thumbnail && item.url.includes('youtu')) {
+                    const id = item.url.match(/(?:v=|youtu\.be\/)([\w-]{6,})/);
+                    if (id) item.thumbnail = `https://img.youtube.com/vi/${id[1]}/hqdefault.jpg`;
+                }
+                current.items.push(item);
+                i = j - 1;
+            }
+
+            return categories.filter(c => c.items.length);
+        }
+
         async function renderMultimedia() {
             const md = await loadMarkdown('multimedia');
             if (!md) return;
-            document.getElementById('multimedia-content').innerHTML = marked.parse(md);
+            const categories = parseMultimedia(md);
+            document.getElementById('multimedia-content').innerHTML = categories.map(c => `
+                <div class="media-category">
+                    <h3>${c.title}</h3>
+                    <div class="media-carousel">
+                        ${c.items.map(item => `
+                            <a class="media-card" href="${item.url || '#'}" target="_blank" rel="noopener noreferrer">
+                                <div class="media-thumb-wrap">
+                                    ${item.thumbnail ? `<img class="media-thumb" src="${item.thumbnail}" alt="${item.title}">` : ''}
+                                </div>
+                                <div class="media-body">
+                                    <div class="media-title">${item.title}</div>
+                                    <div class="media-meta">${item.meta.slice(0,2).join(' · ')}</div>
+                                </div>
+                            </a>`).join('')}
+                    </div>
+                </div>`).join('');
         }
 
         async function renderStats() {
