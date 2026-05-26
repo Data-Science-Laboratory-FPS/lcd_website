@@ -1053,7 +1053,7 @@
             const description = getField('Description') || '';
             const tags = splitTopicTags(topic);
             const badge = uploaded.includes('2026') ? '✓ Nuevo' : (type.toLowerCase().includes('podcast') ? '✓ Destacado' : '');
-            const cta = type.toLowerCase().includes('podcast') ? '▶ Escuchar podcast' : '▶ Ver vídeo';
+            const cta = type.toLowerCase().includes('podcast') ? 'Listen to podcast' : 'Watch video';
             const uploadedTimestamp = parseUploadedDate(uploaded);
             return { language, institution, uploaded, duration, tags, badge, cta, description, uploadedTimestamp };
         }
