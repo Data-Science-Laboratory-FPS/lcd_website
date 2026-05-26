@@ -536,20 +536,48 @@
         .media-title { color: #2E2925; font-size: 1.03rem; font-weight: 600; margin-bottom: .45rem; line-height: 1.35; min-height: 2.6em; }
         .media-meta { color: #6f7377; font-size: 13px; line-height: 1.45; margin-bottom: .6rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .media-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: .85rem; }
+        .media-info-row { display: flex; justify-content: flex-end; margin-bottom: .55rem; }
+        .media-info-toggle {
+            width: 1.55rem;
+            height: 1.55rem;
+            border: 1px solid rgba(0,121,50,.45);
+            border-radius: 999px;
+            background: #f5fbf6;
+            color: #007932;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: .92rem;
+            font-weight: 700;
+            line-height: 1;
+            cursor: pointer;
+            transition: background .2s ease, color .2s ease;
+        }
+        .media-info-toggle:hover,
+        .media-info-toggle:focus-visible { background: #007932; color: #fff; outline: none; }
         .media-description {
             color: #4e5458;
-            font-size: .86rem;
+            font-size: .84rem;
             line-height: 1.45;
-            max-height: 0;
             opacity: 0;
-            overflow: hidden;
-            transition: max-height .3s ease, opacity .25s ease;
-            margin-bottom: 0;
+            pointer-events: none;
+            position: absolute;
+            left: 16px;
+            right: 16px;
+            bottom: 72px;
+            background: #fff;
+            border: 1px solid rgba(0,121,50,.3);
+            border-radius: 10px;
+            box-shadow: 0 10px 24px rgba(0,0,0,.14);
+            padding: .7rem .75rem;
+            transform: translateY(4px);
+            transition: opacity .2s ease, transform .2s ease;
+            z-index: 5;
         }
-        .media-card:hover .media-description {
-            max-height: 220px;
+        .media-card.info-open .media-description {
             opacity: 1;
-            margin-bottom: .8rem;
+            pointer-events: auto;
+            transform: translateY(0);
         }
         .media-topic-tag {
             display: inline-block;
@@ -1038,7 +1066,7 @@
                                     <div class="media-title">${item.title}</div>
                                     <div class="media-meta">📅 ${media.uploaded} · ${media.language} · 🏛️ ${media.institution}</div>
                                     <div class="media-tags">${media.tags.map(tag => `<span class="media-topic-tag">${tag}</span>`).join('')}</div>
-                                    ${media.description ? `<p class="media-description">${media.description.replace(/\\n/g, '<br>')}</p>` : ''}
+                                    ${media.description ? `<div class="media-info-row"><button class="media-info-toggle" type="button" aria-label="More information" title="More information">i</button></div><p class="media-description">${media.description.replace(/\\n/g, '<br>')}</p>` : ''}
                                     <span class="media-cta">${media.cta}</span>
                                 </div>
                             </a>`;
@@ -1059,6 +1087,25 @@
                 const step = () => Math.max(260, Math.floor(track.clientWidth * 0.85));
                 prev.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
                 next.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
+            });
+
+            document.querySelectorAll('.media-info-toggle').forEach(btn => {
+                btn.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    const card = btn.closest('.media-card');
+                    if (!card) return;
+                    document.querySelectorAll('.media-card.info-open').forEach(openCard => {
+                        if (openCard !== card) openCard.classList.remove('info-open');
+                    });
+                    card.classList.toggle('info-open');
+                });
+            });
+
+            document.addEventListener('click', (event) => {
+                if (!event.target.closest('.media-card')) {
+                    document.querySelectorAll('.media-card.info-open').forEach(card => card.classList.remove('info-open'));
+                }
             });
         }
 
