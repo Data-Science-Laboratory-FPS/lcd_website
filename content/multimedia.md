@@ -135,9 +135,26 @@
 
 ## 🏥 Clinical AI & Healthcare Innovation
 
+#### “IntelliLung | EU-Horizon funded project”
+- Language: 🇬🇧
+- Type: European research consortium dissemination
+- Programme: Horizon Europe
+- Clinical focus: Mechanical ventilation optimization in ICU patients through AI-assisted decision support
+- Innovation layer: Translational Clinical AI for respiratory critical care
+- Data strategy: Multi-site clinical data harmonization for model robustness and deployment readiness
+- Consortium role: Consortium member
+- Duration: 15 min
+- Uploaded: 26 May 2026
+
+[▶️ ![Thumbnail](https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)
+
 #### “RASCAL (Corona Severity Score Andaluz) ZinkkIn V1”
 - Language: 🇪🇸
+- Type: Clinical innovation demo
+- Clinical scope: COVID-19 hospitalized patient triage and risk stratification
 - Topic: COVID-19 severity prediction, clinical decision support
+- Methodology: Survival analysis + predictive analytics with clinically interpretable signals
+- Regional context: Andalusian health system-oriented implementation
 - Duration: 1 min
 - Uploaded: 12 September 2022
 
