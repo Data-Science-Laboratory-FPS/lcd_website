@@ -8,13 +8,15 @@
     <style>
         /* ─── PALETTE ─────────────────────────────────────────────── */
         :root {
-            --bg:       #F5F7F5;
-            --text:     #1a3a1a;
-            --green:    #007932;
-            --dark:     #005a26;
-            --mint:     #9dd6bf;
-            --sage:     #c8dac8;
-            --white:    #FFFFFF;
+            --bg:       #f0f7f0;
+            --text:     #1a3a1f;
+            --green:    #1a6b2f;
+            --dark:     #1a3a1f;
+            --mint:     #e8f5e9;
+            --sage:     rgba(26, 107, 47, 0.15);
+            --white:    #ffffff;
+            --body:     #2d4a30;
+            --muted:    #4a7a52;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -446,7 +448,11 @@
         .paper-item p, .blog-item p  { color: #2d5a3d; line-height: 1.6; }
 
         .media-category { margin-bottom: 3rem; }
-        .media-category h3 { margin-bottom: 1rem; }
+        .media-category h3 {
+            margin-bottom: 1rem;
+            font-weight: 500;
+            color: var(--green);
+        }
         .media-carousel-shell { position: relative; }
         .media-carousel {
             display: grid;
@@ -456,60 +462,59 @@
             overflow-x: auto;
             padding: .5rem 2.6rem 1rem;
             scroll-snap-type: x mandatory;
-            scrollbar-width: thin;
+            scrollbar-width: none;
             scroll-behavior: smooth;
+            -ms-overflow-style: none;
         }
+        .media-carousel::-webkit-scrollbar { display: none; }
         .media-carousel-control {
             position: absolute;
             top: 45%;
             transform: translateY(-50%);
-            border: 0;
+            border: 1.5px solid var(--green);
             width: 42px;
             height: 42px;
             border-radius: 50%;
-            background: rgba(255,255,255,.95);
-            box-shadow: 0 8px 20px rgba(0,121,50,.2);
+            background: var(--white);
             color: var(--green);
             font-size: 1.5rem;
             cursor: pointer;
             z-index: 2;
         }
-        .media-carousel-control:hover { background: var(--green); color: white; }
+        .media-carousel-control:hover { background: var(--green); color: var(--white); }
         .media-carousel-control.prev { left: .2rem; }
         .media-carousel-control.next { right: .2rem; }
         .media-card {
             scroll-snap-align: start;
-            background: rgba(255,255,255,.95);
-            border: 2px solid rgba(157,214,191,.4);
+            background: var(--white);
+            border: 0.5px solid var(--sage);
             border-radius: 16px;
             overflow: hidden;
             transition: transform .25s ease, box-shadow .25s ease;
+            text-decoration: none;
         }
-        .media-card:hover { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(0,121,50,.18); }
-        .media-thumb-wrap { aspect-ratio: 16 / 9; background: #eaf6ef; }
+        .media-card:hover { transform: translateY(-2px); border-color: rgba(26, 107, 47, 0.3); }
+        .media-thumb-wrap { aspect-ratio: 16 / 9; background: #e8f5e9; }
         .media-thumb {
             width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
         }
-        .media-body { padding: .9rem 1rem 1rem; }
-        .media-title { color: var(--text); font-size: 1rem; margin-bottom: .4rem; }
-        .media-meta { color: #2d5a3d; font-size: .9rem; display: flex; flex-wrap: wrap; gap: .35rem; }
+        .media-body { padding: 1rem 1rem 1.1rem; }
+        .media-title { color: var(--text); font-size: 1rem; font-weight: 700; margin-bottom: .5rem; }
+        .media-meta { color: var(--body); font-size: .9rem; display: flex; flex-wrap: wrap; gap: .35rem; line-height: 1.7; }
         .media-meta-tag {
             display: inline-block;
-            padding: .18rem .5rem;
+            padding: .2rem .55rem;
             border-radius: 999px;
             font-size: .78rem;
-            font-weight: 650;
+            font-weight: 500;
             line-height: 1.35;
-            background: #e8f4ec;
-            color: #1f5f35;
+            background: #e8f5e9;
+            color: #1a6b2f;
+            border: 0.5px solid rgba(26, 107, 47, 0.15);
         }
-        .media-meta-tag:nth-child(4n+1) { background: #e8f4ec; color: #1f5f35; }
-        .media-meta-tag:nth-child(4n+2) { background: #e8effc; color: #1f4f9c; }
-        .media-meta-tag:nth-child(4n+3) { background: #f4ebff; color: #6d2db3; }
-        .media-meta-tag:nth-child(4n+4) { background: #fff2e8; color: #b2561a; }
 
         /* stats */
         .stats { padding: 6rem 5%; text-align: center; }
@@ -880,7 +885,7 @@
 
                     if (l.startsWith('- ')) item.meta.push(l.replace(/^-\s+/, ''));
 
-                    const m = l.match(/\[▶️[^\]]*\]\((https?:\/\/[^)]+)\)/);
+                    const m = l.match(/\]\((https?:\/\/[^)\s]+)\)\s*$/);
                     if (m) item.url = m[1];
 
                     const t = l.match(/!\[Thumbnail\]\((https?:\/\/[^)]+)\)/i);
