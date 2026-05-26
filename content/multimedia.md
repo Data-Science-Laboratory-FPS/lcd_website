@@ -25,12 +25,13 @@
 
 #### “Data Diplomacy: The Harm from Not Sharing Data”
 - Language: 🇬🇧
-- Institution: McGill University
+- Program: Global Health Programs, School of Population and Global Health
+- Institution: Faculty of Medicine and Health Sciences, McGill University
 - Topic: Open science, global health data sharing, data governance
 - Duration: 13 min
 - Uploaded: 10 June 2022
 
-[▶️ ![Thumbnail](https://img.youtube.com/vi/CGiwgNorhvQ/maxresdefault.jpg)](https://youtu.be/CGiwgNorhvQ)
+[▶️ ![Thumbnail](https://img.youtube.com/vi/GGiwgNorhvQ/maxresdefault.jpg)](https://youtu.be/GGiwgNorhvQ)
 
 #### “Formación Medicina Personalizada y de Precisión, Bloque IA - DeepLearning y Transformers”
 - Language: 🇪🇸
