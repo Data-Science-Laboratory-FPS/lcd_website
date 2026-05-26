@@ -841,11 +841,14 @@
             blocks.forEach(block => {
                 const ls = block.split('\n').map(l => l.trim()).filter(l => l);
                 const titleLine = ls.find(l => l.startsWith('###')) || '';
-                const iconMatch = titleLine.match(/^[#\s]*([\p{Emoji}\p{So}\p{Sk}\p{Sm}\p{Sc}])/u);
-                const icon  = iconMatch ? iconMatch[1] : '';
+                const titleWithoutHashes = titleLine.replace(/^###\s*/, '').trim();
+                const parts = titleWithoutHashes.split(/\s+/);
+                const firstToken = parts[0] || '';
+                const looksLikeIcon = /[^\w\d]/.test(firstToken);
+                const icon = looksLikeIcon ? firstToken : '';
                 const title = icon
-                    ? titleLine.replace(/^###\s*[\p{Emoji}\p{So}\p{Sk}\p{Sm}\p{Sc}]\s*/u, '').trim()
-                    : titleLine.replace(/^###\s*/, '').trim();
+                    ? titleWithoutHashes.slice(firstToken.length).trim()
+                    : titleWithoutHashes;
                 const metaLine        = ls.find(l => l.toLowerCase().startsWith('meta:')) || '';
                 const websiteLine     = ls.find(l => l.toLowerCase().startsWith('website:')) || '';
                 const descriptionIdx  = ls.findIndex(l => l.toLowerCase().startsWith('description:'));
