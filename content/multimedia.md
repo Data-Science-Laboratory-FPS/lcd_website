@@ -91,7 +91,7 @@
 - Language: 🇪🇸
 - Topic: Sepsis, FAIR data, emergency medicine, predictive AI
 - Duration: 23 min
-- Uploaded: 25 May 2026
+- Uploaded: 11 February 2026
 
 [▶️ ![Thumbnail](https://img.youtube.com/vi/CHJymvs2cpc/maxresdefault.jpg)](https://youtu.be/CHJymvs2cpc)
 
@@ -99,7 +99,7 @@
 - Language: 🇪🇸
 - Topic: Generative AI, clinical workflows, healthcare innovation, RAG systems
 - Duration: 21 min
-- Uploaded: 24 May 2026
+- Uploaded: 11 February 2026
 
 [▶️ ![Thumbnail](https://img.youtube.com/vi/z4snDgBogbA/maxresdefault.jpg)](https://youtu.be/z4snDgBogbA)
 
@@ -107,7 +107,7 @@
 - Language: 🇪🇸
 - Topic: Open data communities, MIMIC database, equity and scientific collaboration
 - Duration: 18 min
-- Uploaded: 23 May 2026
+- Uploaded: 03 October 2025
 
 [▶️ ![Thumbnail](https://img.youtube.com/vi/Ctk-ae6I6Sc/maxresdefault.jpg)](https://youtu.be/Ctk-ae6I6Sc)
 
@@ -115,7 +115,7 @@
 - Language: 🇪🇸
 - Topic: Open health data, PRAETORIA, ODACI, EVIAS, healthcare AI democratization
 - Duration: 23 min
-- Uploaded: 22 May 2026
+- Uploaded: 03 October 2025
 
 [▶️ ![Thumbnail](https://img.youtube.com/vi/aSR0FYqJwx0/maxresdefault.jpg)](https://youtu.be/aSR0FYqJwx0)
 
