@@ -46,14 +46,12 @@
 
 [▶️ ![Thumbnail](https://img.youtube.com/vi/aSR0FYqJwx0/maxresdefault.jpg)](https://youtu.be/aSR0FYqJwx0)
 
-#### “One Health – Puentes de Salud”
+#### “One Health – Universidad Europea”
 - Language: 🇪🇸
 - Institution: Universidad Europea
-- Host: Borja Aldeguer-Riquelme, PhD
-- Topic: Artificial intelligence in vaccination and public health, data governance, bias and trust
-- Uploaded: 21 May 2026
+- Topic: One Health
 
-[▶️ Watch episode](https://lnkd.in/eQ29meBM)
+[▶️ ![Thumbnail](https://img.youtube.com/vi/kDJFaHn1fJI/maxresdefault.jpg)](https://www.youtube.com/watch?v=kDJFaHn1fJI&list=PLc9PylzWI65WZGIO5rjDgl-T6dTTjQQtF&index=5)
 
 #### “El Sevilla CF es Salud”
 - Language: 🇪🇸
