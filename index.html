@@ -447,16 +447,36 @@
 
         .media-category { margin-bottom: 3rem; }
         .media-category h3 { margin-bottom: 1rem; }
+        .media-carousel-shell { position: relative; }
         .media-carousel {
             display: grid;
             grid-auto-flow: column;
-            grid-auto-columns: minmax(260px, 32vw);
+            grid-auto-columns: minmax(280px, 29vw);
             gap: 1rem;
             overflow-x: auto;
-            padding: .5rem .25rem 1rem;
+            padding: .5rem 2.6rem 1rem;
             scroll-snap-type: x mandatory;
             scrollbar-width: thin;
+            scroll-behavior: smooth;
         }
+        .media-carousel-control {
+            position: absolute;
+            top: 45%;
+            transform: translateY(-50%);
+            border: 0;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: rgba(255,255,255,.95);
+            box-shadow: 0 8px 20px rgba(0,121,50,.2);
+            color: var(--green);
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .media-carousel-control:hover { background: var(--green); color: white; }
+        .media-carousel-control.prev { left: .2rem; }
+        .media-carousel-control.next { right: .2rem; }
         .media-card {
             scroll-snap-align: start;
             background: rgba(255,255,255,.95);
@@ -475,7 +495,21 @@
         }
         .media-body { padding: .9rem 1rem 1rem; }
         .media-title { color: var(--text); font-size: 1rem; margin-bottom: .4rem; }
-        .media-meta { color: #2d5a3d; font-size: .9rem; }
+        .media-meta { color: #2d5a3d; font-size: .9rem; display: flex; flex-wrap: wrap; gap: .35rem; }
+        .media-meta-tag {
+            display: inline-block;
+            padding: .18rem .5rem;
+            border-radius: 999px;
+            font-size: .78rem;
+            font-weight: 650;
+            line-height: 1.35;
+            background: #e8f4ec;
+            color: #1f5f35;
+        }
+        .media-meta-tag:nth-child(4n+1) { background: #e8f4ec; color: #1f5f35; }
+        .media-meta-tag:nth-child(4n+2) { background: #e8effc; color: #1f4f9c; }
+        .media-meta-tag:nth-child(4n+3) { background: #f4ebff; color: #6d2db3; }
+        .media-meta-tag:nth-child(4n+4) { background: #fff2e8; color: #b2561a; }
 
         /* stats */
         .stats { padding: 6rem 5%; text-align: center; }
@@ -872,7 +906,9 @@
             document.getElementById('multimedia-content').innerHTML = categories.map(c => `
                 <div class="media-category">
                     <h3>${c.title}</h3>
-                    <div class="media-carousel">
+                    <div class="media-carousel-shell">
+                        <button class="media-carousel-control prev" type="button" aria-label="Anterior">‹</button>
+                        <div class="media-carousel">
                         ${c.items.map(item => `
                             <a class="media-card" href="${item.url || '#'}" target="_blank" rel="noopener noreferrer">
                                 <div class="media-thumb-wrap">
@@ -880,11 +916,26 @@
                                 </div>
                                 <div class="media-body">
                                     <div class="media-title">${item.title}</div>
-                                    <div class="media-meta">${item.meta.slice(0,2).join(' · ')}</div>
+                                    <div class="media-meta">${item.meta.map(meta => `<span class=\"media-meta-tag\">${meta}</span>`).join('')}</div>
                                 </div>
                             </a>`).join('')}
+                        </div>
+                        <button class="media-carousel-control next" type="button" aria-label="Siguiente">›</button>
                     </div>
                 </div>`).join('');
+            bindMediaCarousels();
+        }
+
+        function bindMediaCarousels() {
+            document.querySelectorAll('.media-carousel-shell').forEach(shell => {
+                const track = shell.querySelector('.media-carousel');
+                const prev = shell.querySelector('.media-carousel-control.prev');
+                const next = shell.querySelector('.media-carousel-control.next');
+                if (!track || !prev || !next) return;
+                const step = () => Math.max(260, Math.floor(track.clientWidth * 0.85));
+                prev.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
+                next.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
+            });
         }
 
         async function renderStats() {
