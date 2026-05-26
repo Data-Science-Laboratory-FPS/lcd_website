@@ -76,6 +76,13 @@
 
 [▶️ ![Thumbnail](https://img.youtube.com/vi/1yf3ht9qHR8/maxresdefault.jpg)](https://youtu.be/1yf3ht9qHR8)
 
+#### “Simposio: Mitos y evidencia sobre la IA para la salud. Una perspectiva desde la evaluación de tecnologías sanitarias y la ciencia de datos”
+- Language: 🇪🇸
+- Type: Symposium talk
+- Topic: AI in healthcare, health technology assessment, data science evidence
+
+[▶️ ![Thumbnail](https://img.youtube.com/vi/YIA4e3ZH8K4/maxresdefault.jpg)](https://youtu.be/YIA4e3ZH8K4)
+
 ---
 
 ## 🎙️ Podcasts & Media Interviews
