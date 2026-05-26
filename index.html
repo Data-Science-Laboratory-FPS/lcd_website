@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NexData Lab - Ciencia de Datos que Transforma</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.0/marked.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         /* ─── PALETTE ─────────────────────────────────────────────── */
         :root {
@@ -423,7 +424,8 @@
         .team-role      { color: var(--green); font-size: .95rem; margin-bottom: 1rem; font-weight: 600; }
         .team-card p    { color: #2d5a3d; line-height: 1.6; font-size: .95rem; }
         .team-links     { margin-top: 1rem; font-size: .95rem; }
-        .team-link      { color: var(--green); text-decoration: none; font-weight: 500; transition: color .2s; }
+        .team-link      { color: var(--green); text-decoration: none; font-weight: 500; transition: color .2s; display: inline-flex; align-items: center; gap: .35rem; }
+        .team-link .fa-brands { font-size: 1.05em; width: 1.1em; text-align: center; }
         .team-link:hover { color: var(--dark); text-decoration: underline; }
 
         /* research / multimedia */
@@ -882,6 +884,29 @@
                 </div>`).join('');
         }
 
+        function formatTeamLinks(linksMarkdown) {
+            const html = marked.parseInline(linksMarkdown || '');
+            const temp = document.createElement('div');
+            temp.innerHTML = html;
+
+            temp.querySelectorAll('a').forEach(a => {
+                const href = (a.getAttribute('href') || '').toLowerCase();
+                a.setAttribute('target', '_blank');
+                a.setAttribute('rel', 'noopener noreferrer');
+                a.classList.add('team-link');
+
+                if (href.includes('linkedin.com')) {
+                    a.innerHTML = '<i class="fa-brands fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span>';
+                    a.setAttribute('aria-label', 'LinkedIn');
+                } else if (href.includes('github.com')) {
+                    a.innerHTML = '<i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span>';
+                    a.setAttribute('aria-label', 'GitHub');
+                }
+            });
+
+            return temp.innerHTML;
+        }
+
         async function renderTeam() {
             const md = await loadMarkdown('equipo');
             if (!md) return;
@@ -894,7 +919,7 @@
                     <div class="team-role">${m.role}</div>
                     <p>${m.bio}</p>
                     <div class="team-links">
-                        ${marked.parse(m.links || '').replaceAll('<a ', '<a target="_blank" rel="noopener noreferrer" class="team-link" ')}
+                        ${formatTeamLinks(m.links || '')}
                     </div>
                 </div>`).join('');
         }
