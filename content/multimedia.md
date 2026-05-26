@@ -4,16 +4,15 @@
 
 ## 🎙️ Podcasts & Media Interviews
 
-#### “IntelliLung | EU-Horizon funded project”
-- Language: 🇬🇧
-- Type: European research consortium dissemination
-- Programme: Horizon Europe
-- Topic: AI-based clinical decision support for mechanical ventilation optimization in ICU patients
-- Consortium role: Consortium member
+#### “Foro Inteligencia Artificial - Fenin, Federación Española de Empresas de Tecnología Sanitaria”
+- Language: 🇪🇸
+- Type: Institutional forum talk
+- Institution: Fenin
+- Topic: Artificial intelligence in healthcare technology and innovation
 - Duration: 15 min
 - Uploaded: 26 May 2026
 
-[▶️ ![Thumbnail](https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)
+[▶️ ![Thumbnail](https://img.youtube.com/vi/ke6qrOSqqB0/maxresdefault.jpg)](https://youtu.be/ke6qrOSqqB0)
 
 #### “Podcast - IA y Datos FAIR para tratar la Sepsis de Urgencias”
 - Language: 🇪🇸
@@ -135,18 +134,17 @@
 
 ## 🏥 Clinical AI & Healthcare Innovation
 
-#### “IntelliLung | EU-Horizon funded project”
-- Language: 🇬🇧
-- Type: European research consortium dissemination
-- Programme: Horizon Europe
-- Clinical focus: Mechanical ventilation optimization in ICU patients through AI-assisted decision support
-- Innovation layer: Translational Clinical AI for respiratory critical care
-- Data strategy: Multi-site clinical data harmonization for model robustness and deployment readiness
-- Consortium role: Consortium member
+#### “Foro Inteligencia Artificial - Fenin, Federación Española de Empresas de Tecnología Sanitaria”
+- Language: 🇪🇸
+- Type: Institutional forum talk
+- Clinical focus: AI for health technology sector transformation
+- Innovation layer: Public-private dialogue on data and digital health
+- Data strategy: Responsible AI and interoperability in clinical environments
+- Institution: Fenin
 - Duration: 15 min
 - Uploaded: 26 May 2026
 
-[▶️ ![Thumbnail](https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)
+[▶️ ![Thumbnail](https://img.youtube.com/vi/ke6qrOSqqB0/maxresdefault.jpg)](https://youtu.be/ke6qrOSqqB0)
 
 #### “RASCAL (Corona Severity Score Andaluz) ZinkkIn V1”
 - Language: 🇪🇸
