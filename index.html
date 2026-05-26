@@ -911,7 +911,8 @@
                     <div class="service-icon">${s.icon}</div>
                     <h3>${s.title}</h3>
                     <p>${s.description}</p>
-                </div>`).join('');
+                </div>`;
+            }).join('');
         }
 
         async function renderProjects() {
@@ -924,7 +925,8 @@
                     <div class="project-meta">${p.meta}</div>
                     <p>${p.description}</p>
                     ${p.summary ? `<div class="project-summary">${p.summary}</div>` : ''}
-                </div>`).join('');
+                </div>`;
+            }).join('');
         }
 
         function formatTeamLinks(linksMarkdown) {
@@ -964,7 +966,8 @@
                     <div class="team-links">
                         ${formatTeamLinks(m.links || '')}
                     </div>
-                </div>`).join('');
+                </div>`;
+            }).join('');
         }
 
         async function renderResearch() {
@@ -1025,6 +1028,17 @@
                 .filter(Boolean);
         }
 
+        function parseUploadedDate(uploaded = '') {
+            const parsed = Date.parse(uploaded);
+            if (!Number.isNaN(parsed)) return parsed;
+            const normalized = uploaded
+                .toLowerCase()
+                .replace(/ene/g, 'jan').replace(/abr/g, 'apr').replace(/ago/g, 'aug')
+                .replace(/sept/g, 'sep').replace(/dic/g, 'dec');
+            const fallback = Date.parse(normalized);
+            return Number.isNaN(fallback) ? 0 : fallback;
+        }
+
         function parseMediaFields(meta = []) {
             const getField = (label) => {
                 const line = meta.find(m => m.toLowerCase().startsWith(`${label.toLowerCase()}:`));
@@ -1040,20 +1054,23 @@
             const tags = splitTopicTags(topic);
             const badge = uploaded.includes('2026') ? '✓ Nuevo' : (type.toLowerCase().includes('podcast') ? '✓ Destacado' : '');
             const cta = type.toLowerCase().includes('podcast') ? '▶ Escuchar podcast' : '▶ Ver vídeo';
-            return { language, institution, uploaded, duration, tags, badge, cta, description };
+            const uploadedTimestamp = parseUploadedDate(uploaded);
+            return { language, institution, uploaded, duration, tags, badge, cta, description, uploadedTimestamp };
         }
 
         async function renderMultimedia() {
             const md = await loadMarkdown('multimedia');
             if (!md) return;
             const categories = parseMultimedia(md);
-            document.getElementById('multimedia-content').innerHTML = categories.map(c => `
+            document.getElementById('multimedia-content').innerHTML = categories.map(c => {
+                const sortedItems = [...c.items].sort((a, b) => parseMediaFields(b.meta).uploadedTimestamp - parseMediaFields(a.meta).uploadedTimestamp);
+                return `
                 <div class="media-category">
                     <h3>${c.title}</h3>
                     <div class="media-carousel-shell">
                         <button class="media-carousel-control prev" type="button" aria-label="Anterior">‹</button>
                         <div class="media-carousel">
-                        ${c.items.map(item => {
+                        ${sortedItems.map(item => {
                             const media = parseMediaFields(item.meta);
                             return `
                             <a class="media-card" href="${item.url || '#'}" target="_blank" rel="noopener noreferrer">
@@ -1074,7 +1091,8 @@
                         </div>
                         <button class="media-carousel-control next" type="button" aria-label="Siguiente">›</button>
                     </div>
-                </div>`).join('');
+                </div>`;
+            }).join('');
             bindMediaCarousels();
         }
 
@@ -1116,7 +1134,8 @@
                 <div class="stat-item">
                     <div class="stat-number">${s.number}</div>
                     <div class="stat-label">${s.label}</div>
-                </div>`).join('');
+                </div>`;
+            }).join('');
         }
 
         async function renderContact() {
