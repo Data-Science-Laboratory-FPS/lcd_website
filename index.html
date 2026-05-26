@@ -700,42 +700,42 @@
     <!-- SERVICES -->
     <section class="section" id="services">
         <h2 class="section-title">Our Services</h2>
-        <p class="section-subtitle">End-to-end solutions in data science</p>
+        <p class="section-subtitle">Integrated data science services for rigorous analytical workflows</p>
         <div class="services-grid" id="services-grid"><div class="loading">Loading services...</div></div>
     </section>
 
     <!-- PROJECTS -->
     <section class="section" id="projects">
         <h2 class="section-title">Projects</h2>
-        <p class="section-subtitle">From evidence to action: research with impact</p>
+        <p class="section-subtitle">Applied research projects grounded in empirical evidence</p>
         <div class="projects-grid" id="projects-grid"><div class="loading">Loading projects...</div></div>
     </section>
 
     <!-- TEAM -->
     <section class="section" id="team">
         <h2 class="section-title">Team</h2>
-        <p class="section-subtitle">The minds behind innovation</p>
+        <p class="section-subtitle">Interdisciplinary team of researchers and technical specialists</p>
         <div class="team-grid" id="team-grid"><div class="loading">Loading team...</div></div>
     </section>
 
     <!-- RESEARCH -->
     <section class="section" id="research">
         <h2 class="section-title">Research</h2>
-        <p class="section-subtitle">Contributing to the advancement of data science</p>
+        <p class="section-subtitle">Scientific contributions to methodological progress in data science</p>
         <div class="content-wrapper" id="research-content"><div class="loading">Loading research...</div></div>
     </section>
 
     <!-- MULTIMEDIA -->
     <section class="section" id="multimedia">
         <h2 class="section-title">Multimedia</h2>
-        <p class="section-subtitle">Knowledge we share</p>
+        <p class="section-subtitle">Educational resources, talks, and publications for open dissemination</p>
         <div class="content-wrapper" id="multimedia-content"><div class="loading">Loading multimedia...</div></div>
     </section>
 
     <!-- STATS -->
     <section class="stats" id="impact">
         <h2 class="section-title">Our impact</h2>
-        <p class="section-subtitle">Results that speak for themselves</p>
+        <p class="section-subtitle">Measured outcomes from research, development, and collaboration</p>
         <div class="stats-grid" id="stats-grid"><div class="loading">Loading...</div></div>
     </section>
 
@@ -909,13 +909,14 @@
         async function renderServices() {
             const md = await loadMarkdown('services');
             if (!md) return;
-            document.getElementById('services-grid').innerHTML = parseServices(md).map(s => `
-                <div class="service-card">
-                    <div class="service-icon">${s.icon}</div>
-                    <h3>${s.title}</h3>
-                    <p>${s.description}</p>
-                </div>`
+            const html = parseServices(md).map(function (s) {
+                return '<div class="service-card">'
+                    + '<div class="service-icon">' + s.icon + '</div>'
+                    + '<h3>' + s.title + '</h3>'
+                    + '<p>' + s.description + '</p>'
+                    + '</div>';
             }).join('');
+            document.getElementById('services-grid').innerHTML = html;
         }
 
         async function renderProjects() {
@@ -1086,7 +1087,7 @@
                                     <div class="media-title">${item.title}</div>
                                     <div class="media-meta">📅 ${media.uploaded} · ${media.language} · 🏛️ ${media.institution}</div>
                                     <div class="media-tags">${media.tags.map(tag => `<span class="media-topic-tag">${tag}</span>`).join('')}</div>
-                                    ${media.description ? `<div class="media-info-row"><button class="media-info-toggle" type="button" aria-label="More information" title="More information">i</button></div><p class="media-description">${media.description.replace(/\\n/g, '<br>')}</p>` : ''}
+                                    ${media.description ? `<div class="media-info-row"><button class="media-info-toggle" type="button" aria-label="More information" title="More information">i</button></div><p class="media-description">${media.description.split('\\n').join('<br>')}</p>` : ''}
                                     <span class="media-cta">${media.cta}</span>
                                 </div>
                             </a>`;
