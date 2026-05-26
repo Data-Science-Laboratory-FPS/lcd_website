@@ -10,9 +10,9 @@
 - Institution: Fenin
 - Topic: Artificial intelligence in healthcare technology and innovation
 - Duration: 15 min
-- Uploaded: 26 May 2026
+- Uploaded: 06 April 2021
 
-[▶️ ![Thumbnail](https://img.youtube.com/vi/ke6qrOSqqB0/maxresdefault.jpg)](https://youtu.be/ke6qrOSqqB0)
+[▶️ ![Thumbnail](https://img.youtube.com/vi/DEySESy-Xcs/maxresdefault.jpg)](https://www.youtube.com/watch?v=DEySESy-Xcs)
 
 #### “Tarragona 2022 - Critical Data Summit & Datathon”
 - Language: 🇪🇸
@@ -139,7 +139,7 @@
 - Innovation layer: Translational AI-CDSS for ICU deployment and evaluation
 - Data strategy: Multicenter validation with clinically interpretable modeling
 - Duration: 15 min
-- Uploaded: 26 May 2026
+- Uploaded: 06 April 2021
 
 [▶️ ![Thumbnail](https://img.youtube.com/vi/ke6qrOSqqB0/maxresdefault.jpg)](https://youtu.be/ke6qrOSqqB0)
 
