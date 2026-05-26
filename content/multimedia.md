@@ -12,7 +12,7 @@
 - Duration: 15 min
 - Uploaded: 26 May 2026
 
-[▶️ ![Thumbnail](https://img.youtube.com/vi/ke6qrOSqqB0/maxresdefault.jpg)](https://youtu.be/ke6qrOSqqB0)
+[▶️ <img src="https://img.youtube.com/vi/ke6qrOSqqB0/maxresdefault.jpg" alt="IntelliLung video thumbnail" title="IntelliLung: AI-based clinical decision support for optimizing mechanical ventilation in critical care" />](https://youtu.be/ke6qrOSqqB0)
 
 #### “Podcast - IA y Datos FAIR para tratar la Sepsis de Urgencias”
 - Language: 🇪🇸
@@ -144,7 +144,7 @@
 - Duration: 15 min
 - Uploaded: 26 May 2026
 
-[▶️ ![Thumbnail](https://img.youtube.com/vi/ke6qrOSqqB0/maxresdefault.jpg)](https://youtu.be/ke6qrOSqqB0)
+[▶️ <img src="https://img.youtube.com/vi/ke6qrOSqqB0/maxresdefault.jpg" alt="IntelliLung video thumbnail" title="IntelliLung: AI-based clinical decision support for optimizing mechanical ventilation in critical care" />](https://youtu.be/ke6qrOSqqB0)
 
 #### “RASCAL (Corona Severity Score Andaluz) ZinkkIn V1”
 - Language: 🇪🇸
