@@ -749,8 +749,37 @@
     </footer>
 
     <script>
-        // ── marked setup ──────────────────────────────────────────────
-        marked.setOptions({ breaks: true, gfm: true });
+        // ── markdown setup (con fallback robusto) ───────────────────────
+        const hasMarked = typeof window.marked !== 'undefined';
+        if (hasMarked) {
+            window.marked.setOptions({ breaks: true, gfm: true });
+        } else {
+            console.warn('Marked no está disponible; se usa fallback básico para Markdown.');
+        }
+
+        function escapeHtml(text = '') {
+            return text
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
+        }
+
+        function basicMarkdownToHtml(md = '') {
+            return md
+                .split(/\n{2,}/)
+                .map(block => `<p>${escapeHtml(block).replace(/\n/g, '<br>')}</p>`)
+                .join('');
+        }
+
+        function parseMarkdown(md = '') {
+            return hasMarked ? window.marked.parse(md) : basicMarkdownToHtml(md);
+        }
+
+        function parseMarkdownInline(md = '') {
+            return hasMarked ? window.marked.parseInline(md) : escapeHtml(md);
+        }
 
         // ── hamburger toggle ──────────────────────────────────────────
         const hamburger  = document.getElementById('hamburger');
@@ -934,7 +963,7 @@
         }
 
         function formatTeamLinks(linksMarkdown) {
-            const html = marked.parseInline(linksMarkdown || '');
+            const html = parseMarkdownInline(linksMarkdown || '');
             const temp = document.createElement('div');
             temp.innerHTML = html;
 
@@ -977,7 +1006,7 @@
         async function renderResearch() {
             const md = await loadMarkdown('research');
             if (!md) return;
-            document.getElementById('research-content').innerHTML = marked.parse(md);
+            document.getElementById('research-content').innerHTML = parseMarkdown(md);
         }
 
         function parseMultimedia(md) {
