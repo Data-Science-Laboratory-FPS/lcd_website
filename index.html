@@ -735,7 +735,39 @@
         }
         .impact-carousel-control.prev { left: .45rem; }
         .impact-carousel-control.next { right: .45rem; }
-        .impact-item { scroll-snap-align: start; background: #fff; border: 1px solid rgba(0,121,50,.18); border-radius: 14px; padding: .9rem; }
+        .impact-item {
+            scroll-snap-align: start;
+            background: #fff;
+            border: 1px solid rgba(0,121,50,.18);
+            border-radius: 14px;
+            overflow: hidden;
+            padding: 0 0 .9rem;
+            text-align: left;
+            box-shadow: 0 6px 20px rgba(0, 121, 50, .1);
+        }
+        .impact-thumb-wrap {
+            aspect-ratio: 16 / 9;
+            background: linear-gradient(135deg, #007932, #368f3f);
+            border-radius: 14px 14px 0 0;
+            overflow: hidden;
+            position: relative;
+        }
+        .impact-thumb {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+        }
+        .impact-thumb-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(0,121,50,.16), rgba(157,214,191,.35));
+            color: #1a6b2f;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        .impact-body { padding: .9rem .9rem 0; }
         .impact-item h3 { font-size: 1rem; margin-bottom: .45rem; color: var(--text); }
         .impact-meta { font-size: .82rem; color: #486a4d; margin-bottom: .45rem; }
         .impact-summary { font-size: .9rem; color: #2d5a3d; line-height: 1.45; }
@@ -1041,6 +1073,18 @@
             return members;
         }
 
+        function extractMarkdownImageUrl(line) {
+            const image = line.match(/!\[[^\]]*\]\((https?:\/\/[^)]+)\)/i);
+            return image ? image[1].trim() : '';
+        }
+
+        function makeArticleThumbnailUrl(url = '') {
+            if (!url) return '';
+            const normalizedUrl = url.trim();
+            if (!/^https?:\/\//i.test(normalizedUrl)) return '';
+            return `https://api.microlink.io/?url=${encodeURIComponent(normalizedUrl)}&screenshot=true&meta=false&embed=screenshot.url`;
+        }
+
         function parseImpactNews(md) {
             const lines = md.split('\n');
             const news = [];
@@ -1051,17 +1095,25 @@
                 if (!line) continue;
                 if (line.startsWith('#### ')) {
                     if (current) news.push(current);
-                    current = { title: line.replace(/^####\s+/, '').replace(/[“”]/g, ''), date: '', url: '', summary: '' };
+                    current = { title: line.replace(/^####\s+/, '').replace(/[“”]/g, ''), date: '', url: '', summary: '', thumbnail: '' };
                     continue;
                 }
-                if (!current || !line.startsWith('- ')) continue;
+                if (!current) continue;
+
+                const markdownImage = extractMarkdownImageUrl(line);
+                if (markdownImage) current.thumbnail = markdownImage;
+
+                if (!line.startsWith('- ')) continue;
                 const value = line.replace(/^- /, '');
                 if (value.toLowerCase().startsWith('fecha:')) current.date = value.split(':').slice(1).join(':').trim();
                 else if (value.toLowerCase().startsWith('url:')) current.url = value.split(':').slice(1).join(':').trim();
                 else if (value.toLowerCase().startsWith('impacto:')) current.summary = value.split(':').slice(1).join(':').trim();
+                else if (value.toLowerCase().startsWith('thumbnail:') || value.toLowerCase().startsWith('miniatura:')) {
+                    current.thumbnail = value.split(':').slice(1).join(':').trim();
+                }
             }
             if (current) news.push(current);
-            return news;
+            return news.map(item => ({ ...item, thumbnail: item.thumbnail || makeArticleThumbnailUrl(item.url) }));
         }
 
         // ── renderers ─────────────────────────────────────────────────
@@ -1365,10 +1417,15 @@
                 <button class="impact-carousel-control prev" type="button" aria-label="Anterior">‹</button>
                 <div class="impact-carousel">
                     ${items.map(item => `<article class="impact-item">
-                        <h3>${item.title}</h3>
-                        <div class="impact-meta">📅 ${item.date || 'Fecha por confirmar'}</div>
-                        <p class="impact-summary">${item.summary || ''}</p>
-                        ${item.url ? `<a class="impact-link" href="${item.url}" target="_blank" rel="noopener noreferrer">Ver noticia</a>` : ''}
+                        <div class="impact-thumb-wrap">
+                            ${item.thumbnail ? `<img class="impact-thumb" src="${item.thumbnail}" alt="${item.title}" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='${makeArticleThumbnailUrl(item.url)}';">` : '<div class="impact-thumb impact-thumb-placeholder">Noticia</div>'}
+                        </div>
+                        <div class="impact-body">
+                            <h3>${item.title}</h3>
+                            <div class="impact-meta">📅 ${item.date || 'Fecha por confirmar'}</div>
+                            <p class="impact-summary">${item.summary || ''}</p>
+                            ${item.url ? `<a class="impact-link" href="${item.url}" target="_blank" rel="noopener noreferrer">Ver noticia</a>` : ''}
+                        </div>
                     </article>`).join('')}
                 </div>
                 <button class="impact-carousel-control next" type="button" aria-label="Siguiente">›</button>
