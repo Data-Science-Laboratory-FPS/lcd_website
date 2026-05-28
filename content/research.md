@@ -1,117 +1,129 @@
 ### <i class="fa-solid fa-book-open-reader"></i> Published Papers
 <div class="papers-intro">A curated record of peer-reviewed publications in healthcare AI, critical care, and clinical decision support.</div>
+
+**“Oral Melatonin in Critically Ill Patients with COVID-19: A quasi-experimental pragmatic trial”**
+*Publication • 25/12/2025 • Sánchez-García M, et al.*
+
 **“Toward Transparent Clinical Decision Support in the ICU: A Multi-Window, Model-Agnostic Explainability Approach for 72-Hour Mortality Prediction Using the eICU Collaborative Research Database”**
-*Med Intensiva • 2025 • Gallardo Gómez, D., Díaz, S., Quintero Sosa, J., Jiménez Vázquez, C., Ritoré-Hidalgo, Á., Gutiérrez-Pizarraya, A., **Armengol de la Hoz, M. Á.**, Recuerda Núñez, M., Estella, Á.*
-<!--[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://doi.org/) -->
+*DOI 10.1016/j.medine.2025.502349 • 3/11/2025 • Daniel Gallardo Gómez, Sara Díaz, Javier Quintero Sosa, Claudia Jiménez Vázquez, Álvaro Ritoré-Hidalgo, Antonio Gutiérrez-Pizarraya, Miguel Ángel Armengol de la Hoz, María Recuerda Núñez, Ángel Estella*
+[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://doi.org/10.1016/j.medine.2025.502349)
+
+**“Identifying key clinical and biochemical predictors of treatment outcomes in inflammatory bowel disease: a real-world evidence study”**
+*DOI 10.1038/s41598-025-25370-0 • 20/10/2025 • Juan Luis González Rodríguez, Carmen Vías Parrado, Jaime Cordero-Ramos, Ahmed Bouallou, Miguel Ángel Armengol de la Hoz, Federico Argüelles Arias*
+[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://doi.org/10.1038/s41598-025-25370-0)
+
+**“Rendimiento diagnóstico del triaje telefónico para dolor torácico no traumático en el Centro Coordinador de Urgencias y Emergencias. Estudio Poblacional en Andalucía.”**
+*DOI 10.55633/s3me/101.2025 • 15/10/2025 • Carlos Romero-Olóriz, María José Luque-Hernández, Cristina López-López, Auxiliadora Caballero-García, Juan Antonio Péculo Carrasco, Miguel Ángel Armengol de la Hoz*
+[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://doi.org/10.55633/s3me/101.2025)
 
 **“Bridging Generative AI and Healthcare Practice: Insights from the GenAI Health Hackathon at Hospital Clínic de Barcelona”**
-*BMJ Health & Care Informatics • 2025 • Frid, S., Bassegoda, O., Camacho Mahamud, M. A., Sanjuan, G., **Armengol de la Hoz, M. Á.**, Celi, L. A., Cano Franco, I., Anmella, G., Cuñat López, T., Arellano, A. L., Leguízamo-Martínez, L. M., Mezquita, L., Axcell Peñafiel P., Gallardo-Pizarro, A., González Colom, R., Renú Jornet, A., Bracons Cucó, G., Borrat Frigola, X.*
-<!--[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://doi.org/) -->
+*DOI 10.1136/bmjhci-2025-101640 • 15/10/2025 • Santiago Frid, Octavi Bassegoda, Maria Araceli Camacho Mahamud, Gemma Sanjuan, Miguel Ángel Armengol de la Hoz, Leo Celi, Isaac Cano Franco, Gerard Anmella, Tomas Cuñat López, Ana Lucía Arellano, Lina María Leguízamo-Martínez, Laura Mezquita, Petter Axcell Peñafiel Macías, Antonio Gallardo-Pizarro, Ruben González Colom, Arturo Renú Jornet, Guillem Bracons Cucó, Xavier Borrat Frigola*
+[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://doi.org/10.1136/bmjhci-2025-101640)
 
-**“Datos Abiertos e Inteligencia Artificial: Una Ventana de Oportunidad para Pacientes Sépticos en los Servicios de Urgencias”**
-*Emergencias • 2025 • Estella, Á., **Armengol de la Hoz, M. Á.**, González del Castillo, J., Grupo de trabajo INFURG-SEMES*
+**“Datos abiertos e inteligencia artificial: una ventana de oportunidad para pacientes sépticos en los servicios de urgencias”**
+*DOI 10.55633/s3me/056.2025 • 13/06/2025 • Ángel Estella, Miguel Ángel Armengol de la Hoz, Juan González del Castillo, Grupo de trabajo INFURG-SEMES*
 [<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://doi.org/10.55633/s3me/056.2025)
 
-**“Assessing COVID-19 Vaccine Effectiveness and Risk Factors for Severe Outcomes Through Machine Learning Techniques: A Real-World Data Study in Andalusia, Spain”**
-*J Epidemiol Glob Health • 2024 • Serrano-Ortiz, Á., Romero-Cabrera, J. L., Monserrat Villatoro, J., Cordero-Ramos, J., Ruiz-Montero, R., Ritoré, Á., Dopazo, J., del Diego Salas, J., García-Sánchez, V., Salcedo-Leal, I., **Armengol de la Hoz, M. Á.**, Túnez, I., Guzmán, M. Á.* [<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://doi.org/10.1007/s44197-024-00298-2)
+**“Assessing COVID-19 Vaccine Effectiveness and Risk Factors for Severe Outcomes through Machine Learning Techniques: A Real-World Data Study in Andalusia, Spain”**
+*DOI 10.1007/s44197-024-00298-2 • 11/11/2024 • Álvaro Serrano-Ortiz, Juan Luis Romero-Cabrera, Jaime Monserrat Villatoro, Jaime Cordero-Ramos, Rafael Ruiz-Montero, Álvaro Ritoré, Joaquín Dopazo, Jorge del Diego Salas, Valle García Sánchez, Inmaculada Salcedo-Leal, Miguel Ángel Armengol de la Hoz, Isaac Túnez, Miguel Ángel Guzmán*
+[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://doi.org/10.1007/s44197-024-00298-2)
 
-**“COVID Data for Shared Learning (CDSL): A Comprehensive, Multimodal COVID-19 Dataset from HM Hospitales”**
-*PhysioNet • 2024 • Ritoré, Á., Oprescu, A. M., Estirado Bronchalo, A., **Armengol de la Hoz, M. Á.***
-[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://doi.org/10.13026/1176-6c44)
+**“COVID Data for Shared Learning (CDSL): A comprehensive, multimodal COVID-19 dataset from HM Hospitales”**
+*DOI 10.13026/85z8-jq92 • 25/10/2024 • Álvaro Ritoré, Andreea M Oprescu, Alberto Estirado Bronchalo, Miguel Ángel Armengol de la Hoz*
+[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://doi.org/10.13026/85z8-jq92)
 
-**“The Role of Open Access Data in Democratizing Healthcare AI: A Pathway to Research Enhancement, Patient Well-Being and Treatment Equity in Andalusia, Spain”**
-*PLOS Dig Health • 2024 • Ritoré, Á., Jiménez, C., González, J. L., Rejón-Parrilla, J. C., Hervás, P., Toro, E., Parra-Calderón, C. L., Celi, L. A., Túnez, I., **Armengol de la Hoz, M. Á.***
+**“The role of Open Access Data in democratizing healthcare AI: A pathway to research enhancement, patient well-being and treatment equity in Andalusia, Spain”**
+*DOI 10.1371/journal.pdig.0000599 • 16/09/2024 • Álvaro Ritoré, Claudia M. Jiménez, Juan Luis González, Juan Carlos Rejón-Parrilla, Pablo Hervás, Esteban Toro, Carlos Luis Parra-Calderón, Leo Anthony Celi, Isaac Túnez, Miguel Ángel Armengol de la Hoz*
 [<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://doi.org/10.1371/journal.pdig.0000599)
 
-**“The Open Data Revolution: Enhancing Healthcare in Intensive Care Units”**
-*Med Intensiva (English Ed) • 2024 • Muñoz-Lezcano, S., de la Fuente, C., Estella, Á., Amaya-Villar, R., Puppo-Moreno, A. M., **Armengol-de la Hoz, M. Á.**, Garnacho-Montero, J.*
+**“The open data revolution: Enhancing healthcare in intensive care units”**
+*DOI 10.1016/j.medine.2024.03.011 • 5/04/2024 • Sergio Muñoz-Lezcano, Carmen de la Fuente, Ángel Estella, Rosario Amaya-Villar, Antonio M Puppo-Moreno, Miguel Ángel Armengol-de la Hoz, José Garnacho-Montero*
 [<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://doi.org/10.1016/j.medine.2024.03.011)
 
 **“Predicting ICU Mortality in Acute Respiratory Distress Syndrome Patients Using Machine Learning: The Predicting Outcome and STratifiCation of severity in ARDS (POSTCARDS) Study”**
-*Crit Care Med • 2024 • Villar, J., González-Martín, J. M., Hernández-González, J., **Armengol de la Hoz, M. A.**, Fernández, C., Martín-Rodríguez, C., Mosteiro, F., Martínez, D., Sánchez-Ballesteros, J., Ferrando, C., Domínguez-Berrot, A. M., Añón, J. M., Parra, L., Montiel, R., Solano, R., Robaglia, D., Szakmany, T., Steyerberg, E. W., Slutsky, A. S.*
-[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://doi.org/10.1097/CCM.0000000000006030)
+*PMID 37651262 • 31/08/2023 • Jesús Villar, Jesús M González-Martín, Jerónimo Hernández-González, Miguel A Armengol, Cristina Fernández, Carmen Martín-Rodríguez, Fernando Mosteiro, Domingo Martínez, Jesús Sánchez-Ballesteros, Carlos Ferrando, Ana M Domínguez-Berrot, José M Añón, Laura Parra, Raquel Montiel, Rosario Solano, Denis Robaglia, Pedro Rodríguez-Suárez, Estrella Gómez-Bentolila, Rosa L Fernández, Tamas Szakmany, Ewout W Steyerberg, Arthur S Slutsky, POSTCARDS Network*
+[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://pubmed.ncbi.nlm.nih.gov/37651262/)
 
-**“Altered Consciousness Mediates the Effect of Hypernatremia, but Not Hyponatremia, on Mortality Among Patients Observed in the ICU”**
-*Int Care Med • 2023 • **Armengol de la Hoz, M. Á.**, Hao, S., Raines, N. H., Celi, L. A., Sánchez-González, P., Gómez, E. J., Danziger, J.*
-[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://doi.org/10.21203/rs.3.rs-3255987/v1)
+**“Altered consciousness mediates the effect of hypernatremia, but not hyponatremia, on mortality among patients observed in the ICU”**
+*PMC article • 24/08/2023 • Miguel Ángel Armengol de la Hoz, Sicheng Hao, Nathan Hutzel Raines, Leo Anthony Celi, Patricia Sánchez-González, Enrique J. Gómez, John Danziger*
+[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10462186/)
 
-**“Predictors of Mechanical Ventilation and Mortality in Critically Ill Patients With COVID-19 Pneumonia”**
-*Med Intensiva • 2023 • Muñoz Lezcano, S., **Armengol de la Hoz, M. Á.**, Corbi, A., López, F., Sánchez García, M., Núñez Reiz, A., Fariña González, T., Zlatkov, V. Y.*
-[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://doi.org/10.1016/j.medine.2023.07.009)
+**“Predictors of mechanical ventilation and mortality in critically ill patients with COVID-19 pneumonia”**
+*PMID 37500305 • 25/07/2023 • Sergio Muñoz Lezcano, Miguel Ángel Armengol de la Hoz, Alberto Corbi, Fernando López, Miguel Sánchez García, Antonio Nuñez Reiz, Tomás Fariña González, Viktor Yordanov Zlatkov*
+[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://pubmed.ncbi.nlm.nih.gov/37500305/)
 
-**“A Guide to Sharing Open Healthcare Data Under the General Data Protection Regulation”**
-.*Sci Data • 2023 • de Kok, J. W. T. M., **Armengol de la Hoz, M. Á.**, de Jong, Y., Brokke, V., Elbers, P. W. G., Thoral, P., Castillejo, A., Trenor, T., Castellano, J. M., Bronchalo, A. E., Merz, T. M., Faltys, M.; Collaborator group; van der Horst, I. C. C., Xu, M., Celi, L. A., van Bussel, B. C. T., Borrat, X.*
-[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://doi.org/10.1038/s41597-023-02256-2)
+**“A guide to sharing open healthcare data under the General Data Protection Regulation”**
+*PMID 37355751 • 24/06/2023 • Jip W T M de Kok, Miguel Á Armengol de la Hoz, Ymke de Jong, Véronique Brokke, Paul W G Elbers, Patrick Thoral, Alejandro Castillejo, Tomás Trenor, Jose M Castellano, Alberto E Bronchalo, Tobias M Merz, Martin Faltys, Collaborator group, Iwan C C van der Horst, Minnan Xu, Leo Anthony Celi, Bas C T van Bussel, Xavier Borrat*
+[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://pubmed.ncbi.nlm.nih.gov/37355751/)
 
 **“PDSS: A Pharmacological Decision Support System for Diabetics Patients with COVID-19”**
-*Stud Health Technol Inform • 2022 • Amaya-Rodriguez, I., Larburu, N., Rollán Martinez-Herrera, M., Rebescher, K., Macia, I., **Armengol de la Hoz, M. A.**, Rubio-Escudero, C., Garin-Muga, A.*
-[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://doi.org/10.3233/SHTI230197)
+*PMID 37203740 • 18/05/2023 • Isabel Amaya-Rodriguez, Nekane Larburu, María Rollán Martinez-Herrera, Kristin Rebescher, Iván Macia, Miguel A Armengol De La Hoz, Cristina Rubio-Escudero, Alba Garin-Muga*
+[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://pubmed.ncbi.nlm.nih.gov/37203740/)
 
 **“A Large-Scale Multicenter Retrospective Study on Nephrotoxicity Associated With Empiric Broad-Spectrum Antibiotics in Critically Ill Patients”**
-*Chest • 2022 • Chen, A. Y., Deng, C.-Y., Calvachi-Prieto, P., **Armengol de la Hoz, M. Á.**, Khazi-Syed, A., Chen, C., Scurlock, C., Becker, C. D., Johnson, A. E. W., Celi, L. A., Dagan, A.*
-[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://doi.org/10.1016/j.chest.2023.03.046)
+*PMID 37040818 • 9/04/2023 • Alyssa Y Chen, Chih-Ying Deng, Paola Calvachi-Prieto, Miguel Ángel Armengol de la Hoz, Afeefah Khazi-Syed, Christina Chen, Corey Scurlock, Christian D Becker, Alistair E W Johnson, Leo Anthony Celi, Alon Dagan*
+[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://pubmed.ncbi.nlm.nih.gov/37040818/)
 
 **“Hypotension and Cardiac Surgical Outcomes: Reply”**
-*Anesthesiology • 2022 • Rangasamy, V., **Armengol de la Hoz, M.**, Subramaniam, B.*
-[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://doi.org/10.1097/ALN.0000000000004417)
+*PMID 36652594 • 1/03/2023 • Valluvan Rangasamy, Miguel Armengol de la Hoz, Balachundhar Subramaniam*
+[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://pubmed.ncbi.nlm.nih.gov/36652594/)
 
-**“High Resolution Data Modifies Intensive Care Unit Dialysis Outcome Predictions as Compared With Low Resolution Administrative Data Set”**
-*PLOS Dig Health • 2022 • Ziegler, J., Rush, B. N. M., Gottlieb, E. R., Celi, L. A., **Armengol de la Hoz, M. Á.***
-[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://doi.org/10.1371/journal.pdig.0000124)
+**“High resolution data modifies intensive care unit dialysis outcome predictions as compared with low resolution administrative data set”**
+*PMID 36812632 • 11/10/2022 • Jennifer Ziegler, Barret N. M. Rush, Eric R. Gottlieb, Leo Anthony Celi, Miguel Ángel Armengol de la Hoz*
+[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://pubmed.ncbi.nlm.nih.gov/36812632/)
 
-**“Reporting Guideline for the Early-Stage Clinical Evaluation of Decision Support Systems Driven by Artificial Intelligence: DECIDE-AI”**
-*Nat Med • 2022 • Vasey, B., Nagendran, M., Campbell, B., Clifton, D. A., Collins, G. S., Denaxas, S., Denniston, A. K., Faes, L., Geerts, B., Ibrahim, M., Liu, X., Mateen, B. A., Mathur, P., McCradden, M. D., Morgan, L., Ordish, J., Rogers, C., Saria, S., Ting, D. S. W., Watkinson, P., Weber, W., Wheatstone, P., McCulloch, P.; **DECIDE-AI expert group (Armengol de la Hoz, M. Á.)***
-[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://doi.org/10.1038/s41591-022-01951-8)
+**“Reporting guideline for the early-stage clinical evaluation of decision support systems driven by artificial intelligence: DECIDE-AI”**
+*PMID 35585198 • 12/08/2022 • Baptiste Vasey, Myura Nagendran, Bruce Campbell, David A Clifton, Gary S Collins, Spiros Denaxas, Alastair K Denniston, Livia Faes, Bart Geerts, Mudathir Ibrahim, Xiaoxuan Liu, Bilal A Mateen, Piyush Mathur, Melissa D McCradden, Lauren Morgan, Johan Ordish, Campbell Rogers, Suchi Saria, Daniel S W Ting, Peter Watkinson, Wim Weber, Peter Wheatstone, Peter McCulloch, DECIDE-AI expert group (Miguel Ángel Armengol de la Hoz)*
+[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://pubmed.ncbi.nlm.nih.gov/35585198/)
 
-**“Developing and Validating Multi-Modal Models for Mortality Prediction in COVID-19 Patients: A Multi-center Retrospective Study”**
-*J Digit Imaging • 2021 • Wu, T.-Y., **Armengol de la Hoz, M. Á.**, Kuo, P.-C., Paguio, J. A., Yao, J. S., Dee, E. C., Yeung, W., Jurado, J., Moulick, A., Milazzo, C., Peinado, P., Villares, P., Cubillo, A., Varona, J. F., Lee, H-C., Estirado, A., Castellano, J. M., Celi, L. A.*
-[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://doi.org/10.1007/s10278-022-00674-z)
+**“Developing and Validating Multi-Modal Models for Mortality Prediction in COVID-19 Patients: a Multi-center Retrospective Study”**
+*PMID 35789446 • 5/07/2022 • Joy Tzung-Yu Wu, Miguel Ángel Armengol de la Hoz, Po-Chih Kuo, Joseph Alexander Paguio, Jasper Seth Yao, Edward Christopher Dee, Wesley Yeung, Jerry Jurado, Achintya Moulick, Carmelo Milazzo, Paloma Peinado, Paula Villares, Antonio Cubillo, José Felipe Varona, Hyung-Chul Lee, Alberto Estirado, José Maria Castellano, Leo Anthony Celi*
+[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://pubmed.ncbi.nlm.nih.gov/35789446/)
 
-**“Operationalising Fairness in Medical Algorithms”** *BMJ Health & Care Informatics • 2021 • Parbhoo, S., Wawira Gichoya, J., Celi, L. A., **Armengol de la Hoz, M. Á.***
-[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://doi.org/10.1136/bmjhci-2022-100617)
+**“Operationalising fairness in medical algorithms”**
+*PMID 35688512 • 1/06/2022 • Sonali Parbhoo, Judy Wawira Gichoya, Leo Anthony Celi, Miguel Ángel Armengol de la Hoz*
+[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://pubmed.ncbi.nlm.nih.gov/35688512/)
 
-**“Intraoperative Hypotension and Acute Kidney Injury, Stroke, and Mortality During and Outside Cardiopulmonary Bypass: A Retrospective Observational Cohort Study”**
-*Anesthesiology • 2021 • **Armengol de la Hoz, M. A.**, Rangasamy, V., Brenes Bastos, A., Xu, X., Novack, V., Saugel, B., Subramaniam, B.*
-[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://doi.org/10.1097/ALN.0000000000004175)
+**“Intraoperative Hypotension and Acute Kidney Injury, Stroke, and Mortality during and outside Cardiopulmonary Bypass: A Retrospective Observational Cohort Study”**
+*PMID 35188970 • 1/06/2022 • Miguel Armengol de la Hoz, Valluvan Rangasamy, Andres Brenes Bastos, Xinling Xu, Victor Novack, Bernd Saugel, Balachundhar Subramaniam*
+[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://pubmed.ncbi.nlm.nih.gov/35188970/)
 
 **“Sex-Specific Differences in Ventricular Remodeling and Response After Cardiac Resynchronization Therapy”**
-*Am J Cardiol • 2021 • Varrias, D., **Armengol de la Hoz, M.**, Zhao, M., Pujol, M., Orencole, M., Venkata, V. S., Zordok, M. A., Luong, K., Rana, F., Lau, E., Ibrahim, N., Newton-Cheh, C., Heist, K., Singh, J., Das, S.*
-[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://doi.org/10.1016/j.amjcard.2022.03.021)
+*PMID 35473782 • 23/04/2022 • Dimitrios Varrias, Miguel Armengol De La Hoz, Megan Zhao, Margarida Pujol, Mary Orencole, Vikramaditya Samala Venkata, Magdi Atef Zordok, Katherine Luong, Farhan Rana, Emily Lau, Nasrein Ibrahim, Christopher Newton-Cheh, Kevin Heist, Jagmeet Singh, Saumya Das*
+[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://pubmed.ncbi.nlm.nih.gov/35473782/)
 
-**“A Novel Vascular Leak Index Identifies Sepsis Patients With a Higher Risk for In-Hospital Death and Fluid Accumulation”**
-*Crit Care • 2021 • Chandra, J., **Armengol de la Hoz, M. A.**, Lee, G., Lee, A., Thoral, P., Elbers, P., Lee, H-C., Munger, J. S., Celi, L. A., Kaufman, D. A.*
-[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://doi.org/10.1186/s13054-022-03968-4)
+**“A novel Vascular Leak Index identifies sepsis patients with a higher risk for in-hospital death and fluid accumulation”**
+*PMID 35410278 • 11/04/2022 • Jay Chandra, Miguel A Armengol de la Hoz, Gwendolyn Lee, Alexandria Lee, Patrick Thoral, Paul Elbers, Hyung-Chul Lee, John S Munger, Leo Anthony Celi, David A Kaufman*
+[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://pubmed.ncbi.nlm.nih.gov/35410278/)
 
-**“Systematic Review and Comparison of Publicly Available ICU Data Sets — A Decision Guide for Clinicians and Data Scientists”**
-*Crit Care Med • 2021 • Sauer, C. M., Dam, T. A., Celi, L. A., Faltys, M., **Armengol de la Hoz, M. A.**, Adhikari, L., Ziesemer, K. A., Girbes, A., Thoral, P. J., Elbers, P.*
-[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://doi.org/10.1097/CCM.0000000000005517)
+**“Systematic Review and Comparison of Publicly Available ICU Data Sets-A Decision Guide for Clinicians and Data Scientists”**
+*PMID 35234175 • 2/03/2022 • Christopher M Sauer, Tariq A Dam, Leo A Celi, Martin Faltys, Miguel A A de la Hoz, Lasith Adhikari, Kirsten A Ziesemer, Armand Girbes, Patrick J Thoral, Paul Elbers*
+[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://pubmed.ncbi.nlm.nih.gov/35234175/)
 
-**“Can a Low-Cost Exercise Monitor Provide Useful Heart Rate Monitoring for Use in Low-Resource Emergency Departments?”**
-*Clin Exp Emerg Med • 2021 • O’Mara, T. A., **Armengol de la Hoz, M.**, Mechanic, O. J., Dagan, A.*
-[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://doi.org/10.1001/jamacardio.2021.0292)
+**“Can a low-cost exercise monitor provide useful heart rate monitoring for use in low-resource emergency departments?”**
+*PMID 34649408 • 30/09/2021 • Thomas A O'Mara, Miguel Armengol de la Hoz, Oren J Mechanic, Alon Dagan*
+[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://pubmed.ncbi.nlm.nih.gov/34649408/)
 
 **“Metabolic Cost of Exercise Initiation in Patients With Heart Failure With Preserved Ejection Fraction vs Community-Dwelling Adults”**
-*JAMA Cardiol • 2021 • Shah, R. V., Schoenike, M. W., **Armengol de la Hoz, M. Á.**, Cunningham, T. F., Blodgett, J. B., Tanguay, M., Sbarbaro, J. A., Nayor, M., Rouvina, J., Kowal, A., Houstis, N., Baggish, A. L., Ho, J. E., Hardin, C., Malhotra, R., Larson, M. G., Vasan, R. S., Lewis, G. D.*
-[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://doi.org/10.1001/jamacardio.2021.0292)
-
-**“Association of Chloride Ion and Sodium-Chloride Difference With Acute Kidney Injury and Mortality in Critically Ill Patients”**
-*Crit Care Explorations • 2020 • Kimura, S., **Armengol de la Hoz, M. Á.**, Raines, N. H., Celi, L. A.*
-[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://doi.org/10.1097/CCE.0000000000000247)
-
-**“Use of Do-Not-Resuscitate Orders for Critically Ill Patients with ESKD”**
-*J Am Soc Nephrol • 2020 • Danziger, J., **Armengol de la Hoz, M. Á.**, Celi, L. A., Cohen, R. A., Mukamal, K. J.*
-[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://doi.org/10.1681/ASN.2020081160)
+*PMID 33729454 • 17/03/2021 • Ravi V Shah, Mark W Schoenike, Miguel Á Armengol de la Hoz, Thomas F Cunningham, Jasmine B Blodgett, Melissa Tanguay, John A Sbarbaro, Matthew Nayor, Jennifer Rouvina, Alyssa Kowal, Nicholas Houstis, Aaron L Baggish, Jennifer E Ho, Corey Hardin, Rajeev Malhotra, Martin G Larson, Ramachandran S Vasan, Gregory D Lewis*
+[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://pubmed.ncbi.nlm.nih.gov/33729454/)
 
 **“Machine Learning Models with Preoperative Risk Factors and Intraoperative Hypotension Parameters Predict Mortality After Cardiac Surgery”**
-*J Cardiothorac Vasc Anesth • 2020 • Bento, M. P., **Armengol de la Hoz, M.**, Rangasamy, V., Subramaniam, B.*
-[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://doi.org/10.1053/j.jvca.2020.07.029)
+*PMID 32747203 • 12/07/2020 • Marta Priscila Bento Fernandes, Miguel Armengol de la Hoz, Valluvan Rangasamy, Balachundhar Subramaniam*
+[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://pubmed.ncbi.nlm.nih.gov/32747203/)
 
-**“Incidence and Risk Model Development for Severe Tachypnea Following Terminal Extubation”**
-*Chest • 2020 • Fehnel, C. R., **Armengol de la Hoz, M.**, Celi, L. A., Campbell, M. L., Hanafy, K., Nozari, A., White, D. B., Mitchell, S. L.*
-[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://doi.org/10.1016/j.chest.2020.04.027)
+**“Association of chloride ion and sodium-chloride difference with acute kidney injury and mortality in critically ill patients”**
+*PMID 33251513 • 24/11/2020 • Satoshi Kimura, Miguel Angel Armengol de la Hoz, Nathan Hutzel Raines, Leo Anthony Celi*
+[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://pubmed.ncbi.nlm.nih.gov/33251513/)
+
+**“Use of do-not-resuscitate orders for critically ill patients with ESKD”**
+*PMID 32855209 • 27/08/2020 • John Danziger, Miguel Ángel Armengol de la Hoz, Leo Anthony Celi, Robert A Cohen, Kenneth J Mukamal*
+[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://pubmed.ncbi.nlm.nih.gov/32855209/)
+
+**“Incidence and risk model development for severe tachypnea following terminal extubation”**
+*PMID 32360728 • 28/04/2020 • Corey R Fehnel, Miguel Armengol de la Hoz, Leo A Celi, Margaret L Campbell, Khalid Hanafy, Ala Nozari, Douglas B White, Susan L Mitchell*
+[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://pubmed.ncbi.nlm.nih.gov/32360728/)
 
 **“Temporal Trends in Critical Care Outcomes in U.S. Minority-Serving Hospitals”**
-*Am J Respir Crit Care Med • 2020 • Danziger, J., **Armengol de la Hoz, M. Á.**, Li, W., Komorowski, M., Deliberato, R. O., Rush, B. N. M., Mukamal, K. J., Celi, L., Badawi, O.*
-[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://doi.org/10.1164/rccm.201903-0623OC)
-
-<!-- ### 📝 Technical Blog **Latest articles:** - **“From Zero to Hero in MLOps”** – Practical guide to deploying models in production - **“LLMs in Spanish: Effective Fine-Tuning”** – Techniques to adapt language models - **“Hyperparameter Optimization with Optuna”** – Hands-on tutorial - **“Data Quality: The Silent Enemy of ML”** – Best practices [View all articles →](#) -->
+*PMID 31948262 • 15/03/2020 • John Danziger, Miguel Ángel Armengol de la Hoz, Wenyuan Li, Matthieu Komorowski, Rodrigo Octávio Deliberato, Barret N M Rush, Kenneth J Mukamal, Leo Celi, Omar Badawi*
+[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://pubmed.ncbi.nlm.nih.gov/31948262/)
