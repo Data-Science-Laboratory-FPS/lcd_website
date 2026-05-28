@@ -526,6 +526,12 @@
         .papers-counter { font-size: .82rem; color: #4f534d; }
         .papers-subtitle { font-size: .9rem; margin: 0 0 .8rem; color: #4a4a47; }
         .papers-list { display: grid; gap: .5rem; }
+        .papers-pagination { display:flex; justify-content:space-between; align-items:center; gap:.8rem; margin-top: .85rem; flex-wrap: wrap; }
+        .papers-page-info { font-size:.82rem; color:#4f534d; }
+        .papers-page-controls { display:flex; gap:.5rem; }
+        .papers-page-btn { border:1px solid rgba(0,121,50,.35); background:#fff; color:#007932; border-radius:999px; padding:.34rem .74rem; font-size:.78rem; font-weight:700; cursor:pointer; }
+        .papers-page-btn[disabled] { opacity:.45; cursor:not-allowed; }
+        .papers-page-btn:not([disabled]):hover { background:rgba(0,121,50,.08); }
         .paper-card { display: block; text-decoration: none; color: inherit; background: #fff; border: none; border-radius: 12px; padding: .65rem .8rem; transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; position: relative; }
         .paper-card:hover, .paper-card:focus-visible { border-color: #007932; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,121,50,.08); }
         .paper-card:focus-visible { outline: 3px solid rgba(0,121,50,.35); outline-offset: 2px; }
@@ -1161,49 +1167,64 @@
                 { title: "A guide to sharing open healthcare data under the GDPR", journal: "Sci Data", year: 2023, url: "https://doi.org/10.1038/s41597-023-02256-2", authors: ["de Kok, J.", "Armengol de la Hoz, M. Á.", "de Jong, Y."] },
                 { title: "PDSS: A Pharmacological Decision Support System for Diabetics Patients with COVID-19", journal: "Stud Health Technol Inform", year: 2023, url: "https://doi.org/10.3233/SHTI230197", authors: ["Amaya-Rodriguez, I.", "Larburu, N.", "Armengol De La Hoz, M. A."] },
                 { title: "A Large-Scale Multicenter Retrospective Study on Nephrotoxicity with Broad-Spectrum Antibiotics", journal: "Chest", year: 2023, url: "https://doi.org/10.1016/j.chest.2023.03.046", authors: ["Chen, A. Y.", "Deng, C.-Y.", "Armengol de la Hoz, M. Á."] }
-            ]
-            const keepStart = 2;
-            const keepEnd = 2;
-            const cap = 7;
+            ];
+            const keepStart = 2; const keepEnd = 2; const cap = 7;
+            const pageSize = 6;
             const markCorr = (name, corrSet) => corrSet.has(name) ? `${name}*` : name;
             const collapseAuthors = (paper) => {
                 const corrSet = new Set(paper.corresponding || []);
                 const full = paper.authors.map(n => markCorr(n, corrSet));
                 if (full.length <= cap) return { text: full.join(', '), truncated: false, fullText: full.join(', ') };
-                const middleStart = keepStart;
-                const middleEnd = full.length - keepEnd;
-                const collapsed = [...full.slice(0, middleStart), '…', ...full.slice(middleEnd)];
-                const corrNames = [...corrSet].map(n => markCorr(n, corrSet));
-                corrNames.forEach(c => { if (!collapsed.includes(c)) collapsed.splice(collapsed.length - keepEnd, 0, c); });
+                const collapsed = [...full.slice(0, keepStart), '…', ...full.slice(full.length - keepEnd)];
+                [...corrSet].map(n => markCorr(n, corrSet)).forEach(c => { if (!collapsed.includes(c)) collapsed.splice(collapsed.length - keepEnd, 0, c); });
                 return { text: [...new Set(collapsed)].join(', '), truncated: true, fullText: full.join(', ') };
             };
-            const items = publications.map((paper, i) => {
-                const a = collapseAuthors(paper);
-                const linkAttrs = paper.url ? `href="${paper.url}" target="_blank" rel="noopener noreferrer"` : "";
-                return `<a class="paper-card ${paper.url ? '' : 'paper-card-disabled'}" ${linkAttrs} style="animation: fadeIn .35s ease ${i * 70}ms both;">
-                    <div class="paper-meta-row"><span class="paper-journal">${paper.journal}</span><span class="paper-year">${paper.year}</span></div>
-                    <h3 class="paper-title">${paper.title}</h3>
-                    <div class="paper-authors" data-full="${a.fullText}" data-short="${a.text}" data-expanded="false">${a.text}</div>
-                    ${a.truncated ? '<button class="paper-toggle" type="button">Show all authors</button>' : ''}
-                    <span class="read-affordance"><i class="fa-regular fa-newspaper" aria-hidden="true"></i> Read article</span>
-                </a>`;
-            }).join('');
-            document.getElementById('research-content').innerHTML = `<section class="papers-shell" aria-label="Published Papers">
-                <p class="papers-eyebrow">DS Lab · Fundación Progreso y Salud · Junta de Andalucía</p>
-                <div class="papers-headline"><h2>Published Papers</h2><p class="papers-counter">${publications.length} publications</p></div>
-                <p class="papers-subtitle">Scientific publications ordered by most recent advances and linked by DOI.</p>
-                <div class="papers-list">${items}</div>
-            </section>`;
-            document.querySelectorAll('.paper-toggle').forEach(btn => {
-                btn.addEventListener('click', (e) => {
+
+            const root = document.getElementById('research-content');
+            let currentPage = 1;
+            const totalPages = Math.max(1, Math.ceil(publications.length / pageSize));
+
+            function paint() {
+                const start = (currentPage - 1) * pageSize;
+                const pageItems = publications.slice(start, start + pageSize);
+                const cards = pageItems.map((paper, i) => {
+                    const a = collapseAuthors(paper);
+                    const linkAttrs = paper.url ? `href="${paper.url}" target="_blank" rel="noopener noreferrer"` : "";
+                    return `<a class="paper-card ${paper.url ? '' : 'paper-card-disabled'}" ${linkAttrs} style="animation: fadeIn .35s ease ${i * 70}ms both;">
+                        <div class="paper-meta-row"><span class="paper-journal">${paper.journal}</span><span class="paper-year">${paper.year}</span></div>
+                        <h3 class="paper-title">${paper.title}</h3>
+                        <div class="paper-authors" data-full="${a.fullText}" data-short="${a.text}" data-expanded="false">${a.text}</div>
+                        ${a.truncated ? '<button class="paper-toggle" type="button">Show all authors</button>' : ''}
+                        <span class="read-affordance"><i class="fa-regular fa-newspaper" aria-hidden="true"></i> Read article</span>
+                    </a>`;
+                }).join('');
+
+                root.innerHTML = `<section class="papers-shell" aria-label="Published Papers">
+                    <p class="papers-eyebrow">DS Lab · Fundación Progreso y Salud · Junta de Andalucía</p>
+                    <div class="papers-headline"><h2>Published Papers</h2><p class="papers-counter">${publications.length} publications</p></div>
+                    <p class="papers-subtitle">Scientific publications ordered by most recent advances and linked by DOI.</p>
+                    <div class="papers-list">${cards}</div>
+                    <div class="papers-pagination">
+                        <p class="papers-page-info">Showing ${start + 1}-${Math.min(start + pageSize, publications.length)} of ${publications.length}</p>
+                        <div class="papers-page-controls">
+                            <button class="papers-page-btn" data-page="prev" ${currentPage === 1 ? 'disabled' : ''}>Previous</button>
+                            <button class="papers-page-btn" data-page="next" ${currentPage === totalPages ? 'disabled' : ''}>Next</button>
+                        </div>
+                    </div>
+                </section>`;
+
+                root.querySelectorAll('.paper-toggle').forEach(btn => btn.addEventListener('click', (e) => {
                     e.preventDefault(); e.stopPropagation();
                     const line = btn.previousElementSibling;
                     const expanded = line.getAttribute('data-expanded') === 'true';
                     line.textContent = expanded ? line.dataset.short : line.dataset.full;
                     line.setAttribute('data-expanded', expanded ? 'false' : 'true');
                     btn.textContent = expanded ? 'Show all authors' : 'Hide authors';
-                });
-            });
+                }));
+                root.querySelector('[data-page="prev"]')?.addEventListener('click', () => { if (currentPage > 1) { currentPage -= 1; paint(); } });
+                root.querySelector('[data-page="next"]')?.addEventListener('click', () => { if (currentPage < totalPages) { currentPage += 1; paint(); } });
+            }
+            paint();
         }
 
         function parseMultimedia(md) {
@@ -1249,6 +1270,22 @@
             }
 
             return categories.filter(c => c.items.length);
+        }
+
+
+        function parseDateFlexible(value = '') {
+            const raw = (value || '').trim();
+            if (!raw) return null;
+            const numeric = raw.match(/^(\d{1,2})[\/-](\d{1,2})[\/-](\d{2,4})$/);
+            if (numeric) {
+                const day = Number(numeric[1]);
+                const month = Number(numeric[2]) - 1;
+                const year = Number(numeric[3].length === 2 ? `20${numeric[3]}` : numeric[3]);
+                const d = new Date(year, month, day);
+                return Number.isNaN(d.getTime()) ? null : d;
+            }
+            const parsed = new Date(raw);
+            return Number.isNaN(parsed.getTime()) ? null : parsed;
         }
 
         function splitTopicTags(topicValue = '') {
@@ -1360,7 +1397,14 @@
         async function renderStats() {
             const md = await loadMarkdown('impact');
             if (!md) return;
-            const items = parseImpactNews(md);
+            const items = parseImpactNews(md).sort((a, b) => {
+                const da = parseDateFlexible(a.date);
+                const db = parseDateFlexible(b.date);
+                if (!da && !db) return 0;
+                if (!da) return 1;
+                if (!db) return -1;
+                return da - db;
+            });
             document.getElementById('stats-grid').innerHTML = `<div class="impact-carousel-shell">
                 <button class="impact-carousel-control prev" type="button" aria-label="Anterior">‹</button>
                 <div class="impact-carousel">
