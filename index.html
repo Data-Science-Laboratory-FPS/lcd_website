@@ -515,7 +515,7 @@
             margin-inline: auto;
             padding: 1rem;
             background: linear-gradient(180deg, rgba(54,143,63,.04), rgba(0,121,50,.02));
-            border: 1px solid rgba(0,121,50,.12);
+            border: none;
             border-radius: 18px;
             font-family: 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             color: #2e2925;
@@ -526,8 +526,8 @@
         .papers-counter { font-size: .82rem; color: #4f534d; }
         .papers-subtitle { font-size: .9rem; margin: 0 0 .8rem; color: #4a4a47; }
         .papers-list { display: grid; gap: .5rem; }
-        .paper-card { display: block; text-decoration: none; color: inherit; background: #fff; border: 1px solid rgba(0,121,50,.2); border-radius: 12px; padding: .65rem .8rem; transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; position: relative; }
-        .paper-card:hover, .paper-card:focus-visible { border-color: #007932; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,121,50,.11); }
+        .paper-card { display: block; text-decoration: none; color: inherit; background: #fff; border: none; border-radius: 12px; padding: .65rem .8rem; transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; position: relative; }
+        .paper-card:hover, .paper-card:focus-visible { border-color: #007932; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,121,50,.08); }
         .paper-card:focus-visible { outline: 3px solid rgba(0,121,50,.35); outline-offset: 2px; }
         .paper-meta-row { display: flex; gap: .45rem; margin-bottom: .35rem; }
         .paper-journal { background: #007932; color: #fff; border-radius: 999px; padding: .13rem .52rem; font-size: .72rem; font-weight: 700; }
@@ -537,7 +537,9 @@
         .paper-toggle { border: 0; background: none; color: #007932; font-size: .76rem; font-weight: 700; margin-top: .2rem; cursor: pointer; padding: 0; }
         .read-affordance { position: absolute; right: .8rem; bottom: .65rem; opacity: 0; transform: translateY(4px); transition: opacity .18s ease, transform .18s ease; color: #007932; font-size: .77rem; font-weight: 700; display: inline-flex; align-items: center; gap: .33rem; pointer-events: none; }
         .paper-card:hover .read-affordance, .paper-card:focus-visible .read-affordance { opacity: 1; transform: translateY(0); }
-        @media (prefers-reduced-motion: reduce) {
+                .paper-card-disabled { cursor: default; opacity: .86; }
+        .paper-card-disabled .read-affordance { display: none; }
+@media (prefers-reduced-motion: reduce) {
             .paper-card, .read-affordance { transition: none; }
         }
 
@@ -582,7 +584,7 @@
         .media-card {
             scroll-snap-align: start;
             background: #ffffff;
-            border: 1px solid rgba(0,121,50,.12);
+            border: none;
             border-radius: 14px;
             overflow: hidden;
             transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
@@ -613,6 +615,7 @@
             object-fit: cover;
             display: block;
         }
+        .media-thumb-placeholder { display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(0,121,50,.16), rgba(157,214,191,.35)); color: #1a6b2f; font-weight: 700; font-size: 1rem; }
         .media-duration {
             position: absolute;
             right: 10px;
@@ -854,7 +857,7 @@
     <!-- MULTIMEDIA -->
     <section class="section" id="multimedia">
         <h2 class="section-title">Multimedia</h2>
-        <p class="section-subtitle">Educational resources, talks, and publications for open dissemination</p>
+        <p class="section-subtitle">News, visibility and public outreach of our work for citizens</p>
         <div class="content-wrapper" id="multimedia-content"><div class="loading">Loading multimedia...</div></div>
     </section>
 
@@ -1142,15 +1145,23 @@
 
         async function renderResearch() {
             const publications = [
-                { title: "Temporal Trends in Critical Care Outcomes in U.S. Minority-Serving Hospitals", journal: "Am J Respir Crit Care Med", year: 2020, url: "https://doi.org/10.1164/rccm.201903-0623OC", authors: ["Danziger, J.", "Armengol de la Hoz, M. Á.", "Li, W.", "Komorowski, M.", "Deliberato, R. O.", "Rush, B. N. M.", "Mukamal, K. J.", "Celi, L.", "Badawi, O."] },
-                { title: "Incidence and Risk Model Development for Severe Tachypnea Following Terminal Extubation", journal: "Chest", year: 2020, url: "https://doi.org/10.1016/j.chest.2020.04.027", authors: ["Fehnel, C. R.", "Armengol de la Hoz, M.", "Celi, L. A.", "Campbell, M. L.", "Hanafy, K.", "Nozari, A.", "White, D. B.", "Mitchell, S. L."] },
-                { title: "Machine Learning Models with Preoperative Risk Factors and Intraoperative Hypotension Parameters Predict Mortality After Cardiac Surgery", journal: "J Cardiothorac Vasc Anesth", year: 2020, url: "https://doi.org/10.1053/j.jvca.2020.07.029", authors: ["Bento, M. P.", "Armengol de la Hoz, M.", "Rangasamy, V.", "Subramaniam, B."] },
-                { title: "Use of Do-Not-Resuscitate Orders for Critically Ill Patients with ESKD", journal: "J Am Soc Nephrol", year: 2020, url: "https://doi.org/10.1681/ASN.2020081160", authors: ["Danziger, J.", "Armengol de la Hoz, M. Á.", "Celi, L. A.", "Cohen, R. A.", "Mukamal, K. J."] },
-                { title: "A guide to sharing open healthcare data under the General Data Protection Regulation", journal: "Sci Data", year: 2023, url: "https://doi.org/10.1038/s41597-023-02256-2", authors: ["de Kok, J. W. T. M.", "Armengol de la Hoz, M. Á.", "de Jong, Y.", "Brokke, V.", "Elbers, P. W. G.", "Thoral, P."] },
-                { title: "The open data revolution: Enhancing healthcare in intensive care units", journal: "Med Intensiva", year: 2024, url: "https://doi.org/10.1016/j.medine.2024.03.011", authors: ["Muñoz-Lezcano, S.", "de la Fuente, C.", "Estella, Á.", "Armengol-de la Hoz, M. Á."] },
-                { title: "The role of Open Access Data in democratizing healthcare AI: A pathway to research enhancement, patient well-being and treatment equity in Andalusia, Spain", journal: "PLOS Dig Health", year: 2024, url: "https://doi.org/10.1371/journal.pdig.0000599", authors: ["Ritoré, Á.", "Jiménez, C.", "González, J. L.", "Armengol de la Hoz, M. Á."] },
-                { title: "Bridging Generative AI and Healthcare Practice: Insights from the GenAI Health Hackathon at Hospital Clínic de Barcelona", journal: "BMJ Health & Care Informatics", year: 2025, url: "https://doi.org/10.1136/bmjhci-2025-101640", authors: ["Frid, S.", "Bassegoda, O.", "Camacho Mahamud, M. A.", "Sanjuan, G.", "Armengol de la Hoz, M. Á."] }
-            ];
+                { title: "Oral Melatonin in Critically Ill Patients with COVID-19: A quasi-experimental pragmatic trial", journal: "Journal of Medical Virology", year: 2025, url: "", authors: ["Sánchez-García, M.", "et al."] },
+                { title: "Toward Transparent Clinical Decision Support in the ICU: A Multi-Window, Model-Agnostic Explainability Approach for 72-Hour Mortality Prediction Using the eICU Collaborative Research Database", journal: "Med Intensiva", year: 2025, url: "https://doi.org/10.1016/j.medine.2025.502349", authors: ["Gallardo Gómez, D.", "Díaz, S.", "Quintero Sosa, J.", "Jiménez Vázquez, C.", "Ritoré-Hidalgo, Á.", "Armengol de la Hoz, M. Á."] },
+                { title: "Identifying key clinical and biochemical predictors of treatment outcomes in inflammatory bowel disease: a real-world evidence study", journal: "Scientific Reports", year: 2025, url: "https://doi.org/10.1038/s41598-025-25370-0", authors: ["González Rodríguez, J. L.", "Vías Parrado, C.", "Cordero-Ramos, J.", "Bouallou, A.", "Armengol de la Hoz, M. Á."] },
+                { title: "Rendimiento diagnóstico del triaje telefónico para dolor torácico no traumático en Andalucía", journal: "Emergencias", year: 2025, url: "https://doi.org/10.55633/s3me/101.2025", authors: ["Romero-Olóriz, C.", "Luque-Hernández, M. J.", "López-López, C.", "Caballero-García, A.", "Péculo Carrasco, J. A.", "Armengol de la Hoz, M. Á."] },
+                { title: "Bridging Generative AI and Healthcare Practice: Insights from the GenAI Health Hackathon at Hospital Clínic de Barcelona", journal: "BMJ Health & Care Informatics", year: 2025, url: "https://doi.org/10.1136/bmjhci-2025-101640", authors: ["Frid, S.", "Bassegoda, O.", "Camacho Mahamud, M. A.", "Sanjuan, G.", "Armengol de la Hoz, M. Á."] },
+                { title: "Datos abiertos e inteligencia artificial: una ventana de oportunidad para pacientes sépticos en urgencias", journal: "Emergencias", year: 2025, url: "https://doi.org/10.55633/s3me/056.2025", authors: ["Estella, Á.", "Armengol de la Hoz, M. Á.", "González del Castillo, J."] },
+                { title: "Assessing COVID-19 Vaccine Effectiveness and Risk Factors for Severe Outcomes", journal: "J Epidemiol Glob Health", year: 2024, url: "https://doi.org/10.1007/s44197-024-00298-2", authors: ["Serrano-Ortiz, Á.", "Romero-Cabrera, J. L.", "Monserrat Villatoro, J.", "Cordero-Ramos, J.", "Armengol de la Hoz, M. Á."] },
+                { title: "COVID Data for Shared Learning (CDSL): A comprehensive, multimodal COVID-19 dataset from HM Hospitales", journal: "PhysioNet", year: 2024, url: "https://doi.org/10.13026/85z8-jq92", authors: ["Ritoré, Á.", "Oprescu, A. M.", "Estirado Bronchalo, A.", "Armengol de la Hoz, M. Á."] },
+                { title: "The role of Open Access Data in democratizing healthcare AI", journal: "PLOS Dig Health", year: 2024, url: "https://doi.org/10.1371/journal.pdig.0000599", authors: ["Ritoré, Á.", "Jiménez, C.", "González, J. L.", "Armengol de la Hoz, M. Á."] },
+                { title: "The open data revolution: Enhancing healthcare in intensive care units", journal: "Med Intensiva", year: 2024, url: "https://doi.org/10.1016/j.medine.2024.03.011", authors: ["Muñoz-Lezcano, S.", "de la Fuente, C.", "Estella, Á.", "Armengol de la Hoz, M. Á."] },
+                { title: "Predicting ICU Mortality in ARDS Patients Using Machine Learning (POSTCARDS)", journal: "Crit Care Med", year: 2023, url: "https://doi.org/10.1097/CCM.0000000000006030", authors: ["Villar, J.", "González-Martín, J. M.", "Hernández-González, J.", "Armengol, M. A."] },
+                { title: "Altered consciousness mediates hypernatremia effect on ICU mortality", journal: "PMC", year: 2023, url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10462186/", authors: ["Armengol de la Hoz, M. Á.", "Hao, S.", "Raines, N. H.", "Danziger, J."] },
+                { title: "Predictors of mechanical ventilation and mortality in critically ill COVID-19 patients", journal: "Med Intensiva", year: 2023, url: "https://doi.org/10.1016/j.medine.2023.07.009", authors: ["Muñoz Lezcano, S.", "Armengol de la Hoz, M. Á.", "Corbi, A."] },
+                { title: "A guide to sharing open healthcare data under the GDPR", journal: "Sci Data", year: 2023, url: "https://doi.org/10.1038/s41597-023-02256-2", authors: ["de Kok, J.", "Armengol de la Hoz, M. Á.", "de Jong, Y."] },
+                { title: "PDSS: A Pharmacological Decision Support System for Diabetics Patients with COVID-19", journal: "Stud Health Technol Inform", year: 2023, url: "https://doi.org/10.3233/SHTI230197", authors: ["Amaya-Rodriguez, I.", "Larburu, N.", "Armengol De La Hoz, M. A."] },
+                { title: "A Large-Scale Multicenter Retrospective Study on Nephrotoxicity with Broad-Spectrum Antibiotics", journal: "Chest", year: 2023, url: "https://doi.org/10.1016/j.chest.2023.03.046", authors: ["Chen, A. Y.", "Deng, C.-Y.", "Armengol de la Hoz, M. Á."] }
+            ]
             const keepStart = 2;
             const keepEnd = 2;
             const cap = 7;
@@ -1168,7 +1179,8 @@
             };
             const items = publications.map((paper, i) => {
                 const a = collapseAuthors(paper);
-                return `<a class="paper-card" href="${paper.url}" target="_blank" rel="noopener noreferrer" style="animation: fadeIn .35s ease ${i * 70}ms both;">
+                const linkAttrs = paper.url ? `href="${paper.url}" target="_blank" rel="noopener noreferrer"` : "";
+                return `<a class="paper-card ${paper.url ? '' : 'paper-card-disabled'}" ${linkAttrs} style="animation: fadeIn .35s ease ${i * 70}ms both;">
                     <div class="paper-meta-row"><span class="paper-journal">${paper.journal}</span><span class="paper-year">${paper.year}</span></div>
                     <h3 class="paper-title">${paper.title}</h3>
                     <div class="paper-authors" data-full="${a.fullText}" data-short="${a.text}" data-expanded="false">${a.text}</div>
@@ -1179,7 +1191,7 @@
             document.getElementById('research-content').innerHTML = `<section class="papers-shell" aria-label="Published Papers">
                 <p class="papers-eyebrow">DS Lab · Fundación Progreso y Salud · Junta de Andalucía</p>
                 <div class="papers-headline"><h2>Published Papers</h2><p class="papers-counter">${publications.length} publications</p></div>
-                <p class="papers-subtitle">A curated record of peer-reviewed publications in healthcare AI, critical care, and clinical decision support.</p>
+                <p class="papers-subtitle">Scientific publications ordered by most recent advances and linked by DOI.</p>
                 <div class="papers-list">${items}</div>
             </section>`;
             document.querySelectorAll('.paper-toggle').forEach(btn => {
@@ -1294,7 +1306,7 @@
                             <a class="media-card" href="${item.url || '#'}" target="_blank" rel="noopener noreferrer">
                                 ${media.badge ? `<span class="media-state-badge">${media.badge}</span>` : ''}
                                 <div class="media-thumb-wrap">
-                                    ${item.thumbnail ? `<img class="media-thumb" src="${item.thumbnail}" alt="${item.title}">` : ''}
+                                    ${item.thumbnail ? `<img class="media-thumb" src="${item.thumbnail}" alt="${item.title}">` : '<div class="media-thumb media-thumb-placeholder">News</div>'}
                                     ${media.duration ? `<span class="media-duration">${media.duration}</span>` : ''}
                                 </div>
                                 <div class="media-body">
