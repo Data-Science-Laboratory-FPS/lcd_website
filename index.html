@@ -511,7 +511,7 @@
 
         /* Published papers (compact academic list) */
         .papers-shell {
-            max-width: 900px;
+            max-width: 100%;
             margin-inline: auto;
             padding: 1rem;
             background: linear-gradient(180deg, rgba(54,143,63,.04), rgba(0,121,50,.02));
@@ -701,8 +701,42 @@
 
         /* stats */
         .stats { padding: 6rem 5%; text-align: center; }
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-top: 3rem; }
-        .stat-item   { animation: fadeInUp .8s ease; }
+        .stats-grid { margin-top: 2rem; }
+        .impact-carousel-shell { position: relative; padding-inline: 2.4rem; }
+        .impact-carousel {
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: minmax(300px, 34vw);
+            gap: 1rem;
+            overflow-x: auto;
+            padding: .5rem 0 1rem;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            scroll-behavior: smooth;
+        }
+        .impact-carousel::-webkit-scrollbar { display: none; }
+        .impact-carousel-control {
+            position: absolute;
+            top: 42%;
+            transform: translateY(-50%);
+            width: 1.9rem; height: 1.9rem;
+            border-radius: 999px;
+            border: 1px solid rgba(0,121,50,.36);
+            background: rgba(255,255,255,.95);
+            color: var(--green);
+            font-size: 1.2rem;
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .impact-carousel-control.prev { left: .45rem; }
+        .impact-carousel-control.next { right: .45rem; }
+        .impact-item { scroll-snap-align: start; background: #fff; border: 1px solid rgba(0,121,50,.18); border-radius: 14px; padding: .9rem; }
+        .impact-item h3 { font-size: 1rem; margin-bottom: .45rem; color: var(--text); }
+        .impact-meta { font-size: .82rem; color: #486a4d; margin-bottom: .45rem; }
+        .impact-summary { font-size: .9rem; color: #2d5a3d; line-height: 1.45; }
+        .impact-link { display: inline-flex; margin-top: .6rem; color: var(--green); font-weight: 600; text-decoration: none; }
         .stat-number { font-size: 3.5rem; font-weight: 800; background: linear-gradient(135deg, var(--green), var(--mint)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: .5rem; }
         .stat-label  { color: #2d5a3d; font-size: 1.1rem; font-weight: 500; }
 
@@ -1004,16 +1038,27 @@
             return members;
         }
 
-        function parseStats(md) {
-            const stats = [];
-            const blocks = md.split('\n\n').filter(b => b.trim() && b.includes('**'));
-            blocks.forEach(block => {
-                const ls = block.split('\n').filter(l => l.trim());
-                if (ls.length >= 2) {
-                    stats.push({ number: ls[0].replace(/^\*\*|\*\*$/g, ''), label: ls[1] });
+        function parseImpactNews(md) {
+            const lines = md.split('\n');
+            const news = [];
+            let current = null;
+
+            for (const rawLine of lines) {
+                const line = rawLine.trim();
+                if (!line) continue;
+                if (line.startsWith('#### ')) {
+                    if (current) news.push(current);
+                    current = { title: line.replace(/^####\s+/, '').replace(/[“”]/g, ''), date: '', url: '', summary: '' };
+                    continue;
                 }
-            });
-            return stats;
+                if (!current || !line.startsWith('- ')) continue;
+                const value = line.replace(/^- /, '');
+                if (value.toLowerCase().startsWith('fecha:')) current.date = value.split(':').slice(1).join(':').trim();
+                else if (value.toLowerCase().startsWith('url:')) current.url = value.split(':').slice(1).join(':').trim();
+                else if (value.toLowerCase().startsWith('impacto:')) current.summary = value.split(':').slice(1).join(':').trim();
+            }
+            if (current) news.push(current);
+            return news;
         }
 
         // ── renderers ─────────────────────────────────────────────────
@@ -1097,9 +1142,14 @@
 
         async function renderResearch() {
             const publications = [
-                { title: "Toward Transparent Clinical Decision Support in the ICU: A Multi-Window, Model-Agnostic Explainability Approach for 72-Hour Mortality Prediction Using the eICU Collaborative Research Database", journal: "Med Intensiva", year: 2025, url: "https://doi.org/", authors: ["Gallardo Gómez, D.", "Díaz, S.", "Quintero Sosa, J.", "Jiménez Vázquez, C.", "Ritoré-Hidalgo, Á.", "Gutiérrez-Pizarraya, A.", "Armengol de la Hoz, M. Á.", "Recuerda Núñez, M.", "Estella, Á."], corresponding: ["Armengol de la Hoz, M. Á."] },
-                { title: "Bridging Generative AI and Healthcare Practice: Insights from the GenAI Health Hackathon at Hospital Clínic de Barcelona", journal: "BMJ Health & Care Informatics", year: 2025, url: "https://doi.org/", authors: ["Frid, S.", "Bassegoda, O.", "Camacho Mahamud, M. A.", "Sanjuan, G.", "Armengol de la Hoz, M. Á.", "Celi, L. A.", "Cano Franco, I.", "Anmella, G.", "Cuñat López, T.", "Arellano, A. L.", "Leguízamo-Martínez, L. M.", "Mezquita, L.", "Axcell Peñafiel P.", "Gallardo-Pizarro, A.", "González Colom, R.", "Renú Jornet, A.", "Bracons Cucó, G.", "Borrat Frigola, X."], corresponding: ["Borrat Frigola, X."] },
-                { title: "Assessing COVID-19 Vaccine Effectiveness and Risk Factors for Severe Outcomes Through Machine Learning Techniques: A Real-World Data Study in Andalusia, Spain", journal: "J Epidemiol Glob Health", year: 2024, url: "https://doi.org/10.1007/s44197-024-00298-2", authors: ["Serrano-Ortiz, Á.", "Romero-Cabrera, J. L.", "Monserrat Villatoro, J.", "Cordero-Ramos, J.", "Ruiz-Montero, R.", "Ritoré, Á.", "Dopazo, J.", "del Diego Salas, J.", "García-Sánchez, V.", "Salcedo-Leal, I.", "Armengol de la Hoz, M. Á.", "Túnez, I.", "Guzmán, M. Á."], corresponding: ["Armengol de la Hoz, M. Á."] }
+                { title: "Temporal Trends in Critical Care Outcomes in U.S. Minority-Serving Hospitals", journal: "Am J Respir Crit Care Med", year: 2020, url: "https://doi.org/10.1164/rccm.201903-0623OC", authors: ["Danziger, J.", "Armengol de la Hoz, M. Á.", "Li, W.", "Komorowski, M.", "Deliberato, R. O.", "Rush, B. N. M.", "Mukamal, K. J.", "Celi, L.", "Badawi, O."] },
+                { title: "Incidence and Risk Model Development for Severe Tachypnea Following Terminal Extubation", journal: "Chest", year: 2020, url: "https://doi.org/10.1016/j.chest.2020.04.027", authors: ["Fehnel, C. R.", "Armengol de la Hoz, M.", "Celi, L. A.", "Campbell, M. L.", "Hanafy, K.", "Nozari, A.", "White, D. B.", "Mitchell, S. L."] },
+                { title: "Machine Learning Models with Preoperative Risk Factors and Intraoperative Hypotension Parameters Predict Mortality After Cardiac Surgery", journal: "J Cardiothorac Vasc Anesth", year: 2020, url: "https://doi.org/10.1053/j.jvca.2020.07.029", authors: ["Bento, M. P.", "Armengol de la Hoz, M.", "Rangasamy, V.", "Subramaniam, B."] },
+                { title: "Use of Do-Not-Resuscitate Orders for Critically Ill Patients with ESKD", journal: "J Am Soc Nephrol", year: 2020, url: "https://doi.org/10.1681/ASN.2020081160", authors: ["Danziger, J.", "Armengol de la Hoz, M. Á.", "Celi, L. A.", "Cohen, R. A.", "Mukamal, K. J."] },
+                { title: "A guide to sharing open healthcare data under the General Data Protection Regulation", journal: "Sci Data", year: 2023, url: "https://doi.org/10.1038/s41597-023-02256-2", authors: ["de Kok, J. W. T. M.", "Armengol de la Hoz, M. Á.", "de Jong, Y.", "Brokke, V.", "Elbers, P. W. G.", "Thoral, P."] },
+                { title: "The open data revolution: Enhancing healthcare in intensive care units", journal: "Med Intensiva", year: 2024, url: "https://doi.org/10.1016/j.medine.2024.03.011", authors: ["Muñoz-Lezcano, S.", "de la Fuente, C.", "Estella, Á.", "Armengol-de la Hoz, M. Á."] },
+                { title: "The role of Open Access Data in democratizing healthcare AI: A pathway to research enhancement, patient well-being and treatment equity in Andalusia, Spain", journal: "PLOS Dig Health", year: 2024, url: "https://doi.org/10.1371/journal.pdig.0000599", authors: ["Ritoré, Á.", "Jiménez, C.", "González, J. L.", "Armengol de la Hoz, M. Á."] },
+                { title: "Bridging Generative AI and Healthcare Practice: Insights from the GenAI Health Hackathon at Hospital Clínic de Barcelona", journal: "BMJ Health & Care Informatics", year: 2025, url: "https://doi.org/10.1136/bmjhci-2025-101640", authors: ["Frid, S.", "Bassegoda, O.", "Camacho Mahamud, M. A.", "Sanjuan, G.", "Armengol de la Hoz, M. Á."] }
             ];
             const keepStart = 2;
             const keepEnd = 2;
@@ -1298,12 +1348,28 @@
         async function renderStats() {
             const md = await loadMarkdown('impact');
             if (!md) return;
-            document.getElementById('stats-grid').innerHTML = parseStats(md).map(s => `
-                <div class="stat-item">
-                    <div class="stat-number">${s.number}</div>
-                    <div class="stat-label">${s.label}</div>
-                </div>`
-            ).join('');
+            const items = parseImpactNews(md);
+            document.getElementById('stats-grid').innerHTML = `<div class="impact-carousel-shell">
+                <button class="impact-carousel-control prev" type="button" aria-label="Anterior">‹</button>
+                <div class="impact-carousel">
+                    ${items.map(item => `<article class="impact-item">
+                        <h3>${item.title}</h3>
+                        <div class="impact-meta">📅 ${item.date || 'Fecha por confirmar'}</div>
+                        <p class="impact-summary">${item.summary || ''}</p>
+                        ${item.url ? `<a class="impact-link" href="${item.url}" target="_blank" rel="noopener noreferrer">Ver noticia</a>` : ''}
+                    </article>`).join('')}
+                </div>
+                <button class="impact-carousel-control next" type="button" aria-label="Siguiente">›</button>
+            </div>`;
+            const shell = document.querySelector('.impact-carousel-shell');
+            const track = shell?.querySelector('.impact-carousel');
+            const prev = shell?.querySelector('.impact-carousel-control.prev');
+            const next = shell?.querySelector('.impact-carousel-control.next');
+            if (track && prev && next) {
+                const step = () => Math.max(320, Math.floor(track.clientWidth * 0.9));
+                prev.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
+                next.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
+            }
         }
 
         async function renderContact() {
