@@ -24,6 +24,10 @@
 *DOI 10.55633/s3me/056.2025 • 13/06/2025 • Ángel Estella, Miguel Ángel Armengol de la Hoz, Juan González del Castillo, Grupo de trabajo INFURG-SEMES*
 [<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://doi.org/10.55633/s3me/056.2025)
 
+**“Assessing the impact of vaccines on COVID-19 efficacy in survival rates: a survival analysis approach for clinical decision support”**
+*DOI 10.3389/fpubh.2024.1437388 • 18/11/2024 • Juan Luis González Rodríguez, Andreea M Oprescu, Sergio Muñoz Lezcano, Jaime Cordero Ramos, Juan Luis Romero Cabrera, Miguel Ángel Armengol de la Hoz, Ángel Estella*
+[<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://doi.org/10.3389/fpubh.2024.1437388)
+
 **“Assessing COVID-19 Vaccine Effectiveness and Risk Factors for Severe Outcomes through Machine Learning Techniques: A Real-World Data Study in Andalusia, Spain”**
 *DOI 10.1007/s44197-024-00298-2 • 11/11/2024 • Álvaro Serrano-Ortiz, Juan Luis Romero-Cabrera, Jaime Monserrat Villatoro, Jaime Cordero-Ramos, Rafael Ruiz-Montero, Álvaro Ritoré, Joaquín Dopazo, Jorge del Diego Salas, Valle García Sánchez, Inmaculada Salcedo-Leal, Miguel Ángel Armengol de la Hoz, Isaac Túnez, Miguel Ángel Guzmán*
 [<i class="fa-solid fa-arrow-up-right-from-square"></i> Read paper](https://doi.org/10.1007/s44197-024-00298-2)

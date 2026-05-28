@@ -528,10 +528,12 @@
         .papers-list { display: grid; gap: .5rem; }
         .papers-pagination { display:flex; justify-content:space-between; align-items:center; gap:.8rem; margin-top: .85rem; flex-wrap: wrap; }
         .papers-page-info { font-size:.82rem; color:#4f534d; }
-        .papers-page-controls { display:flex; gap:.5rem; }
-        .papers-page-btn { border:1px solid rgba(0,121,50,.35); background:#fff; color:#007932; border-radius:999px; padding:.34rem .74rem; font-size:.78rem; font-weight:700; cursor:pointer; }
+        .papers-page-controls { display:flex; gap:.4rem; flex-wrap: wrap; justify-content: flex-end; }
+        .papers-page-btn { border:1px solid rgba(0,121,50,.35); background:#fff; color:#007932; border-radius:999px; padding:.34rem .7rem; font-size:.78rem; font-weight:700; cursor:pointer; min-width: 2.05rem; }
         .papers-page-btn[disabled] { opacity:.45; cursor:not-allowed; }
+        .papers-page-btn[aria-current="page"] { background:#007932; color:#fff; box-shadow: 0 5px 14px rgba(0,121,50,.18); }
         .papers-page-btn:not([disabled]):hover { background:rgba(0,121,50,.08); }
+        .papers-page-btn[aria-current="page"]:hover { background:#007932; }
         .paper-card { display: block; text-decoration: none; color: inherit; background: #fff; border: none; border-radius: 12px; padding: .65rem .8rem; transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; position: relative; }
         .paper-card:hover, .paper-card:focus-visible { border-color: #007932; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,121,50,.08); }
         .paper-card:focus-visible { outline: 3px solid rgba(0,121,50,.35); outline-offset: 2px; }
@@ -540,7 +542,6 @@
         .paper-year { border: 1px solid #007932; color: #007932; border-radius: 999px; padding: .13rem .5rem; font-size: .72rem; font-weight: 700; }
         .paper-title { font-family: 'Spectral', Georgia, serif; font-size: 1.05rem; line-height: 1.24; margin: 0 0 .2rem; color: #2e2925; }
         .paper-authors { font-size: .79rem; color: #5a5a56; line-height: 1.28; }
-        .paper-toggle { border: 0; background: none; color: #007932; font-size: .76rem; font-weight: 700; margin-top: .2rem; cursor: pointer; padding: 0; }
         .read-affordance { position: absolute; right: .8rem; bottom: .65rem; opacity: 0; transform: translateY(4px); transition: opacity .18s ease, transform .18s ease; color: #007932; font-size: .77rem; font-weight: 700; display: inline-flex; align-items: center; gap: .33rem; pointer-events: none; }
         .paper-card:hover .read-affordance, .paper-card:focus-visible .read-affordance { opacity: 1; transform: translateY(0); }
                 .paper-card-disabled { cursor: default; opacity: .86; }
@@ -1216,6 +1217,7 @@
                 {"title": "Rendimiento diagnóstico del triaje telefónico para dolor torácico no traumático en el Centro Coordinador de Urgencias y Emergencias. Estudio Poblacional en Andalucía.", "journal": "DOI 10.55633/s3me/101.2025", "year": 2025, "date": "15/10/2025", "url": "https://doi.org/10.55633/s3me/101.2025", "authors": ["Carlos Romero-Olóriz", "María José Luque-Hernández", "Cristina López-López", "Auxiliadora Caballero-García", "Juan Antonio Péculo Carrasco", "Miguel Ángel Armengol de la Hoz"]},
                 {"title": "Bridging Generative AI and Healthcare Practice: Insights from the GenAI Health Hackathon at Hospital Clínic de Barcelona", "journal": "DOI 10.1136/bmjhci-2025-101640", "year": 2025, "date": "15/10/2025", "url": "https://doi.org/10.1136/bmjhci-2025-101640", "authors": ["Santiago Frid", "Octavi Bassegoda", "Maria Araceli Camacho Mahamud", "Gemma Sanjuan", "Miguel Ángel Armengol de la Hoz", "Leo Celi", "Isaac Cano Franco", "Gerard Anmella", "Tomas Cuñat López", "Ana Lucía Arellano", "Lina María Leguízamo-Martínez", "Laura Mezquita", "Petter Axcell Peñafiel Macías", "Antonio Gallardo-Pizarro", "Ruben González Colom", "Arturo Renú Jornet", "Guillem Bracons Cucó", "Xavier Borrat Frigola"]},
                 {"title": "Datos abiertos e inteligencia artificial: una ventana de oportunidad para pacientes sépticos en los servicios de urgencias", "journal": "DOI 10.55633/s3me/056.2025", "year": 2025, "date": "13/06/2025", "url": "https://doi.org/10.55633/s3me/056.2025", "authors": ["Ángel Estella", "Miguel Ángel Armengol de la Hoz", "Juan González del Castillo", "Grupo de trabajo INFURG-SEMES"]},
+                {"title": "Assessing the impact of vaccines on COVID-19 efficacy in survival rates: a survival analysis approach for clinical decision support", "journal": "DOI 10.3389/fpubh.2024.1437388", "year": 2024, "date": "18/11/2024", "url": "https://doi.org/10.3389/fpubh.2024.1437388", "authors": ["Juan Luis González Rodríguez", "Andreea M Oprescu", "Sergio Muñoz Lezcano", "Jaime Cordero Ramos", "Juan Luis Romero Cabrera", "Miguel Ángel Armengol de la Hoz", "Ángel Estella"]},
                 {"title": "Assessing COVID-19 Vaccine Effectiveness and Risk Factors for Severe Outcomes through Machine Learning Techniques: A Real-World Data Study in Andalusia, Spain", "journal": "DOI 10.1007/s44197-024-00298-2", "year": 2024, "date": "11/11/2024", "url": "https://doi.org/10.1007/s44197-024-00298-2", "authors": ["Álvaro Serrano-Ortiz", "Juan Luis Romero-Cabrera", "Jaime Monserrat Villatoro", "Jaime Cordero-Ramos", "Rafael Ruiz-Montero", "Álvaro Ritoré", "Joaquín Dopazo", "Jorge del Diego Salas", "Valle García Sánchez", "Inmaculada Salcedo-Leal", "Miguel Ángel Armengol de la Hoz", "Isaac Túnez", "Miguel Ángel Guzmán"]},
                 {"title": "COVID Data for Shared Learning (CDSL): A comprehensive, multimodal COVID-19 dataset from HM Hospitales", "journal": "DOI 10.13026/85z8-jq92", "year": 2024, "date": "25/10/2024", "url": "https://doi.org/10.13026/85z8-jq92", "authors": ["Álvaro Ritoré", "Andreea M Oprescu", "Alberto Estirado Bronchalo", "Miguel Ángel Armengol de la Hoz"]},
                 {"title": "The role of Open Access Data in democratizing healthcare AI: A pathway to research enhancement, patient well-being and treatment equity in Andalusia, Spain", "journal": "DOI 10.1371/journal.pdig.0000599", "year": 2024, "date": "16/09/2024", "url": "https://doi.org/10.1371/journal.pdig.0000599", "authors": ["Álvaro Ritoré", "Claudia M. Jiménez", "Juan Luis González", "Juan Carlos Rejón-Parrilla", "Pablo Hervás", "Esteban Toro", "Carlos Luis Parra-Calderón", "Leo Anthony Celi", "Isaac Túnez", "Miguel Ángel Armengol de la Hoz"]},
@@ -1243,16 +1245,11 @@
                 {"title": "Incidence and risk model development for severe tachypnea following terminal extubation", "journal": "PMID 32360728", "year": 2020, "date": "28/04/2020", "url": "https://pubmed.ncbi.nlm.nih.gov/32360728/", "authors": ["Corey R Fehnel", "Miguel Armengol de la Hoz", "Leo A Celi", "Margaret L Campbell", "Khalid Hanafy", "Ala Nozari", "Douglas B White", "Susan L Mitchell"]},
                 {"title": "Temporal Trends in Critical Care Outcomes in U.S. Minority-Serving Hospitals", "journal": "PMID 31948262", "year": 2020, "date": "15/03/2020", "url": "https://pubmed.ncbi.nlm.nih.gov/31948262/", "authors": ["John Danziger", "Miguel Ángel Armengol de la Hoz", "Wenyuan Li", "Matthieu Komorowski", "Rodrigo Octávio Deliberato", "Barret N M Rush", "Kenneth J Mukamal", "Leo Celi", "Omar Badawi"]},
             ];
-            const keepStart = 2; const keepEnd = 2; const cap = 7;
             const pageSize = 6;
             const markCorr = (name, corrSet) => corrSet.has(name) ? `${name}*` : name;
-            const collapseAuthors = (paper) => {
+            const formatAuthors = (paper) => {
                 const corrSet = new Set(paper.corresponding || []);
-                const full = paper.authors.map(n => markCorr(n, corrSet));
-                if (full.length <= cap) return { text: full.join(', '), truncated: false, fullText: full.join(', ') };
-                const collapsed = [...full.slice(0, keepStart), '…', ...full.slice(full.length - keepEnd)];
-                [...corrSet].map(n => markCorr(n, corrSet)).forEach(c => { if (!collapsed.includes(c)) collapsed.splice(collapsed.length - keepEnd, 0, c); });
-                return { text: [...new Set(collapsed)].join(', '), truncated: true, fullText: full.join(', ') };
+                return paper.authors.map(n => markCorr(n, corrSet)).join(', ');
             };
 
             const root = document.getElementById('research-content');
@@ -1263,41 +1260,42 @@
                 const start = (currentPage - 1) * pageSize;
                 const pageItems = publications.slice(start, start + pageSize);
                 const cards = pageItems.map((paper, i) => {
-                    const a = collapseAuthors(paper);
+                    const authors = formatAuthors(paper);
                     const linkAttrs = paper.url ? `href="${paper.url}" target="_blank" rel="noopener noreferrer"` : "";
                     return `<a class="paper-card ${paper.url ? '' : 'paper-card-disabled'}" ${linkAttrs} style="animation: fadeIn .35s ease ${i * 70}ms both;">
                         <div class="paper-meta-row"><span class="paper-journal">${paper.journal}</span><span class="paper-year">${paper.date || paper.year}</span></div>
                         <h3 class="paper-title">${paper.title}</h3>
-                        <div class="paper-authors" data-full="${a.fullText}" data-short="${a.text}" data-expanded="false">${a.text}</div>
-                        ${a.truncated ? '<button class="paper-toggle" type="button">Show all authors</button>' : ''}
+                        <div class="paper-authors">${authors}</div>
                         <span class="read-affordance"><i class="fa-regular fa-newspaper" aria-hidden="true"></i> Read article</span>
                     </a>`;
+                }).join('');
+                const pageButtons = Array.from({ length: totalPages }, (_, idx) => {
+                    const page = idx + 1;
+                    return `<button class="papers-page-btn" data-page="${page}" ${page === currentPage ? 'aria-current="page"' : ''}>${page}</button>`;
                 }).join('');
 
                 root.innerHTML = `<section class="papers-shell" aria-label="Published Papers">
                     <p class="papers-eyebrow">DS Lab · Fundación Progreso y Salud · Junta de Andalucía</p>
                     <div class="papers-headline"><h2>Published Papers</h2><p class="papers-counter">${publications.length} publications</p></div>
-                    <p class="papers-subtitle">Scientific publications ordered by most recent publication date and linked by PMID/DOI when available.</p>
+                    <p class="papers-subtitle">Scientific publications ordered by most recent publication date and linked by PMID/DOI when available. All authors are shown in full.</p>
                     <div class="papers-list">${cards}</div>
                     <div class="papers-pagination">
-                        <p class="papers-page-info">Showing ${start + 1}-${Math.min(start + pageSize, publications.length)} of ${publications.length}</p>
+                        <p class="papers-page-info">Showing ${start + 1}-${Math.min(start + pageSize, publications.length)} of ${publications.length} · Page ${currentPage} of ${totalPages}</p>
                         <div class="papers-page-controls">
                             <button class="papers-page-btn" data-page="prev" ${currentPage === 1 ? 'disabled' : ''}>Previous</button>
+                            ${pageButtons}
                             <button class="papers-page-btn" data-page="next" ${currentPage === totalPages ? 'disabled' : ''}>Next</button>
                         </div>
                     </div>
                 </section>`;
 
-                root.querySelectorAll('.paper-toggle').forEach(btn => btn.addEventListener('click', (e) => {
-                    e.preventDefault(); e.stopPropagation();
-                    const line = btn.previousElementSibling;
-                    const expanded = line.getAttribute('data-expanded') === 'true';
-                    line.textContent = expanded ? line.dataset.short : line.dataset.full;
-                    line.setAttribute('data-expanded', expanded ? 'false' : 'true');
-                    btn.textContent = expanded ? 'Show all authors' : 'Hide authors';
+                root.querySelectorAll('.papers-page-btn').forEach(btn => btn.addEventListener('click', () => {
+                    const target = btn.dataset.page;
+                    if (target === 'prev' && currentPage > 1) currentPage -= 1;
+                    else if (target === 'next' && currentPage < totalPages) currentPage += 1;
+                    else if (!Number.isNaN(Number(target))) currentPage = Number(target);
+                    paint();
                 }));
-                root.querySelector('[data-page="prev"]')?.addEventListener('click', () => { if (currentPage > 1) { currentPage -= 1; paint(); } });
-                root.querySelector('[data-page="next"]')?.addEventListener('click', () => { if (currentPage < totalPages) { currentPage += 1; paint(); } });
             }
             paint();
         }
