@@ -1391,11 +1391,13 @@
             const topic = getField('Topic') || '';
             const type = getField('Type') || '';
             const description = getField('Description') || '';
+            const views = getField('Views') || '';
+            const location = getField('Location') || '';
             const tags = splitTopicTags(topic);
             const badge = uploaded.includes('2026') ? '✓ Nuevo' : (type.toLowerCase().includes('podcast') ? '✓ Destacado' : '');
             const cta = type.toLowerCase().includes('podcast') ? 'Listen to podcast' : 'Watch video';
             const uploadedTimestamp = parseUploadedDate(uploaded);
-            return { language, institution, uploaded, duration, tags, badge, cta, description, uploadedTimestamp };
+            return { language, institution, uploaded, duration, tags, badge, cta, description, views, location, uploadedTimestamp };
         }
 
         async function renderMultimedia() {
@@ -1422,6 +1424,7 @@
                                 <div class="media-body">
                                     <div class="media-title">${item.title}</div>
                                     <div class="media-meta">📅 ${media.uploaded} · ${media.language} · 🏛️ ${media.institution}</div>
+                                    ${(media.views || media.location) ? `<div class="media-meta">${[media.views ? `👁️ ${media.views} views` : '', media.location ? `📍 ${media.location}` : ''].filter(Boolean).join(' · ')}</div>` : ''}
                                     <div class="media-tags">${media.tags.map(tag => `<span class="media-topic-tag">${tag}</span>`).join('')}</div>
                                     ${media.description ? `<div class="media-info-row"><button class="media-info-toggle" type="button" aria-label="More information" title="More information">i</button></div><p class="media-description">${media.description.split('\\n').join('<br>')}</p>` : ''}
                                     <span class="media-cta">${media.cta}</span>
