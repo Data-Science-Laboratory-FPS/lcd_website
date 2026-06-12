@@ -513,39 +513,74 @@
         .papers-shell {
             max-width: 100%;
             margin-inline: auto;
-            padding: 1rem;
-            background: linear-gradient(180deg, rgba(54,143,63,.04), rgba(0,121,50,.02));
-            border: none;
-            border-radius: 18px;
+            padding: 0;
+            background: transparent;
+            border: 0;
+            border-radius: 0;
             font-family: 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             color: #2e2925;
         }
-        .papers-eyebrow { font-size: .72rem; text-transform: uppercase; letter-spacing: .09em; color: #368f3f; font-weight: 700; }
-        .papers-headline { display: flex; align-items: baseline; justify-content: space-between; gap: .6rem; margin: .2rem 0 .45rem; }
-        .papers-headline h2 { font-family: 'Spectral', Georgia, serif; font-size: clamp(1.4rem, 2vw, 2rem); margin: 0; color: #2e2925; }
-        .papers-counter { font-size: .82rem; color: #4f534d; }
-        .papers-subtitle { font-size: .9rem; margin: 0 0 .8rem; color: #4a4a47; }
-        .papers-list { display: grid; gap: .5rem; }
-        .papers-pagination { display:flex; justify-content:space-between; align-items:center; gap:.8rem; margin-top: .85rem; flex-wrap: wrap; }
-        .papers-page-info { font-size:.82rem; color:#4f534d; }
+        .papers-headline {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: .75rem;
+            margin: 0 0 1rem;
+            flex-wrap: wrap;
+        }
+        .papers-headline h2 {
+            font-family: 'Spectral', Georgia, serif;
+            font-size: clamp(1.45rem, 2vw, 2rem);
+            margin: 0;
+            color: var(--text);
+        }
+        .papers-headline h2 i { color: var(--green); margin-right: .35rem; }
+        .papers-counter { font-size: .85rem; color: #4f534d; margin: 0; }
+        .papers-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 23rem), 1fr));
+            gap: .75rem;
+            align-items: stretch;
+        }
+        .papers-pagination { display:flex; justify-content:space-between; align-items:center; gap:.8rem; margin-top: 1rem; flex-wrap: wrap; }
+        .papers-page-info { font-size:.82rem; color:#4f534d; margin: 0; }
         .papers-page-controls { display:flex; gap:.4rem; flex-wrap: wrap; justify-content: flex-end; }
-        .papers-page-btn { border:1px solid rgba(0,121,50,.35); background:#fff; color:#007932; border-radius:999px; padding:.34rem .7rem; font-size:.78rem; font-weight:700; cursor:pointer; min-width: 2.05rem; }
+        .papers-page-btn { border:1px solid rgba(0,121,50,.24); background:rgba(255,255,255,.72); color:#007932; border-radius:999px; padding:.34rem .7rem; font-size:.78rem; font-weight:700; cursor:pointer; min-width: 2.05rem; }
         .papers-page-btn[disabled] { opacity:.45; cursor:not-allowed; }
-        .papers-page-btn[aria-current="page"] { background:#007932; color:#fff; box-shadow: 0 5px 14px rgba(0,121,50,.18); }
+        .papers-page-btn[aria-current="page"] { background:#007932; color:#fff; box-shadow: 0 5px 14px rgba(0,121,50,.14); }
         .papers-page-btn:not([disabled]):hover { background:rgba(0,121,50,.08); }
         .papers-page-btn[aria-current="page"]:hover { background:#007932; }
-        .paper-card { display: block; text-decoration: none; color: inherit; background: #fff; border: none; border-radius: 12px; padding: .65rem .8rem; transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; position: relative; }
-        .paper-card:hover, .paper-card:focus-visible { border-color: #007932; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,121,50,.08); }
+        .paper-card {
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+            text-decoration: none;
+            color: inherit;
+            background: rgba(255,255,255,.68);
+            border: 0;
+            border-radius: 12px;
+            padding: .8rem .9rem;
+            transition: transform .18s ease, background-color .18s ease, box-shadow .18s ease;
+            position: relative;
+        }
+        .paper-card:hover, .paper-card:focus-visible { transform: translateY(-2px); background: #fff; box-shadow: 0 8px 18px rgba(0,121,50,.07); }
         .paper-card:focus-visible { outline: 3px solid rgba(0,121,50,.35); outline-offset: 2px; }
-        .paper-meta-row { display: flex; flex-wrap: wrap; gap: .45rem; margin-bottom: .35rem; }
-        .paper-journal { display: inline-flex; align-items: center; gap: .32rem; background: linear-gradient(135deg, #007932, #2da66c); color: #fff; border-radius: 999px; padding: .15rem .58rem; font-size: .72rem; font-weight: 700; box-shadow: 0 5px 14px rgba(0,121,50,.16); }
+        .paper-meta-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .45rem; margin-bottom: .45rem; }
+        .paper-journal { display: inline-flex; align-items: center; gap: .32rem; color: #007932; font-size: .75rem; font-weight: 700; line-height: 1.2; }
         .paper-journal i { font-size: .78rem; }
-        .paper-year { border: 1px solid #007932; color: #007932; border-radius: 999px; padding: .13rem .5rem; font-size: .72rem; font-weight: 700; }
-        .paper-title { font-family: 'Spectral', Georgia, serif; font-size: 1.05rem; line-height: 1.24; margin: 0 0 .2rem; color: #2e2925; }
-        .paper-authors { font-size: .79rem; color: #5a5a56; line-height: 1.28; }
-        .read-affordance { position: absolute; right: .8rem; bottom: .65rem; opacity: 0; transform: translateY(4px); transition: opacity .18s ease, transform .18s ease; color: #007932; font-size: .77rem; font-weight: 700; display: inline-flex; align-items: center; gap: .33rem; pointer-events: none; }
-        .paper-card:hover .read-affordance, .paper-card:focus-visible .read-affordance { opacity: 1; transform: translateY(0); }
-                .paper-card-disabled { cursor: default; opacity: .86; }
+        .paper-year { color: #5f665e; font-size: .72rem; font-weight: 700; white-space: nowrap; }
+        .paper-title { font-family: 'Spectral', Georgia, serif; font-size: 1rem; line-height: 1.24; margin: 0 0 .25rem; color: #2e2925; }
+        .paper-authors {
+            font-size: .79rem;
+            color: #5a5a56;
+            line-height: 1.32;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .read-affordance { margin-top: auto; padding-top: .55rem; color: #007932; font-size: .77rem; font-weight: 700; display: inline-flex; align-items: center; gap: .33rem; pointer-events: none; }
+        .paper-card-disabled { cursor: default; opacity: .86; }
         .paper-card-disabled .read-affordance { display: none; }
 @media (prefers-reduced-motion: reduce) {
             .paper-card, .read-affordance { transition: none; }
@@ -1275,9 +1310,7 @@
                 }).join('');
 
                 root.innerHTML = `<section class="papers-shell" aria-label="Published Papers">
-                    <p class="papers-eyebrow">DS Lab · Fundación Progreso y Salud · Junta de Andalucía</p>
                     <div class="papers-headline"><h2><i class="fa-solid fa-microscope" aria-hidden="true"></i> Published Papers</h2><p class="papers-counter">${publications.length} publications</p></div>
-                    <p class="papers-subtitle">Scientific publications with journal titles highlighted for quick scanning and linked by PMID/DOI when available. All authors are shown in full.</p>
                     <div class="papers-list">${cards}</div>
                     <div class="papers-pagination">
                         <p class="papers-page-info">Showing ${start + 1}-${Math.min(start + pageSize, publications.length)} of ${publications.length} · Page ${currentPage} of ${totalPages}</p>
