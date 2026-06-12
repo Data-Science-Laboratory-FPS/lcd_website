@@ -98,6 +98,14 @@
 - Servicio hospitalario: Ciencia de Datos
 - Impacto: Refuerzo de la colaboración formativa con el MIT mediante estancias centradas en modelos de IA aplicados a problemas sanitarios reales.
 
+#### “Investigadores muestran en el Nuevo Mirandilla cómo la IA puede salvar vidas en hospitales”
+- Fecha: 16/10/2025
+- URL: https://www.portalcadista.com/cadizcf-institucional/54499-investigadores-muestran-en-el-nuevo-mirandilla-como-la-ia-puede-salvar-vidas-en-hospitales
+- Tipo de proyecto: Divulgación de IA clínica e innovación sanitaria
+- Etiqueta clínica: IA sanitaria
+- Servicio hospitalario: Diagnóstico, leucemia infantil e infecciones hospitalarias
+- Impacto: Participación en Innova Cádiz para mostrar aplicaciones de IA y análisis de datos en soporte a la decisión clínica, predicción de recaídas en leucemia infantil y control de infecciones hospitalarias.
+
 #### “La inteligencia artificial podría predecir el riesgo de fallecimiento en la UCI”
 - Fecha: 19/11/2025
 - URL: https://www.europapress.es/esandalucia/sevilla/noticia-investigadores-demuestran-inteligencia-artificial-podria-predecir-riesgo-fallecimiento-uci-20251119125938.html
@@ -121,3 +129,11 @@
 - Etiqueta clínica: Enfermedad inflamatoria intestinal
 - Servicio hospitalario: Aparato Digestivo
 - Impacto: Estudio con XGBoost para predecir la respuesta a vedolizumab y ustekinumab, orientando tratamientos más eficaces y personalizados en EII.
+
+#### “Andalucía impulsa una herramienta con IA para detectar antes la depresión posparto”
+- Fecha: 03/03/2026
+- URL: https://www.consalud.es/autonomias/andalucia/andalucia-impulsa-una-herramienta-con-ia-para-detectar-antes-la-depresion-posparto.html
+- Tipo de proyecto: Sistema de apoyo a la decisión clínica con IA
+- Etiqueta clínica: Salud mental perinatal
+- Servicio hospitalario: Atención materna y salud mental
+- Impacto: Desarrollo de e-Perinatal–Clinical, un sistema inteligente con modelos predictivos, asistente conversacional y microintervenciones digitales para reforzar la detección temprana, la estratificación del riesgo y la toma de decisiones compartida en salud mental perinatal.
