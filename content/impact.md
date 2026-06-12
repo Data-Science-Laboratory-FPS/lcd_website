@@ -34,6 +34,14 @@
 - Servicio hospitalario: UCI y Salud Mental
 - Impacto: Impulso de SAIDIS para detectar intentos severos de suicidio mediante IA y datos clínicos de UCI, favoreciendo una respuesta asistencial más temprana.
 
+#### “La oncología, a la cabeza del impacto de la IA en la medicina de precisión”
+- Fecha: 03/08/2024
+- URL: https://saludymedicina.org/post/la-oncologia-a-la-cabeza-del-impacto-de-la-ia-en-la-medicina-de-precision
+- Tipo de proyecto: IA aplicada a medicina de precisión
+- Etiqueta clínica: Oncología
+- Servicio hospitalario: Medicina de precisión
+- Impacto: Participación en una jornada sobre biomarcadores e IA en salud, destacando el valor del dato sanitario, su acceso seguro y ético, y el papel de los modelos de IA para apoyar diagnósticos precoces, decisiones clínicas y tratamientos personalizados en oncología.
+
 #### “El proyecto andaluz premiado que trata de evitar suicidios usando la IA”
 - Fecha: 28/10/2024
 - URL: https://gacetamedica.com/politica/proyecto-andaluz-suicidios-ia/
