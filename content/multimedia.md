@@ -81,6 +81,7 @@
 - Language: 🇪🇸
 - Type: Symposium talk
 - Topic: AI in healthcare, health technology assessment, data science evidence
+- Uploaded: 20 March 2025
 
 [▶️ ![Thumbnail](https://img.youtube.com/vi/YIA4e3ZH8K4/maxresdefault.jpg)](https://youtu.be/YIA4e3ZH8K4)
 
@@ -148,7 +149,6 @@
 - Institution: EKFZ for Digital Health
 - Topic: Mechanical ventilation, intensive care, AI clinical decision support, ventilator-induced lung injury prevention
 - Uploaded: 15 March 2026
-- Views: 175
 - Location: Dresden
 - Description: Mechanical ventilation is a life-saving therapy widely used in intensive care units around the world. However, selecting the optimal ventilator settings for critically ill patients remains a major challenge. A patient’s respiratory condition can change rapidly, requiring clinicians to constantly balance two competing goals: ensuring adequate gas exchange while minimizing the risk of ventilator-induced lung and organ injury.\n\nThe IntelliLung project addresses this challenge by developing an AI-based clinical decision support system designed to help intensive care teams optimize mechanical ventilation for critically ill patients.\n\nLearn more at https://intellilung-project.eu\n\nFunded by the European Union’s HORIZON European Health and Digital Executive Agency (HaDEA) under grant agreement No. 101057434. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union. Neither the European Union nor the granting authority can be held responsible for them.
 
