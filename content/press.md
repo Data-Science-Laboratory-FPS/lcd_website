@@ -1,6 +1,6 @@
-# Impacto
+# Press
 
-## Proyectos y resultados en entorno clínico (orden cronológico)
+## Cobertura de prensa y apariciones públicas (orden cronológico)
 
 #### “Un plan nacional en biotecnología a medio plazo para ganar peso estratégico”
 - Fecha: 12/05/2021
@@ -8,7 +8,7 @@
 - Tipo de proyecto: Biotecnología y smart health
 - Etiqueta clínica: Salud digital
 - Servicio hospitalario: Innovación sanitaria
-- Impacto: Participación en el debate sobre estrategias de biotecnología y aplicaciones de IA en salud, incluyendo experiencias de Big Data sanitario.
+- Resumen: Participación en el debate sobre estrategias de biotecnología y aplicaciones de IA en salud, incluyendo experiencias de Big Data sanitario.
 
 #### “Premiado un proyecto sobre enfermedad digestiva coliderado por la Plataforma de Medicina Computacional”
 - Fecha: 12/01/2023
@@ -16,7 +16,7 @@
 - Tipo de proyecto: IA clínica predictiva
 - Etiqueta clínica: Enfermedad inflamatoria intestinal
 - Servicio hospitalario: Aparato Digestivo
-- Impacto: Desarrollo de modelos para anticipar la remisión en enfermedad inflamatoria intestinal y avanzar en decisiones terapéuticas más personalizadas.
+- Resumen: Desarrollo de modelos para anticipar la remisión en enfermedad inflamatoria intestinal y avanzar en decisiones terapéuticas más personalizadas.
 
 #### “Primeros pasos para diseñar las bases que evaluarán las tecnologías en salud digital en Europa”
 - Fecha: 05/02/2024
@@ -24,7 +24,7 @@
 - Tipo de proyecto: Evaluación de tecnologías sanitarias digitales
 - Etiqueta clínica: Salud digital
 - Servicio hospitalario: Evaluación sanitaria
-- Impacto: Contribución metodológica a ASSESS-DHT para definir manuales europeos de evaluación de tecnologías digitales en salud.
+- Resumen: Contribución metodológica a ASSESS-DHT para definir manuales europeos de evaluación de tecnologías digitales en salud.
 
 #### “Andalucía lidera SAIDIS, un proyecto para la prevención del suicidio mediante la IA”
 - Fecha: 29/07/2024
@@ -32,7 +32,7 @@
 - Tipo de proyecto: Sistema inteligente de alerta clínica
 - Etiqueta clínica: Prevención del suicidio
 - Servicio hospitalario: UCI y Salud Mental
-- Impacto: Impulso de SAIDIS para detectar intentos severos de suicidio mediante IA y datos clínicos de UCI, favoreciendo una respuesta asistencial más temprana.
+- Resumen: Impulso de SAIDIS para detectar intentos severos de suicidio mediante IA y datos clínicos de UCI, favoreciendo una respuesta asistencial más temprana.
 
 #### “La oncología, a la cabeza del impacto de la IA en la medicina de precisión”
 - Fecha: 03/08/2024
@@ -40,7 +40,7 @@
 - Tipo de proyecto: IA aplicada a medicina de precisión
 - Etiqueta clínica: Oncología
 - Servicio hospitalario: Medicina de precisión
-- Impacto: Participación en una jornada sobre biomarcadores e IA en salud, destacando el valor del dato sanitario, su acceso seguro y ético, y el papel de los modelos de IA para apoyar diagnósticos precoces, decisiones clínicas y tratamientos personalizados en oncología.
+- Resumen: Participación en una jornada sobre biomarcadores e IA en salud, destacando el valor del dato sanitario, su acceso seguro y ético, y el papel de los modelos de IA para apoyar diagnósticos precoces, decisiones clínicas y tratamientos personalizados en oncología.
 
 #### “El proyecto andaluz premiado que trata de evitar suicidios usando la IA”
 - Fecha: 28/10/2024
@@ -48,7 +48,7 @@
 - Tipo de proyecto: Reconocimiento a innovación clínica
 - Etiqueta clínica: Prevención del suicidio
 - Servicio hospitalario: UCI y Salud Mental
-- Impacto: Reconocimiento de SAIDIS como iniciativa innovadora para identificar perfiles de riesgo y apoyar la prevención del suicidio con modelos de lenguaje e IA.
+- Resumen: Reconocimiento de SAIDIS como iniciativa innovadora para identificar perfiles de riesgo y apoyar la prevención del suicidio con modelos de lenguaje e IA.
 
 #### “Investigadores andaluces lideran un estudio sobre modelos abiertos de datos para la IA sanitaria”
 - Fecha: 30/11/2024
@@ -56,7 +56,7 @@
 - Tipo de proyecto: Modelos abiertos de datos sanitarios
 - Etiqueta clínica: IA sanitaria
 - Servicio hospitalario: Investigación biomédica
-- Impacto: Colaboración internacional para proponer modelos de datos abiertos que faciliten una IA sanitaria más interoperable, transparente y reutilizable.
+- Resumen: Colaboración internacional para proponer modelos de datos abiertos que faciliten una IA sanitaria más interoperable, transparente y reutilizable.
 
 #### “Premiado un proyecto del Macarena sobre medicina de precisión aplicada a la enfermedad inflamatoria intestinal”
 - Fecha: 03/03/2025
@@ -64,7 +64,7 @@
 - Tipo de proyecto: Medicina de precisión con IA
 - Etiqueta clínica: Enfermedad inflamatoria intestinal
 - Servicio hospitalario: Aparato Digestivo
-- Impacto: Beca para desarrollar soporte a la decisión clínica en enfermedad inflamatoria intestinal, reforzando la medicina personalizada en digestivo.
+- Resumen: Beca para desarrollar soporte a la decisión clínica en enfermedad inflamatoria intestinal, reforzando la medicina personalizada en digestivo.
 
 #### “La IA ayudará al 061 de Andalucía a decidir qué emergencias requieren atención médica inmediata”
 - Fecha: 17/05/2025
@@ -72,7 +72,7 @@
 - Tipo de proyecto: IA aplicada al triaje telefónico
 - Etiqueta clínica: Emergencias médicas
 - Servicio hospitalario: 061
-- Impacto: El proyecto trIAje aplica aprendizaje automático y procesamiento del lenguaje natural para priorizar llamadas y acelerar la atención de emergencias críticas.
+- Resumen: El proyecto trIAje aplica aprendizaje automático y procesamiento del lenguaje natural para priorizar llamadas y acelerar la atención de emergencias críticas.
 
 #### “La OCDE reconoce un proyecto europeo de evaluación de tecnologías sanitarias con participación andaluza”
 - Fecha: 23/05/2025
@@ -80,7 +80,7 @@
 - Tipo de proyecto: Evaluación de tecnologías sanitarias digitales
 - Etiqueta clínica: Salud digital
 - Servicio hospitalario: Evaluación sanitaria
-- Impacto: Reconocimiento de ASSESS-DHT como buena práctica internacional para evaluar tecnologías sanitarias digitales con participación de la Fundación Progreso y Salud.
+- Resumen: Reconocimiento de ASSESS-DHT como buena práctica internacional para evaluar tecnologías sanitarias digitales con participación de la Fundación Progreso y Salud.
 
 #### “El INiBICA participa en el foro europeo ASTP en Lituania”
 - Fecha: 29/05/2025
@@ -88,7 +88,7 @@
 - Tipo de proyecto: Gobernanza del dato e IA en salud
 - Etiqueta clínica: Salud digital
 - Servicio hospitalario: Transferencia e innovación
-- Impacto: Proyección europea del modelo andaluz de salud basada en datos y de los usos primarios y secundarios del dato sanitario.
+- Resumen: Proyección europea del modelo andaluz de salud basada en datos y de los usos primarios y secundarios del dato sanitario.
 
 #### “La Fundación Progreso y Salud forma a dos estudiantes del MIT durante el verano”
 - Fecha: 05/07/2025
@@ -96,7 +96,7 @@
 - Tipo de proyecto: Formación internacional en ciencia de datos
 - Etiqueta clínica: IA sanitaria
 - Servicio hospitalario: Ciencia de Datos
-- Impacto: Refuerzo de la colaboración formativa con el MIT mediante estancias centradas en modelos de IA aplicados a problemas sanitarios reales.
+- Resumen: Refuerzo de la colaboración formativa con el MIT mediante estancias centradas en modelos de IA aplicados a problemas sanitarios reales.
 
 #### “Investigadores muestran en el Nuevo Mirandilla cómo la IA puede salvar vidas en hospitales”
 - Fecha: 16/10/2025
@@ -104,7 +104,7 @@
 - Tipo de proyecto: Divulgación de IA clínica e innovación sanitaria
 - Etiqueta clínica: IA sanitaria
 - Servicio hospitalario: Diagnóstico, leucemia infantil e infecciones hospitalarias
-- Impacto: Participación en Innova Cádiz para mostrar aplicaciones de IA y análisis de datos en soporte a la decisión clínica, predicción de recaídas en leucemia infantil y control de infecciones hospitalarias.
+- Resumen: Participación en Innova Cádiz para mostrar aplicaciones de IA y análisis de datos en soporte a la decisión clínica, predicción de recaídas en leucemia infantil y control de infecciones hospitalarias.
 
 #### “La inteligencia artificial podría predecir el riesgo de fallecimiento en la UCI”
 - Fecha: 19/11/2025
@@ -112,7 +112,7 @@
 - Tipo de proyecto: IA predictiva en UCI
 - Etiqueta clínica: Mortalidad crítica
 - Servicio hospitalario: UCI
-- Impacto: Modelo de aprendizaje automático sobre más de 100.000 pacientes para estratificar el riesgo de fallecimiento durante las primeras 72 horas de ingreso en críticos.
+- Resumen: Modelo de aprendizaje automático sobre más de 100.000 pacientes para estratificar el riesgo de fallecimiento durante las primeras 72 horas de ingreso en críticos.
 
 #### “La mejora del dato sanitario requiere más formación del internista en IA”
 - Fecha: 28/11/2025
@@ -120,7 +120,7 @@
 - Tipo de proyecto: Gobernanza e IA clínica
 - Etiqueta clínica: Medicina interna
 - Servicio hospitalario: Medicina Interna
-- Impacto: Visibilización de la formación clínica en datos e IA como requisito para mejorar la calidad del dato sanitario y adoptar herramientas de forma segura.
+- Resumen: Visibilización de la formación clínica en datos e IA como requisito para mejorar la calidad del dato sanitario y adoptar herramientas de forma segura.
 
 #### “El Virgen Macarena y la FPyS investigan predecir el tratamiento más eficaz en EII”
 - Fecha: 17/02/2026
@@ -128,7 +128,7 @@
 - Tipo de proyecto: IA clínica predictiva
 - Etiqueta clínica: Enfermedad inflamatoria intestinal
 - Servicio hospitalario: Aparato Digestivo
-- Impacto: Estudio con XGBoost para predecir la respuesta a vedolizumab y ustekinumab, orientando tratamientos más eficaces y personalizados en EII.
+- Resumen: Estudio con XGBoost para predecir la respuesta a vedolizumab y ustekinumab, orientando tratamientos más eficaces y personalizados en EII.
 
 #### “Andalucía impulsa una herramienta con IA para detectar antes la depresión posparto”
 - Fecha: 03/03/2026
@@ -136,4 +136,4 @@
 - Tipo de proyecto: Sistema de apoyo a la decisión clínica con IA
 - Etiqueta clínica: Salud mental perinatal
 - Servicio hospitalario: Atención materna y salud mental
-- Impacto: Desarrollo de e-Perinatal–Clinical, un sistema inteligente con modelos predictivos, asistente conversacional y microintervenciones digitales para reforzar la detección temprana, la estratificación del riesgo y la toma de decisiones compartida en salud mental perinatal.
+- Resumen: Desarrollo de e-Perinatal–Clinical, un sistema inteligente con modelos predictivos, asistente conversacional y microintervenciones digitales para reforzar la detección temprana, la estratificación del riesgo y la toma de decisiones compartida en salud mental perinatal.

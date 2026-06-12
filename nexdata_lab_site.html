@@ -629,7 +629,7 @@
             <li><a href="#equipo">Equipo</a></li>
             <li><a href="#investigacion">Investigación</a></li>
             <li><a href="#multimedia">Multimedia</a></li>
-            <li><a href="#impacto">Impacto</a></li>
+            <li><a href="#press">Press</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
@@ -675,9 +675,9 @@
         <div class="content-wrapper" id="multimedia-content"></div>
     </section>
 
-    <section class="stats" id="impacto">
-        <h2 class="section-title">Nuestro Impacto</h2>
-        <p class="section-subtitle">Resultados que hablan por sí mismos</p>
+    <section class="stats" id="press">
+        <h2 class="section-title">Press</h2>
+        <p class="section-subtitle">Cobertura de prensa y apariciones públicas de nuestro trabajo</p>
         <div class="stats-grid" id="stats-grid"></div>
     </section>
 
@@ -877,7 +877,7 @@ Sistema de retrieval-augmented generation paso a paso.
 **"Computer Vision para principiantes"**
 Serie completa de detección de objetos con YOLO.`,
 
-            impacto: `**50+**
+            press: `**50+**
 Proyectos Completados
 
 **95%**
@@ -1083,9 +1083,9 @@ Agenda una consultoría gratuita y descubre cómo la ciencia de datos puede impu
             document.getElementById('multimedia-content').innerHTML = html;
         }
 
-        // Renderizar Stats
-        function renderStats() {
-            const stats = parseStats(content.impacto);
+        // Renderizar Press
+        function renderPress() {
+            const stats = parseStats(content.press);
             
             const html = stats.map(s => `
                 <div class="stat-item">
@@ -1118,7 +1118,7 @@ Agenda una consultoría gratuita y descubre cómo la ciencia de datos puede impu
             renderTeam();
             renderResearch();
             renderMultimedia();
-            renderStats();
+            renderPress();
             renderContact();
         }
 
