@@ -1293,13 +1293,14 @@
                 return paper.authors.map(n => markCorr(n, corrSet)).join(', ');
             };
 
+            const sortedPublications = sortNewestFirst(publications, paper => paper.date || paper.year);
             const root = document.getElementById('research-content');
             let currentPage = 1;
-            const totalPages = Math.max(1, Math.ceil(publications.length / pageSize));
+            const totalPages = Math.max(1, Math.ceil(sortedPublications.length / pageSize));
 
             function paint() {
                 const start = (currentPage - 1) * pageSize;
-                const pageItems = publications.slice(start, start + pageSize);
+                const pageItems = sortedPublications.slice(start, start + pageSize);
                 const cards = pageItems.map((paper, i) => {
                     const authors = formatAuthors(paper);
                     const linkAttrs = paper.url ? `href="${paper.url}" target="_blank" rel="noopener noreferrer"` : "";
@@ -1316,10 +1317,10 @@
                 }).join('');
 
                 root.innerHTML = `<section class="papers-shell" aria-label="Published Papers">
-                    <div class="papers-headline"><h2><i class="fa-solid fa-microscope" aria-hidden="true"></i> Published Papers</h2><p class="papers-counter">${publications.length} publications</p></div>
+                    <div class="papers-headline"><h2><i class="fa-solid fa-microscope" aria-hidden="true"></i> Published Papers</h2><p class="papers-counter">${sortedPublications.length} publications</p></div>
                     <div class="papers-list">${cards}</div>
                     <div class="papers-pagination">
-                        <p class="papers-page-info">Showing ${start + 1}-${Math.min(start + pageSize, publications.length)} of ${publications.length} · Page ${currentPage} of ${totalPages}</p>
+                        <p class="papers-page-info">Showing ${start + 1}-${Math.min(start + pageSize, sortedPublications.length)} of ${sortedPublications.length} · Page ${currentPage} of ${totalPages}</p>
                         <div class="papers-page-controls">
                             <button class="papers-page-btn" data-page="prev" ${currentPage === 1 ? 'disabled' : ''}>Previous</button>
                             ${pageButtons}
@@ -1386,7 +1387,7 @@
 
 
         function parseDateFlexible(value = '') {
-            const raw = (value || '').trim();
+            const raw = String(value || '').trim();
             if (!raw) return null;
             const numeric = raw.match(/^(\d{1,2})[\/-](\d{1,2})[\/-](\d{2,4})$/);
             if (numeric) {
@@ -1398,6 +1399,19 @@
             }
             const parsed = new Date(raw);
             return Number.isNaN(parsed.getTime()) ? null : parsed;
+        }
+
+        function toSortableTimestamp(value = '') {
+            const parsed = parseDateFlexible(value);
+            return parsed ? parsed.getTime() : 0;
+        }
+
+        function sortNewestFirst(items, dateSelector) {
+            return [...items].sort((a, b) => {
+                const da = toSortableTimestamp(dateSelector(a));
+                const db = toSortableTimestamp(dateSelector(b));
+                return db - da;
+            });
         }
 
         function splitTopicTags(topicValue = '') {
@@ -1443,7 +1457,7 @@
             if (!md) return;
             const categories = parseMultimedia(md);
             document.getElementById('multimedia-content').innerHTML = categories.map(c => {
-                const sortedItems = [...c.items].sort((a, b) => parseMediaFields(b.meta).uploadedTimestamp - parseMediaFields(a.meta).uploadedTimestamp);
+                const sortedItems = sortNewestFirst(c.items, item => parseMediaFields(item.meta).uploaded);
                 return `
                 <div class="media-category">
                     <h3>${c.title}</h3>
@@ -1511,14 +1525,7 @@
         async function renderStats() {
             const md = await loadMarkdown('impact');
             if (!md) return;
-            const items = parseImpactNews(md).sort((a, b) => {
-                const da = parseDateFlexible(a.date);
-                const db = parseDateFlexible(b.date);
-                if (!da && !db) return 0;
-                if (!da) return 1;
-                if (!db) return -1;
-                return da - db;
-            });
+            const items = sortNewestFirst(parseImpactNews(md), item => item.date);
             document.getElementById('stats-grid').innerHTML = `<div class="impact-carousel-shell">
                 <button class="impact-carousel-control prev" type="button" aria-label="Anterior">‹</button>
                 <div class="impact-carousel">
