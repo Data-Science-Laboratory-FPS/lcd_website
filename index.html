@@ -747,11 +747,11 @@
             color: #fff;
         }
 
-        /* stats */
-        .stats { padding: 6rem 5%; text-align: center; }
-        .stats-grid { margin-top: 2rem; }
-        .impact-carousel-shell { position: relative; padding-inline: 2.4rem; }
-        .impact-carousel {
+        /* press */
+        .press { padding: 6rem 5%; text-align: center; }
+        .press-grid { margin-top: 2rem; }
+        .press-carousel-shell { position: relative; padding-inline: 2.4rem; }
+        .press-carousel {
             display: grid;
             grid-auto-flow: column;
             grid-auto-columns: minmax(300px, 34vw);
@@ -762,8 +762,8 @@
             scrollbar-width: none;
             scroll-behavior: smooth;
         }
-        .impact-carousel::-webkit-scrollbar { display: none; }
-        .impact-carousel-control {
+        .press-carousel::-webkit-scrollbar { display: none; }
+        .press-carousel-control {
             position: absolute;
             top: 42%;
             transform: translateY(-50%);
@@ -778,9 +778,9 @@
             cursor: pointer;
             z-index: 2;
         }
-        .impact-carousel-control.prev { left: .45rem; }
-        .impact-carousel-control.next { right: .45rem; }
-        .impact-item {
+        .press-carousel-control.prev { left: .45rem; }
+        .press-carousel-control.next { right: .45rem; }
+        .press-item {
             scroll-snap-align: start;
             background: #fff;
             border: 1px solid rgba(0,121,50,.18);
@@ -790,20 +790,20 @@
             text-align: left;
             box-shadow: 0 6px 20px rgba(0, 121, 50, .1);
         }
-        .impact-thumb-wrap {
+        .press-thumb-wrap {
             aspect-ratio: 16 / 9;
             background: linear-gradient(135deg, #007932, #368f3f);
             border-radius: 14px 14px 0 0;
             overflow: hidden;
             position: relative;
         }
-        .impact-thumb {
+        .press-thumb {
             width: 100%;
             height: 100%;
             display: block;
             object-fit: cover;
         }
-        .impact-thumb-placeholder {
+        .press-thumb-placeholder {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -812,11 +812,11 @@
             font-weight: 700;
             font-size: 1rem;
         }
-        .impact-body { padding: .9rem .9rem 0; }
-        .impact-item h3 { font-size: 1rem; margin-bottom: .45rem; color: var(--text); }
-        .impact-meta { font-size: .82rem; color: #486a4d; margin-bottom: .45rem; }
-        .impact-summary { font-size: .9rem; color: #2d5a3d; line-height: 1.45; }
-        .impact-link { display: inline-flex; margin-top: .6rem; color: var(--green); font-weight: 600; text-decoration: none; }
+        .press-body { padding: .9rem .9rem 0; }
+        .press-item h3 { font-size: 1rem; margin-bottom: .45rem; color: var(--text); }
+        .press-meta { font-size: .82rem; color: #486a4d; margin-bottom: .45rem; }
+        .press-summary { font-size: .9rem; color: #2d5a3d; line-height: 1.45; }
+        .press-link { display: inline-flex; margin-top: .6rem; color: var(--green); font-weight: 600; text-decoration: none; }
         .stat-number { font-size: 3.5rem; font-weight: 800; background: linear-gradient(135deg, var(--green), var(--mint)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: .5rem; }
         .stat-label  { color: #2d5a3d; font-size: 1.1rem; font-weight: 500; }
 
@@ -860,7 +860,7 @@
             <li><a href="#team"       onclick="closeMenu()">Team</a></li>
             <li><a href="#research" onclick="closeMenu()">Research</a></li>
             <li><a href="#multimedia"   onclick="closeMenu()">Multimedia</a></li>
-            <li><a href="#impact"      onclick="closeMenu()">Impact</a></li>
+            <li><a href="#press"      onclick="closeMenu()">Press</a></li>
             <li><a href="#contact"     onclick="closeMenu()">Contact</a></li>
         </ul>
     </div>
@@ -875,7 +875,7 @@
             <li><a href="#team">Team</a></li>
             <li><a href="#research">Research</a></li>
             <li><a href="#multimedia">Multimedia</a></li>
-            <li><a href="#impact">Impact</a></li>
+            <li><a href="#press">Press</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
 
@@ -938,11 +938,11 @@
         <div class="content-wrapper" id="multimedia-content"><div class="loading">Loading multimedia...</div></div>
     </section>
 
-    <!-- STATS -->
-    <section class="stats" id="impact">
-        <h2 class="section-title">Our impact</h2>
-        <p class="section-subtitle">Measured outcomes from research, development, and collaboration</p>
-        <div class="stats-grid" id="stats-grid"><div class="loading">Loading...</div></div>
+    <!-- PRESS -->
+    <section class="press" id="press">
+        <h2 class="section-title">Press</h2>
+        <p class="section-subtitle">Selected media coverage and public visibility of our clinical AI work</p>
+        <div class="press-grid" id="press-grid"><div class="loading">Loading press...</div></div>
     </section>
 
     <!-- CTA / CONTACT -->
@@ -1138,7 +1138,7 @@
             return `https://api.microlink.io/?url=${encodeURIComponent(normalizedUrl)}&screenshot=true&meta=false&embed=screenshot.url`;
         }
 
-        function parseImpactNews(md) {
+        function parsePressNews(md) {
             const lines = md.split('\n');
             const news = [];
             let current = null;
@@ -1160,7 +1160,7 @@
                 const value = line.replace(/^- /, '');
                 if (value.toLowerCase().startsWith('fecha:')) current.date = value.split(':').slice(1).join(':').trim();
                 else if (value.toLowerCase().startsWith('url:')) current.url = value.split(':').slice(1).join(':').trim();
-                else if (value.toLowerCase().startsWith('impacto:')) current.summary = value.split(':').slice(1).join(':').trim();
+                else if (value.toLowerCase().startsWith('resumen:')) current.summary = value.split(':').slice(1).join(':').trim();
                 else if (value.toLowerCase().startsWith('thumbnail:') || value.toLowerCase().startsWith('miniatura:')) {
                     current.thumbnail = value.split(':').slice(1).join(':').trim();
                 }
@@ -1522,31 +1522,31 @@
             });
         }
 
-        async function renderStats() {
-            const md = await loadMarkdown('impact');
+        async function renderPress() {
+            const md = await loadMarkdown('press');
             if (!md) return;
-            const items = sortNewestFirst(parseImpactNews(md), item => item.date);
-            document.getElementById('stats-grid').innerHTML = `<div class="impact-carousel-shell">
-                <button class="impact-carousel-control prev" type="button" aria-label="Anterior">‹</button>
-                <div class="impact-carousel">
-                    ${items.map(item => `<article class="impact-item">
-                        <div class="impact-thumb-wrap">
-                            ${item.thumbnail ? `<img class="impact-thumb" src="${item.thumbnail}" alt="${item.title}" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='${makeArticleScreenshotUrl(item.url)}';">` : '<div class="impact-thumb impact-thumb-placeholder">Noticia</div>'}
+            const items = sortNewestFirst(parsePressNews(md), item => item.date);
+            document.getElementById('press-grid').innerHTML = `<div class="press-carousel-shell">
+                <button class="press-carousel-control prev" type="button" aria-label="Anterior">‹</button>
+                <div class="press-carousel">
+                    ${items.map(item => `<article class="press-item">
+                        <div class="press-thumb-wrap">
+                            ${item.thumbnail ? `<img class="press-thumb" src="${item.thumbnail}" alt="${item.title}" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='${makeArticleScreenshotUrl(item.url)}';">` : '<div class="press-thumb press-thumb-placeholder">Noticia</div>'}
                         </div>
-                        <div class="impact-body">
+                        <div class="press-body">
                             <h3>${item.title}</h3>
-                            <div class="impact-meta">📅 ${item.date || 'Fecha por confirmar'}</div>
-                            <p class="impact-summary">${item.summary || ''}</p>
-                            ${item.url ? `<a class="impact-link" href="${item.url}" target="_blank" rel="noopener noreferrer">Ver noticia</a>` : ''}
+                            <div class="press-meta">📅 ${item.date || 'Fecha por confirmar'}</div>
+                            <p class="press-summary">${item.summary || ''}</p>
+                            ${item.url ? `<a class="press-link" href="${item.url}" target="_blank" rel="noopener noreferrer">Ver noticia</a>` : ''}
                         </div>
                     </article>`).join('')}
                 </div>
-                <button class="impact-carousel-control next" type="button" aria-label="Siguiente">›</button>
+                <button class="press-carousel-control next" type="button" aria-label="Siguiente">›</button>
             </div>`;
-            const shell = document.querySelector('.impact-carousel-shell');
-            const track = shell?.querySelector('.impact-carousel');
-            const prev = shell?.querySelector('.impact-carousel-control.prev');
-            const next = shell?.querySelector('.impact-carousel-control.next');
+            const shell = document.querySelector('.press-carousel-shell');
+            const track = shell?.querySelector('.press-carousel');
+            const prev = shell?.querySelector('.press-carousel-control.prev');
+            const next = shell?.querySelector('.press-carousel-control.next');
             if (track && prev && next) {
                 const step = () => Math.max(320, Math.floor(track.clientWidth * 0.9));
                 prev.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
@@ -1597,12 +1597,12 @@
                 renderTeam(),
                 renderResearch(),
                 renderMultimedia(),
-                renderStats(),
+                renderPress(),
                 renderContact()
             ]);
 
             setTimeout(() => {
-                document.querySelectorAll('.service-card, .stat-item, .project-card, .team-card').forEach(el => {
+                document.querySelectorAll('.service-card, .project-card, .team-card').forEach(el => {
                     el.style.opacity = '0';
                     el.style.transform = 'translateY(30px)';
                     el.style.transition = 'all .6s ease';
