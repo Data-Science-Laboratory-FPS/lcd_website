@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 72" role="img" aria-labelledby="title desc">
+  <title id="title">Funded by the European Union</title>
+  <desc id="desc">European Union emblem with the funding statement Funded by the European Union.</desc>
+  <rect width="260" height="72" fill="none"/>
+  <g transform="translate(0 4)">
+    <rect width="96" height="64" fill="#003399"/>
+    <g fill="#ffcc00" transform="translate(48 32)">
+      <polygon points="0,-4.8 1.08,-1.49 4.57,-1.49 1.74,0.57 2.82,3.89 0,1.83 -2.82,3.89 -1.74,0.57 -4.57,-1.49 -1.08,-1.49" transform="translate(0 -21)"/>
+      <polygon points="0,-4.8 1.08,-1.49 4.57,-1.49 1.74,0.57 2.82,3.89 0,1.83 -2.82,3.89 -1.74,0.57 -4.57,-1.49 -1.08,-1.49" transform="translate(10.5 -18.19) rotate(30)"/>
+      <polygon points="0,-4.8 1.08,-1.49 4.57,-1.49 1.74,0.57 2.82,3.89 0,1.83 -2.82,3.89 -1.74,0.57 -4.57,-1.49 -1.08,-1.49" transform="translate(18.19 -10.5) rotate(60)"/>
+      <polygon points="0,-4.8 1.08,-1.49 4.57,-1.49 1.74,0.57 2.82,3.89 0,1.83 -2.82,3.89 -1.74,0.57 -4.57,-1.49 -1.08,-1.49" transform="translate(21 0) rotate(90)"/>
+      <polygon points="0,-4.8 1.08,-1.49 4.57,-1.49 1.74,0.57 2.82,3.89 0,1.83 -2.82,3.89 -1.74,0.57 -4.57,-1.49 -1.08,-1.49" transform="translate(18.19 10.5) rotate(120)"/>
+      <polygon points="0,-4.8 1.08,-1.49 4.57,-1.49 1.74,0.57 2.82,3.89 0,1.83 -2.82,3.89 -1.74,0.57 -4.57,-1.49 -1.08,-1.49" transform="translate(10.5 18.19) rotate(150)"/>
+      <polygon points="0,-4.8 1.08,-1.49 4.57,-1.49 1.74,0.57 2.82,3.89 0,1.83 -2.82,3.89 -1.74,0.57 -4.57,-1.49 -1.08,-1.49" transform="translate(0 21) rotate(180)"/>
+      <polygon points="0,-4.8 1.08,-1.49 4.57,-1.49 1.74,0.57 2.82,3.89 0,1.83 -2.82,3.89 -1.74,0.57 -4.57,-1.49 -1.08,-1.49" transform="translate(-10.5 18.19) rotate(210)"/>
+      <polygon points="0,-4.8 1.08,-1.49 4.57,-1.49 1.74,0.57 2.82,3.89 0,1.83 -2.82,3.89 -1.74,0.57 -4.57,-1.49 -1.08,-1.49" transform="translate(-18.19 10.5) rotate(240)"/>
+      <polygon points="0,-4.8 1.08,-1.49 4.57,-1.49 1.74,0.57 2.82,3.89 0,1.83 -2.82,3.89 -1.74,0.57 -4.57,-1.49 -1.08,-1.49" transform="translate(-21 0) rotate(270)"/>
+      <polygon points="0,-4.8 1.08,-1.49 4.57,-1.49 1.74,0.57 2.82,3.89 0,1.83 -2.82,3.89 -1.74,0.57 -4.57,-1.49 -1.08,-1.49" transform="translate(-18.19 -10.5) rotate(300)"/>
+      <polygon points="0,-4.8 1.08,-1.49 4.57,-1.49 1.74,0.57 2.82,3.89 0,1.83 -2.82,3.89 -1.74,0.57 -4.57,-1.49 -1.08,-1.49" transform="translate(-10.5 -18.19) rotate(330)"/>
+    </g>
+  </g>
+  <text x="112" y="28" fill="#1a1a1a" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700">Funded by the</text>
+  <text x="112" y="51" fill="#1a1a1a" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700">European Union</text>
+</svg>
