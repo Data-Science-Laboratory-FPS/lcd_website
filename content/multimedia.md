@@ -130,6 +130,25 @@
 
 [▶️ ![Thumbnail](https://img.youtube.com/vi/aSR0FYqJwx0/maxresdefault.jpg)](https://youtu.be/aSR0FYqJwx0)
 
+#### “Miguel Ángel Armengol | Asociación Salud Digital”
+- Language: 🇪🇸
+- Type: Media interview
+- Institution: Asociación Salud Digital
+- Topic: Digital health, health data, healthcare innovation
+- Uploaded: 30 March 2023
+
+[▶️ ![Thumbnail](https://img.youtube.com/vi/AwRE4sZr_YU/maxresdefault.jpg)](https://www.youtube.com/watch?v=AwRE4sZr_YU)
+
+#### “Miguel Armengol | Portal Hospitalario at MakeHealthLATAM”
+- Language: 🇪🇸
+- Type: Event interview
+- Event: MakeHealthLATAM - Rincón de la Innovación
+- Institution: Portal Hospitalario
+- Topic: Digital health, Big Data, health system innovation, interoperability, telemedicine
+- Uploaded: 26 January 2023
+
+[▶️ ![Thumbnail](https://img.youtube.com/vi/ugD3pmhVVjQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=ugD3pmhVVjQ)
+
 #### “El Sevilla CF es Salud”
 - Language: 🇪🇸
 - Institution: Sevilla FC Radio
