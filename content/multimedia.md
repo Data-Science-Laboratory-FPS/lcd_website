@@ -88,6 +88,15 @@
 
 ## 🎙️ Podcasts & Media Interviews
 
+#### “Podcast - AI Applied to Vaccination | One Health – Puentes de Salud”
+- Language: 🇪🇸
+- Program: Puentes One Health - Conectando Generaciones a través de la Vacunación
+- Institution: Universidad Europea de Valencia / Cátedra Pfizer
+- Topic: Artificial intelligence, predictive models, vaccination strategy, public health resource optimization
+- Uploaded: 20 March 2026
+
+[▶️ ![Thumbnail](https://img.youtube.com/vi/kDJFaHn1fJI/maxresdefault.jpg)](https://www.youtube.com/watch?v=kDJFaHn1fJI&list=PLc9PylzWI65WZGIO5rjDgl-T6dTTjQQtF&index=6)
+
 #### “Podcast - AI and FAIR Data for Emergency Sepsis Care”
 - Language: 🇪🇸
 - Topic: Sepsis, FAIR data, emergency medicine, predictive AI
@@ -119,13 +128,6 @@
 - Uploaded: 03 October 2025
 
 [▶️ ![Thumbnail](https://img.youtube.com/vi/aSR0FYqJwx0/maxresdefault.jpg)](https://youtu.be/aSR0FYqJwx0)
-
-#### “One Health – Universidad Europea”
-- Language: 🇪🇸
-- Institution: Universidad Europea
-- Topic: One Health
-
-[▶️ ![Thumbnail](https://img.youtube.com/vi/kDJFaHn1fJI/maxresdefault.jpg)](https://www.youtube.com/watch?v=kDJFaHn1fJI&list=PLc9PylzWI65WZGIO5rjDgl-T6dTTjQQtF&index=5)
 
 #### “El Sevilla CF es Salud”
 - Language: 🇪🇸
