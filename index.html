@@ -408,6 +408,8 @@
         .project-card:hover { transform: translateY(-10px); border-color: var(--mint); box-shadow: 0 20px 60px rgba(157,214,191,.3); }
         .project-card h3 { font-size: 1.5rem; color: var(--green); margin-bottom: 1rem; }
         .project-meta    { color: var(--dark); font-size: .9rem; font-weight: 600; margin-bottom: 1rem; }
+        .project-meta.with-eu-logo { display: flex; align-items: center; justify-content: space-between; gap: .75rem; flex-wrap: wrap; }
+        .eu-funded-logo { width: min(125px, 40%); height: auto; display: block; flex: 0 0 auto; }
         .project-card p  { color: #2d5a3d; line-height: 1.6; margin-bottom: 1.5rem; }
         .project-link    { color: var(--green); font-size: .9rem; text-decoration: none; display: block; margin-bottom: .75rem; }
         .project-link:hover { text-decoration: underline; }
@@ -1090,7 +1092,8 @@
                 const website     = websiteLine  ? websiteLine.replace(/^website:\s*/i, '') : '';
                 const description = descriptionIdx >= 0 ? ls[descriptionIdx].replace(/^description:\s*/i, '') : '';
                 const summary     = summaryIdx >= 0     ? ls.slice(summaryIdx).join(' ').replace(/^summary:\s*/i, '') : '';
-                projects.push({ icon, title, meta, website, description, summary });
+                const isEuropeanFunded = /horizon europe|european union|\bEU\b|🇪🇺/i.test(meta);
+                projects.push({ icon, title, meta, website, description, summary, isEuropeanFunded });
             });
             return projects;
         }
@@ -1197,7 +1200,10 @@
                 <div class="project-card">
                     <h3>${p.icon} ${p.title}</h3>
                     ${p.website ? `<a href="${p.website}" target="_blank" class="project-link">${p.website}</a>` : ''}
-                    <div class="project-meta">${p.meta}</div>
+                    <div class="project-meta${p.isEuropeanFunded ? ' with-eu-logo' : ''}">
+                        <span>${p.meta}</span>
+                        ${p.isEuropeanFunded ? '<img src="images/eu-funded-by-eu.svg" alt="Funded by the European Union" class="eu-funded-logo" loading="lazy">' : ''}
+                    </div>
                     <p>${p.description}</p>
                     ${p.summary ? `<div class="project-summary">${p.summary}</div>` : ''}
                 </div>`
