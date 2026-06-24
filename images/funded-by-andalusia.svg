@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 220" role="img" aria-labelledby="title desc">
-  <title id="title">Funded by Andalucía</title>
-  <desc id="desc">Stylized green Andalucía A logo followed by the text Funded by Andalucía.</desc>
+  <title id="title">Funded by Junta de Andalucía</title>
+  <desc id="desc">Stylized green Andalucía A logo followed by the text Funded by Junta de Andalucía.</desc>
   <rect width="760" height="220" fill="#fff"/>
   <g transform="translate(20 18) scale(.82)">
     <path d="M0 220 104 0h44L44 220Z" fill="#2f8d3f"/>
@@ -9,6 +9,6 @@
   </g>
   <g fill="#16110f" font-family="Arial, Helvetica, sans-serif" font-weight="700">
     <text x="270" y="95" font-size="56">Funded by</text>
-    <text x="270" y="165" font-size="56">Andalucía</text>
+    <text x="270" y="165" font-size="56">Junta de Andalucía</text>
   </g>
 </svg>
