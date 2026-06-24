@@ -1,14 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 210" role="img" aria-labelledby="title desc">
-  <title id="title">Funded by the Government of Andalusia</title>
-  <desc id="desc">Green Andalusia mark with the text Funded by the Government of Andalusia.</desc>
-  <rect width="760" height="210" fill="#fff"/>
-  <g transform="translate(26 25)">
-    <path d="M0 160 79 0h53l80 160h-55L106 51 53 160Z" fill="#0b7f3a"/>
-    <path d="M80 126c31-9 69-7 104 10l29 24h-60c-20-15-44-23-73-23Z" fill="#25833b"/>
-    <path d="M91 0h41l80 160h-55L112 64Z" fill="#149447" opacity=".75"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 220" role="img" aria-labelledby="title desc">
+  <title id="title">Funded by Andalucía</title>
+  <desc id="desc">Stylized green Andalucía A logo followed by the text Funded by Andalucía.</desc>
+  <rect width="760" height="220" fill="#fff"/>
+  <g transform="translate(20 18) scale(.82)">
+    <path d="M0 220 104 0h44L44 220Z" fill="#2f8d3f"/>
+    <path d="M104 0h44l88 220h-44L124 49Z" fill="#007a3d"/>
+    <path d="M104 162c40-8 83 0 119 25l13 33h-44c-31-24-63-31-88-26Z" fill="#2f8d3f"/>
   </g>
   <g fill="#16110f" font-family="Arial, Helvetica, sans-serif" font-weight="700">
-    <text x="270" y="88" font-size="54">Funded by the</text>
-    <text x="270" y="157" font-size="54">Government of Andalusia</text>
+    <text x="270" y="95" font-size="56">Funded by</text>
+    <text x="270" y="165" font-size="56">Andalucía</text>
   </g>
 </svg>
