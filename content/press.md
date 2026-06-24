@@ -114,6 +114,14 @@
 - Servicio hospitalario: UCI
 - Resumen: Modelo de aprendizaje automático sobre más de 100.000 pacientes para estratificar el riesgo de fallecimiento durante las primeras 72 horas de ingreso en críticos.
 
+#### “La inteligencia artificial podría predecir el riesgo de muerte durante las primeras 72 horas en la UCI”
+- Fecha: 20/11/2025
+- URL: https://www.antena3.com/noticias/salud/inteligencia-artificial-podria-predecir-riesgo-muerte-primeras-72-horas-uci_20251120691f420e360d0840bced0948.html
+- Tipo de proyecto: IA predictiva en UCI
+- Etiqueta clínica: Mortalidad crítica
+- Servicio hospitalario: UCI
+- Resumen: Antena 3 recoge el estudio retrospectivo con datos anonimizados de 106.000 pacientes críticos y destaca un modelo de aprendizaje automático con una precisión cercana al 93% para anticipar el riesgo de fallecimiento en las primeras 72 horas de ingreso en UCI.
+
 #### “La mejora del dato sanitario requiere más formación del internista en IA”
 - Fecha: 28/11/2025
 - URL: https://www.redaccionmedica.com/secciones/medicina-interna/la-mejora-del-dato-sanitario-requiere-mas-formacion-del-internista-en-ia-7102
