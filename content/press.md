@@ -10,6 +10,14 @@
 - Servicio hospitalario: Innovación sanitaria
 - Resumen: Participación en el debate sobre estrategias de biotecnología y aplicaciones de IA en salud, incluyendo experiencias de Big Data sanitario.
 
+#### “Andalucía expone sus actuaciones en 'big data' en la presentación de la estrategia gallega de inteligencia artificial”
+- Fecha: 23/06/2021
+- URL: https://www.europapress.es/esandalucia/sevilla/noticia-andalucia-expone-actuaciones-big-data-presentacion-estrategia-gallega-inteligencia-artificial-20210623165211.html
+- Tipo de proyecto: Estrategia de big data sanitario
+- Etiqueta clínica: IA sanitaria
+- Servicio hospitalario: Sistema sanitario público de Andalucía
+- Resumen: Presentación de la estrategia andaluza de big data sanitario en el marco de la Estrategia gallega de inteligencia artificial 2030, destacando la integración de datos clínicos para apoyar decisiones asistenciales, investigadoras y de gestión.
+
 #### “Premiado un proyecto sobre enfermedad digestiva coliderado por la Plataforma de Medicina Computacional”
 - Fecha: 12/01/2023
 - URL: https://www.europapress.es/esandalucia/sevilla/noticia-premiado-proyecto-enfermedad-digestiva-coliderado-plataforma-medicina-computacional-20230112132056.html
