@@ -1,13 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 220" role="img" aria-labelledby="title desc">
-  <title id="title">Andalucía</title>
-  <desc id="desc">Stylized green Andalucía A logo followed by the text Andalucía.</desc>
-  <rect width="760" height="220" fill="#fff"/>
-  <g transform="translate(20 18) scale(.82)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 180" role="img" aria-labelledby="title desc">
+  <title id="title">Funded by Junta de Andalucía</title>
+  <desc id="desc">Stylized green Andalucía A logo with the text Funded by Junta de Andalucía.</desc>
+  <rect width="520" height="180" rx="14" fill="#fff"/>
+  <g transform="translate(20 24) scale(.5)">
     <path d="M0 220 104 0h44L44 220Z" fill="#2f8d3f"/>
     <path d="M104 0h44l88 220h-44L124 49Z" fill="#007a3d"/>
     <path d="M104 162c40-8 83 0 119 25l13 33h-44c-31-24-63-31-88-26Z" fill="#2f8d3f"/>
   </g>
   <g fill="#16110f" font-family="Arial, Helvetica, sans-serif" font-weight="700">
-    <text x="270" y="135" font-size="68">Andalucía</text>
+    <text x="155" y="72" font-size="34">Funded by</text>
+    <text x="155" y="116" font-size="34">Junta de Andalucía</text>
   </g>
 </svg>
