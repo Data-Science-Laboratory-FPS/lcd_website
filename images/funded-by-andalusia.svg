@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 210" role="img" aria-labelledby="title desc">
+  <title id="title">Funded by the Government of Andalusia</title>
+  <desc id="desc">Green Andalusia mark with the text Funded by the Government of Andalusia.</desc>
+  <rect width="760" height="210" fill="#fff"/>
+  <g transform="translate(26 25)">
+    <path d="M0 160 79 0h53l80 160h-55L106 51 53 160Z" fill="#0b7f3a"/>
+    <path d="M80 126c31-9 69-7 104 10l29 24h-60c-20-15-44-23-73-23Z" fill="#25833b"/>
+    <path d="M91 0h41l80 160h-55L112 64Z" fill="#149447" opacity=".75"/>
+  </g>
+  <g fill="#16110f" font-family="Arial, Helvetica, sans-serif" font-weight="700">
+    <text x="270" y="88" font-size="54">Funded by the</text>
+    <text x="270" y="157" font-size="54">Government of Andalusia</text>
+  </g>
+</svg>
