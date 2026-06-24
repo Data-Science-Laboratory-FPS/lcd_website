@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 170" role="img" aria-labelledby="title desc">
+  <title id="title">Funded by Boehringer Ingelheim</title>
+  <desc id="desc">Compact funding badge with the Boehringer Ingelheim name.</desc>
+  <rect width="620" height="170" rx="18" fill="#fff"/>
+  <g transform="translate(24 20)">
+    <text x="0" y="26" fill="#485a64" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Funded by</text>
+    <g transform="translate(0 48)">
+      <rect x="0" y="0" width="96" height="74" rx="9" fill="none" stroke="#0076a8" stroke-width="7"/>
+      <path d="M22 58V20m18 38V12m18 46V26m18 32V18" stroke="#0076a8" stroke-width="7" stroke-linecap="round"/>
+      <path d="M16 58h66" stroke="#0076a8" stroke-width="7" stroke-linecap="round"/>
+      <text x="118" y="31" fill="#0076a8" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="800">Boehringer</text>
+      <text x="118" y="68" fill="#0076a8" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="800">Ingelheim</text>
+    </g>
+  </g>
+</svg>

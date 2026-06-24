@@ -30,6 +30,13 @@ meta: Horizon Europe project 🇪🇺
 website: https://intellilung-project.eu/
 summary: IntelliLung aims to clinically validate and extend an Artificial Intelligence Clinical Decision Support System (AI-CDSS) based on reinforcement learning. The system is designed to optimize mechanical ventilation settings in intensive care unit patients by integrating ventilator parameters, clinical variables, and patient condition to identify optimal setting combinations and reduce the risk of lung injury. Retrospective and multicenter prospective studies are being conducted to validate the IntelliLung AI-DSS and its patient information software.
 
+
+---
+
+### 🫁 ARAI: AI-based Risk Stratification for Rheumatoid Arthritis–Associated Interstitial Lung Disease
+meta: Regional research project (Andalusia, Hospital Universitario Virgen Macarena)
+funding: boehringer-ingelheim
+summary: ARAI is a real-world evidence project focused on the identification of patients with rheumatoid arthritis at increased risk of developing rheumatoid arthritis–associated interstitial lung disease (RA-ILD). Using longitudinal electronic health records, laboratory data, comorbidities, hospital activity records, and pharmacy data, the project combines survival analysis and machine learning approaches to characterize risk profiles and estimate the probability of incident ILD within a five-year follow-up period. The study aims to support early identification of high-risk patients, facilitate risk-based respiratory surveillance strategies, and generate evidence for more personalized management of rheumatoid arthritis in routine clinical practice. The project is based on a retrospective cohort of more than 5,700 patients with confirmed rheumatoid arthritis from the Hospital Universitario Virgen Macarena.
 ---
 
 ### 💉 RASCAL: Survival Analysis of COVID-19 Hospitalized Patients in Andalusian Hospitals
