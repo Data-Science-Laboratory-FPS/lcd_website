@@ -42,6 +42,14 @@
 - Servicio hospitalario: Medicina de precisión
 - Resumen: Participación en una jornada sobre biomarcadores e IA en salud, destacando el valor del dato sanitario, su acceso seguro y ético, y el papel de los modelos de IA para apoyar diagnósticos precoces, decisiones clínicas y tratamientos personalizados en oncología.
 
+#### “Cinco hitos de la ciencia y la innovación andaluza”
+- Fecha: 22/10/2024
+- URL: https://www.elcorreoweb.es/andalucia/2024/10/22/cinco-hitos-ciencia-innovacion-andaluza-109037763.html
+- Tipo de proyecto: Innovación científica andaluza
+- Etiqueta clínica: Prevención del suicidio
+- Servicio hospitalario: UCI y Salud Mental
+- Resumen: El Correo de Andalucía incluye SAIDIS entre cinco hitos de la ciencia y la innovación andaluza, destacando su uso de inteligencia artificial para transformar la identificación y prevención del suicidio.
+
 #### “El proyecto andaluz premiado que trata de evitar suicidios usando la IA”
 - Fecha: 28/10/2024
 - URL: https://gacetamedica.com/politica/proyecto-andaluz-suicidios-ia/
