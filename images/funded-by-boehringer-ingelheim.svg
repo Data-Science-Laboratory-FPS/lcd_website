@@ -1,19 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-labelledby="title desc">
-  <title id="title">Boehringer Ingelheim</title>
-  <desc id="desc">Boehringer Ingelheim circular building logo.</desc>
-  <rect width="180" height="180" fill="#fff"/>
-  <g fill="none" stroke="#06352e" stroke-width="8" stroke-linejoin="miter">
-    <path d="M36 147A78 78 0 1 1 144 147"/>
-    <path d="M62 53 90 29 118 53"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 180" role="img" aria-labelledby="title desc">
+  <title id="title">Funded by Boehringer Ingelheim</title>
+  <desc id="desc">Boehringer Ingelheim circular building logo with the text Funded by Boehringer Ingelheim.</desc>
+  <rect width="520" height="180" rx="14" fill="#fff"/>
+  <g transform="translate(20 18) scale(.8)">
+    <g fill="none" stroke="#06352e" stroke-width="8" stroke-linejoin="miter">
+      <path d="M36 147A78 78 0 1 1 144 147"/>
+      <path d="M62 53 90 29 118 53"/>
+    </g>
+    <g fill="#06352e">
+      <rect x="81" y="62" width="9" height="100"/>
+      <rect x="91" y="62" width="9" height="100"/>
+      <rect x="64" y="62" width="9" height="94"/>
+      <rect x="107" y="62" width="9" height="94"/>
+      <path d="M28 112h9v50l-9-8Z"/>
+      <path d="M45 112h9v61l-9-5Z"/>
+      <path d="M126 112h9v56l-9 5Z"/>
+      <path d="M143 112h9v42l-9 8Z"/>
+    </g>
   </g>
-  <g fill="#06352e">
-    <rect x="81" y="62" width="9" height="100"/>
-    <rect x="91" y="62" width="9" height="100"/>
-    <rect x="64" y="62" width="9" height="94"/>
-    <rect x="107" y="62" width="9" height="94"/>
-    <path d="M28 112h9v50l-9-8Z"/>
-    <path d="M45 112h9v61l-9-5Z"/>
-    <path d="M126 112h9v56l-9 5Z"/>
-    <path d="M143 112h9v42l-9 8Z"/>
+  <g fill="#16110f" font-family="Arial, Helvetica, sans-serif" font-weight="700">
+    <text x="185" y="72" font-size="34">Funded by</text>
+    <text x="185" y="116" font-size="34">Boehringer Ingelheim</text>
   </g>
 </svg>

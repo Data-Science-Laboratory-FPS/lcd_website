@@ -1108,7 +1108,7 @@
                 const summary     = summaryIdx >= 0     ? ls.slice(summaryIdx).join(' ').replace(/^summary:\s*/i, '') : '';
                 const funding     = fundingLine ? fundingLine.replace(/^funding:\s*/i, '').trim().toLowerCase() : '';
                 const isEuropeanFunded = /horizon europe|european union|\bEU\b|🇪🇺/i.test(meta);
-                const isAndalusiaFunded = /andalusia|andalucía/i.test(meta) || /triaje/i.test(title);
+                const isAndalusiaFunded = /triaje/i.test(title);
                 const isBoehringerFunded = funding === 'boehringer-ingelheim' || /\barai\b/i.test(title);
                 const fundingLogo = isEuropeanFunded
                     ? { src: 'images/eu-funded-by-eu.svg', alt: 'Funded by the European Union', logoOnly: true }
