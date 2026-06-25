@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" role="img" aria-label="Miniatura de prensa: Premiado un proyecto sobre enfermedad digestiva coliderado por la Plataforma de Medicina Computacional">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ecfccb"/>
+      <stop offset="1" stop-color="#ffffff"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" rx="28" fill="url(#g)"/>
+  <circle cx="566" cy="70" r="82" fill="#365314" opacity=".12"/>
+  <circle cx="76" cy="318" r="108" fill="#365314" opacity=".10"/>
+  <rect x="32" y="32" width="180" height="40" rx="20" fill="#365314" opacity=".95"/>
+  <text x="122" y="58" text-anchor="middle" font-family="Ubuntu, Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff">PRESS</text>
+  <text x="32" y="118" font-family="Ubuntu, Arial, sans-serif" font-size="26" font-weight="700" fill="#1a3a1f"><tspan x="32" dy="0">Premiado un proyecto sobre</tspan><tspan x="32" dy="30">enfermedad digestiva coliderado</tspan><tspan x="32" dy="30">por la Plataforma de Medicina…</tspan></text>
+  <text x="32" y="286" font-family="Ubuntu, Arial, sans-serif" font-size="18" font-weight="600" fill="#365314">europapress.es</text>
+  <text x="32" y="316" font-family="Ubuntu, Arial, sans-serif" font-size="16" fill="#486a4d">12/01/2023</text>
+</svg>
