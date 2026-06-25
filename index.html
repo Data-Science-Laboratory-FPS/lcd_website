@@ -1355,6 +1355,17 @@
             paint();
         }
 
+        function extractYouTubeVideoId(url = '') {
+            const match = String(url).match(/(?:v=|youtu\.be\/|embed\/|shorts\/)([\w-]{6,})/);
+            return match ? match[1] : '';
+        }
+
+        function getYouTubeThumbnail(url = '', preferred = '') {
+            const id = extractYouTubeVideoId(url || preferred);
+            if (!id) return preferred;
+            return `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
+        }
+
         function parseMultimedia(md) {
             const categories = [];
             let current = null;
@@ -1389,9 +1400,8 @@
                     j++;
                 }
 
-                if (!item.thumbnail && item.url.includes('youtu')) {
-                    const id = item.url.match(/(?:v=|youtu\.be\/)([\w-]{6,})/);
-                    if (id) item.thumbnail = `https://img.youtube.com/vi/${id[1]}/hqdefault.jpg`;
+                if (item.url.includes('youtu') || item.thumbnail.includes('ytimg.com') || item.thumbnail.includes('youtube.com')) {
+                    item.thumbnail = getYouTubeThumbnail(item.url, item.thumbnail);
                 }
                 current.items.push(item);
                 i = j - 1;
