@@ -1031,6 +1031,17 @@
             }
         }
 
+        async function loadJson(filename, fallback = {}) {
+            try {
+                const res = await fetch(`content/${filename}.json`);
+                if (!res.ok) throw new Error(`Error loading ${filename}.json`);
+                return await res.json();
+            } catch (err) {
+                console.warn(`Error loading ${filename}.json:`, err);
+                return fallback;
+            }
+        }
+
         // ── parsers ───────────────────────────────────────────────────
         function parseHeroContent(md) {
             const lines = md.split('\n');
@@ -1137,21 +1148,12 @@
             return image ? image[1].trim() : '';
         }
 
-        function makeArticleThumbnailUrl(url = '') {
-            if (!url) return '';
-            const normalizedUrl = url.trim();
-            if (!/^https?:\/\//i.test(normalizedUrl)) return '';
-            return `https://api.microlink.io/?url=${encodeURIComponent(normalizedUrl)}&embed=image.url`;
+        function resolvePressThumbnail(item, thumbnailCache = {}) {
+            if (item.thumbnail) return item.thumbnail;
+            return thumbnailCache[item.url] || '';
         }
 
-        function makeArticleScreenshotUrl(url = '') {
-            if (!url) return '';
-            const normalizedUrl = url.trim();
-            if (!/^https?:\/\//i.test(normalizedUrl)) return '';
-            return `https://api.microlink.io/?url=${encodeURIComponent(normalizedUrl)}&screenshot=true&meta=false&embed=screenshot.url`;
-        }
-
-        function parsePressNews(md) {
+        function parsePressNews(md, thumbnailCache = {}) {
             const lines = md.split('\n');
             const news = [];
             let current = null;
@@ -1179,7 +1181,7 @@
                 }
             }
             if (current) news.push(current);
-            return news.map(item => ({ ...item, thumbnail: item.thumbnail || makeArticleThumbnailUrl(item.url) }));
+            return news.map(item => ({ ...item, thumbnail: resolvePressThumbnail(item, thumbnailCache) }));
         }
 
         // ── renderers ─────────────────────────────────────────────────
@@ -1536,15 +1538,18 @@
         }
 
         async function renderPress() {
-            const md = await loadMarkdown('press');
+            const [md, thumbnailCache] = await Promise.all([
+                loadMarkdown('press'),
+                loadJson('press-thumbnails', {})
+            ]);
             if (!md) return;
-            const items = sortNewestFirst(parsePressNews(md), item => item.date);
+            const items = sortNewestFirst(parsePressNews(md, thumbnailCache), item => item.date);
             document.getElementById('press-grid').innerHTML = `<div class="press-carousel-shell">
                 <button class="press-carousel-control prev" type="button" aria-label="Anterior">‹</button>
                 <div class="press-carousel">
                     ${items.map(item => `<article class="press-item">
                         <div class="press-thumb-wrap">
-                            ${item.thumbnail ? `<img class="press-thumb" src="${item.thumbnail}" alt="${item.title}" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='${makeArticleScreenshotUrl(item.url)}';">` : '<div class="press-thumb press-thumb-placeholder">Noticia</div>'}
+                            ${item.thumbnail ? `<img class="press-thumb" src="${item.thumbnail}" alt="${item.title}" loading="lazy" decoding="async">` : '<div class="press-thumb press-thumb-placeholder">Noticia</div>'}
                         </div>
                         <div class="press-body">
                             <h3>${item.title}</h3>

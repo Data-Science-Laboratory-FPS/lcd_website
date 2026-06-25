@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" role="img" aria-label="Miniatura de prensa: Andalucía lidera SAIDIS, un proyecto para la prevención del suicidio mediante la IA">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#d1e7dd"/>
+      <stop offset="1" stop-color="#ffffff"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" rx="28" fill="url(#g)"/>
+  <circle cx="566" cy="70" r="82" fill="#0f5132" opacity=".12"/>
+  <circle cx="76" cy="318" r="108" fill="#0f5132" opacity=".10"/>
+  <rect x="32" y="32" width="180" height="40" rx="20" fill="#0f5132" opacity=".95"/>
+  <text x="122" y="58" text-anchor="middle" font-family="Ubuntu, Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff">PRESS</text>
+  <text x="32" y="118" font-family="Ubuntu, Arial, sans-serif" font-size="26" font-weight="700" fill="#1a3a1f"><tspan x="32" dy="0">Andalucía lidera SAIDIS, un</tspan><tspan x="32" dy="30">proyecto para la prevención del</tspan><tspan x="32" dy="30">suicidio mediante la IA</tspan></text>
+  <text x="32" y="286" font-family="Ubuntu, Arial, sans-serif" font-size="18" font-weight="600" fill="#0f5132">elespanol.com</text>
+  <text x="32" y="316" font-family="Ubuntu, Arial, sans-serif" font-size="16" fill="#486a4d">29/07/2024</text>
+</svg>
