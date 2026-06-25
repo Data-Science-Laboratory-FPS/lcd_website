@@ -114,6 +114,15 @@
 
 [▶️ ![Thumbnail](https://img.youtube.com/vi/z4snDgBogbA/maxresdefault.jpg)](https://youtu.be/z4snDgBogbA)
 
+#### “Podcast - What Nobody Tells You About Digitizing Public Healthcare”
+- Language: 🇪🇸
+- Program: HealthTech Dialogues | Powered by Savana
+- Institution: Savana
+- Topic: Public health system digital transformation, clinical data, AI-assisted decision-making, digital health barriers and promising projects
+- Uploaded: 28 October 2025
+
+[▶️ ![Thumbnail](https://img.youtube.com/vi/TDFmL7LOSCI/maxresdefault.jpg)](https://www.youtube.com/watch?v=TDFmL7LOSCI)
+
 #### “Podcast - The Power of Data Communities”
 - Language: 🇪🇸
 - Topic: Open data communities, MIMIC database, equity and scientific collaboration
