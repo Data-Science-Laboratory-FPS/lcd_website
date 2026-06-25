@@ -81,6 +81,7 @@
 - Language: 🇪🇸
 - Type: Symposium talk
 - Topic: AI in healthcare, health technology assessment, data science evidence
+- Duration: 55 min
 - Uploaded: 20 March 2025
 
 [▶️ ![Thumbnail](https://img.youtube.com/vi/YIA4e3ZH8K4/maxresdefault.jpg)](https://youtu.be/YIA4e3ZH8K4)
@@ -94,6 +95,7 @@
 - Program: Puentes One Health - Conectando Generaciones a través de la Vacunación
 - Institution: Universidad Europea de Valencia / Cátedra Pfizer
 - Topic: Artificial intelligence, predictive models, vaccination strategy, public health resource optimization
+- Duration: 31 min
 - Uploaded: 20 March 2026
 
 [▶️ ![Thumbnail](https://img.youtube.com/vi/kDJFaHn1fJI/maxresdefault.jpg)](https://www.youtube.com/watch?v=kDJFaHn1fJI&list=PLc9PylzWI65WZGIO5rjDgl-T6dTTjQQtF&index=6)
@@ -119,6 +121,7 @@
 - Program: HealthTech Dialogues | Powered by Savana
 - Institution: Savana
 - Topic: Public health system digital transformation, clinical data, AI-assisted decision-making, digital health barriers and promising projects
+- Duration: 38 min
 - Uploaded: 28 October 2025
 
 [▶️ ![Thumbnail](https://img.youtube.com/vi/TDFmL7LOSCI/maxresdefault.jpg)](https://www.youtube.com/watch?v=TDFmL7LOSCI)
@@ -144,6 +147,7 @@
 - Type: Media interview
 - Institution: Asociación Salud Digital
 - Topic: Digital health, health data, healthcare innovation
+- Duration: 7 min
 - Uploaded: 30 March 2023
 
 [▶️ ![Thumbnail](https://img.youtube.com/vi/AwRE4sZr_YU/maxresdefault.jpg)](https://www.youtube.com/watch?v=AwRE4sZr_YU)
@@ -154,6 +158,7 @@
 - Event: MakeHealthLATAM - Rincón de la Innovación
 - Institution: Portal Hospitalario
 - Topic: Digital health, Big Data, health system innovation, interoperability, telemedicine
+- Duration: 9 min
 - Uploaded: 26 January 2023
 
 [▶️ ![Thumbnail](https://img.youtube.com/vi/ugD3pmhVVjQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=ugD3pmhVVjQ)
@@ -176,6 +181,7 @@
 - Type: EU-Horizon funded project video
 - Institution: EKFZ for Digital Health
 - Topic: Mechanical ventilation, intensive care, AI clinical decision support, ventilator-induced lung injury prevention
+- Duration: 3 min
 - Uploaded: 15 March 2026
 - Location: Dresden
 - Description: Mechanical ventilation is a life-saving therapy widely used in intensive care units around the world. However, selecting the optimal ventilator settings for critically ill patients remains a major challenge. A patient’s respiratory condition can change rapidly, requiring clinicians to constantly balance two competing goals: ensuring adequate gas exchange while minimizing the risk of ventilator-induced lung and organ injury.\n\nThe IntelliLung project addresses this challenge by developing an AI-based clinical decision support system designed to help intensive care teams optimize mechanical ventilation for critically ill patients.\n\nLearn more at https://intellilung-project.eu\n\nFunded by the European Union’s HORIZON European Health and Digital Executive Agency (HaDEA) under grant agreement No. 101057434. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union. Neither the European Union nor the granting authority can be held responsible for them.
