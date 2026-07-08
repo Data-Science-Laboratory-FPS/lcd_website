@@ -39,3 +39,11 @@ Degree in Biomedical Engineering. MSc in Software Engineering: Data, Cloud and I
 **IMAGE:** https://raw.githubusercontent.com/Data-Science-Laboratory-FPS/lcd_website/main/images/foto_macarena.jpg
 PhD Bioinformatician applying data science and AI to transform real-world health data into clinical innovation.
 *[LinkedIn](https://www.linkedin.com/in/mlsanchez22/) • [ORCID](https://orcid.org/0000-0002-6193-9498) • [GitHub](https://github.com/mlsanchez22)*
+
+---
+
+### 👨‍💻 José Aguayo Arjona
+**Data Scientist**
+**IMAGE:** images/foto_jose_aguayo_arjona.jpg
+Data Scientist with a BSc in Statistics, specialized in Biostatistics, and an MSc in Applied Statistics. Specialized in statistical modeling, machine learning, and health data analysis.
+*[LinkedIn](https://www.linkedin.com/in/joseaguayoarjona) • [ORCID](https://orcid.org/0009-0002-3036-7391)*
