@@ -44,6 +44,6 @@ PhD Bioinformatician applying data science and AI to transform real-world health
 
 ### 👨‍💻 José Aguayo Arjona
 **Data Scientist**
-**IMAGE:** images/foto_jose_aguayo_arjona.jpg
+**IMAGE:** images/foto_jose_aguayo.jpeg
 Data Scientist with a BSc in Statistics, specialized in Biostatistics, and an MSc in Applied Statistics. Specialized in statistical modeling, machine learning, and health data analysis.
 *[LinkedIn](https://www.linkedin.com/in/joseaguayoarjona) • [ORCID](https://orcid.org/0009-0002-3036-7391)*
