@@ -148,6 +148,14 @@
 - Servicio hospitalario: Medicina Interna
 - Resumen: Visibilización de la formación clínica en datos e IA como requisito para mejorar la calidad del dato sanitario y adoptar herramientas de forma segura.
 
+#### “Una investigación analiza el triaje telefónico para el dolor torácico en urgencias y emergencias”
+- Fecha: 07/01/2026
+- URL: https://www.europapress.es/esandalucia/sevilla/noticia-investigacion-andaluza-analiza-triaje-telefonico-dolor-toracico-urgencias-emergencias-20260107114747.html
+- Tipo de proyecto: IA aplicada al triaje telefónico
+- Etiqueta clínica: Dolor torácico
+- Servicio hospitalario: 061
+- Resumen: Estudio poblacional del Centro de Emergencias Sanitarias 061 y la Fundación Progreso y Salud sobre casi 250.000 llamadas por dolor torácico no traumático, que valida la seguridad del triaje telefónico andaluz y enmarca el análisis en el proyecto Triaje Telefónico para apoyar la priorización de emergencias con inteligencia artificial.
+
 #### “El Virgen Macarena y la FPyS investigan predecir el tratamiento más eficaz en EII”
 - Fecha: 17/02/2026
 - URL: https://www.europapress.es/esandalucia/sevilla/noticia-hospital-macarena-sevilla-fpys-investigan-predecir-tratamiento-mas-eficaz-enfermedad-inflamatoria-intestinal-20260217110551.html
