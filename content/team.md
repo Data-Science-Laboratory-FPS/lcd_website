@@ -3,7 +3,7 @@
 ---
 
 ### 👨‍💻 Dr. Miguel Ángel Armengol de la Hoz
-**Lead Data Scientist**
+**Head, Data Science Lab**
 **IMAGE:** https://raw.githubusercontent.com/Data-Science-Laboratory-FPS/lcd_website/main/images/foto_miguelangel.jpg
 PhD and MSc in Biomedical Engineering; BSc in Telecommunications Engineering. Research Affiliate at MIT, previously sponsored by Harvard Med.
 *[LinkedIn](https://www.linkedin.com/in/miguelangelarmengol/) • [ORCID](https://orcid.org/0000-0002-7012-2973) • [GitHub](https://github.com/theonesp)*
