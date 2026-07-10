@@ -50,24 +50,6 @@
 
 [▶️ ![Thumbnail](https://img.youtube.com/vi/q0r9f3Ht_l8/maxresdefault.jpg)](https://youtu.be/q0r9f3Ht_l8)
 
-#### “Big Data, Artificial Intelligence and Open Data in the Fight Against COVID-19 (Part 1)”
-- Language: 🇪🇸
-- Event: Ecosystem Techcare Colombia
-- Topic: Open data and AI applied to COVID-19
-- Duration: 11 min
-- Uploaded: 18 August 2021
-
-[▶️ ![Thumbnail](https://img.youtube.com/vi/fNx0zscQfPo/maxresdefault.jpg)](https://youtu.be/fNx0zscQfPo)
-
-#### “Big Data, Artificial Intelligence and Open Data in the Fight Against COVID-19 (Part 2)”
-- Language: 🇪🇸
-- Event: Ecosystem Techcare Colombia
-- Topic: Collaborative AI ecosystems and healthcare analytics
-- Duration: 11 min
-- Uploaded: 18 August 2021
-
-[▶️ ![Thumbnail](https://img.youtube.com/vi/mEzInsqVsi8/maxresdefault.jpg)](https://youtu.be/mEzInsqVsi8)
-
 #### “Application of Big Data to Clinical Medicine”
 - Language: 🇪🇸
 - Institution: University of Málaga
