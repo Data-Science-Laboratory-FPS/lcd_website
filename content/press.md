@@ -156,6 +156,14 @@
 - Servicio hospitalario: 061
 - Resumen: Estudio poblacional del Centro de Emergencias Sanitarias 061 y la Fundación Progreso y Salud sobre casi 250.000 llamadas por dolor torácico no traumático, que valida la seguridad del triaje telefónico andaluz y enmarca el análisis en el proyecto Triaje Telefónico para apoyar la priorización de emergencias con inteligencia artificial.
 
+#### “Las jornadas ‘IA para el Hospital del Futuro’ refuerzan la colaboración entre inteligencia artificial e innovación sanitaria”
+- Fecha: 02/02/2026
+- URL: https://www.ibsgranada.es/las-jornadas-ia-para-el-hospital-del-futuro-refuerzan-la-colaboracion-entre-inteligencia-artificial-e-innovacion-sanitaria/
+- Tipo de proyecto: Colaboración en IA e innovación sanitaria
+- Etiqueta clínica: IA sanitaria
+- Servicio hospitalario: Hospital Universitario Clínico San Cecilio
+- Resumen: Jornada organizada por ibs.GRANADA, Fundación AI Granada Research & Innovation y el Hospital Universitario Clínico San Cecilio para conectar a grupos de IA y Ciencia de Datos con unidades clínicas, celebrar más de 50 reuniones B2B e impulsar nuevos proyectos de inteligencia artificial aplicada a la atención hospitalaria.
+
 #### “El Virgen Macarena y la FPyS investigan predecir el tratamiento más eficaz en EII”
 - Fecha: 17/02/2026
 - URL: https://www.europapress.es/esandalucia/sevilla/noticia-hospital-macarena-sevilla-fpys-investigan-predecir-tratamiento-mas-eficaz-enfermedad-inflamatoria-intestinal-20260217110551.html
