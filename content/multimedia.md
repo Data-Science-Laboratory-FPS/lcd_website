@@ -41,14 +41,14 @@
 
 [▶️ ![Thumbnail](https://img.youtube.com/vi/a7rKSigNEKI/maxresdefault.jpg)](https://youtu.be/a7rKSigNEKI)
 
-#### “Complutense 2022 - Introduction to Machine Learning + Healthcare Data Crowdsourcing”
+#### “Clase Complutense 2022 - Introducción a Machine Learning + Crowdsourcing del dato sanitario”
 - Language: 🇪🇸
 - Institution: Universidad Complutense
 - Topic: Machine learning, crowdsourcing, healthcare data
 - Duration: 63 min
 - Uploaded: 02 June 2022
 
-[▶️ ![Thumbnail](https://img.youtube.com/vi/q0r9f3Ht_l8/maxresdefault.jpg)](https://youtu.be/q0r9f3Ht_l8)
+[▶️ ![Thumbnail](https://img.youtube.com/vi/qOr9f3Ht_I8/maxresdefault.jpg)](https://youtu.be/qOr9f3Ht_I8)
 
 #### “Big Data, Artificial Intelligence and Open Data in the Fight Against COVID-19 (Part 1)”
 - Language: 🇪🇸
