@@ -77,6 +77,19 @@
 
 [▶️ ![Thumbnail](https://img.youtube.com/vi/1yf3ht9qHR8/maxresdefault.jpg)](https://youtu.be/1yf3ht9qHR8)
 
+#### “III Semana de la IA - Sixth Roundtable: Review of R&D&I in Healthcare AI”
+- Language: 🇪🇸
+- Type: Academic roundtable
+- Event: III Semana de la IA
+- Institution: Facultad de Derecho, Universidad de Sevilla
+- Topic: Healthcare AI, R&D&I, biomedical data science, health innovation
+- Duration: 74 min
+- Uploaded: 13 November 2025
+- Location: Sevilla
+- Description: Roundtable moderated by Alfonso Carmona Martínez with Javier Montero Plata, Pedro Luis Navarro Gómez, José Antonio Trujillo Ruiz and Ángel Serrano Alarcón, focused on reviewing research, development and innovation in healthcare artificial intelligence.
+
+[▶️ ![Thumbnail](https://img.youtube.com/vi/0qJXMyBWP8w/maxresdefault.jpg)](https://www.youtube.com/watch?v=0qJXMyBWP8w)
+
 #### “Symposium: Myths and Evidence on AI for Health. A Perspective from Health Technology Assessment and Data Science”
 - Language: 🇪🇸
 - Type: Symposium talk
