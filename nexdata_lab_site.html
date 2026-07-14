@@ -459,198 +459,6 @@
             line-height: 1.6;
         }
 
-        .research-intro {
-            margin-bottom: 1.25rem;
-        }
-
-        .research-intro h3 {
-            color: #e8f5e9;
-            font-size: 1.45rem;
-            margin-bottom: 0.45rem;
-        }
-
-        .research-intro p {
-            color: #a5d6a7;
-            line-height: 1.6;
-        }
-
-        .research-summary {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 0.75rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .research-summary-item {
-            background: rgba(0, 230, 118, 0.08);
-            border: 1px solid rgba(0, 230, 118, 0.18);
-            border-radius: 14px;
-            padding: 0.9rem 1rem;
-        }
-
-        .research-summary-number {
-            color: #00e676;
-            display: block;
-            font-size: 1.55rem;
-            font-weight: 900;
-        }
-
-        .research-summary-label {
-            color: #a5d6a7;
-            display: block;
-            font-size: 0.82rem;
-            margin-top: 0.25rem;
-        }
-
-        .research-toolbar {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 1.5rem;
-        }
-
-        .research-count {
-            color: #a5d6a7;
-            font-size: 0.95rem;
-        }
-
-        .research-filters {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .research-filter {
-            border: 1px solid rgba(0, 230, 118, 0.25);
-            background: rgba(13, 25, 13, 0.75);
-            color: #a5d6a7;
-            border-radius: 999px;
-            padding: 0.45rem 0.8rem;
-            cursor: pointer;
-            font: inherit;
-            font-size: 0.85rem;
-            transition: all 0.2s ease;
-        }
-
-        .research-filter.active,
-        .research-filter:hover {
-            background: #00e676;
-            color: #0a0f0a;
-            border-color: #00e676;
-        }
-
-        .research-grid {
-            display: grid;
-            gap: 1rem;
-        }
-
-        .publication-card {
-            position: relative;
-            overflow: hidden;
-            background: linear-gradient(135deg, rgba(13, 25, 13, 0.88), rgba(13, 25, 13, 0.58));
-            border: 1px solid rgba(0, 230, 118, 0.16);
-            border-left: 6px solid var(--role-color, #66bb6a);
-            border-radius: 18px;
-            padding: 1.35rem;
-            transition: all 0.25s ease;
-        }
-
-        .publication-card::before {
-            content: '';
-            position: absolute;
-            inset: 0 0 auto 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--role-color, #66bb6a), transparent);
-            opacity: 0.8;
-        }
-
-        .publication-card.role-first {
-            background: linear-gradient(135deg, rgba(10, 38, 48, 0.92), rgba(13, 25, 13, 0.62));
-        }
-
-        .publication-card.role-senior {
-            background: linear-gradient(135deg, rgba(10, 45, 25, 0.92), rgba(13, 25, 13, 0.62));
-        }
-
-        .publication-card.role-coauthor {
-            background: linear-gradient(135deg, rgba(35, 35, 24, 0.84), rgba(13, 25, 13, 0.56));
-        }
-
-        .publication-card:hover {
-            border-color: rgba(0, 230, 118, 0.55);
-            box-shadow: 0 18px 45px rgba(0, 230, 118, 0.12);
-            transform: translateY(-4px);
-        }
-
-        .publication-meta {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.45rem;
-            align-items: center;
-            margin-bottom: 0.8rem;
-        }
-
-        .publication-pill {
-            border: 1px solid rgba(102, 187, 106, 0.28);
-            border-radius: 999px;
-            color: #a5d6a7;
-            background: rgba(0, 230, 118, 0.06);
-            font-size: 0.76rem;
-            font-weight: 700;
-            letter-spacing: 0.01em;
-            padding: 0.25rem 0.55rem;
-        }
-
-        .publication-pill.strong {
-            background: rgba(0, 230, 118, 0.18);
-            color: #e8f5e9;
-            border-color: rgba(0, 230, 118, 0.45);
-        }
-
-        .publication-date {
-            margin-left: auto;
-            color: #66bb6a;
-            font-size: 0.82rem;
-            white-space: nowrap;
-        }
-
-        .publication-card h3 {
-            color: #e8f5e9;
-            font-size: 1.08rem;
-            line-height: 1.45;
-            margin-bottom: 0.75rem;
-        }
-
-        .publication-authors {
-            color: #a5d6a7;
-            font-size: 0.9rem;
-            line-height: 1.65;
-            margin-bottom: 0.9rem;
-        }
-
-        .publication-authors strong {
-            color: #ffffff;
-        }
-
-        .publication-affiliation {
-            color: #8ecf91;
-            font-size: 0.82rem;
-            line-height: 1.5;
-            margin-bottom: 0.9rem;
-        }
-
-        .publication-link {
-            color: #00e676;
-            font-weight: 800;
-            text-decoration: none;
-        }
-
-        .publication-link:hover {
-            text-decoration: underline;
-        }
-
         .multimedia-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -888,48 +696,6 @@
             gfm: true
         });
 
-        const ROLE_META = {
-            senior: { label: 'Último autor', color: '#00e676' },
-            first: { label: 'Primer autor', color: '#4fc3f7' },
-            coauthor: { label: 'Coautor', color: '#cddc39' },
-            correspondent: { label: 'Correspondencia', color: '#ffb74d' }
-        };
-
-        const RESEARCH_PUBLICATIONS = [
-            { year: 2025, date: '2025-12-25', id: '', title: 'Oral Melatonin in Critically Ill Patients with COVID-19: A quasi-experimental pragmatic trial', authors: 'Sánchez-García M, et al.; Miguel Sánchez-García', journal: 'Journal of Medical Virology', jcr: true, article: false, quartile: '', impact: '', role: 'coauthor', fps: true, affiliation: '' },
-            { year: 2025, date: '2025-11-03', id: '10.1016/j.medine.2025.502349', title: 'Toward Transparent Clinical Decision Support in the ICU: A Multi-Window, Model-Agnostic Explainability Approach for 72-Hour Mortality Prediction Using the eICU Collaborative Research Database', authors: 'Daniel Gallardo Gómez; Sara Díaz; Javier Quintero Sosa; Claudia Jiménez Vázquez; Álvaro Ritoré-Hidalgo; Antonio Gutiérrez-Pizarraya; Miguel Ángel Armengol de la Hoz; María Recuerda Núñez; Ángel Estella', journal: 'Medicina Intensiva (English Edition)', jcr: true, article: true, quartile: 'Q2', impact: '4,7', role: 'senior', fps: true, affiliation: 'Data Science Lab, Progress and Health Public Foundation (FPS), Seville, Spain' },
-            { year: 2025, date: '2025-10-20', id: '10.1038/s41598-025-25370-0', title: 'Identifying key clinical and biochemical predictors of treatment outcomes in inflammatory bowel disease: a real-world evidence study', authors: 'Juan Luis González Rodríguez; Carmen Vías Parrado; Jaime Cordero-Ramos; Ahmed Bouallou; Miguel Ángel Armengol de la Hoz; Federico Argüelles Arias', journal: 'Scientific Reports', jcr: true, article: true, quartile: 'Q1', impact: '', role: 'senior', fps: true, affiliation: 'Data Science Lab, Fundación Progreso y Salud, Sevilla, España' },
-            { year: 2025, date: '2025-10-15', id: '10.1136/bmjhci-2025-101640', title: 'Bridging Generative AI and Healthcare Practice: Insights from the GenAI Health Hackathon at Hospital Clínic de Barcelona', authors: 'Santiago Frid; Octavi Bassegoda; Maria Araceli Camacho Mahamud; Gemma Sanjuan; Miguel Ángel Armengol de la Hoz; Leo Celi; Isaac Cano Franco; Gerard Anmella; Xavier Borrat Frigola', journal: 'BMJ Health & Care Informatics', jcr: true, article: true, quartile: 'Q1', impact: '4,4', role: 'coauthor', fps: true, affiliation: 'Big Data Department, PMC-FPS, Regional Government of Andalusia Ministry of Health and Consumer Affairs, Seville, Spain' },
-            { year: 2025, date: '2025-10-15', id: '10.55633/s3me/101.2025', title: 'Rendimiento diagnóstico del triaje telefónico para dolor torácico no traumático en el Centro Coordinador de Urgencias y Emergencias. Estudio poblacional en Andalucía.', authors: 'Carlos Romero-Olóriz; María José Luque-Hernández; Cristina López-López; Auxiliadora Caballero-García; Juan Antonio Péculo Carrasco; Miguel Ángel Armengol de la Hoz', journal: 'Emergencias', jcr: true, article: true, quartile: 'Q1', impact: '5,4', role: 'senior', fps: true, affiliation: 'Laboratorio de Ciencia de Datos, Fundación Progreso y Salud, Sevilla, España' },
-            { year: 2025, date: '2025-06-13', id: '10.55633/s3me/056.2025', title: 'Datos abiertos e inteligencia artificial: una ventana de oportunidad para pacientes sépticos en los servicios de urgencias', authors: 'Ángel Estella; Miguel Ángel Armengol de la Hoz; Juan González del Castillo; Grupo de trabajo INFURG-SEMES', journal: 'Emergencias', jcr: true, article: true, quartile: 'Q1', impact: '', role: 'coauthor', fps: true, affiliation: 'Departamento de Big Data, Fundación Pública Andaluza Progreso y Salud-FPS, Sevilla, España' },
-            { year: 2024, date: '2024-11-11', id: '10.1007/s44197-024-00298-2', title: 'Assessing COVID-19 Vaccine Effectiveness and Risk Factors for Severe Outcomes through Machine Learning Techniques: A Real-World Data Study in Andalusia, Spain', authors: 'Álvaro Serrano-Ortiz; Juan Luis Romero-Cabrera; Jaime Monserrat Villatoro; Jaime Cordero-Ramos; Rafael Ruiz-Montero; Álvaro Ritoré; Joaquín Dopazo; Jorge del Diego Salas; Valle García Sánchez; Inmaculada Salcedo-Leal; Miguel Ángel Armengol de la Hoz; Isaac Túnez; Miguel Ángel Guzmán', journal: 'Journal of Epidemiology and Global Health', jcr: true, article: true, quartile: 'Q1', impact: '3,8', role: 'senior', fps: true, affiliation: 'Big Data Department, PMC-FPS, Regional Ministry of Health and Consumer Affairs, Seville, Spain' },
-            { year: 2024, date: '2024-10-25', id: '10.13026/85z8-jq92', title: 'COVID Data for Shared Learning (CDSL): A comprehensive, multimodal COVID-19 dataset from HM Hospitales', authors: 'Álvaro Ritoré; Andreea M Oprescu; Alberto Estirado Bronchalo; Miguel Ángel Armengol de la Hoz', journal: 'PhysioNet', jcr: false, article: true, quartile: '', impact: '', role: 'senior', fps: true, affiliation: 'Big Data Department, PMC-Foundation Progress and Health, Regional Ministry of Health and Consumer Affairs, Andalucía' },
-            { year: 2024, date: '2024-09-16', id: '10.1371/journal.pdig.0000599', title: 'The role of Open Access Data in democratizing healthcare AI: A pathway to research enhancement, patient well-being and treatment equity in Andalusia, Spain', authors: 'Álvaro Ritoré; Claudia M. Jiménez; Juan Luis González; Juan Carlos Rejón-Parrilla; Pablo Hervás; Esteban Toro; Carlos Luis Parra-Calderón; Leo Anthony Celi; Isaac Túnez; Miguel Ángel Armengol de la Hoz', journal: 'PLOS Digital Health', jcr: false, article: true, quartile: '', impact: '', role: 'senior', fps: true, affiliation: 'Big Data Department, PMC, Fundación Progreso y Salud, Seville, Spain' },
-            { year: 2024, date: '2024-04-05', id: '10.1016/j.medine.2024.03.011', title: 'The open data revolution: Enhancing healthcare in intensive care units', authors: 'Sergio Muñoz-Lezcano; Carmen de la Fuente; Ángel Estella; Rosario Amaya-Villar; Antonio M Puppo-Moreno; Miguel Ángel Armengol-de la Hoz; José Garnacho-Montero', journal: 'Medicina Intensiva (English Edition)', jcr: true, article: true, quartile: 'Q2', impact: '2,7', role: 'senior', fps: true, affiliation: 'Big Data Department, PMC-FPS, Regional Ministry of Health and Consumer Affairs, Sevilla, Andalucía, Spain' },
-            { year: 2023, date: '2023-08-31', id: '37651262', title: 'Predicting ICU Mortality in Acute Respiratory Distress Syndrome Patients Using Machine Learning: The POSTCARDS Study', authors: 'Jesús Villar; Jesús M González-Martín; Jerónimo Hernández-González; Miguel A Armengol; Cristina Fernández; Arthur S Slutsky; POSTCARDS Network', journal: 'Critical Care Medicine', jcr: true, article: true, quartile: 'Q1', impact: '8,8', role: 'coauthor', fps: true, affiliation: 'Big Data Department, PMC-FPS, Regional Ministry of Health and Consumer Affairs, Sevilla, Spain' },
-            { year: 2023, date: '2023-08-24', id: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10462186/', title: 'Altered consciousness mediates the effect of hypernatremia, but not hyponatremia, on mortality among patients observed in the ICU', authors: 'Miguel Ángel Armengol de la Hoz; Sicheng Hao; Nathan Hutzel Raines; Leo Anthony Celi; Patricia Sánchez-González; Enrique J. Gómez; John Danziger', journal: 'Intensive Care Medicine', jcr: true, article: true, quartile: 'D1', impact: '38,9', role: 'first', fps: true, affiliation: 'Big Data Department, PMC, Progress and Health Foundation (FPS), Regional Ministry of Health of Andalucia' },
-            { year: 2023, date: '2023-07-25', id: '37500305', title: 'Predictors of mechanical ventilation and mortality in critically ill patients with COVID-19 pneumonia', authors: 'Sergio Muñoz Lezcano; Miguel Ángel Armengol de la Hoz; Alberto Corbi; Fernando López; Miguel Sánchez García; Antonio Nuñez Reiz; Tomás Fariña González; Viktor Yordanov Zlatkov', journal: 'Medicina Intensiva', jcr: true, article: true, quartile: 'Q3', impact: '3,0', role: 'first', fps: true, affiliation: 'Big Data Department, PMC-FPS, Consejería de Salud y Consumo, Junta de Andalucía, Spain' },
-            { year: 2023, date: '2023-06-24', id: '37355751', title: 'A guide to sharing open healthcare data under the General Data Protection Regulation', authors: 'Jip W T M de Kok; Miguel Á Armengol de la Hoz; Ymke de Jong; Véronique Brokke; Paul W G Elbers; Xavier Borrat', journal: 'Scientific Data', jcr: true, article: true, quartile: 'Q1', impact: '9,8', role: 'first', fps: true, affiliation: 'Big Data Department, PMC, Fundacion Progreso y Salud (FPS), Regional Ministry of Health of Andalucia, Seville, Andalucia, Spain' },
-            { year: 2023, date: '2023-05-18', id: '37203740', title: 'PDSS: A Pharmacological Decision Support System for Diabetics Patients with COVID-19', authors: 'Isabel Amaya-Rodriguez; Nekane Larburu; María Rollán Martinez-Herrera; Kristin Rebescher; Iván Macia; Miguel A Armengol De La Hoz; Cristina Rubio-Escudero; Alba Garin-Muga', journal: 'Studies in Health Technology and Informatics', jcr: false, article: true, quartile: '', impact: '', role: 'coauthor', fps: true, affiliation: 'Big Data Department - Regional Ministry of Health of Southern Spain, Spain' },
-            { year: 2023, date: '2023-04-09', id: '37040818', title: 'A Large-Scale Multicenter Retrospective Study on Nephrotoxicity Associated With Empiric Broad-Spectrum Antibiotics in Critically Ill Patients', authors: 'Alyssa Y Chen; Chih-Ying Deng; Paola Calvachi-Prieto; Miguel Ángel Armengol de la Hoz; Afeefah Khazi-Syed; Alon Dagan', journal: 'Chest', jcr: true, article: true, quartile: 'D1', impact: '10,1', role: 'coauthor', fps: false, affiliation: 'Laboratory for Computational Physiology, MIT; Harvard Medical School; Universidad Politécnica de Madrid' },
-            { year: 2023, date: '2023-03-01', id: '36652594', title: 'Hypotension and Cardiac Surgical Outcomes: Reply', authors: 'Valluvan Rangasamy; Miguel Armengol de la Hoz; Balachundhar Subramaniam', journal: 'Anesthesiology', jcr: true, article: false, quartile: '', impact: '8,8', role: 'coauthor', fps: false, affiliation: 'Beth Israel Deaconess Medical Center, Harvard Medical School, Boston' },
-            { year: 2022, date: '2022-10-11', id: '36812632', title: 'High resolution data modifies intensive care unit dialysis outcome predictions as compared with low resolution administrative data set', authors: 'Jennifer Ziegler; Barret N. M. Rush; Eric R. Gottlieb; Leo Anthony Celi; Miguel Ángel Armengol de la Hoz', journal: 'PLOS Digital Health', jcr: false, article: true, quartile: '', impact: '', role: 'senior', fps: true, affiliation: 'Big Data Department, Fundacion Progreso y Salud, Regional Ministry of Health of Andalucia' },
-            { year: 2022, date: '2022-08-12', id: '35585198', title: 'Reporting guideline for the early-stage clinical evaluation of decision support systems driven by artificial intelligence: DECIDE-AI', authors: 'Baptiste Vasey; Myura Nagendran; Bruce Campbell; David A Clifton; DECIDE-AI expert group (Miguel Ángel Armengol de la Hoz)', journal: 'Nature Medicine', jcr: true, article: true, quartile: 'D1', impact: '82,9', role: 'coauthor', fps: true, affiliation: 'Big Data Department, Fundación Pública Andaluza Progreso y Salud, Regional Ministry of Health of Southern Spain, Sevilla, Spain' },
-            { year: 2022, date: '2022-07-05', id: '35789446', title: 'Developing and Validating Multi-Modal Models for Mortality Prediction in COVID-19 Patients: a Multi-center Retrospective Study', authors: 'SJoy Tzung-Yu Wu; Miguel Ángel Armengol de la Hoz; Po-Chih Kuo; Joseph Alexander Paguio; Leo Anthony Celi', journal: 'Journal of Digital Imaging', jcr: true, article: true, quartile: 'Q1', impact: '4,4', role: 'first', fps: true, affiliation: 'Big Data Department, Fundacion Progreso Y Salud, Regional Ministry of Health of Andalucia, Andalucia, Spain' },
-            { year: 2022, date: '2022-06-01', id: '35188970', title: 'Intraoperative Hypotension and Acute Kidney Injury, Stroke, and Mortality during and outside Cardiopulmonary Bypass', authors: 'Miguel Armengol de la Hoz; Valluvan Rangasamy; Andres Brenes Bastos; Xinling Xu; Victor Novack; Bernd Saugel; Balachundhar Subramaniam', journal: 'Anesthesiology', jcr: true, article: true, quartile: 'D1', impact: '8,8', role: 'first', fps: true, affiliation: 'Regional Ministry of Health Andalucia, Big Data Department, Seville, Spain' },
-            { year: 2022, date: '2022-06-01', id: '35688512', title: 'Operationalising fairness in medical algorithms', authors: 'Sonali Parbhoo; Judy Wawira Gichoya; Leo Anthony Celi; Miguel Ángel Armengol de la Hoz', journal: 'BMJ Health & Care Informatics', jcr: true, article: true, quartile: 'Q2', impact: '4,1', role: 'senior', fps: true, affiliation: 'Regional Ministry of Health Southern Spain, Big Data Department, Seville, Spain' },
-            { year: 2022, date: '2022-04-23', id: '35473782', title: 'Sex-Specific Differences in Ventricular Remodeling and Response After Cardiac Resynchronization Therapy', authors: 'Dimitrios Varrias; Miguel Armengol De La Hoz; Megan Zhao; Margarida Pujol; Saumya Das', journal: 'The American Journal of Cardiology', jcr: true, article: true, quartile: 'Q3', impact: '2,8', role: 'first', fps: false, affiliation: 'Harvard Medical School; Massachusetts General Hospital; MIT Critical Data; Universidad Politécnica de Madrid' },
-            { year: 2022, date: '2022-04-11', id: '35410278', title: 'A novel Vascular Leak Index identifies sepsis patients with a higher risk for in-hospital death and fluid accumulation', authors: 'Jay Chandra; Miguel A Armengol de la Hoz; Gwendolyn Lee; Alexandria Lee; Patrick Thoral; Paul Elbers; Leo Anthony Celi; David A Kaufman', journal: 'Critical Care', jcr: true, article: true, quartile: 'Q1', impact: '15,1', role: 'first', fps: true, affiliation: 'Big Data Department, Fundación Progreso y Salud, Regional Ministry of Health of Andalucia, Sevilla, Spain' },
-            { year: 2022, date: '2022-03-02', id: '35234175', title: 'Systematic Review and Comparison of Publicly Available ICU Data Sets-A Decision Guide for Clinicians and Data Scientists', authors: 'Christopher M Sauer; Tariq A Dam; Leo A Celi; Martin Faltys; Miguel A A de la Hoz; Patrick J Thoral; Paul Elbers', journal: 'Critical Care Medicine', jcr: true, article: true, quartile: 'Q1', impact: '8,8', role: 'coauthor', fps: true, affiliation: 'Fdn Progreso & Salud, Big Data Dept, Regional Ministry of Health Andalucia, Seville, Spain' },
-            { year: 2021, date: '2021-09-30', id: '34649408', title: 'Can a low-cost exercise monitor provide useful heart rate monitoring for use in low-resource emergency departments?', authors: "Thomas A O'Mara; Miguel Armengol de la Hoz; Oren J Mechanic; Alon Dagan", journal: 'Clinical and Experimental Emergency Medicine', jcr: true, article: true, quartile: 'Q3', impact: '', role: 'coauthor', fps: false, affiliation: 'University of New England; Massachusetts General Hospital; MIT; Universidad Politécnica de Madrid' },
-            { year: 2021, date: '2021-03-17', id: '33729454', title: 'Metabolic Cost of Exercise Initiation in Patients With Heart Failure With Preserved Ejection Fraction vs Community-Dwelling Adults', authors: 'Ravi V Shah; Mark W Schoenike; Miguel Á Armengol de la Hoz; Thomas F Cunningham; Gregory D Lewis', journal: 'JAMA Cardiology', jcr: true, article: true, quartile: 'D1', impact: '30,2', role: 'first', fps: false, affiliation: 'Department of Medicine, Massachusetts General Hospital, Harvard Medical School, Boston' },
-            { year: 2021, date: '2021-07-12', id: '32747203', title: 'Machine Learning Models with Preoperative Risk Factors and Intraoperative Hypotension Parameters Predict Mortality After Cardiac Surgery', authors: 'Marta Priscila Bento Fernandes; Miguel Armengol de la Hoz; Valluvan Rangasamy; Balachundhar Subramaniam', journal: 'Journal of Cardiothoracic and Vascular Anesthesia', jcr: true, article: true, quartile: 'Q2', impact: '2,9', role: 'first', fps: false, affiliation: 'Massachusetts General Hospital; Universidad Politécnica de Madrid' },
-            { year: 2020, date: '2020-11-24', id: '33251513', title: 'Association of chloride ion and sodium-chloride difference with acute kidney injury and mortality in critically ill patients', authors: 'Satoshi Kimura; Miguel Angel Armengol de la Hoz; Nathan Hutzel Raines; Leo Anthony Celi', journal: 'Critical Care Explorations', jcr: false, article: true, quartile: '', impact: '', role: 'first', fps: false, affiliation: 'Massachusetts General Hospital; Universidad Politécnica de Madrid' },
-            { year: 2020, date: '2020-08-27', id: '32855209', title: 'Use of do-not-resuscitate orders for critically ill patients with ESKD', authors: 'John Danziger; Miguel Ángel Armengol de la Hoz; Leo Anthony Celi; Robert A Cohen; Kenneth J Mukamal', journal: 'Journal of the American Society of Nephrology', jcr: true, article: true, quartile: 'D1', impact: '10,1', role: 'coauthor', fps: false, affiliation: 'Harvard Medical School; Massachusetts General Hospital; MIT; Universidad Politécnica de Madrid' },
-            { year: 2020, date: '2020-04-28', id: '32360728', title: 'Incidence and risk model development for severe tachypnea following terminal extubation', authors: 'Corey R Fehnel; Miguel Armengol de la Hoz; Leo A Celi; Margaret L Campbell; Susan L Mitchell', journal: 'Chest', jcr: true, article: true, quartile: 'D1', impact: '9,4', role: 'first', fps: false, affiliation: 'Harvard Medical School; Massachusetts General Hospital; MIT; Universidad Politécnica de Madrid' },
-            { year: 2020, date: '2020-03-15', id: '31948262', title: 'Temporal Trends in Critical Care Outcomes in U.S. Minority-Serving Hospitals', authors: 'John Danziger; Miguel Ángel Armengol de la Hoz; Wenyuan Li; Matthieu Komorowski; Omar Badawi', journal: 'American Journal of Respiratory and Critical Care Medicine', jcr: true, article: true, quartile: 'D1', impact: '21,4', role: 'coauthor', fps: false, affiliation: 'Harvard Medical School; Massachusetts General Hospital; MIT; Universidad Politécnica de Madrid' }
-        ];
-
         // Simulación de contenido MD (en producción, esto vendría de archivos)
         const content = {
             inicio: `# Transformamos datos en decisiones inteligentes
@@ -1056,7 +822,37 @@ MBA + Data Science. Experto en traducir insights técnicos a estrategia de negoc
 
 Especialista en visión por computadora y procesamiento de imágenes. Ex-Tesla Autopilot team. Experta en PyTorch y OpenCV.`,
 
-            investigacion: `Investigación renderizada dinámicamente desde RESEARCH_PUBLICATIONS.`,
+            investigacion: `### 📄 Papers Publicados
+
+**"Efficient Transformer Architecture for Time Series Forecasting"**
+*NeurIPS 2024 • Mendoza, C., Rodríguez, A.*
+
+Arquitectura transformer optimizada que reduce en 40% el tiempo de entrenamiento en series temporales largas.
+
+---
+
+**"Federated Learning for Healthcare: Privacy-Preserving Predictions"**
+*ICML 2024 • González, M., Torres, J.*
+
+Framework de aprendizaje federado que permite entrenar modelos médicos sin compartir datos sensibles.
+
+---
+
+**"Real-time Fraud Detection using Graph Neural Networks"**
+*KDD 2023 • Mendoza, C., Martínez, L.*
+
+Sistema de detección de fraude basado en GNN que procesa relaciones complejas en tiempo real.
+
+---
+
+### 📝 Blog Técnico
+
+**Últimos artículos:**
+
+- **"De Zero a Hero en MLOps"** - Guía práctica para poner modelos en producción
+- **"LLMs en Español: Fine-tuning efectivo"** - Técnicas para adaptar modelos de lenguaje
+- **"Optimización de Hiperparámetros con Optuna"** - Tutorial hands-on
+- **"Data Quality: El enemigo silencioso del ML"** - Best practices`,
 
             multimedia: `### 🎙️ Podcast: "Data Talks"
 
@@ -1276,80 +1072,9 @@ Agenda una consultoría gratuita y descubre cómo la ciencia de datos puede impu
         }
 
         // Renderizar Investigación
-        function publicationUrl(id) {
-            if (!id) return '';
-            if (id.startsWith('http')) return id;
-            if (id.includes('/')) return `https://doi.org/${id}`;
-            return `https://pubmed.ncbi.nlm.nih.gov/${id}/`;
-        }
-
-        function renderResearch(activeYear = 'all', activeRole = 'all') {
-            const years = [...new Set(RESEARCH_PUBLICATIONS.map((p) => p.year))].sort((a, b) => b - a);
-            const filtered = RESEARCH_PUBLICATIONS
-                .filter((p) => activeYear === 'all' || String(p.year) === String(activeYear))
-                .filter((p) => activeRole === 'all' || p.role === activeRole)
-                .sort((a, b) => b.date.localeCompare(a.date));
-
-            const yearButtons = ['all', ...years].map((year) => `
-                <button class="research-filter ${String(activeYear) === String(year) ? 'active' : ''}" onclick="renderResearch('${year}', '${activeRole}')">
-                    ${year === 'all' ? 'Todo' : year}
-                </button>
-            `).join('');
-
-            const roleButtons = ['all', ...Object.keys(ROLE_META)].map((role) => `
-                <button class="research-filter ${activeRole === role ? 'active' : ''}" onclick="renderResearch('${activeYear}', '${role}')">
-                    ${role === 'all' ? 'Todos los roles' : ROLE_META[role].label}
-                </button>
-            `).join('');
-
-            const cards = filtered.map((p) => {
-                const role = ROLE_META[p.role] || ROLE_META.coauthor;
-                const url = publicationUrl(p.id);
-                const authors = p.authors.replace(/Miguel (Ángel|Angel|Á|A|A\.)?\s*Armengol(?: de la Hoz| De La Hoz)?/gi, (match) => `<strong>${match}</strong>`);
-                const labels = [
-                    `<span class="publication-pill strong">${p.journal}</span>`,
-                    p.quartile ? `<span class="publication-pill">${p.quartile}</span>` : '',
-                    p.impact ? `<span class="publication-pill">IF ${p.impact}</span>` : '',
-                    `<span class="publication-pill">${p.jcr ? 'JCR' : 'No JCR'}</span>`,
-                    `<span class="publication-pill">${p.article ? 'Artículo' : 'No artículo'}</span>`,
-                    `<span class="publication-pill">${role.label}</span>`,
-                    p.fps ? `<span class="publication-pill">Filiación FPS</span>` : ''
-                ].filter(Boolean).join('');
-
-                return `
-                    <article class="publication-card role-${p.role}" style="--role-color: ${role.color}">
-                        <div class="publication-meta">
-                            ${labels}
-                            <time class="publication-date" datetime="${p.date}">${new Date(p.date).toLocaleDateString('es-ES', { day: '2-digit', month: 'short', year: 'numeric' })}</time>
-                        </div>
-                        <h3>${p.title}</h3>
-                        <p class="publication-authors">${authors}</p>
-                        ${p.affiliation ? `<p class="publication-affiliation"><strong>Afiliación:</strong> ${p.affiliation}</p>` : ''}
-                        ${url ? `<a class="publication-link" href="${url}" target="_blank" rel="noopener noreferrer">Leer publicación →</a>` : '<span class="publication-pill">Referencia pendiente de DOI/PMID</span>'}
-                    </article>
-                `;
-            }).join('');
-
-            const totalJcr = RESEARCH_PUBLICATIONS.filter((p) => p.jcr).length;
-            const topImpact = RESEARCH_PUBLICATIONS.filter((p) => p.impact).sort((a, b) => parseFloat(b.impact.replace(',', '.')) - parseFloat(a.impact.replace(',', '.')))[0];
-
-            document.getElementById('research-content').innerHTML = `
-                <div class="research-intro">
-                    <h3>📄 Published papers</h3>
-                    <p>Listado curado de publicaciones con diferencias visuales por rol: primer autor en azul, último autor en verde y coautor en amarillo.</p>
-                </div>
-                <div class="research-summary">
-                    <div class="research-summary-item"><span class="research-summary-number">${RESEARCH_PUBLICATIONS.length}</span><span class="research-summary-label">publicaciones</span></div>
-                    <div class="research-summary-item"><span class="research-summary-number">${totalJcr}</span><span class="research-summary-label">indexadas JCR</span></div>
-                    <div class="research-summary-item"><span class="research-summary-number">${RESEARCH_PUBLICATIONS.filter((p) => p.fps).length}</span><span class="research-summary-label">con filiación FPS</span></div>
-                    <div class="research-summary-item"><span class="research-summary-number">IF ${topImpact.impact}</span><span class="research-summary-label">mayor impacto: ${topImpact.journal}</span></div>
-                </div>
-                <div class="research-toolbar">
-                    <div class="research-count"><strong>${filtered.length}</strong> de ${RESEARCH_PUBLICATIONS.length} publicaciones visibles</div>
-                    <div class="research-filters">${yearButtons}${roleButtons}</div>
-                </div>
-                <div class="research-grid">${cards}</div>
-            `;
+        function renderResearch() {
+            const html = marked.parse(content.investigacion);
+            document.getElementById('research-content').innerHTML = html;
         }
 
         // Renderizar Multimedia
