@@ -540,7 +540,6 @@
             color: var(--text);
         }
         .papers-headline h2 i { color: var(--green); margin-right: .35rem; }
-        .papers-counter { font-size: .85rem; color: #4f534d; margin: 0; }
         .papers-list {
             display: grid;
             grid-template-columns: 1fr;
@@ -561,14 +560,15 @@
             min-height: 100%;
             text-decoration: none;
             color: inherit;
-            background: rgba(255,255,255,.68);
-            border: 0;
-            border-radius: 12px;
-            padding: .8rem .9rem;
-            transition: transform .18s ease, background-color .18s ease, box-shadow .18s ease;
+            background: #ffffff;
+            border: 1px solid rgba(157,214,191,.45);
+            border-radius: 14px;
+            padding: 1rem 1.1rem;
+            box-shadow: 0 6px 20px rgba(0,121,50,.12);
+            transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
             position: relative;
         }
-        .paper-card:hover, .paper-card:focus-visible { transform: translateY(-2px); background: #fff; box-shadow: 0 8px 18px rgba(0,121,50,.07); }
+        .paper-card:hover, .paper-card:focus-visible { transform: translateY(-4px); border-color: var(--green); box-shadow: 0 12px 30px rgba(0,121,50,.18); }
         .paper-card:focus-visible { outline: 3px solid rgba(0,121,50,.35); outline-offset: 2px; }
         .paper-meta-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .45rem; margin-bottom: .45rem; }
         .paper-journal { display: inline-flex; align-items: center; gap: .32rem; color: #007932; font-size: .75rem; font-weight: 700; line-height: 1.2; }
@@ -588,29 +588,6 @@
         .paper-card-disabled { cursor: default; opacity: .86; }
         .paper-card-disabled .read-affordance { display: none; }
 
-        .papers-summary {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: .75rem;
-            margin: 0 0 1rem;
-        }
-        .papers-summary-item {
-            background: rgba(0,121,50,.07);
-            border: 1px solid rgba(0,121,50,.16);
-            border-radius: 12px;
-            padding: .8rem .9rem;
-        }
-        .papers-summary-number { display:block; color:#007932; font-size:1.25rem; font-weight:800; line-height:1.15; }
-        .papers-summary-label { display:block; color:#4f534d; font-size:.78rem; margin-top:.25rem; }
-        .papers-filter-row { display:flex; flex-wrap:wrap; gap:.45rem; margin: 0 0 1rem; }
-        .papers-filter-btn { border:1px solid rgba(0,121,50,.24); background:rgba(255,255,255,.8); color:#007932; border-radius:999px; padding:.34rem .7rem; font-size:.78rem; font-weight:700; cursor:pointer; }
-        .papers-filter-btn[aria-pressed="true"], .papers-filter-btn:hover { background:#007932; color:#fff; }
-        .paper-card { border-left: 5px solid var(--role-color, rgba(0,121,50,.28)); }
-        .paper-card.role-first { background: linear-gradient(135deg, rgba(79,195,247,.16), rgba(255,255,255,.82)); }
-        .paper-card.role-senior { background: linear-gradient(135deg, rgba(0,121,50,.14), rgba(255,255,255,.82)); }
-        .paper-card.role-coauthor { background: linear-gradient(135deg, rgba(205,220,57,.18), rgba(255,255,255,.82)); }
-        .paper-pills { display:flex; flex-wrap:wrap; gap:.35rem; margin:.5rem 0 .55rem; }
-        .paper-pill { color:#2d5a3d; background:rgba(0,121,50,.08); border:1px solid rgba(0,121,50,.16); border-radius:999px; padding:.18rem .48rem; font-size:.68rem; font-weight:800; line-height:1.2; }
         .paper-affiliation { color:#607065; font-size:.72rem; line-height:1.35; margin-top:.45rem; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
         .paper-authors .highlight-author { color:#2e2925; font-weight:800; }
 @media (prefers-reduced-motion: reduce) {
@@ -1294,12 +1271,6 @@
         }
 
         async function renderResearch() {
-            const roleMeta = {
-                senior: { label: 'Último autor', color: '#007932' },
-                first: { label: 'Primer autor', color: '#0277bd' },
-                coauthor: { label: 'Coautor', color: '#8a9a12' },
-                correspondent: { label: 'Correspondencia', color: '#b26a00' }
-            };
             const publications = [
             { year: 2025, date: '2025-12-25', id: '', title: 'Oral Melatonin in Critically Ill Patients with COVID-19: A quasi-experimental pragmatic trial', authors: 'Sánchez-García M, et al.; Miguel Sánchez-García', journal: 'Journal of Medical Virology', jcr: true, article: false, quartile: '', impact: '', role: 'coauthor', fps: true, affiliation: '' },
             { year: 2025, date: '2025-11-03', id: '10.1016/j.medine.2025.502349', title: 'Toward Transparent Clinical Decision Support in the ICU: A Multi-Window, Model-Agnostic Explainability Approach for 72-Hour Mortality Prediction Using the eICU Collaborative Research Database', authors: 'Daniel Gallardo Gómez; Sara Díaz; Javier Quintero Sosa; Claudia Jiménez Vázquez; Álvaro Ritoré-Hidalgo; Antonio Gutiérrez-Pizarraya; Miguel Ángel Armengol de la Hoz; María Recuerda Núñez; Ángel Estella', journal: 'Medicina Intensiva (English Edition)', jcr: true, article: true, quartile: 'Q2', impact: '4,7', role: 'senior', fps: true, affiliation: 'Data Science Lab, Progress and Health Public Foundation (FPS), Seville, Spain' },
@@ -1337,8 +1308,6 @@
             const pageSize = 6;
             const root = document.getElementById('research-content');
             let currentPage = 1;
-            let activeYear = 'all';
-            let activeRole = 'all';
 
             const publicationUrl = (id) => {
                 if (!id) return '';
@@ -1347,13 +1316,9 @@
                 return `https://pubmed.ncbi.nlm.nih.gov/${id}/`;
             };
             const highlightAuthor = (authors) => authors.replace(/Miguel (Ángel|Angel|Á|A|A\.)?\s*Armengol(?: de la Hoz| De La Hoz|-de la Hoz)?/gi, '<span class="highlight-author">$&</span>');
-            const impactValue = (paper) => Number.parseFloat(String(paper.impact || '0').replace(',', '.')) || 0;
-            const years = [...new Set(publications.map(p => p.year))].sort((a, b) => b - a);
 
             function filteredPublications() {
-                return sortNewestFirst(publications, paper => paper.date || paper.year)
-                    .filter(p => activeYear === 'all' || String(p.year) === String(activeYear))
-                    .filter(p => activeRole === 'all' || p.role === activeRole);
+                return sortNewestFirst(publications, paper => paper.date || paper.year);
             }
 
             function paint() {
@@ -1363,43 +1328,22 @@
                 const start = (currentPage - 1) * pageSize;
                 const pageItems = visible.slice(start, start + pageSize);
                 const cards = pageItems.map((paper, i) => {
-                    const role = roleMeta[paper.role] || roleMeta.coauthor;
                     const url = publicationUrl(paper.id || paper.url || '');
                     const linkAttrs = url ? `href="${url}" target="_blank" rel="noopener noreferrer"` : '';
-                    const pills = [
-                        paper.quartile ? `<span class="paper-pill">${paper.quartile}</span>` : '',
-                        paper.impact ? `<span class="paper-pill">IF ${paper.impact}</span>` : '',
-                        `<span class="paper-pill">${paper.jcr ? 'JCR' : 'No JCR'}</span>`,
-                        `<span class="paper-pill">${paper.article ? 'Artículo' : 'No artículo'}</span>`,
-                        `<span class="paper-pill">${role.label}</span>`,
-                        paper.fps ? '<span class="paper-pill">Filiación FPS</span>' : ''
-                    ].filter(Boolean).join('');
-                    return `<a class="paper-card role-${paper.role} ${url ? '' : 'paper-card-disabled'}" ${linkAttrs} style="--role-color: ${role.color}; animation: fadeIn .35s ease ${i * 70}ms both;">
+                    return `<a class="paper-card ${url ? '' : 'paper-card-disabled'}" ${linkAttrs} style="animation: fadeIn .35s ease ${i * 70}ms both;">
                         <div class="paper-meta-row"><span class="paper-journal"><i class="fa-solid fa-book-medical" aria-hidden="true"></i>${paper.journal}</span><span class="paper-year">${paper.date || paper.year}</span></div>
                         <h3 class="paper-title">${paper.title}</h3>
-                        <div class="paper-pills">${pills}</div>
                         <div class="paper-authors">${highlightAuthor(paper.authors)}</div>
                         ${paper.affiliation ? `<div class="paper-affiliation"><strong>Afiliación:</strong> ${paper.affiliation}</div>` : ''}
                         <span class="read-affordance"><i class="fa-regular fa-newspaper" aria-hidden="true"></i>${url ? 'Read article' : 'Referencia pendiente'}</span>
                     </a>`;
                 }).join('');
-                const yearButtons = ['all', ...years].map(year => `<button class="papers-filter-btn" data-filter="year" data-value="${year}" aria-pressed="${String(activeYear) === String(year)}">${year === 'all' ? 'Todos los años' : year}</button>`).join('');
-                const roleButtons = ['all', ...Object.keys(roleMeta)].map(role => `<button class="papers-filter-btn" data-filter="role" data-value="${role}" aria-pressed="${activeRole === role}">${role === 'all' ? 'Todos los roles' : roleMeta[role].label}</button>`).join('');
                 const pageButtons = Array.from({ length: totalPages }, (_, idx) => {
                     const page = idx + 1;
                     return `<button class="papers-page-btn" data-page="${page}" ${page === currentPage ? 'aria-current="page"' : ''}>${page}</button>`;
                 }).join('');
-                const topImpact = publications.filter(p => p.impact).sort((a, b) => impactValue(b) - impactValue(a))[0];
-
                 root.innerHTML = `<section class="papers-shell" aria-label="Published Papers">
-                    <div class="papers-headline"><h2><i class="fa-solid fa-microscope" aria-hidden="true"></i> Published Papers</h2><p class="papers-counter">${visible.length} of ${publications.length} publications</p></div>
-                    <div class="papers-summary">
-                        <div class="papers-summary-item"><span class="papers-summary-number">${publications.length}</span><span class="papers-summary-label">publicaciones</span></div>
-                        <div class="papers-summary-item"><span class="papers-summary-number">${publications.filter(p => p.jcr).length}</span><span class="papers-summary-label">indexadas JCR</span></div>
-                        <div class="papers-summary-item"><span class="papers-summary-number">${publications.filter(p => p.fps).length}</span><span class="papers-summary-label">con filiación FPS</span></div>
-                        <div class="papers-summary-item"><span class="papers-summary-number">IF ${topImpact?.impact || '-'}</span><span class="papers-summary-label">mayor impacto</span></div>
-                    </div>
-                    <div class="papers-filter-row">${yearButtons}${roleButtons}</div>
+                    <div class="papers-headline"><h2><i class="fa-solid fa-microscope" aria-hidden="true"></i> Published Papers</h2></div>
                     <div class="papers-list">${cards}</div>
                     <div class="papers-pagination">
                         <p class="papers-page-info">Showing ${visible.length ? start + 1 : 0}-${Math.min(start + pageSize, visible.length)} of ${visible.length} · Page ${currentPage} of ${totalPages}</p>
@@ -1411,12 +1355,6 @@
                     </div>
                 </section>`;
 
-                root.querySelectorAll('.papers-filter-btn').forEach(btn => btn.addEventListener('click', () => {
-                    if (btn.dataset.filter === 'year') activeYear = btn.dataset.value;
-                    if (btn.dataset.filter === 'role') activeRole = btn.dataset.value;
-                    currentPage = 1;
-                    paint();
-                }));
                 root.querySelectorAll('.papers-page-btn').forEach(btn => btn.addEventListener('click', () => {
                     const target = btn.dataset.page;
                     if (target === 'prev' && currentPage > 1) currentPage -= 1;
