@@ -85,6 +85,17 @@
 
 ## 🎙️ Podcasts & Media Interviews
 
+#### “La mejora del dato sanitario requiere más formación del internista en IA”
+- Language: 🇪🇸
+- Type: Media interview
+- Institution: Redacción Médica
+- Topic: artificial intelligence, Internal Medicine, healthcare data quality, clinical training
+- Duration: 3 min
+- Uploaded: 27 November 2025
+- Description: Experts in Internal Medicine discuss the benefits and current barriers to using artificial intelligence in clinical practice, emphasizing the need for greater clinician involvement and training to improve the quality and use of healthcare data.
+
+[▶️ ![Thumbnail](https://img.youtube.com/vi/f4kiftlOiR0/maxresdefault.jpg)](https://youtu.be/f4kiftlOiR0)
+
 #### “Podcast - AI Applied to Vaccination | One Health – Puentes de Salud”
 - Language: 🇪🇸
 - Program: Puentes One Health - Conectando Generaciones a través de la Vacunación
