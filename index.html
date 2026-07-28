@@ -403,6 +403,7 @@
             border-radius: 24px;
             padding: 2.5rem;
             transition: all .4s ease;
+            position: relative;
         }
 
         .project-card:hover { transform: translateY(-10px); border-color: var(--mint); box-shadow: 0 20px 60px rgba(157,214,191,.3); }
@@ -415,6 +416,47 @@
         .project-card p  { color: #2d5a3d; line-height: 1.6; margin-bottom: 1.5rem; }
         .project-link    { color: var(--green); font-size: .9rem; text-decoration: none; display: block; margin-bottom: .75rem; }
         .project-link:hover { text-decoration: underline; }
+        .project-info-row { display: flex; justify-content: flex-end; margin-top: 1rem; }
+        .project-info-toggle {
+            width: 1.7rem;
+            height: 1.7rem;
+            border: 1px solid rgba(0,121,50,.45);
+            border-radius: 999px;
+            background: #f5fbf6;
+            color: var(--green);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1;
+            cursor: pointer;
+            transition: background .2s ease, color .2s ease;
+        }
+        .project-info-toggle:hover,
+        .project-info-toggle:focus-visible,
+        .project-card.info-open .project-info-toggle { background: var(--green); color: #fff; outline: none; }
+        .project-info-panel {
+            opacity: 0;
+            pointer-events: none;
+            position: absolute;
+            left: 2.5rem;
+            right: 2.5rem;
+            bottom: 4.8rem;
+            padding: 1rem;
+            background: #fff;
+            border: 1px solid rgba(0,121,50,.3);
+            border-radius: 10px;
+            box-shadow: 0 10px 24px rgba(0,0,0,.14);
+            color: #2d5a3d;
+            font-size: .9rem;
+            line-height: 1.55;
+            transform: translateY(4px);
+            transition: opacity .2s ease, transform .2s ease;
+            z-index: 5;
+        }
+        .project-card.info-open .project-info-panel { opacity: 1; pointer-events: auto; transform: translateY(0); }
+        .project-info-panel h4 { color: var(--green); font-size: 1.05rem; margin: 0 0 .7rem; }
 
         /* team */
         .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem; }
@@ -1106,11 +1148,15 @@
                 const descriptionIdx  = ls.findIndex(l => l.toLowerCase().startsWith('description:'));
                 const summaryIdx      = ls.findIndex(l => l.toLowerCase().startsWith('summary:'));
                 const fundingLine     = ls.find(l => l.toLowerCase().startsWith('funding:')) || '';
+                const infoTitleLine   = ls.find(l => l.toLowerCase().startsWith('info-title:')) || '';
+                const infoLine        = ls.find(l => l.toLowerCase().startsWith('info:')) || '';
                 const meta        = metaLine     ? metaLine.replace(/^meta:\s*/i, '') : '';
                 const website     = websiteLine  ? websiteLine.replace(/^website:\s*/i, '') : '';
                 const description = descriptionIdx >= 0 ? ls[descriptionIdx].replace(/^description:\s*/i, '') : '';
                 const summary     = summaryIdx >= 0     ? ls.slice(summaryIdx).join(' ').replace(/^summary:\s*/i, '') : '';
                 const funding     = fundingLine ? fundingLine.replace(/^funding:\s*/i, '').trim().toLowerCase() : '';
+                const infoTitle   = infoTitleLine ? infoTitleLine.replace(/^info-title:\s*/i, '') : '';
+                const info        = infoLine ? infoLine.replace(/^info:\s*/i, '') : '';
                 const isEuropeanFunded = /horizon europe|european union|\bEU\b|🇪🇺/i.test(meta);
                 const isAndalusiaFunded = /triaje/i.test(title);
                 const isBoehringerFunded = funding === 'boehringer-ingelheim' || /\barai\b/i.test(title);
@@ -1121,7 +1167,7 @@
                         : isAndalusiaFunded
                             ? { src: 'images/funded-by-andalusia.svg', alt: 'Funded by Andalucía' }
                             : null;
-                projects.push({ icon, title, meta, website, description, summary, fundingLogo });
+                projects.push({ icon, title, meta, website, description, summary, fundingLogo, infoTitle, info });
             });
             return projects;
         }
@@ -1225,8 +1271,37 @@
                     </div>
                     <p>${p.description}</p>
                     ${p.summary ? `<div class="project-summary">${p.summary}</div>` : ''}
+                    ${p.info ? `<div class="project-info-row"><button class="project-info-toggle" type="button" aria-label="${p.infoTitle || 'Más información'}" title="${p.infoTitle || 'Más información'}" aria-expanded="false">i</button></div><div class="project-info-panel"><h4>${p.infoTitle || 'Más información'}</h4>${p.info.split('\\n').join('<br>')}</div>` : ''}
                 </div>`
             ).join('');
+            bindProjectInfo();
+        }
+
+        function bindProjectInfo() {
+            document.querySelectorAll('.project-info-toggle').forEach(btn => {
+                btn.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    const card = btn.closest('.project-card');
+                    if (!card) return;
+                    const willOpen = !card.classList.contains('info-open');
+                    document.querySelectorAll('.project-card.info-open').forEach(openCard => {
+                        openCard.classList.remove('info-open');
+                        openCard.querySelector('.project-info-toggle')?.setAttribute('aria-expanded', 'false');
+                    });
+                    card.classList.toggle('info-open', willOpen);
+                    btn.setAttribute('aria-expanded', String(willOpen));
+                });
+            });
+
+            document.addEventListener('click', (event) => {
+                if (!event.target.closest('.project-card')) {
+                    document.querySelectorAll('.project-card.info-open').forEach(card => {
+                        card.classList.remove('info-open');
+                        card.querySelector('.project-info-toggle')?.setAttribute('aria-expanded', 'false');
+                    });
+                }
+            });
         }
 
         function formatTeamLinks(linksMarkdown) {
