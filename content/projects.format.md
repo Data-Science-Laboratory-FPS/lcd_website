@@ -17,4 +17,5 @@ summary: <One paragraph summary>
 Rules:
 - `meta` and `summary` are required.
 - `website`, `funding`, `info-title`, and `info` are optional; omit them when unavailable.
+- Project information is shown as an overlaid popup, matching the multimedia information-card interaction.
 - Keep summaries as a single paragraph so the parser can read the complete value.
