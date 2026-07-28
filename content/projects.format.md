@@ -17,4 +17,5 @@ summary: <One paragraph summary>
 Rules:
 - `meta` and `summary` are required.
 - `website`, `funding`, `info-title`, and `info` are optional; omit them when unavailable.
+- Preserve the capitalization of `info-title` exactly as it should appear in the panel heading and button tooltip.
 - Keep summaries as a single paragraph so the parser can read the complete value.
