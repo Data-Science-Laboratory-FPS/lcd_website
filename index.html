@@ -403,6 +403,7 @@
             border-radius: 24px;
             padding: 2.5rem;
             transition: all .4s ease;
+            position: relative;
         }
 
         .project-card:hover { transform: translateY(-10px); border-color: var(--mint); box-shadow: 0 20px 60px rgba(157,214,191,.3); }
@@ -436,17 +437,25 @@
         .project-info-toggle:focus-visible,
         .project-card.info-open .project-info-toggle { background: var(--green); color: #fff; outline: none; }
         .project-info-panel {
-            display: none;
-            margin-top: .75rem;
+            opacity: 0;
+            pointer-events: none;
+            position: absolute;
+            left: 2.5rem;
+            right: 2.5rem;
+            bottom: 4.8rem;
             padding: 1rem;
-            background: #f8fcf9;
-            border: 1px solid rgba(0,121,50,.25);
-            border-radius: 12px;
+            background: #fff;
+            border: 1px solid rgba(0,121,50,.3);
+            border-radius: 10px;
+            box-shadow: 0 10px 24px rgba(0,0,0,.14);
             color: #2d5a3d;
             font-size: .9rem;
             line-height: 1.55;
+            transform: translateY(4px);
+            transition: opacity .2s ease, transform .2s ease;
+            z-index: 5;
         }
-        .project-card.info-open .project-info-panel { display: block; }
+        .project-card.info-open .project-info-panel { opacity: 1; pointer-events: auto; transform: translateY(0); }
         .project-info-panel h4 { color: var(--green); font-size: 1.05rem; margin: 0 0 .7rem; }
 
         /* team */
@@ -1262,7 +1271,7 @@
                     </div>
                     <p>${p.description}</p>
                     ${p.summary ? `<div class="project-summary">${p.summary}</div>` : ''}
-                    ${p.info ? `<div class="project-info-row"><button class="project-info-toggle" type="button" aria-label="Más información" title="Más información" aria-expanded="false">i</button></div><div class="project-info-panel"><h4>${p.infoTitle || 'Más información'}</h4>${p.info.split('\\n').join('<br>')}</div>` : ''}
+                    ${p.info ? `<div class="project-info-row"><button class="project-info-toggle" type="button" aria-label="${p.infoTitle || 'Más información'}" title="${p.infoTitle || 'Más información'}" aria-expanded="false">i</button></div><div class="project-info-panel"><h4>${p.infoTitle || 'Más información'}</h4>${p.info.split('\\n').join('<br>')}</div>` : ''}
                 </div>`
             ).join('');
             bindProjectInfo();
@@ -1270,7 +1279,9 @@
 
         function bindProjectInfo() {
             document.querySelectorAll('.project-info-toggle').forEach(btn => {
-                btn.addEventListener('click', () => {
+                btn.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    event.stopPropagation();
                     const card = btn.closest('.project-card');
                     if (!card) return;
                     const willOpen = !card.classList.contains('info-open');
@@ -1281,6 +1292,15 @@
                     card.classList.toggle('info-open', willOpen);
                     btn.setAttribute('aria-expanded', String(willOpen));
                 });
+            });
+
+            document.addEventListener('click', (event) => {
+                if (!event.target.closest('.project-card')) {
+                    document.querySelectorAll('.project-card.info-open').forEach(card => {
+                        card.classList.remove('info-open');
+                        card.querySelector('.project-info-toggle')?.setAttribute('aria-expanded', 'false');
+                    });
+                }
             });
         }
 
