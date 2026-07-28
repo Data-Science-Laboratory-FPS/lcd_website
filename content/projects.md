@@ -15,6 +15,8 @@ summary: The BRIDGE project aims to boost health innovation in Europe by develop
 
 ### 🚑 trIAje: AI-based Optimization of Emergency Call Triage
 meta: Regional research project (Andalusia, CCUE)
+info-title: Equipo investigador
+info: Miguel Ángel Armengol de la Hoz — Doctor en Ingeniería, Ciencia de datos\n\nMaría José Luque Hernández — Doctora en Medicina, MFyC, Emergencias\n\nCarlos Romero Olóriz — Licenciado en Medicina, MFyC, Emergencias\n\nAuxiliadora Mesa Caballero — Doctora en Medicina, MFyC, Emergencias\n\nCristina López López — Licenciada en Medicina, MFyC, Emergencias
 summary: The trIAje project applies advanced artificial intelligence techniques —including supervised learning, deep learning, and natural language processing— to optimize the telephone triage process of the Andalusian Emergency Coordination Center (CCUE). Using both structured data (triage questions) and unstructured data (free-text notes from emergency calls), the project develops predictive models to improve the accuracy of classifying critical emergencies such as cardiac arrest, respiratory distress, chest pain, and stroke. By identifying key predictive variables and evaluating model performance through sensitivity, specificity, and false positive/negative rates, trIAje aims to enhance clinical decision-making, reduce unnecessary alarms, and improve emergency care outcomes across the regional system.
 
 ---
