@@ -3,7 +3,7 @@
 Use `press.md` for press cards. Each article is a level-4 heading followed by Spanish metadata fields.
 
 ```md
-#### “<Headline>”
+#### <i class="fa-regular fa-newspaper"></i> “<Headline>” — <Medio>
 - Fecha: <DD/MM/YYYY>
 - URL: <Article URL>
 - Miniatura: <Optional local image path>
@@ -17,3 +17,4 @@ Rules:
 - `Fecha`, `URL`, `Tipo de proyecto`, `Etiqueta clínica`, `Servicio hospitalario`, and `Resumen` are required.
 - `Miniatura` is optional and should point to a stable local asset when automatic thumbnails are not suitable.
 - Keep summaries concise and in one paragraph for parser compatibility.
+- Prefix every heading with the Font Awesome newspaper icon and append the newspaper/media name after the title.
