@@ -1209,6 +1209,12 @@
             return template.content.textContent || template.content.innerText || '';
         }
 
+        function formatPressHeading(heading = '') {
+            const match = heading.match(/^\*\*([\s\S]+)\*\*\s+📰\s+\*([\s\S]+)\*$/);
+            if (!match) return parseMarkdownInline(heading);
+            return `<strong>${escapeHtml(match[1])}</strong> 📰 <em>${escapeHtml(match[2])}</em>`;
+        }
+
         function parsePressNews(md, thumbnailCache = {}) {
             const lines = md.split('\n');
             const news = [];
@@ -1219,7 +1225,7 @@
                 if (!line) continue;
                 if (line.startsWith('#### ')) {
                     if (current) news.push(current);
-                    current = { title: line.replace(/^####\s+/, '').replace(/[“”]/g, ''), date: '', url: '', summary: '', thumbnail: '' };
+                    current = { title: formatPressHeading(line.replace(/^####\s+/, '')), date: '', url: '', summary: '', thumbnail: '' };
                     continue;
                 }
                 if (!current) continue;
