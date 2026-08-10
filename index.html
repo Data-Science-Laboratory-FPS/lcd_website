@@ -1210,9 +1210,18 @@
         }
 
         function formatPressHeading(heading = '') {
-            const match = heading.match(/^\*\*([\s\S]+)\*\*\s+📰\s+\*([\s\S]+)\*$/);
-            if (!match) return parseMarkdownInline(heading);
-            return `<strong>${escapeHtml(match[1])}</strong> 📰 <em>${escapeHtml(match[2])}</em>`;
+            const currentFormat = heading.match(/^\*\*([\s\S]+)\*\*\s+📰\s+\*([\s\S]+)\*$/);
+            if (currentFormat) {
+                return `<strong>${escapeHtml(currentFormat[1])}</strong> 📰 <em>${escapeHtml(currentFormat[2])}</em>`;
+            }
+
+            // Keep cards consistent while a previously cached press.md is still in use.
+            const legacyFormat = heading.match(/^<i\b[^>]*fa-newspaper[^>]*><\/i>\s*[“"]([\s\S]+?)[”"]\s*[—-]\s*(.+)$/i);
+            if (legacyFormat) {
+                return `<strong>“${escapeHtml(legacyFormat[1])}”</strong> 📰 <em>${escapeHtml(legacyFormat[2])}</em>`;
+            }
+
+            return parseMarkdownInline(heading);
         }
 
         function parsePressNews(md, thumbnailCache = {}) {
