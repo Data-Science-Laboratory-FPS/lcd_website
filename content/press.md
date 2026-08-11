@@ -187,3 +187,11 @@
 - Etiqueta clínica: Artritis reumatoide
 - Servicio hospitalario: Reumatología y Neumología
 - Resumen: El proyecto ARAI, desarrollado por la Fundación Progreso y Salud y el Hospital Universitario Virgen Macarena, aplica inteligencia artificial sobre datos de vida real de casi 6.000 pacientes para estimar el riesgo de enfermedad pulmonar intersticial difusa tras el diagnóstico de artritis reumatoide y apoyar estrategias de vigilancia respiratoria personalizada.
+
+#### **“La medicina que se adelanta a la enfermedad: así ayuda la inteligencia artificial a prevenir complicaciones”** 📰 *Diario de Sevilla*
+- Fecha: 09/08/2026
+- URL: https://www.diariodesevilla.es/sevilla/medicina-adelanta-enfermedad-ayuda-inteligencia_0_2007668650.html
+- Tipo de proyecto: IA clínica predictiva
+- Etiqueta clínica: Artritis reumatoide
+- Servicio hospitalario: Reumatología, Neumología y Farmacia Hospitalaria
+- Resumen: El proyecto ARAI analiza datos clínicos, analíticos y farmacológicos de 5.797 pacientes para estimar el riesgo de enfermedad pulmonar intersticial difusa durante los cinco años posteriores al diagnóstico de artritis reumatoide y facilitar una vigilancia respiratoria temprana y personalizada.
