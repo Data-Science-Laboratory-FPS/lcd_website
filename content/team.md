@@ -50,7 +50,8 @@ Data Scientist with a BSc in Statistics, specialized in Biostatistics, and an MS
 
 ---
 
-### 👩‍💻 Paula Villares
-**Telecommunications Engineer**
-**IMAGE:** https://raw.githubusercontent.com/Data-Science-Laboratory-FPS/lcd_website/main/images/foto_paula.svg
+### 👤 Paula Vázquez Pérez
+**Data Scientist**
+**IMAGE:**
 Telecommunications Engineer and MSc in Telecommunications Engineering. Experience in Artificial Intelligence applied to healthcare, medical imaging, biomedical signal processing, and data analysis for patient monitoring.
+*[ORCID](https://orcid.org/0009-0002-3036-7391)*
