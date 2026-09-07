@@ -53,5 +53,5 @@ Data Scientist with a BSc in Statistics, specialized in Biostatistics, and an MS
 ### 👤 Paula Vázquez Pérez
 **Data Scientist**
 **IMAGE:**
-Data Scientist with a BSc in Statistics, specialized in Biostatistics, and an MSc in Applied Statistics. Specialized in statistical modeling, machine learning, and health data analysis.
-*[ORCID](https://orcid.org/0009-0002-3036-7391)*
+Telecommunications Engineer and MSc in Telecommunications Engineering. Experience in Artificial Intelligence applied to healthcare, medical imaging, biomedical signal processing, and data analysis for patient monitoring.
+*[LinkedIn](https://www.linkedin.com/in/paula-vazquez-perez/) • [ORCID](https://orcid.org/0009-0002-8882-2801)*
