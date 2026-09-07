@@ -47,3 +47,10 @@ PhD Bioinformatician applying data science and AI to transform real-world health
 **IMAGE:** https://raw.githubusercontent.com/Data-Science-Laboratory-FPS/lcd_website/main/images/foto_jose_aguayo.jpeg
 Data Scientist with a BSc in Statistics, specialized in Biostatistics, and an MSc in Applied Statistics. Specialized in statistical modeling, machine learning, and health data analysis.
 *[LinkedIn](https://www.linkedin.com/in/joseaguayoarjona) • [ORCID](https://orcid.org/0009-0002-3036-7391)*
+
+---
+
+### 👩‍💻 Paula Villares
+**Telecommunications Engineer**
+**IMAGE:** https://raw.githubusercontent.com/Data-Science-Laboratory-FPS/lcd_website/main/images/foto_paula.svg
+Telecommunications Engineer and MSc in Telecommunications Engineering. Experience in Artificial Intelligence applied to healthcare, medical imaging, biomedical signal processing, and data analysis for patient monitoring.

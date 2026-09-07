@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-labelledby="title desc">
+  <title id="title">Paula Villares</title>
+  <desc id="desc">Profile placeholder with Paula Villares's initials</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#006b7d"/>
+      <stop offset="1" stop-color="#35a6a6"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" rx="48" fill="url(#background)"/>
+  <circle cx="300" cy="300" r="194" fill="#fff" opacity=".12"/>
+  <text x="300" y="330" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="164" font-weight="700" text-anchor="middle">PV</text>
+</svg>
