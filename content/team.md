@@ -50,7 +50,7 @@ Data Scientist with a BSc in Statistics, specialized in Biostatistics, and an MS
 
 ---
 
-### 👤 Paula Vázquez Pérez
+### 👩‍💻 Paula Vázquez Pérez
 **Data Scientist**
 **IMAGE:**
 Telecommunications Engineer and MSc in Telecommunications Engineering. Experience in Artificial Intelligence applied to healthcare, medical imaging, biomedical signal processing, and data analysis for patient monitoring.
