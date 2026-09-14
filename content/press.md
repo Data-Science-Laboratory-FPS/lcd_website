@@ -195,3 +195,19 @@
 - Etiqueta clínica: Artritis reumatoide
 - Servicio hospitalario: Reumatología, Neumología y Farmacia Hospitalaria
 - Resumen: El proyecto ARAI analiza datos clínicos, analíticos y farmacológicos de 5.797 pacientes para estimar el riesgo de enfermedad pulmonar intersticial difusa durante los cinco años posteriores al diagnóstico de artritis reumatoide y facilitar una vigilancia respiratoria temprana y personalizada.
+
+#### **“Proponen un nuevo modelo para evaluar las tecnologías de ámbito sanitario”** 📰 *Diario de Sevilla*
+- Fecha: 07/09/2026
+- URL: https://www.diariodesevilla.es/salud/investigacion-tecnologia/proponen-nuevo-modelo-evaluar-tecnologias_0_2007893629.html
+- Tipo de proyecto: Evaluación de tecnologías sanitarias digitales
+- Etiqueta clínica: Salud digital
+- Servicio hospitalario: Evaluación sanitaria
+- Resumen: El proyecto europeo ASSESS-DHT propone el marco Life-Cycle-Based Evaluation para evaluar de forma progresiva y continua las tecnologías sanitarias digitales, incluidas las basadas en inteligencia artificial, a lo largo de cinco etapas y con requisitos adaptados a su finalidad, riesgo y evolución.
+
+#### **“Andalucía desarrolla el mayor estudio europeo sobre triaje telefónico en pacientes con sospecha de ictus”** 📰 *Europa Press*
+- Fecha: 11/09/2026
+- URL: https://www.europapress.es/esandalucia/sevilla/noticia-andalucia-desarrolla-mayor-estudio-europeo-triaje-telefonico-pacientes-sospecha-ictus-20260911141943.html
+- Tipo de proyecto: IA aplicada al triaje telefónico
+- Etiqueta clínica: Ictus
+- Servicio hospitalario: 061
+- Resumen: El proyecto trIAje analiza cerca de 44.000 llamadas recibidas por los ocho centros provinciales del 061 entre 2020 y 2024 y muestra que el protocolo estructurado GTTA54 mejora la detección de posibles ictus y reduce el infratriaje sin aumentar el sobretriaje, sentando las bases para incorporar inteligencia artificial al primer contacto telefónico.
