@@ -37,7 +37,6 @@
 #### **“Andalucía lidera SAIDIS, un proyecto para la prevención del suicidio mediante la IA”** 📰 *El Español*
 - Fecha: 29/07/2024
 - URL: https://www.elespanol.com/sevilla/20240729/andalucia-lidera-saidis-proyecto-prevencion-suicidio-mediante-inteligencia-artificial/872662894_0.html
-- Miniatura: images/saidis-press-thumbnail.svg
 - Tipo de proyecto: Sistema inteligente de alerta clínica
 - Etiqueta clínica: Prevención del suicidio
 - Servicio hospitalario: UCI y Salud Mental
@@ -62,7 +61,6 @@
 #### **“El proyecto andaluz premiado que trata de evitar suicidios usando la IA”** 📰 *Gaceta Médica*
 - Fecha: 28/10/2024
 - URL: https://gacetamedica.com/politica/proyecto-andaluz-suicidios-ia/
-- Miniatura: images/saidis-press-thumbnail.svg
 - Tipo de proyecto: Reconocimiento a innovación clínica
 - Etiqueta clínica: Prevención del suicidio
 - Servicio hospitalario: UCI y Salud Mental
