@@ -55,3 +55,11 @@ Data Scientist with a BSc in Statistics, specialized in Biostatistics, and an MS
 **IMAGE:** https://raw.githubusercontent.com/Data-Science-Laboratory-FPS/lcd_website/main/images/foto_paula_vazquez.png
 Telecommunications Engineer and MSc in Telecommunications Engineering. Experience in Artificial Intelligence applied to healthcare, medical imaging, biomedical signal processing, and data analysis for patient monitoring.
 *[LinkedIn](https://www.linkedin.com/in/paula-vazquez-perez/) • [ORCID](https://orcid.org/0009-0002-8882-2801)*
+
+---
+
+### 👨‍💻 Daniel Gallardo Gómez
+**Data Scientist**
+**IMAGE:** https://raw.githubusercontent.com/Data-Science-Laboratory-FPS/lcd_website/main/images/foto_daniel_gallardo.jpg
+Data Scientist with a PhD in Biostatistics and Public Health, and an MSc in Data Science. Research fellow in Artificial Intelligence, Machine Learning, Deep Learning, and Agentic Engineering.
+*[LinkedIn](https://www.linkedin.com/in/daniel-gallardo-g%C3%B3mez-phd-b32863138/) • [ORCID](https://orcid.org/0000-0002-3029-026X) • [GitHub](https://github.com/dgalgom)*
